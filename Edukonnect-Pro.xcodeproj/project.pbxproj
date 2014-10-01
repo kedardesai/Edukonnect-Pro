@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B09EEAF19DBD5B00049F667 /* EKPDashboardViewController.m */; };
+		1B4A310019D967000067B674 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A30FF19D967000067B674 /* Foundation.framework */; };
+		1B4A310219D967000067B674 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A310119D967000067B674 /* CoreGraphics.framework */; };
+		1B4A310419D967000067B674 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A310319D967000067B674 /* UIKit.framework */; };
+		1B4A310A19D967000067B674 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B4A310819D967000067B674 /* InfoPlist.strings */; };
+		1B4A310C19D967000067B674 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A310B19D967000067B674 /* main.m */; };
+		1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A310F19D967000067B674 /* EKPAppDelegate.m */; };
+		1B4A311219D967000067B674 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B4A311119D967000067B674 /* Images.xcassets */; };
+		1B4A311919D967000067B674 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A311819D967000067B674 /* XCTest.framework */; };
+		1B4A311A19D967000067B674 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A30FF19D967000067B674 /* Foundation.framework */; };
+		1B4A311B19D967000067B674 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4A310319D967000067B674 /* UIKit.framework */; };
+		1B4A312319D967000067B674 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B4A312119D967000067B674 /* InfoPlist.strings */; };
+		1B4A312519D967000067B674 /* Edukonnect_ProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A312419D967000067B674 /* Edukonnect_ProTests.m */; };
+		1B4A313019D968040067B674 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4A312F19D968040067B674 /* MainStoryboard_iPhone.storyboard */; };
+		1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313319D9687B0067B674 /* EKPRegistrationViewController.m */; };
+		1B4A313919D969F30067B674 /* KDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313819D969F30067B674 /* KDTextField.m */; };
+		1B4A313D19DAC1390067B674 /* EKPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313C19DAC1390067B674 /* EKPConstants.m */; };
+		1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */; };
+		1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314B19DAC2510067B674 /* EKPUtility.m */; };
+		1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B4A311C19D967000067B674 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B4A30F419D967000067B674 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B4A30FB19D967000067B674;
+			remoteInfo = "Edukonnect-Pro";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B09EEAE19DBD5B00049F667 /* EKPDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPDashboardViewController.h; sourceTree = "<group>"; };
+		1B09EEAF19DBD5B00049F667 /* EKPDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPDashboardViewController.m; sourceTree = "<group>"; };
+		1B4A30FC19D967000067B674 /* Edukonnect-Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edukonnect-Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4A30FF19D967000067B674 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B4A310119D967000067B674 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1B4A310319D967000067B674 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1B4A310719D967000067B674 /* Edukonnect-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edukonnect-Pro-Info.plist"; sourceTree = "<group>"; };
+		1B4A310919D967000067B674 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1B4A310B19D967000067B674 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B4A310D19D967000067B674 /* Edukonnect-Pro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Edukonnect-Pro-Prefix.pch"; sourceTree = "<group>"; };
+		1B4A310E19D967000067B674 /* EKPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKPAppDelegate.h; sourceTree = "<group>"; };
+		1B4A310F19D967000067B674 /* EKPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKPAppDelegate.m; sourceTree = "<group>"; };
+		1B4A311119D967000067B674 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1B4A311719D967000067B674 /* Edukonnect-ProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Edukonnect-ProTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4A311819D967000067B674 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1B4A312019D967000067B674 /* Edukonnect-ProTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edukonnect-ProTests-Info.plist"; sourceTree = "<group>"; };
+		1B4A312219D967000067B674 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1B4A312419D967000067B674 /* Edukonnect_ProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Edukonnect_ProTests.m; sourceTree = "<group>"; };
+		1B4A312F19D968040067B674 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1B4A313219D9687B0067B674 /* EKPRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPRegistrationViewController.h; sourceTree = "<group>"; };
+		1B4A313319D9687B0067B674 /* EKPRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPRegistrationViewController.m; sourceTree = "<group>"; };
+		1B4A313719D969F30067B674 /* KDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDTextField.h; sourceTree = "<group>"; };
+		1B4A313819D969F30067B674 /* KDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDTextField.m; sourceTree = "<group>"; };
+		1B4A313B19DAC1390067B674 /* EKPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPConstants.h; sourceTree = "<group>"; };
+		1B4A313C19DAC1390067B674 /* EKPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPConstants.m; sourceTree = "<group>"; };
+		1B4A313E19DAC15E0067B674 /* EKPAlertMessageConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPAlertMessageConstants.h; sourceTree = "<group>"; };
+		1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPAlertMessageConstants.m; sourceTree = "<group>"; };
+		1B4A314A19DAC2510067B674 /* EKPUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPUtility.h; sourceTree = "<group>"; };
+		1B4A314B19DAC2510067B674 /* EKPUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUtility.m; sourceTree = "<group>"; };
+		1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginViewController.h; sourceTree = "<group>"; };
+		1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B4A30F919D967000067B674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A310219D967000067B674 /* CoreGraphics.framework in Frameworks */,
+				1B4A310419D967000067B674 /* UIKit.framework in Frameworks */,
+				1B4A310019D967000067B674 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B4A311419D967000067B674 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A311919D967000067B674 /* XCTest.framework in Frameworks */,
+				1B4A311B19D967000067B674 /* UIKit.framework in Frameworks */,
+				1B4A311A19D967000067B674 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B4A30F319D967000067B674 = {
+			isa = PBXGroup;
+			children = (
+				1B4A310519D967000067B674 /* Edukonnect-Pro */,
+				1B4A311E19D967000067B674 /* Edukonnect-ProTests */,
+				1B4A30FE19D967000067B674 /* Frameworks */,
+				1B4A30FD19D967000067B674 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B4A30FD19D967000067B674 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A30FC19D967000067B674 /* Edukonnect-Pro.app */,
+				1B4A311719D967000067B674 /* Edukonnect-ProTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B4A30FE19D967000067B674 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A30FF19D967000067B674 /* Foundation.framework */,
+				1B4A310119D967000067B674 /* CoreGraphics.framework */,
+				1B4A310319D967000067B674 /* UIKit.framework */,
+				1B4A311819D967000067B674 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B4A310519D967000067B674 /* Edukonnect-Pro */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A310E19D967000067B674 /* EKPAppDelegate.h */,
+				1B4A310F19D967000067B674 /* EKPAppDelegate.m */,
+				1B4A313A19DAC10F0067B674 /* Common */,
+				1B4A313519D969AF0067B674 /* CustomViews */,
+				1B4A313119D968570067B674 /* ViewControllers */,
+				1B4A312E19D967D40067B674 /* Storyboards */,
+				1B4A311119D967000067B674 /* Images.xcassets */,
+				1B4A310619D967000067B674 /* Supporting Files */,
+			);
+			path = "Edukonnect-Pro";
+			sourceTree = "<group>";
+		};
+		1B4A310619D967000067B674 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A310719D967000067B674 /* Edukonnect-Pro-Info.plist */,
+				1B4A310819D967000067B674 /* InfoPlist.strings */,
+				1B4A310B19D967000067B674 /* main.m */,
+				1B4A310D19D967000067B674 /* Edukonnect-Pro-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B4A311E19D967000067B674 /* Edukonnect-ProTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A312419D967000067B674 /* Edukonnect_ProTests.m */,
+				1B4A311F19D967000067B674 /* Supporting Files */,
+			);
+			path = "Edukonnect-ProTests";
+			sourceTree = "<group>";
+		};
+		1B4A311F19D967000067B674 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A312019D967000067B674 /* Edukonnect-ProTests-Info.plist */,
+				1B4A312119D967000067B674 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B4A312E19D967D40067B674 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A312F19D968040067B674 /* MainStoryboard_iPhone.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1B4A313119D968570067B674 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A313219D9687B0067B674 /* EKPRegistrationViewController.h */,
+				1B4A313319D9687B0067B674 /* EKPRegistrationViewController.m */,
+				1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */,
+				1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */,
+				1B09EEAE19DBD5B00049F667 /* EKPDashboardViewController.h */,
+				1B09EEAF19DBD5B00049F667 /* EKPDashboardViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1B4A313519D969AF0067B674 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A313619D969E10067B674 /* KDTextField */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		1B4A313619D969E10067B674 /* KDTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A313719D969F30067B674 /* KDTextField.h */,
+				1B4A313819D969F30067B674 /* KDTextField.m */,
+			);
+			path = KDTextField;
+			sourceTree = "<group>";
+		};
+		1B4A313A19DAC10F0067B674 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A314919DAC2410067B674 /* Utility */,
+				1B4A314519DAC1D00067B674 /* Categories */,
+				1B4A313B19DAC1390067B674 /* EKPConstants.h */,
+				1B4A313C19DAC1390067B674 /* EKPConstants.m */,
+				1B4A313E19DAC15E0067B674 /* EKPAlertMessageConstants.h */,
+				1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1B4A314519DAC1D00067B674 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1B4A314919DAC2410067B674 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1B4A314A19DAC2510067B674 /* EKPUtility.h */,
+				1B4A314B19DAC2510067B674 /* EKPUtility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B4A30FB19D967000067B674 /* Edukonnect-Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B4A312819D967000067B674 /* Build configuration list for PBXNativeTarget "Edukonnect-Pro" */;
+			buildPhases = (
+				1B4A30F819D967000067B674 /* Sources */,
+				1B4A30F919D967000067B674 /* Frameworks */,
+				1B4A30FA19D967000067B674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Edukonnect-Pro";
+			productName = "Edukonnect-Pro";
+			productReference = 1B4A30FC19D967000067B674 /* Edukonnect-Pro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B4A311619D967000067B674 /* Edukonnect-ProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B4A312B19D967000067B674 /* Build configuration list for PBXNativeTarget "Edukonnect-ProTests" */;
+			buildPhases = (
+				1B4A311319D967000067B674 /* Sources */,
+				1B4A311419D967000067B674 /* Frameworks */,
+				1B4A311519D967000067B674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B4A311D19D967000067B674 /* PBXTargetDependency */,
+			);
+			name = "Edukonnect-ProTests";
+			productName = "Edukonnect-ProTests";
+			productReference = 1B4A311719D967000067B674 /* Edukonnect-ProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B4A30F419D967000067B674 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EKP;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Kedar Desai";
+				TargetAttributes = {
+					1B4A311619D967000067B674 = {
+						TestTargetID = 1B4A30FB19D967000067B674;
+					};
+				};
+			};
+			buildConfigurationList = 1B4A30F719D967000067B674 /* Build configuration list for PBXProject "Edukonnect-Pro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B4A30F319D967000067B674;
+			productRefGroup = 1B4A30FD19D967000067B674 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B4A30FB19D967000067B674 /* Edukonnect-Pro */,
+				1B4A311619D967000067B674 /* Edukonnect-ProTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B4A30FA19D967000067B674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A313019D968040067B674 /* MainStoryboard_iPhone.storyboard in Resources */,
+				1B4A310A19D967000067B674 /* InfoPlist.strings in Resources */,
+				1B4A311219D967000067B674 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B4A311519D967000067B674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A312319D967000067B674 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B4A30F819D967000067B674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A313D19DAC1390067B674 /* EKPConstants.m in Sources */,
+				1B4A313919D969F30067B674 /* KDTextField.m in Sources */,
+				1B4A310C19D967000067B674 /* main.m in Sources */,
+				1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */,
+				1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */,
+				1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */,
+				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
+				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
+				1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B4A311319D967000067B674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4A312519D967000067B674 /* Edukonnect_ProTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B4A311D19D967000067B674 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B4A30FB19D967000067B674 /* Edukonnect-Pro */;
+			targetProxy = 1B4A311C19D967000067B674 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1B4A310819D967000067B674 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B4A310919D967000067B674 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1B4A312119D967000067B674 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B4A312219D967000067B674 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B4A312619D967000067B674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1B4A312719D967000067B674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B4A312919D967000067B674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
+				INFOPLIST_FILE = "Edukonnect-Pro/Edukonnect-Pro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1B4A312A19D967000067B674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
+				INFOPLIST_FILE = "Edukonnect-Pro/Edukonnect-Pro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1B4A312C19D967000067B674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Edukonnect-Pro.app/Edukonnect-Pro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Edukonnect-ProTests/Edukonnect-ProTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1B4A312D19D967000067B674 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Edukonnect-Pro.app/Edukonnect-Pro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
+				INFOPLIST_FILE = "Edukonnect-ProTests/Edukonnect-ProTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B4A30F719D967000067B674 /* Build configuration list for PBXProject "Edukonnect-Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B4A312619D967000067B674 /* Debug */,
+				1B4A312719D967000067B674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B4A312819D967000067B674 /* Build configuration list for PBXNativeTarget "Edukonnect-Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B4A312919D967000067B674 /* Debug */,
+				1B4A312A19D967000067B674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B4A312B19D967000067B674 /* Build configuration list for PBXNativeTarget "Edukonnect-ProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B4A312C19D967000067B674 /* Debug */,
+				1B4A312D19D967000067B674 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B4A30F419D967000067B674 /* Project object */;
+}
