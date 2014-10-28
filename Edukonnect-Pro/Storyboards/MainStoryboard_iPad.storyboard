@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="fB9-W9-Ltg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="Xmc-pj-csu">
+            <objects>
+                <viewController storyboardIdentifier="EKPRegistrationViewController" id="YRy-5w-esx" customClass="EKPRegistrationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TGu-if-1cU"/>
+                        <viewControllerLayoutGuide type="bottom" id="aeM-ab-p8I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vRf-LE-bbB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lHy-bu-dum"/>
+                    <connections>
+                        <segue destination="rnR-xx-hu6" kind="push" identifier="RegistrationSuccessfulSegue" id="v6P-N2-I3Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZc-3t-jyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="-1698"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="9yZ-xo-JSa">
+            <objects>
+                <viewController storyboardIdentifier="EKPLoginViewController" id="rnR-xx-hu6" customClass="EKPLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20a-Fj-4Va"/>
+                        <viewControllerLayoutGuide type="bottom" id="lDc-T2-ovj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bDy-8C-231">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OaB-pG-6ee"/>
+                    <connections>
+                        <segue destination="8NF-mM-e3e" kind="push" identifier="LoginSuccessfulSegue" id="el2-Ed-SuB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZI-tO-xev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-1698"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="5cF-0P-dBJ">
+            <objects>
+                <viewController storyboardIdentifier="EKPDashboardViewController" id="8NF-mM-e3e" customClass="EKPDashboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kK6-TK-G5I"/>
+                        <viewControllerLayoutGuide type="bottom" id="xcu-kH-iNu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RlN-rG-pIr">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1h7-er-ikF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-1700"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O8c-1o-GMz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fB9-W9-Ltg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t96-fi-2R9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YRy-5w-esx" kind="relationship" relationship="rootViewController" id="5DN-M3-GqT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoy-cn-0As" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="-1700"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

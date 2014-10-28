@@ -27,6 +27,10 @@
 		1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */; };
 		1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314B19DAC2510067B674 /* EKPUtility.m */; };
 		1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */; };
+		1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */; };
+		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
+		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
+		1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,13 @@
 		1B4A314B19DAC2510067B674 /* EKPUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUtility.m; sourceTree = "<group>"; };
 		1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginViewController.h; sourceTree = "<group>"; };
 		1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginViewController.m; sourceTree = "<group>"; };
+		1E2A1A971A001B0D000B7695 /* UIImage+EKPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKPImage.h"; sourceTree = "<group>"; };
+		1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EKPImage.m"; sourceTree = "<group>"; };
+		1E2A1A9A1A001C61000B7695 /* EKPEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEnums.h; sourceTree = "<group>"; };
+		1E2A1A9B1A001C61000B7695 /* EKPEnums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEnums.m; sourceTree = "<group>"; };
+		1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSingleton.h; sourceTree = "<group>"; };
+		1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSingleton.m; sourceTree = "<group>"; };
+		1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				1B4A312F19D968040067B674 /* MainStoryboard_iPhone.storyboard */,
+				1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -212,21 +224,17 @@
 		1B4A313A19DAC10F0067B674 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1E2A1A9D1A001CF2000B7695 /* Singleton */,
+				1E2A1A961A001AE3000B7695 /* Categories */,
 				1B4A314919DAC2410067B674 /* Utility */,
-				1B4A314519DAC1D00067B674 /* Categories */,
 				1B4A313B19DAC1390067B674 /* EKPConstants.h */,
 				1B4A313C19DAC1390067B674 /* EKPConstants.m */,
 				1B4A313E19DAC15E0067B674 /* EKPAlertMessageConstants.h */,
 				1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */,
+				1E2A1A9A1A001C61000B7695 /* EKPEnums.h */,
+				1E2A1A9B1A001C61000B7695 /* EKPEnums.m */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		1B4A314519DAC1D00067B674 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		1B4A314919DAC2410067B674 /* Utility */ = {
@@ -236,6 +244,24 @@
 				1B4A314B19DAC2510067B674 /* EKPUtility.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		1E2A1A961A001AE3000B7695 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1E2A1A971A001B0D000B7695 /* UIImage+EKPImage.h */,
+				1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1E2A1A9D1A001CF2000B7695 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */,
+				1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */,
 				1B4A313019D968040067B674 /* MainStoryboard_iPhone.storyboard in Resources */,
 				1B4A310A19D967000067B674 /* InfoPlist.strings in Resources */,
 				1B4A311219D967000067B674 /* Images.xcassets in Resources */,
@@ -337,8 +364,11 @@
 			files = (
 				1B4A313D19DAC1390067B674 /* EKPConstants.m in Sources */,
 				1B4A313919D969F30067B674 /* KDTextField.m in Sources */,
+				1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */,
 				1B4A310C19D967000067B674 /* main.m in Sources */,
+				1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */,
 				1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */,
+				1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */,
 				1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */,
 				1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */,
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
@@ -463,7 +493,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
 				INFOPLIST_FILE = "Edukonnect-Pro/Edukonnect-Pro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -476,7 +508,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
 				INFOPLIST_FILE = "Edukonnect-Pro/Edukonnect-Pro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

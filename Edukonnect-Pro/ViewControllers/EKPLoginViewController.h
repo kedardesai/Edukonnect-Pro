@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPLoginViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
-@property (nonatomic, strong) IBOutlet UITableView *loginTableView;
-@property (nonatomic, strong) IBOutlet UIView *loginTableHeaderView;
+@interface EKPLoginViewController : UIViewController
 
 @end

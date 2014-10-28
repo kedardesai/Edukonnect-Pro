@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPRegistrationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
-@property (nonatomic, strong) IBOutlet UITableView *registrationTableView;
-@property (nonatomic, strong) IBOutlet UIView *registrationTableHeaderView;
+@interface EKPRegistrationViewController : UIViewController
 
 @end

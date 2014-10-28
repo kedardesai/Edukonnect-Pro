@@ -16,4 +16,6 @@
     #import "EKPConstants.h"
     #import "EKPAlertMessageConstants.h"
     #import "EKPUtility.h"
+    #import "EKPSingleton.h"
+    #import "UIImage+EKPImage.h"
 #endif

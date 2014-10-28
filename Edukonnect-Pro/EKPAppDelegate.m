@@ -12,19 +12,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f]
+                                                            }];
     
-    /*********** Change Font for screen title ***********/
-//    NSArray *vComp = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
     
-//    if ([[vComp objectAtIndex:0] intValue] >= 7) { // In case of iOS7 and above
-        [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f]
-                                                                }];
-//    } else if ([[vComp objectAtIndex:0] intValue] <= 6) { // In case of iOS6 and above
-//        [[UINavigationBar appearance] setTitleTextAttributes: @{
-//                                                                UITextAttributeFont: [UIFont fontWithName:@"Helvetica-Bold" size:20.0f]
-//                                                                }];
-//    }
+    // To navigate direct to Dashboard if needed
+    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Notification_Storyboard_iPhone" bundle:[NSBundle mainBundle]];
+//    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+//    window.rootViewController = [storyboard instantiateInitialViewController];
     
     return YES;
 }

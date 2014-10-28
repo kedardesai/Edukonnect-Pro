@@ -11,9 +11,15 @@
 @implementation EKPConstants
 
 #pragma mark Screen-Title Constants 
-
 NSString *const REGISTRATION_SCREEN_TITLE = @"Registration";
 NSString *const LOGIN_SCREEN_TITLE = @"Login";
 NSString *const DASHBOARD_SCREEN_TITLE = @"Dashboard";
+
+#pragma mark Segue Names
+NSString *const REGISTRATION_SECCESSFUL = @"RegistrationSuccessfulSegue";
+
+#pragma mark Singleton Keys
+NSString *const EKP_THEME = @"selectedTheme";
+
 
 @end
