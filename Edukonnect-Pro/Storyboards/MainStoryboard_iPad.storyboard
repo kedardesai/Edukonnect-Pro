@@ -16,10 +16,80 @@
                     <view key="view" contentMode="scaleToFill" id="vRf-LE-bbB">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-St-6C3">
+                                <rect key="frame" x="110" y="120" width="96" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8Z-OG-nx3" customClass="KDTextField">
+                                <rect key="frame" x="110" y="161" width="534" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YRy-5w-esx" id="c00-1y-mM6"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Mobile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no5-c1-iGF">
+                                <rect key="frame" x="110" y="242" width="124" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ekq-iT-ir3" customClass="KDTextField">
+                                <rect key="frame" x="110" y="283" width="534" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YRy-5w-esx" id="nE0-wW-1FS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aab-v3-VCc">
+                                <rect key="frame" x="110" y="359" width="111" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igi-fz-PhG" customClass="KDTextField">
+                                <rect key="frame" x="110" y="400" width="534" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YRy-5w-esx" id="gr8-p8-3NI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBj-xS-JdE">
+                                <rect key="frame" x="110" y="502" width="534" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725490196078" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="no5-c1-iGF" firstAttribute="bottom" secondItem="Ekq-iT-ir3" secondAttribute="top" constant="-10" id="9lz-1Y-sgJ"/>
+                            <constraint firstItem="vbs-St-6C3" firstAttribute="bottom" secondItem="O8Z-OG-nx3" secondAttribute="top" constant="-10" id="JH1-Jt-r6k"/>
+                            <constraint firstItem="igi-fz-PhG" firstAttribute="bottom" secondItem="LBj-xS-JdE" secondAttribute="top" constant="-40" id="QUx-1T-44h"/>
+                            <constraint firstItem="Ekq-iT-ir3" firstAttribute="height" secondItem="igi-fz-PhG" secondAttribute="height" id="YGK-Fa-uov"/>
+                            <constraint firstItem="TGu-if-1cU" firstAttribute="bottom" secondItem="vbs-St-6C3" secondAttribute="top" constant="-50" id="clk-Ts-dtq"/>
+                            <constraint firstItem="Ekq-iT-ir3" firstAttribute="bottom" secondItem="Aab-v3-VCc" secondAttribute="top" constant="-40" id="hlv-8D-EuW"/>
+                            <constraint firstItem="O8Z-OG-nx3" firstAttribute="height" secondItem="Ekq-iT-ir3" secondAttribute="height" id="jaS-cR-FGX"/>
+                            <constraint firstItem="O8Z-OG-nx3" firstAttribute="bottom" secondItem="no5-c1-iGF" secondAttribute="top" constant="-40" id="qPV-3b-gcY"/>
+                            <constraint firstItem="Aab-v3-VCc" firstAttribute="bottom" secondItem="igi-fz-PhG" secondAttribute="top" constant="-10" id="v7s-4Z-d6P"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lHy-bu-dum"/>
                     <connections>
+                        <outlet property="emailLabel" destination="Aab-v3-VCc" id="vb4-Jq-kI9"/>
+                        <outlet property="emailTextField" destination="igi-fz-PhG" id="5Lh-Xq-18c"/>
+                        <outlet property="mobileLabel" destination="no5-c1-iGF" id="MEm-l7-bmk"/>
+                        <outlet property="mobileTextField" destination="Ekq-iT-ir3" id="Jcn-gD-h4Q"/>
+                        <outlet property="nameLabel" destination="vbs-St-6C3" id="Tkx-pv-3da"/>
+                        <outlet property="nameTextField" destination="O8Z-OG-nx3" id="6sw-69-a8e"/>
+                        <outlet property="registrationBtn" destination="LBj-xS-JdE" id="Kcz-a9-DEJ"/>
                         <segue destination="rnR-xx-hu6" kind="push" identifier="RegistrationSuccessfulSegue" id="v6P-N2-I3Q"/>
                     </connections>
                 </viewController>

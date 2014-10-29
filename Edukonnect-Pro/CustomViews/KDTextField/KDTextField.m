@@ -389,12 +389,12 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
 
 - (void)numberPadDoneButtonClicked:(UIBarButtonItem *)doneButton
 {
-    [self validateTextFieldAnimated:self.isAnimated];
-    
-    if (!self.inValidError) { // In case textField.text is valid
-        [self.delegate doneWithNumberPad:self];
+//    [self validateTextFieldAnimated:self.isAnimated];
+//    
+//    if (!self.inValidError) { // In case textField.text is valid
+//        [self.delegate doneWithNumberPad:self];
         [self resignFirstResponder];
-    }
+//    }
 }
 
 #pragma mark Text-Validation Methods

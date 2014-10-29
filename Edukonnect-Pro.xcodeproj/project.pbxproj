@@ -31,6 +31,8 @@
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
 		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
 		1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */; };
+		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
+		1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,10 @@
 		1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSingleton.h; sourceTree = "<group>"; };
 		1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSingleton.m; sourceTree = "<group>"; };
 		1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1EA25F131A013D0100EAA661 /* UIColor+EKPColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EKPColor.h"; sourceTree = "<group>"; };
+		1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EKPColor.m"; sourceTree = "<group>"; };
+		1EA25F171A015B5D00EAA661 /* EKPRegistrationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPRegistrationAPI.h; sourceTree = "<group>"; };
+		1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPRegistrationAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 			children = (
 				1B4A310E19D967000067B674 /* EKPAppDelegate.h */,
 				1B4A310F19D967000067B674 /* EKPAppDelegate.m */,
+				1EA25F161A015B3B00EAA661 /* API */,
 				1B4A313A19DAC10F0067B674 /* Common */,
 				1B4A313519D969AF0067B674 /* CustomViews */,
 				1B4A313119D968570067B674 /* ViewControllers */,
@@ -251,6 +258,8 @@
 			children = (
 				1E2A1A971A001B0D000B7695 /* UIImage+EKPImage.h */,
 				1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */,
+				1EA25F131A013D0100EAA661 /* UIColor+EKPColor.h */,
+				1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -262,6 +271,15 @@
 				1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */,
 			);
 			path = Singleton;
+			sourceTree = "<group>";
+		};
+		1EA25F161A015B3B00EAA661 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1EA25F171A015B5D00EAA661 /* EKPRegistrationAPI.h */,
+				1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +390,8 @@
 				1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */,
 				1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */,
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
+				1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */,
+				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,
 				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
 				1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */,
 			);

@@ -18,4 +18,5 @@
     #import "EKPUtility.h"
     #import "EKPSingleton.h"
     #import "UIImage+EKPImage.h"
+    #import "UIColor+EKPColor.h"
 #endif

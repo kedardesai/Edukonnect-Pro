@@ -16,6 +16,8 @@
                                                             NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f]
                                                             }];
     
+    [self.window setBackgroundColor:[UIColor loadScreenBackgroundColor]];
+
     
     // To navigate direct to Dashboard if needed
     
