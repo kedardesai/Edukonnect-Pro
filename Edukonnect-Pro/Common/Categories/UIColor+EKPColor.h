@@ -16,4 +16,8 @@
 
 + (UIColor *)loadComponentAlertColor;
 
++ (UIColor *)loadComponentNormalBackgroundColor;
+
++ (UIColor *)loadComponentErrorBackgroundColor;
+
 @end

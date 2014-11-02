@@ -39,6 +39,7 @@ typedef enum {
 @property (nonatomic) KDTextFieldType textFieldtype;
 @property (nonatomic, setter = setClearIfInValid:) BOOL clearIfInValid;
 @property (nonatomic) BOOL isAnimated;
+@property (nonatomic) BOOL isValid;
 @property (nonatomic) BOOL isMultipleEmailAddresses;
 @property (nonatomic, weak) id <KDTextFieldDelegate> delegate;
 

@@ -106,6 +106,10 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
     self.clearIfInValid = YES;
     self.isAnimated = NO;
     self.isMultipleEmailAddresses = NO;
+    
+    self.isValid = NO;
+    
+    self.backgroundColor = [UIColor loadComponentNormalBackgroundColor];
 }
 
 - (void)setTextFieldStyleWithType
@@ -249,6 +253,8 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
     // Validate textField and if Animated make the border red or keep same border
     
     self.isAnimated = isAnimated;
+    self.isValid = NO;
+    self.backgroundColor = [UIColor loadComponentNormalBackgroundColor];
     
     if (![self isTextNonEmpty]) { // In case text property of textField is empty
         if (self.isAnimated) { // In case developer allows animation in color and automation in user entry.
@@ -264,6 +270,7 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
             [self shakeTextField];
         }
         
+        self.backgroundColor = [UIColor loadComponentErrorBackgroundColor];
         [self.delegate onError:self.inValidError withTextField:self];
         
         return;
@@ -304,6 +311,8 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
             break;
     }
     
+    self.isValid = isValid;
+    
     if (!isValid) { // In case textField.text is not valid
         
         if (self.clearIfInValid) {
@@ -323,6 +332,7 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
             [self shakeTextField];
         }
         
+        self.backgroundColor = [UIColor loadComponentErrorBackgroundColor];
         [self.delegate onError:self.inValidError withTextField:self];
         
     } else { // In case textField.text is valid

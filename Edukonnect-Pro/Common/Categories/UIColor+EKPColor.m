@@ -27,4 +27,14 @@
     return [UIColor colorWithRed:135.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:1.0f];
 }
 
++ (UIColor *)loadComponentNormalBackgroundColor
+{
+    return [UIColor whiteColor];
+}
+
++ (UIColor *)loadComponentErrorBackgroundColor
+{
+    return [UIColor colorWithRed:255.0f/255.0f green:255.0f/250.0f blue:224.0f/255.0f alpha:1.0f];
+}
+
 @end

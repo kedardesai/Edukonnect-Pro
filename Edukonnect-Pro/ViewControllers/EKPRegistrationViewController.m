@@ -112,12 +112,21 @@
 
 - (void)onError:(NSError *)error withTextField:(KDTextField *)textField
 {
-    //    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
+//    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
+    if (textField == self.nameTextField) {
+        [self.nameLabel setTextColor:[UIColor loadComponentAlertColor]];
+        
+    } else if (textField == self.mobileTextField) {
+        [self.mobileLabel setTextColor:[UIColor loadComponentAlertColor]];
+        
+    } else if (textField == self.emailTextField) {
+        [self.emailLabel setTextColor:[UIColor loadComponentAlertColor]];
+    }
 }
 
 - (void)onSucess:(KDTextField *)textField
 {
-    //    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
+//    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
 - (void)addCustomValidation:(KDTextField *)textField
@@ -142,13 +151,25 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    // Validate Inputs here
-    EKPUser *user = [[EKPUser alloc] init];
-    user.userName = self.nameTextField.text;
-    user.userMobile = self.mobileTextField.text;
-    user.userEmail = self.emailTextField.text;
-    BOOL result = [EKPRegistrationAPI registerUserWith:user];
-    return result;
+    [self.nameLabel setTextColor:[UIColor loadComponentNormalColor]];
+    [self.mobileLabel setTextColor:[UIColor loadComponentNormalColor]];
+    [self.emailLabel setTextColor:[UIColor loadComponentNormalColor]];
+    
+    [self.nameTextField validateTextFieldAnimated:YES];
+    [self.mobileTextField validateTextFieldAnimated:YES];
+    [self.emailTextField validateTextFieldAnimated:YES];
+    
+    if (self.nameTextField.isValid && self.mobileTextField.isValid && self.mobileTextField.isValid) {
+        // Validate Inputs here
+        EKPUser *user = [[EKPUser alloc] init];
+        user.userName = self.nameTextField.text;
+        user.userMobile = self.mobileTextField.text;
+        user.userEmail = self.emailTextField.text;
+        BOOL result = [EKPRegistrationAPI registerUserWith:user];
+        return result;
+    }
+    
+    return NO;
 }
 
 @end
