@@ -37,14 +37,9 @@
 
 #pragma mark Saving User
 
-+ (void)saveUserWithName:(NSString *)userName mobile:(NSString *)mobile email:(NSString *)email andDeviceId:(NSString *)deviceId
++ (void)saveUserWithUser:(EKPUser *)userObj
 {
-    EKPUser *user = [[EKPUser alloc] init];
-    user.userName = userName;
-    user.userMobile = mobile;
-    user.userEmail = email;
-    user.userDeviceId = deviceId;
-    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:user];
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:userObj];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:encodedObject forKey:EKP_USER];
     [defaults synchronize];

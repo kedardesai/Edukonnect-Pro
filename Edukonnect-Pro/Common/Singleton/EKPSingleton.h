@@ -15,7 +15,7 @@
 + (void)saveEKPTheme:(kEKPTheme)theme;
 + (kEKPTheme)loadEKPTheme;
 
-+ (void)saveUserWithName:(NSString *)userName mobile:(NSString *)mobile email:(NSString *)email andDeviceId:(NSString *)deviceId;
++ (void)saveUserWithUser:(EKPUser *)user;
 + (EKPUser *)loadUser;
 
 @end
