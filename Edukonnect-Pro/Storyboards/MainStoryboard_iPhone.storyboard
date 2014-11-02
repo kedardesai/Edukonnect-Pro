@@ -66,6 +66,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="CDb-t5-kMa" kind="push" identifier="RegistrationSuccessfulSegue" id="WQy-tP-QzQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -90,7 +93,6 @@
                         <outlet property="nameLabel" destination="gul-CE-aQw" id="CyE-1e-kuz"/>
                         <outlet property="nameTextField" destination="q1f-qH-iee" id="F8t-uv-qtL"/>
                         <outlet property="registrationBtn" destination="Lh4-iw-Hhl" id="dNl-OZ-oaE"/>
-                        <segue destination="CDb-t5-kMa" kind="push" identifier="RegistrationSuccessfulSegue" id="1IY-aW-i4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I4-rD-ZbP" userLabel="First Responder" sceneMemberID="firstResponder"/>

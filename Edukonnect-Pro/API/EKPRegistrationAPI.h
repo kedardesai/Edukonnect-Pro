@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EKPUser.h"
 
 @interface EKPRegistrationAPI : NSObject
+
++ (BOOL)registerUserWith:(EKPUser *)user;
 
 @end

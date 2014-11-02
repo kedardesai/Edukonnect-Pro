@@ -8,6 +8,7 @@
 
 #import "EKPRegistrationViewController.h"
 #import "KDTextField.h"
+#import "EKPRegistrationAPI.h"
 
 @interface EKPRegistrationViewController ()
 
@@ -135,6 +136,19 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     return YES;
+}
+
+#pragma maek UINavigation
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    // Validate Inputs here
+    EKPUser *user = [[EKPUser alloc] init];
+    user.userName = self.nameTextField.text;
+    user.userMobile = self.mobileTextField.text;
+    user.userEmail = self.emailTextField.text;
+    BOOL result = [EKPRegistrationAPI registerUserWith:user];
+    return result;
 }
 
 @end
