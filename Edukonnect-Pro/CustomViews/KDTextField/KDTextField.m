@@ -499,7 +499,7 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
     }
     
     if (self.textFieldtype == kTextFieldTypeMobile) {
-        if ([self.text length]>0) {
+        if ([self.text length]>10) {
             [self createErrorWithLocalisedDescription:ERROR_INVALID_MOBILE_NUMBER andCode:1006];
             return NO;
         }

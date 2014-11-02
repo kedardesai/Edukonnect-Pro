@@ -13,6 +13,7 @@
 #pragma mark AlertView Titles
 NSString *const SUCCESS_TITLE = @"Success";
 NSString *const FAILED_TITLE = @"Error";
+NSString *const NETWORK_ERROR = @"Network Error";
 NSString *const CONFIRMATION_TITLE = @"Confirmation";
 
 #pragma mark Registration-Page Alert Messages

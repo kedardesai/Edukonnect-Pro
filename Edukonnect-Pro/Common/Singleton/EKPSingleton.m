@@ -11,6 +11,8 @@
 
 @implementation EKPSingleton
 
+#pragma mark Saving Themes
+
 + (void)saveEKPTheme:(kEKPTheme)theme
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -32,5 +34,29 @@
     
     return theme;
 }
+
+#pragma mark Saving User
+
++ (void)saveUserWithName:(NSString *)userName mobile:(NSString *)mobile email:(NSString *)email andDeviceId:(NSString *)deviceId
+{
+    EKPUser *user = [[EKPUser alloc] init];
+    user.userName = userName;
+    user.userMobile = mobile;
+    user.userEmail = email;
+    user.userDeviceId = deviceId;
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:user];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:EKP_USER];
+    [defaults synchronize];
+}
+
++ (EKPUser *)loadUser
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:EKP_USER];
+    EKPUser *userObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return userObj;
+}
+
 
 @end

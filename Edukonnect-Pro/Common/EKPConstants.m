@@ -20,6 +20,7 @@ NSString *const REGISTRATION_SECCESSFUL = @"RegistrationSuccessfulSegue";
 
 #pragma mark Singleton Keys
 NSString *const EKP_THEME = @"selectedTheme";
+NSString *const EKP_USER = @"loggedUser";
 
 #pragma API-URL Constants
 NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
@@ -33,6 +34,10 @@ NSString *const RESULT_API_URL = @"resultlist_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
 NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
+
+#pragma mark Response Keys
+NSString *const STATUS_KEY = @"status";
+NSString *const MESSAGE_KEY = @"message";
 
 
 @end

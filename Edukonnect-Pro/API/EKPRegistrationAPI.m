@@ -27,7 +27,7 @@
     
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);
-        [EKPUtility showAlertWithTitle:@"Network Error" andMessage:[error localizedDescription]];
+        [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
         return NO;
     }
     
@@ -36,11 +36,11 @@
     NSMutableDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:webData options:kNilOptions error:&localError];
     
     if (localError) {
-        [EKPUtility showAlertWithTitle:@"Error" andMessage:[localError localizedDescription]];
+        [EKPUtility showAlertWithTitle:FAILED_TITLE andMessage:[localError localizedDescription]];
         return NO;
     }
     
-    result = [[dictionary objectForKey:@"status"] boolValue];
+    result = [[dictionary objectForKey:STATUS_KEY] boolValue];
     
     return result;
 }

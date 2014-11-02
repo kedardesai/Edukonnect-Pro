@@ -166,6 +166,9 @@
         user.userMobile = self.mobileTextField.text;
         user.userEmail = self.emailTextField.text;
         BOOL result = [EKPRegistrationAPI registerUserWith:user];
+        if (result) {
+            [EKPSingleton saveUserWithName:self.nameTextField.text mobile:self.mobileTextField.text email:self.emailTextField.text andDeviceId:nil];
+        }
         return result;
     }
     

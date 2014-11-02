@@ -34,6 +34,8 @@
 		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
 		1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */; };
 		1EC335601A06673600CADF22 /* EKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3355F1A06673600CADF22 /* EKPUser.m */; };
+		1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335621A067D3100CADF22 /* EKPLoginAPI.m */; };
+		1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335651A067D9400CADF22 /* EKPStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,10 @@
 		1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPRegistrationAPI.m; sourceTree = "<group>"; };
 		1EC3355E1A06673600CADF22 /* EKPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPUser.h; sourceTree = "<group>"; };
 		1EC3355F1A06673600CADF22 /* EKPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUser.m; sourceTree = "<group>"; };
+		1EC335611A067D3100CADF22 /* EKPLoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginAPI.h; sourceTree = "<group>"; };
+		1EC335621A067D3100CADF22 /* EKPLoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginAPI.m; sourceTree = "<group>"; };
+		1EC335641A067D9400CADF22 /* EKPStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPStudent.h; sourceTree = "<group>"; };
+		1EC335651A067D9400CADF22 /* EKPStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +288,8 @@
 			children = (
 				1EA25F171A015B5D00EAA661 /* EKPRegistrationAPI.h */,
 				1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */,
+				1EC335611A067D3100CADF22 /* EKPLoginAPI.h */,
+				1EC335621A067D3100CADF22 /* EKPLoginAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -291,6 +299,8 @@
 			children = (
 				1EC3355E1A06673600CADF22 /* EKPUser.h */,
 				1EC3355F1A06673600CADF22 /* EKPUser.m */,
+				1EC335641A067D9400CADF22 /* EKPStudent.h */,
+				1EC335651A067D9400CADF22 /* EKPStudent.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -404,7 +414,9 @@
 				1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */,
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
+				1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */,
 				1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */,
+				1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */,
 				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,
 				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
 				1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */,
