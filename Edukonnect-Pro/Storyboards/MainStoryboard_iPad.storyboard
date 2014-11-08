@@ -110,12 +110,75 @@
                     <view key="view" contentMode="scaleToFill" id="bDy-8C-231">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="School Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-i7-s28">
+                                <rect key="frame" x="110" y="120" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-OG-VX4" customClass="KDTextField">
+                                <rect key="frame" x="110" y="161" width="534" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rnR-xx-hu6" id="wqM-bA-1QA"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkd-QO-MA5">
+                                <rect key="frame" x="110" y="242" width="124" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="liz-cO-7f0" customClass="KDTextField">
+                                <rect key="frame" x="110" y="283" width="534" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rnR-xx-hu6" id="Qgz-mC-vfX"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXu-K8-nfs">
+                                <rect key="frame" x="110" y="359" width="76" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HC2-c4-mE2" customClass="KDTextField">
+                                <rect key="frame" x="110" y="400" width="534" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rnR-xx-hu6" id="u7z-u6-Alb"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsy-e5-fjK">
+                                <rect key="frame" x="110" y="502" width="534" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725490196078" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8NF-mM-e3e" kind="push" identifier="LoginSuccessfulSegue" id="OQN-rN-kNh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bzg-OG-VX4" firstAttribute="bottom" secondItem="fkd-QO-MA5" secondAttribute="top" constant="-40" id="81s-C0-PAg"/>
+                            <constraint firstItem="fkd-QO-MA5" firstAttribute="bottom" secondItem="liz-cO-7f0" secondAttribute="top" constant="-10" id="BVf-L4-lu9"/>
+                            <constraint firstItem="liz-cO-7f0" firstAttribute="height" secondItem="HC2-c4-mE2" secondAttribute="height" id="ESw-XH-H3K"/>
+                            <constraint firstItem="XoI-i7-s28" firstAttribute="bottom" secondItem="bzg-OG-VX4" secondAttribute="top" constant="-10" id="JYd-LU-NLR"/>
+                            <constraint firstItem="bzg-OG-VX4" firstAttribute="height" secondItem="liz-cO-7f0" secondAttribute="height" id="TwX-50-Qqa"/>
+                            <constraint firstItem="20a-Fj-4Va" firstAttribute="bottom" secondItem="XoI-i7-s28" secondAttribute="top" constant="-50" id="VwA-sp-fAg"/>
+                            <constraint firstItem="liz-cO-7f0" firstAttribute="bottom" secondItem="gXu-K8-nfs" secondAttribute="top" constant="-40" id="l8s-Mg-HWb"/>
+                            <constraint firstItem="gXu-K8-nfs" firstAttribute="bottom" secondItem="HC2-c4-mE2" secondAttribute="top" constant="-10" id="ppw-UV-Kcq"/>
+                            <constraint firstItem="HC2-c4-mE2" firstAttribute="bottom" secondItem="Lsy-e5-fjK" secondAttribute="top" constant="-40" id="utU-oC-4b4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OaB-pG-6ee"/>
-                    <connections>
-                        <segue destination="8NF-mM-e3e" kind="push" identifier="LoginSuccessfulSegue" id="el2-Ed-SuB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZI-tO-xev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -53,5 +53,18 @@
     return userObj;
 }
 
+#pragma mark Saving Student and List
+
++ (void)addNewStudent:(EKPStudent *)student
+{
+    
+}
+
++ (NSMutableArray *)loadStudentList
+{
+    NSMutableArray *studentList = [[NSMutableArray alloc] init];
+    return studentList;
+}
+
 
 @end

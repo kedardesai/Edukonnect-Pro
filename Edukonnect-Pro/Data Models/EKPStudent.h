@@ -10,4 +10,8 @@
 
 @interface EKPStudent : NSObject
 
+@property (nonatomic, strong) NSString *studentSchoolCode;
+@property (nonatomic, strong) NSString *studentUsername;
+@property (nonatomic, strong) NSString *studentPassword;
+
 @end

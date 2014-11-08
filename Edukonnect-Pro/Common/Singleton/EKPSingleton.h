@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "EKPEnums.h"
 #import "EKPUser.h"
+#import "EKPStudent.h"
 
 @interface EKPSingleton : NSObject
 
@@ -17,5 +18,8 @@
 
 + (void)saveUserWithUser:(EKPUser *)user;
 + (EKPUser *)loadUser;
+
++ (void)addNewStudent:(EKPStudent *)student;
++ (NSMutableArray *)loadStudentList;
 
 @end

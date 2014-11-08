@@ -113,11 +113,83 @@
                     <view key="view" contentMode="scaleToFill" id="3a4-2Y-bW4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="School Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN8-5s-qyQ">
+                                <rect key="frame" x="30" y="88" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59p-OG-my6" customClass="KDTextField">
+                                <rect key="frame" x="30" y="119" width="260" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CDb-t5-kMa" id="MvR-Cv-TgK"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yv-7x-oq7">
+                                <rect key="frame" x="30" y="187" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SI-rI-fK7" customClass="KDTextField">
+                                <rect key="frame" x="30" y="216" width="260" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CDb-t5-kMa" id="nJh-8N-AAS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-hg-k8n">
+                                <rect key="frame" x="30" y="280" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owd-JS-bDr" customClass="KDTextField">
+                                <rect key="frame" x="30" y="309" width="260" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CDb-t5-kMa" id="MOt-JN-nJo"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4e-aw-VpD">
+                                <rect key="frame" x="30" y="369" width="260" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725490196078" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NnU-yl-2dO" kind="push" identifier="LoginSuccessfulSegue" id="0TZ-91-Sk7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="59p-OG-my6" firstAttribute="bottom" secondItem="9Yv-7x-oq7" secondAttribute="top" constant="-20" id="1Ld-Xi-h1K"/>
+                            <constraint firstItem="9SI-rI-fK7" firstAttribute="bottom" secondItem="lox-hg-k8n" secondAttribute="top" constant="-20" id="TFo-vu-asH"/>
+                            <constraint firstItem="Owd-JS-bDr" firstAttribute="height" secondItem="9SI-rI-fK7" secondAttribute="height" id="UNm-dG-h3h"/>
+                            <constraint firstItem="Owd-JS-bDr" firstAttribute="bottom" secondItem="l4e-aw-VpD" secondAttribute="top" constant="-20" id="VUk-42-viT"/>
+                            <constraint firstItem="LSG-Vh-zWU" firstAttribute="bottom" secondItem="FN8-5s-qyQ" secondAttribute="top" constant="-30" id="YTt-Zk-td1"/>
+                            <constraint firstItem="FN8-5s-qyQ" firstAttribute="bottom" secondItem="59p-OG-my6" secondAttribute="top" constant="-5" id="fdK-Ld-1pM"/>
+                            <constraint firstItem="9Yv-7x-oq7" firstAttribute="bottom" secondItem="9SI-rI-fK7" secondAttribute="top" constant="-5" id="osY-JQ-idt"/>
+                            <constraint firstItem="lox-hg-k8n" firstAttribute="bottom" secondItem="Owd-JS-bDr" secondAttribute="top" constant="-5" id="rHB-Eg-SNI"/>
+                            <constraint firstItem="9SI-rI-fK7" firstAttribute="height" secondItem="59p-OG-my6" secondAttribute="height" id="y5R-e2-lV5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EC3-hs-Iu0"/>
                     <connections>
-                        <segue destination="NnU-yl-2dO" kind="push" identifier="LoginSuccessfulSegue" id="4Hf-4u-1wS"/>
+                        <outlet property="loginButton" destination="l4e-aw-VpD" id="Q2W-qX-RI8"/>
+                        <outlet property="passwordLabel" destination="lox-hg-k8n" id="9ye-S3-qz0"/>
+                        <outlet property="passwordTextField" destination="Owd-JS-bDr" id="ZoX-wP-1p5"/>
+                        <outlet property="schoolCodeLabel" destination="FN8-5s-qyQ" id="3DL-yF-BWk"/>
+                        <outlet property="schoolCodeTextField" destination="59p-OG-my6" id="D59-V0-43V"/>
+                        <outlet property="userNameLabel" destination="9Yv-7x-oq7" id="X8B-1X-XRU"/>
+                        <outlet property="userNameTextField" destination="9SI-rI-fK7" id="hJE-7g-PDh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8X-t4-4sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
