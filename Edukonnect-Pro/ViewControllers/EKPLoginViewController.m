@@ -35,7 +35,7 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage loadScreenBackgroundImage]]];
     
     [self.schoolCodeLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.schoolCodeTextField setTextFieldtype:kTextFieldTypeNumber];
+    [self.schoolCodeTextField setTextFieldtype:kTextFieldTypeCustom];
     [self.schoolCodeTextField setIsAnimated:YES];
     [self.schoolCodeTextField setNormalBorderColor:[UIColor loadComponentNormalColor] errorBorderColor:[UIColor loadComponentAlertColor] normalTextColor:[UIColor blackColor] errorTextColor:[UIColor blackColor] normalBorderWidth:0.6 errorBorderWidth:0.6];
     self.schoolCodeTextField.layer.cornerRadius = 2.0;
@@ -44,7 +44,7 @@
     self.schoolCodeTextField.layer.shadowOpacity = 0.5;
     
     [self.userNameLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.userNameTextField setTextFieldtype:kTextFieldTypeString];
+    [self.userNameTextField setTextFieldtype:kTextFieldTypeEmail];
     [self.userNameTextField setIsAnimated:YES];
     [self.userNameTextField setNormalBorderColor:[UIColor loadComponentNormalColor] errorBorderColor:[UIColor loadComponentAlertColor] normalTextColor:[UIColor blackColor] errorTextColor:[UIColor blackColor] normalBorderWidth:0.6 errorBorderWidth:0.6];
     self.userNameTextField.layer.cornerRadius = 2.0;
@@ -113,7 +113,7 @@
 
 - (void)onError:(NSError *)error withTextField:(KDTextField *)textField
 {
-    //    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
+//    [EKPUtility showAlertWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
     if (textField == self.schoolCodeTextField) {
         [self.schoolCodeLabel setTextColor:[UIColor loadComponentAlertColor]];
         
@@ -130,9 +130,13 @@
     //    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
-- (void)addCustomValidation:(KDTextField *)textField
+- (BOOL)addCustomValidation:(KDTextField *)textField
 {
-    NSLog(@"Add Custom Validation here for password");
+    if ([[textField text] length] == 0) {
+        return NO;
+    }
+    textField.isValid = YES;
+    return YES;
 }
 
 #pragma mark UITextFieldDelegate Methods
@@ -148,7 +152,7 @@
     return YES;
 }
 
-#pragma maek UINavigation
+#pragma mark UINavigation
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {

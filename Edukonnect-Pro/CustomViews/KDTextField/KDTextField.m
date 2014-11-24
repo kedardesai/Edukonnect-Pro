@@ -297,7 +297,7 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
             
         case kTextFieldTypeCustom:
         {
-            [self.delegate addCustomValidation:self]; // Add some custom validation on developer's end.
+            isValid = [self.delegate addCustomValidation:self]; // Add some custom validation on developer's end.
             return;
         }
             break;

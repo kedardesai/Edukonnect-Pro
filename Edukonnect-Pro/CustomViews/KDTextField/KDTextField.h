@@ -30,7 +30,7 @@ typedef enum {
 - (void)onError:(NSError *)error withTextField:(KDTextField *)textField;
 - (void)onSucess:(KDTextField *)textField;
 - (void)doneWithNumberPad:(KDTextField *)textField;
-- (void)addCustomValidation:(KDTextField *)textField;
+- (BOOL)addCustomValidation:(KDTextField *)textField;
 
 @end
 

@@ -12,6 +12,8 @@
 
 + (UIColor *)loadScreenBackgroundColor;
 
++ (UIColor *)loadNavigationBarColor;
+
 + (UIColor *)loadComponentNormalColor;
 
 + (UIColor *)loadComponentAlertColor;

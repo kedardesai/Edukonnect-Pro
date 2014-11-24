@@ -129,9 +129,10 @@
 //    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
 }
 
-- (void)addCustomValidation:(KDTextField *)textField
+- (BOOL)addCustomValidation:(KDTextField *)textField
 {
     NSLog(@"Add Custom Validation here for password");
+    return YES;
 }
 
 #pragma mark UITextFieldDelegate Methods

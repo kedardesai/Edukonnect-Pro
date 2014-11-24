@@ -13,8 +13,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f]
+                                                            NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f], NSForegroundColorAttributeName : [UIColor whiteColor]
                                                             }];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor loadNavigationBarColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTranslucent:YES];
     
     [self.window setBackgroundColor:[UIColor loadScreenBackgroundColor]];
 
