@@ -16,6 +16,18 @@ typedef enum {
     
 } kEKPTheme;
 
+typedef enum {
+    
+    kEKPDashboardMenuMyChild = 0,
+    kEKPDashboardMenuNotice,
+    kEKPDashboardMenuEvent,
+    kEKPDashboardMenuTimeTable,
+    kEKPDashboardMenuGallary,
+    kEKPDashboardMenuAboutUs,
+    kEKPDashboardMenuTermsNConditions
+    
+} EKPDashboardMenus;
+
 @interface EKPEnums : NSObject
 
 @end

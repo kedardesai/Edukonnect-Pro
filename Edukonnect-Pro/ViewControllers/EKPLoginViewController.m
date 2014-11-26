@@ -170,11 +170,33 @@
         student.studentSchoolCode = self.schoolCodeTextField.text;
         student.studentUsername = self.userNameTextField.text;
         student.studentPassword = self.passwordTextField.text;
-        BOOL result = [EKPLoginAPI loginUserWith:student];
-        if (result) {
-            [EKPSingleton addNewStudent:student];
+        NSDictionary *resultDict = [EKPLoginAPI loginUserWith:student];
+        BOOL status = [[resultDict objectForKey:STATUS_KEY] boolValue];
+        if (status) {
+            // school_details
+            NSDictionary *schoolDict = (NSDictionary *)[resultDict objectForKey:LOGIN_API_SCHOOL_DETAILS];
+            student.studentSchoolAddress = [schoolDict objectForKey:LOGIN_API_SCHOOL_ADDRESS];
+            student.studentSchoolEmail = [schoolDict objectForKey:LOGIN_API_SCHOOL_EMAIL];
+            if (![[schoolDict objectForKey:LOGIN_API_SCHOOL_LOGO] isEqual:[NSNull null]]) {
+                student.studentSchoolLogo = [schoolDict objectForKey:LOGIN_API_SCHOOL_LOGO];
+            }
+            student.studentSchoolName = [schoolDict objectForKey:LOGIN_API_SCHOOL_NAME];
+            // student_details
+            NSDictionary *studentDict = (NSDictionary *)[resultDict objectForKey:LOGIN_API_STUDENT_DETAILS];
+            student.studentAddress = [studentDict objectForKey:LOGIN_API_STUDENT_ADDRESS];
+            student.studentBirthday = [studentDict objectForKey:LOGIN_API_STUDENT_BIRTHDAY];
+            student.studentClass = [studentDict objectForKey:LOGIN_API_STUDENT_CLASS];
+            if (![[studentDict objectForKey:LOGIN_API_STUDENT_GRNO] isEqual:[NSNull null]]) {
+                student.studentGRNo = [studentDict objectForKey:LOGIN_API_STUDENT_GRNO];
+            }
+            student.studentName = [studentDict objectForKey:LOGIN_API_STUDENT_NAME];
+            student.studentRollNo = [studentDict objectForKey:LOGIN_API_STUDENT_ROLLNO];
+            student.studentSex = [studentDict objectForKey:LOGIN_API_STUDENT_SEX];
+            
+            [EKPSingleton saveStudent:student];
+//            [EKPSingleton addStudentToList:student];
         }
-        return result;
+        return status;
     }
     
     return NO;

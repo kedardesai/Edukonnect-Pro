@@ -11,6 +11,6 @@
 
 @interface EKPLoginAPI : NSObject
 
-+ (BOOL)loginUserWith:(EKPStudent *)student;
++ (NSDictionary *)loginUserWith:(EKPStudent *)student;
 
 @end

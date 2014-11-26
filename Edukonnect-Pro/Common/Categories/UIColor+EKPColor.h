@@ -22,4 +22,6 @@
 
 + (UIColor *)loadComponentErrorBackgroundColor;
 
++ (UIColor *)loadDarkGrayBorderColor;
+
 @end

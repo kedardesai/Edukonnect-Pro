@@ -21,6 +21,8 @@ NSString *const REGISTRATION_SECCESSFUL = @"RegistrationSuccessfulSegue";
 #pragma mark Singleton Keys
 NSString *const EKP_THEME = @"selectedTheme";
 NSString *const EKP_USER = @"loggedUser";
+NSString *const EKP_CURRENT_STUDENT = @"loggedStudent";
+NSString *const EKP_STUDENT_LIST = @"studentList";
 
 #pragma API-URL Constants
 NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
@@ -34,6 +36,22 @@ NSString *const RESULT_API_URL = @"resultlist_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
 NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
+
+#pragma mark Login API Constants
+NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
+NSString *const LOGIN_API_SCHOOL_ADDRESS = @"address";
+NSString *const LOGIN_API_SCHOOL_EMAIL = @"email";
+NSString *const LOGIN_API_SCHOOL_LOGO = @"logo";
+NSString *const LOGIN_API_SCHOOL_NAME = @"schoolname";
+NSString *const LOGIN_API_STUDENT_DETAILS = @"student_details";
+NSString *const LOGIN_API_STUDENT_ADDRESS = @"address";
+NSString *const LOGIN_API_STUDENT_BIRTHDAY = @"birthday";
+NSString *const LOGIN_API_STUDENT_CLASS = @"class";
+NSString *const LOGIN_API_STUDENT_GRNO = @"grno";
+NSString *const LOGIN_API_STUDENT_NAME = @"name";
+NSString *const LOGIN_API_STUDENT_ROLLNO = @"rollno";
+NSString *const LOGIN_API_STUDENT_SEX = @"sex";
+
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

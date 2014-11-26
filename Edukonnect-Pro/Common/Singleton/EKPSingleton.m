@@ -39,10 +39,7 @@
 
 + (void)saveUserWithUser:(EKPUser *)userObj
 {
-    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:userObj];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:encodedObject forKey:EKP_USER];
-    [defaults synchronize];
+    
 }
 
 + (EKPUser *)loadUser
@@ -53,16 +50,52 @@
     return userObj;
 }
 
-#pragma mark Saving Student and List
+#pragma mark Saving Student
 
-+ (void)addNewStudent:(EKPStudent *)student
++ (void)saveStudent:(EKPStudent *)student
 {
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:student];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:EKP_CURRENT_STUDENT];
+    [defaults synchronize];
+}
+
++ (EKPStudent *)loadStudent
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:EKP_CURRENT_STUDENT];
+    EKPStudent *studentObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return studentObj;
+}
+
+#pragma mark Student List
+
++ (void)addStudentToList:(EKPStudent *)student
+{
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:student];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
+    NSMutableArray *studentList = [[NSMutableArray alloc] init];
+    if ([defaults objectForKey:EKP_CURRENT_STUDENT]) {
+        studentList = [[defaults objectForKey:EKP_CURRENT_STUDENT] mutableCopy];
+    }
+    
+    [studentList addObject:encodedObject];
+    [defaults setObject:studentList forKey:EKP_STUDENT_LIST];
+    [defaults synchronize];
 }
 
 + (NSMutableArray *)loadStudentList
 {
-    NSMutableArray *studentList = [[NSMutableArray alloc] init];
+    NSMutableArray *decodedStudentList = [[NSMutableArray alloc] init];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSMutableArray *studentList = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:EKP_CURRENT_STUDENT]];
+    for (NSData *encodedObj in studentList) {
+        EKPStudent *studentObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObj];
+        [decodedStudentList addObject:studentObj];
+    }
+    
     return studentList;
 }
 

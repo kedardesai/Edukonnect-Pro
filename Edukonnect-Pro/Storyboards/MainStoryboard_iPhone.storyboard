@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Registration View Controller-->
@@ -122,7 +123,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59p-OG-my6" customClass="KDTextField">
                                 <rect key="frame" x="30" y="119" width="260" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="CDb-t5-kMa" id="MvR-Cv-TgK"/>
@@ -130,13 +131,13 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yv-7x-oq7">
                                 <rect key="frame" x="30" y="187" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SI-rI-fK7" customClass="KDTextField">
                                 <rect key="frame" x="30" y="216" width="260" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="CDb-t5-kMa" id="nJh-8N-AAS"/>
@@ -144,13 +145,13 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-hg-k8n">
                                 <rect key="frame" x="30" y="280" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owd-JS-bDr" customClass="KDTextField">
                                 <rect key="frame" x="30" y="309" width="260" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="CDb-t5-kMa" id="MOt-JN-nJo"/>
@@ -207,9 +208,79 @@
                     <view key="view" contentMode="scaleToFill" id="xiM-U9-0cL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34G-8A-UYx">
+                                <rect key="frame" x="10" y="78" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmH-lH-jYa">
+                                <rect key="frame" x="118" y="78" width="180" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.24313725490196078" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSR-nR-jJY">
+                                <rect key="frame" x="118" y="128" width="80" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cue-Qw-zW0">
+                                <rect key="frame" x="198" y="128" width="100" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dii-gn-Vol">
+                                <rect key="frame" x="-4" y="206" width="328" height="29"/>
+                                <segments>
+                                    <segment title="Edu-User"/>
+                                    <segment title="Edu-Student"/>
+                                    <segment title="Webpage"/>
+                                </segments>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TY0-t1-Pap">
+                                <rect key="frame" x="1" y="235" width="318" height="333"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0zc-N0-z62">
+                                    <size key="itemSize" width="106" height="106"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardMenuCollectionViewCell" id="4nr-bZ-hlP" customClass="EKPMenuCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cue-Qw-zW0" firstAttribute="top" secondItem="BmH-lH-jYa" secondAttribute="bottom" constant="10" id="Bxl-j7-cTR"/>
+                            <constraint firstItem="iSR-nR-jJY" firstAttribute="top" secondItem="BmH-lH-jYa" secondAttribute="bottom" constant="10" id="E8p-uz-WLO"/>
+                            <constraint firstItem="iSR-nR-jJY" firstAttribute="leading" secondItem="34G-8A-UYx" secondAttribute="trailing" constant="8" id="Flu-9B-I7d"/>
+                            <constraint firstItem="BmH-lH-jYa" firstAttribute="top" secondItem="HBd-Gn-VBj" secondAttribute="bottom" constant="10" id="Ved-hp-dWI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="34G-8A-UYx" secondAttribute="leading" constant="10" id="bDp-LN-di1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cue-Qw-zW0" secondAttribute="trailing" constant="6" id="bmM-0j-5Ug"/>
+                            <constraint firstItem="HBd-Gn-VBj" firstAttribute="bottom" secondItem="34G-8A-UYx" secondAttribute="top" constant="-10" id="j2L-b6-O0n"/>
+                            <constraint firstItem="cue-Qw-zW0" firstAttribute="leading" secondItem="iSR-nR-jJY" secondAttribute="trailing" constant="5" id="vVU-J7-1Wz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BmH-lH-jYa" secondAttribute="trailing" constant="6" id="x7Z-i7-I16"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nqY-Mj-OX6"/>
+                    <connections>
+                        <outlet property="dashboardMenuCollectionView" destination="TY0-t1-Pap" id="M3p-RJ-xvo"/>
+                        <outlet property="menuTabs" destination="Dii-gn-Vol" id="fCh-V2-5DU"/>
+                        <outlet property="schoolLogoImage" destination="34G-8A-UYx" id="rOA-UG-tUR"/>
+                        <outlet property="schoolName" destination="BmH-lH-jYa" id="mA6-lp-Tjw"/>
+                        <outlet property="studentName" destination="cue-Qw-zW0" id="Uh6-UJ-Nlq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-7N-I2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

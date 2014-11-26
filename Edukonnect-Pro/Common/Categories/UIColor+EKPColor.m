@@ -42,4 +42,9 @@
     return [UIColor colorWithRed:255.0f/255.0f green:255.0f/250.0f blue:224.0f/255.0f alpha:1.0f];
 }
 
++ (UIColor *)loadDarkGrayBorderColor
+{
+    return [UIColor colorWithRed:70.0f/255.0f green:70.0f/255.0f blue:70.0f/255.0f alpha:1.0f];
+}
+
 @end

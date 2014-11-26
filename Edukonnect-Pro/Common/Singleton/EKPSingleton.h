@@ -19,7 +19,10 @@
 + (void)saveUserWithUser:(EKPUser *)user;
 + (EKPUser *)loadUser;
 
-+ (void)addNewStudent:(EKPStudent *)student;
++ (void)saveStudent:(EKPStudent *)student;
++ (EKPStudent *)loadStudent;
+
++ (void)addStudentToList:(EKPStudent *)student;
 + (NSMutableArray *)loadStudentList;
 
 @end

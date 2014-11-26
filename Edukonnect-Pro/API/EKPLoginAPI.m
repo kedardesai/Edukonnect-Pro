@@ -10,10 +10,8 @@
 
 @implementation EKPLoginAPI
 
-+ (BOOL)loginUserWith:(EKPStudent *)student
++ (NSDictionary *)loginUserWith:(EKPStudent *)student
 {
-    BOOL result = NO;
-    
     //Web Service Call
     NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, student.studentSchoolCode, student.studentUsername, student.studentPassword];
     NSURL *url = [NSURL URLWithString:urlString];
@@ -28,7 +26,7 @@
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);
         [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
-        return NO;
+        return nil;
     }
     
     NSError *localError = nil;
@@ -37,11 +35,10 @@
     
     if (localError) {
         [EKPUtility showAlertWithTitle:FAILED_TITLE andMessage:[localError localizedDescription]];
-        return NO;
+        return nil;
     }
     
-    result = [[dictionary objectForKey:STATUS_KEY] boolValue];
-    return result;
+    return dictionary;
 }
 
 @end

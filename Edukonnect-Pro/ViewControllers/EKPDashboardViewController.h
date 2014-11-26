@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPDashboardViewController : UIViewController
+@interface EKPDashboardViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UIImageView *schoolLogoImage;
+@property (nonatomic, strong) IBOutlet UILabel *schoolName;
+@property (nonatomic, strong) IBOutlet UILabel *studentName;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *menuTabs;
+@property (nonatomic, strong) IBOutlet UICollectionView *dashboardMenuCollectionView;
 
 @end
