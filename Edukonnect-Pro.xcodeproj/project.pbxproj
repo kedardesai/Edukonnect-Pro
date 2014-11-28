@@ -31,11 +31,13 @@
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
 		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
 		1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */; };
+		1E9E3EA71A2901E2003150C6 /* EKPMenuCollectionViewCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9E3EA61A2901E2003150C6 /* EKPMenuCollectionViewCell_iPad.xib */; };
 		1E9E96E31A0EA00E007B9585 /* EKPSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E96E21A0EA00E007B9585 /* EKPSchool.m */; };
 		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
 		1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */; };
 		1EA40FE81A264FF800416129 /* EKPMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */; };
-		1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell.xib */; };
+		1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */; };
+		1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */; };
 		1EC335601A06673600CADF22 /* EKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3355F1A06673600CADF22 /* EKPUser.m */; };
 		1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335621A067D3100CADF22 /* EKPLoginAPI.m */; };
 		1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335651A067D9400CADF22 /* EKPStudent.m */; };
@@ -90,6 +92,7 @@
 		1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSingleton.h; sourceTree = "<group>"; };
 		1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSingleton.m; sourceTree = "<group>"; };
 		1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1E9E3EA61A2901E2003150C6 /* EKPMenuCollectionViewCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell_iPad.xib; sourceTree = "<group>"; };
 		1E9E96E11A0EA00E007B9585 /* EKPSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchool.h; sourceTree = "<group>"; };
 		1E9E96E21A0EA00E007B9585 /* EKPSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchool.m; sourceTree = "<group>"; };
 		1EA25F131A013D0100EAA661 /* UIColor+EKPColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EKPColor.h"; sourceTree = "<group>"; };
@@ -98,7 +101,9 @@
 		1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPRegistrationAPI.m; sourceTree = "<group>"; };
 		1EA40FE61A264FF800416129 /* EKPMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPMenuCollectionViewCell.h; sourceTree = "<group>"; };
 		1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPMenuCollectionViewCell.m; sourceTree = "<group>"; };
-		1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell_iPhone.xib; sourceTree = "<group>"; };
+		1EA40FED1A265DF900416129 /* UIFont+EKPFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+EKPFont.h"; sourceTree = "<group>"; };
+		1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+EKPFont.m"; sourceTree = "<group>"; };
 		1EC3355E1A06673600CADF22 /* EKPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPUser.h; sourceTree = "<group>"; };
 		1EC3355F1A06673600CADF22 /* EKPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUser.m; sourceTree = "<group>"; };
 		1EC335611A067D3100CADF22 /* EKPLoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginAPI.h; sourceTree = "<group>"; };
@@ -279,6 +284,8 @@
 				1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */,
 				1EA25F131A013D0100EAA661 /* UIColor+EKPColor.h */,
 				1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */,
+				1EA40FED1A265DF900416129 /* UIFont+EKPFont.h */,
+				1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -308,7 +315,8 @@
 			children = (
 				1EA40FE61A264FF800416129 /* EKPMenuCollectionViewCell.h */,
 				1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */,
-				1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell.xib */,
+				1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */,
+				1E9E3EA61A2901E2003150C6 /* EKPMenuCollectionViewCell_iPad.xib */,
 			);
 			path = EKBMenuCollectionViewCell;
 			sourceTree = "<group>";
@@ -402,10 +410,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell.xib in Resources */,
+				1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib in Resources */,
 				1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */,
 				1B4A313019D968040067B674 /* MainStoryboard_iPhone.storyboard in Resources */,
 				1B4A310A19D967000067B674 /* InfoPlist.strings in Resources */,
+				1E9E3EA71A2901E2003150C6 /* EKPMenuCollectionViewCell_iPad.xib in Resources */,
 				1B4A311219D967000067B674 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +448,7 @@
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
 				1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */,
+				1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */,
 				1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */,
 				1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */,
 				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,

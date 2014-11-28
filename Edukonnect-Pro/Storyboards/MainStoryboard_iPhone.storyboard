@@ -200,7 +200,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="pe4-0c-QkT">
             <objects>
-                <viewController id="NnU-yl-2dO" customClass="EKPDashboardViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EKPDashboardViewController" id="NnU-yl-2dO" customClass="EKPDashboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HBd-Gn-VBj"/>
                         <viewControllerLayoutGuide type="bottom" id="vwi-Hz-vdP"/>
@@ -230,16 +230,19 @@
                                 <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dii-gn-Vol">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dii-gn-Vol">
                                 <rect key="frame" x="-4" y="206" width="328" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cj5-aM-FJF"/>
+                                </constraints>
                                 <segments>
-                                    <segment title="Edu-User"/>
-                                    <segment title="Edu-Student"/>
-                                    <segment title="Webpage"/>
+                                    <segment title="Edu Notice" width="110"/>
+                                    <segment title="Edu Menu" width="106"/>
+                                    <segment title="Edu Resources" width="110"/>
                                 </segments>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TY0-t1-Pap">
-                                <rect key="frame" x="1" y="235" width="318" height="333"/>
+                                <rect key="frame" x="1" y="247" width="318" height="321"/>
                                 <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0zc-N0-z62">
                                     <size key="itemSize" width="106" height="106"/>
@@ -258,6 +261,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="NnU-yl-2dO" id="nnD-Ak-SVE"/>
+                                    <outlet property="delegate" destination="NnU-yl-2dO" id="uQn-oD-Xsf"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

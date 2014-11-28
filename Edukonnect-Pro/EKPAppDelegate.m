@@ -25,9 +25,18 @@
     
     // To navigate direct to Dashboard if needed
     
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Notification_Storyboard_iPhone" bundle:[NSBundle mainBundle]];
 //    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
 //    window.rootViewController = [storyboard instantiateInitialViewController];
+    
+    
+    UIStoryboard *storyboard;
+    if ([EKPUtility getUserDeviceType] == kEKPUserDeviceIPhone) {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    } else {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:[NSBundle mainBundle]];
+    }
+    
+    [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
     
     return YES;
 }

@@ -11,6 +11,8 @@
 
 @interface EKPDashboardViewController ()
 
+- (void)eduTabSelected:(UISegmentedControl *)segmentedControl;
+
 @end
 
 @implementation EKPDashboardViewController
@@ -45,8 +47,17 @@
     CGRect segmentedControlFrame = self.menuTabs.frame;
     segmentedControlFrame.size.height = 50;
     [self.menuTabs setFrame:segmentedControlFrame];
-    [self.menuTabs setTintColor:[UIColor loadComponentNormalBackgroundColor]];
     [self.menuTabs setBackgroundColor:[UIColor loadScreenBackgroundColor]];
+    [self.menuTabs addTarget:self action:@selector(eduTabSelected:) forControlEvents:UIControlEventValueChanged];
+    
+    [[UISegmentedControl appearance] setTintColor:[UIColor loadComponentNormalColor]];
+    
+    NSMutableDictionary *textAttributes = [[NSMutableDictionary alloc] initWithObjects:[NSArray arrayWithObjects:[UIFont loadHelveticaNueueRegular17], [UIColor loadComponentNormalColor], nil] forKeys:[NSArray arrayWithObjects:NSFontAttributeName, NSForegroundColorAttributeName, nil]];
+    [[UISegmentedControl appearance] setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+    
+    NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [[UISegmentedControl appearance] setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +83,7 @@
 {
     EKPMenuCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DashboardMenuCollectionViewCell" forIndexPath:indexPath];
     
+//    cell.backgroundColor = [UIColor loadScreenBackgroundColor];
 //    cell.menuIcon = // Set Image Icon here
     
     return cell;
@@ -83,6 +95,12 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Selected CollectionViewCell : %ld", indexPath.row);
+}
+
+#pragma mark UISegmentedControl Action Method
+
+- (void)eduTabSelected:(UISegmentedControl *)segmentedControl
+{
 }
 
 @end

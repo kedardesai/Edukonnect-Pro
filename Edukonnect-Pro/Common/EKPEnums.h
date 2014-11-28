@@ -17,16 +17,26 @@ typedef enum {
 } kEKPTheme;
 
 typedef enum {
-    
-    kEKPDashboardMenuMyChild = 0,
+    // For Edu Notice
     kEKPDashboardMenuNotice,
     kEKPDashboardMenuEvent,
+    kEKPDashboardMenuResult,
     kEKPDashboardMenuTimeTable,
     kEKPDashboardMenuGallary,
-    kEKPDashboardMenuAboutUs,
-    kEKPDashboardMenuTermsNConditions
+    // For Edu Menu
+    kEKPDashboardMenuEduSen,
+    kEKPDashboardMenuLibrary,
+    kEKPDashboardMenuTransport,
+    kEKPDashboardMenuBoarding,
+    kEKPDashboardMenuFees
     
 } EKPDashboardMenus;
+
+typedef enum {
+    kEKPUserDeviceIPad,
+    kEKPUserDeviceIPhone,
+    
+} EKPUserDeviceType;
 
 @interface EKPEnums : NSObject
 

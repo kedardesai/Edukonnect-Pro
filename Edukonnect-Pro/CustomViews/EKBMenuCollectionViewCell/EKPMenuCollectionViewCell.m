@@ -31,21 +31,26 @@
 
 - (void)loadXib
 {
-    [[NSBundle mainBundle] loadNibNamed:@"EKPMenuCollectionViewCell" owner:self options:nil];
+    if ([EKPUtility getUserDeviceType] == kEKPUserDeviceIPhone) {
+        [[NSBundle mainBundle] loadNibNamed:@"EKPMenuCollectionViewCell_iPhone" owner:self options:nil];
+    } else {
+        [[NSBundle mainBundle] loadNibNamed:@"EKPMenuCollectionViewCell_iPad" owner:self options:nil];
+    }
+    
     [self addSubview:self.cellView];
     
-    self.layer.borderColor = [[UIColor loadDarkGrayBorderColor] CGColor];
-    self.layer.borderWidth = 0.6f;
+    self.cellView.layer.borderColor = [[UIColor loadDarkGrayBorderColor] CGColor];
+    self.cellView.layer.borderWidth = 1.0f;
     
-    switch (self.ekpDashboardMenu) {
-        case kEKPDashboardMenuMyChild:
-            NSLog(@"Show My child Image.");
-            break;
-            
-        default:
-            NSLog(@"Show Default Image.");
-            break;
-    }
+//    switch (self.ekpDashboardMenu) {
+//        case kEKPDashboardMenuMyChild:
+//            NSLog(@"Show My child Image.");
+//            break;
+//            
+//        default:
+//            NSLog(@"Show Default Image.");
+//            break;
+//    }
 }
 
 

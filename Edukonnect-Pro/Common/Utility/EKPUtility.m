@@ -24,4 +24,18 @@
     [alertView show];
 }
 
++ (EKPUserDeviceType)getUserDeviceType
+{
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)]) {
+        //We can test if it's an iPad. Running iOS3.2+
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+            return kEKPUserDeviceIPad; //is an iPad
+        else
+            return kEKPUserDeviceIPhone; //is an iPhone
+        
+    } else {
+        return kEKPUserDeviceIPhone; //does not respond to selector, therefore must be < iOS3.2, therefore is an iPhone
+    }
+}
+
 @end
