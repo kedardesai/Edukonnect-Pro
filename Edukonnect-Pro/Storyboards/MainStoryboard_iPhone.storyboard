@@ -197,6 +197,37 @@
             </objects>
             <point key="canvasLocation" x="413" y="31"/>
         </scene>
+        <!--Switch User View Controller-->
+        <scene sceneID="SBX-Jy-48s">
+            <objects>
+                <viewController storyboardIdentifier="EKPSwitchUserViewController" id="PCV-uJ-Fjl" customClass="EKPSwitchUserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q5y-8R-4vB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zbt-qp-NDV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UWG-D7-meQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="laD-6z-NfU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PCV-uJ-Fjl" id="Rde-G7-11w"/>
+                                    <outlet property="delegate" destination="PCV-uJ-Fjl" id="hPI-o3-mBh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="studentListTableView" destination="laD-6z-NfU" id="o5E-Hr-k72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMi-15-rhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="-639"/>
+        </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="pe4-0c-QkT">
             <objects>

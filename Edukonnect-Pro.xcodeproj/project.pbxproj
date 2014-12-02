@@ -35,6 +35,12 @@
 		1E9E96E31A0EA00E007B9585 /* EKPSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E96E21A0EA00E007B9585 /* EKPSchool.m */; };
 		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
 		1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */; };
+		1EA3720F1A2E3AD000615958 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3720E1A2E3AD000615958 /* DXPopover.m */; };
+		1EA372151A2E451300615958 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA372121A2E451300615958 /* MJPopupBackgroundView.m */; };
+		1EA372161A2E451300615958 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA372141A2E451300615958 /* UIViewController+MJPopupViewController.m */; };
+		1EA3721E1A2E45CB00615958 /* EKPSchoolInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3721D1A2E45CB00615958 /* EKPSchoolInfoViewController.m */; };
+		1EA372231A2E461800615958 /* EKPSchoolInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA372221A2E461800615958 /* EKPSchoolInfoViewController.xib */; };
+		1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA372251A2E525C00615958 /* EKPSwitchUserViewController.m */; };
 		1EA40FE81A264FF800416129 /* EKPMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */; };
 		1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */; };
 		1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */; };
@@ -99,6 +105,17 @@
 		1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EKPColor.m"; sourceTree = "<group>"; };
 		1EA25F171A015B5D00EAA661 /* EKPRegistrationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPRegistrationAPI.h; sourceTree = "<group>"; };
 		1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPRegistrationAPI.m; sourceTree = "<group>"; };
+		1EA3720D1A2E3AD000615958 /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
+		1EA3720E1A2E3AD000615958 /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
+		1EA372111A2E451300615958 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		1EA372121A2E451300615958 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
+		1EA372131A2E451300615958 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		1EA372141A2E451300615958 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		1EA3721C1A2E45CB00615958 /* EKPSchoolInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolInfoViewController.h; sourceTree = "<group>"; };
+		1EA3721D1A2E45CB00615958 /* EKPSchoolInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolInfoViewController.m; sourceTree = "<group>"; };
+		1EA372221A2E461800615958 /* EKPSchoolInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPSchoolInfoViewController.xib; sourceTree = "<group>"; };
+		1EA372241A2E525C00615958 /* EKPSwitchUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSwitchUserViewController.h; sourceTree = "<group>"; };
+		1EA372251A2E525C00615958 /* EKPSwitchUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSwitchUserViewController.m; sourceTree = "<group>"; };
 		1EA40FE61A264FF800416129 /* EKPMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPMenuCollectionViewCell.h; sourceTree = "<group>"; };
 		1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell_iPhone.xib; sourceTree = "<group>"; };
@@ -224,12 +241,17 @@
 		1B4A313119D968570067B674 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1EA3721F1A2E45E400615958 /* Xib */,
 				1B4A313219D9687B0067B674 /* EKPRegistrationViewController.h */,
 				1B4A313319D9687B0067B674 /* EKPRegistrationViewController.m */,
 				1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */,
 				1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */,
 				1B09EEAE19DBD5B00049F667 /* EKPDashboardViewController.h */,
 				1B09EEAF19DBD5B00049F667 /* EKPDashboardViewController.m */,
+				1EA3721C1A2E45CB00615958 /* EKPSchoolInfoViewController.h */,
+				1EA3721D1A2E45CB00615958 /* EKPSchoolInfoViewController.m */,
+				1EA372241A2E525C00615958 /* EKPSwitchUserViewController.h */,
+				1EA372251A2E525C00615958 /* EKPSwitchUserViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -237,6 +259,8 @@
 		1B4A313519D969AF0067B674 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1EA372101A2E451300615958 /* MJPopUp */,
+				1EA3720C1A2E3AD000615958 /* DXPopover */,
 				1EA40FE51A264FF800416129 /* EKBMenuCollectionViewCell */,
 				1B4A313619D969E10067B674 /* KDTextField */,
 			);
@@ -308,6 +332,34 @@
 				1EC335621A067D3100CADF22 /* EKPLoginAPI.m */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		1EA3720C1A2E3AD000615958 /* DXPopover */ = {
+			isa = PBXGroup;
+			children = (
+				1EA3720D1A2E3AD000615958 /* DXPopover.h */,
+				1EA3720E1A2E3AD000615958 /* DXPopover.m */,
+			);
+			path = DXPopover;
+			sourceTree = "<group>";
+		};
+		1EA372101A2E451300615958 /* MJPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				1EA372111A2E451300615958 /* MJPopupBackgroundView.h */,
+				1EA372121A2E451300615958 /* MJPopupBackgroundView.m */,
+				1EA372131A2E451300615958 /* UIViewController+MJPopupViewController.h */,
+				1EA372141A2E451300615958 /* UIViewController+MJPopupViewController.m */,
+			);
+			path = MJPopUp;
+			sourceTree = "<group>";
+		};
+		1EA3721F1A2E45E400615958 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				1EA372221A2E461800615958 /* EKPSchoolInfoViewController.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		1EA40FE51A264FF800416129 /* EKBMenuCollectionViewCell */ = {
@@ -411,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib in Resources */,
+				1EA372231A2E461800615958 /* EKPSchoolInfoViewController.xib in Resources */,
 				1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */,
 				1B4A313019D968040067B674 /* MainStoryboard_iPhone.storyboard in Resources */,
 				1B4A310A19D967000067B674 /* InfoPlist.strings in Resources */,
@@ -437,11 +490,14 @@
 				1B4A313D19DAC1390067B674 /* EKPConstants.m in Sources */,
 				1B4A313919D969F30067B674 /* KDTextField.m in Sources */,
 				1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */,
+				1EA3721E1A2E45CB00615958 /* EKPSchoolInfoViewController.m in Sources */,
 				1B4A310C19D967000067B674 /* main.m in Sources */,
 				1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */,
 				1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */,
 				1E9E96E31A0EA00E007B9585 /* EKPSchool.m in Sources */,
 				1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */,
+				1EA372161A2E451300615958 /* UIViewController+MJPopupViewController.m in Sources */,
+				1EA3720F1A2E3AD000615958 /* DXPopover.m in Sources */,
 				1EA40FE81A264FF800416129 /* EKPMenuCollectionViewCell.m in Sources */,
 				1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */,
 				1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */,
@@ -449,6 +505,8 @@
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
 				1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */,
 				1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */,
+				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
+				1EA372151A2E451300615958 /* MJPopupBackgroundView.m in Sources */,
 				1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */,
 				1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */,
 				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,

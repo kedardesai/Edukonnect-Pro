@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DXPopover.h"
 
 @interface EKPDashboardViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -15,5 +16,13 @@
 @property (nonatomic, strong) IBOutlet UILabel *studentName;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *menuTabs;
 @property (nonatomic, strong) IBOutlet UICollectionView *dashboardMenuCollectionView;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIButton *settingBtn;
+
+@property (nonatomic, strong) NSMutableArray *configMenusArray;
+
+@property (nonatomic, strong) DXPopover *popOver;
+
+- (void)showExtraMenus:(id)sender;
 
 @end
