@@ -29,14 +29,13 @@
 //    window.rootViewController = [storyboard instantiateInitialViewController];
     
     
-    UIStoryboard *storyboard;
-    if ([EKPUtility getUserDeviceType] == kEKPUserDeviceIPhone) {
-        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
-    } else {
-        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:[NSBundle mainBundle]];
-    }
+    UIStoryboard *storyboard = [EKPUtility getStoryboardForCurrentDevice];
+    
+//    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"];
     
     [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
+    // EKPDashboardViewController
+    // EKPLoginViewController
     
     return YES;
 }

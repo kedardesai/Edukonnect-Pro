@@ -62,7 +62,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(showExtraMenus:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(showExtraMenus:)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -144,6 +144,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 - (void)showSwitchUser
 {
     // Show Switch User Page
+    [self performSegueWithIdentifier:@"DashboardToSwitchUserSegue" sender:self];
 }
 
 - (void)showEduProfile

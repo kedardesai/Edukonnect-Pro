@@ -15,10 +15,15 @@ NSString *const SUCCESS_TITLE = @"Success";
 NSString *const FAILED_TITLE = @"Error";
 NSString *const NETWORK_ERROR = @"Network Error";
 NSString *const CONFIRMATION_TITLE = @"Confirmation";
+NSString *const INFORMATION_TITLE = @"Information";
 
 #pragma mark Registration-Page Alert Messages
 
 NSString *const REGISTRATION_SUCCESS = @"Registration Successfully Done.";
 NSString *const REGISTRATION_FAIL = @"Registration Failed. Please try again...!";
+
+#pragma mark SwitchUser-Page Alert Messages
+
+NSString *const ALREADY_LOGGED_IN = @"You are already logged in with same credentials.";
 
 @end

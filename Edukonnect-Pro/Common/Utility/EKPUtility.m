@@ -38,4 +38,16 @@
     }
 }
 
++ (UIStoryboard *)getStoryboardForCurrentDevice
+{
+    UIStoryboard *storyboard;
+    if ([EKPUtility getUserDeviceType] == kEKPUserDeviceIPhone) {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    } else {
+        storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:[NSBundle mainBundle]];
+    }
+    
+    return storyboard;
+}
+
 @end

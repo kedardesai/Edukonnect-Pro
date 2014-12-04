@@ -72,31 +72,51 @@
 
 + (void)addStudentToList:(EKPStudent *)student
 {
-    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:student];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSMutableArray *studentList = [[NSMutableArray alloc] init];
-    if ([defaults objectForKey:EKP_CURRENT_STUDENT]) {
-        studentList = [[defaults objectForKey:EKP_CURRENT_STUDENT] mutableCopy];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_STUDENT_LIST];
+    
+    NSMutableArray *studentListArray;
+    if (dataRepresentingSavedArray != nil)
+    {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil)
+            studentListArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        else
+            studentListArray = [[NSMutableArray alloc] init];
     }
     
-    [studentList addObject:encodedObject];
-    [defaults setObject:studentList forKey:EKP_STUDENT_LIST];
-    [defaults synchronize];
+    BOOL isAddedPreviously = NO;
+    for (EKPStudent *studentTemp in studentListArray) {
+        if ([studentTemp.studentGRNo isEqualToString:student.studentGRNo]) {
+            isAddedPreviously = YES;
+            break;
+        }
+    }
+    if (!isAddedPreviously) {
+        [studentListArray addObject:student];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:studentListArray];
+        [defaults setObject:data forKey:EKP_STUDENT_LIST];
+        [defaults synchronize];
+    }
 }
 
 + (NSMutableArray *)loadStudentList
 {
-    NSMutableArray *decodedStudentList = [[NSMutableArray alloc] init];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSMutableArray *studentList = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:EKP_CURRENT_STUDENT]];
-    for (NSData *encodedObj in studentList) {
-        EKPStudent *studentObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObj];
-        [decodedStudentList addObject:studentObj];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_STUDENT_LIST];
+    NSMutableArray *studentListArray;
+    if (dataRepresentingSavedArray != nil)
+    {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil)
+            studentListArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        else
+            studentListArray = [[NSMutableArray alloc] init];
     }
     
-    return studentList;
+    return studentListArray;
 }
 
 

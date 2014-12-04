@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *studentListTableView;
 
+@property (nonatomic, strong) NSMutableArray *studentListArray;
+
 @end

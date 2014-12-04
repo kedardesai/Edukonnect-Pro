@@ -15,5 +15,6 @@
 + (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message withDelegate:(id<UIAlertViewDelegate>)delegate;
 
 + (EKPUserDeviceType)getUserDeviceType;
++ (UIStoryboard *)getStoryboardForCurrentDevice;
 
 @end

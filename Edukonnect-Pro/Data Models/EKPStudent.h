@@ -25,4 +25,7 @@
 @property (nonatomic, strong) NSString *studentRollNo;
 @property (nonatomic, strong) NSString *studentSex;
 
+- (void)setDetailsWithStudent:(EKPStudent *)studentObject andDictionary:(NSDictionary *)detailsDict;
+- (BOOL)isEqualToStudent:(EKPStudent *)studentObject;
+
 @end
