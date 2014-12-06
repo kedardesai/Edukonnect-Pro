@@ -33,6 +33,10 @@
     
     self.currentStudent = [EKPSingleton loadStudent];
     self.currentUser = [EKPSingleton loadUser];
+    self.currentProfile = [EKPSingleton loadCurrentProfile];
+//    if (self.currentProfile) {
+//        <#statements#>
+//    }
     
     // For SchoolCode
     [self.schoolCodeLabel setTextColor:[UIColor loadComponentNormalColor]];

@@ -24,6 +24,7 @@ NSString *const EKP_THEME = @"selectedTheme";
 NSString *const EKP_USER = @"loggedUser";
 NSString *const EKP_CURRENT_STUDENT = @"loggedStudent";
 NSString *const EKP_STUDENT_LIST = @"studentList";
+NSString *const EKP_CURRENT_PROFILE = @"currentProfile";
 
 #pragma API-URL Constants
 NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";

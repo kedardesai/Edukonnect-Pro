@@ -50,7 +50,7 @@
     return userObj;
 }
 
-#pragma mark Saving Student
+#pragma mark Saving Current Student
 
 + (void)saveStudent:(EKPStudent *)student
 {
@@ -117,6 +117,24 @@
     }
     
     return studentListArray;
+}
+
+#pragma mark Saving Current Profile
+
++ (void)saveCurrentProfile:(EKPProfile *)profile
+{
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:profile];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:EKP_CURRENT_PROFILE];
+    [defaults synchronize];
+}
+
++ (EKPProfile *)loadCurrentProfile
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:EKP_CURRENT_PROFILE];
+    EKPProfile *profileObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return profileObj;
 }
 
 

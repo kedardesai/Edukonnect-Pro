@@ -10,6 +10,7 @@
 #import "EKPEnums.h"
 #import "EKPUser.h"
 #import "EKPStudent.h"
+#import "EKPProfile.h"
 
 @interface EKPSingleton : NSObject
 
@@ -24,5 +25,8 @@
 
 + (void)addStudentToList:(EKPStudent *)student;
 + (NSMutableArray *)loadStudentList;
+
++ (void)saveCurrentProfile:(EKPProfile *)profile;
++ (EKPProfile *)loadCurrentProfile;
 
 @end

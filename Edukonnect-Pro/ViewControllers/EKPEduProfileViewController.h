@@ -10,6 +10,7 @@
 #import "KDTextField.h"
 #import "EKPStudent.h"
 #import "EKPUser.h"
+#import "EKPProfile.h"
 
 @interface EKPEduProfileViewController : UIViewController <KDTextFieldDelegate, UITextFieldDelegate, UIScrollViewDelegate>
 
@@ -46,6 +47,7 @@
 
 @property (nonatomic, strong) EKPStudent *currentStudent;
 @property (nonatomic, strong) EKPUser *currentUser;
+@property (nonatomic, strong) EKPProfile *currentProfile;
 
 - (IBAction)updateButtonClicked:(id)sender;
 
