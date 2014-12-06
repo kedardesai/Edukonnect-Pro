@@ -22,12 +22,19 @@
 {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.topItem.title = @"";
+    
     self.studentListArray = [[NSMutableArray alloc] initWithArray:[EKPSingleton loadStudentList]];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage loadScreenBackgroundImage]]];
     
     [self.studentListTableView setBackgroundView:nil];
     [self.studentListTableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage loadScreenBackgroundImage]]];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.title = [NSString stringWithFormat:@"%@", SWITCH_USER_SCREEN_TITLE];
 }
 
 - (void)didReceiveMemoryWarning

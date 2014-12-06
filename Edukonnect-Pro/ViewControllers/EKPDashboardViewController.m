@@ -150,6 +150,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 - (void)showEduProfile
 {
     // Show Edu Profile Page
+    [self performSegueWithIdentifier:@"DashboardToEduProfileSegue" sender:self];
 }
 
 - (void)showExtraMenus:(id)sender

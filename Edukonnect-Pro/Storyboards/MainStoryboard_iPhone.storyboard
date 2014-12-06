@@ -265,6 +265,194 @@
             </objects>
             <point key="canvasLocation" x="26" y="-639"/>
         </scene>
+        <!--Edu Profile View Controller-->
+        <scene sceneID="ZBg-zc-0kZ">
+            <objects>
+                <viewController storyboardIdentifier="EKPEduProfileViewController" id="hBE-1f-38R" customClass="EKPEduProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lAf-Ud-USJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lTl-Nj-tSJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AT6-BW-Alg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-aF-qvy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obv-7L-hLQ">
+                                        <rect key="frame" x="30" y="10" width="105" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-9i-H7q" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="36" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="FRC-N3-MzE"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GR No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tns-pT-2lV">
+                                        <rect key="frame" x="30" y="96" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qeQ-oj-egW" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="122" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="3Er-im-RtA"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parent Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-Vh-GZg">
+                                        <rect key="frame" x="30" y="182" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Parent Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBM-yW-btG" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="208" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="3Lq-s2-124"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejp-WK-qkP">
+                                        <rect key="frame" x="30" y="268" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nrt-cc-6gO" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="294" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="L8m-6e-T7R"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyD-rf-2r3">
+                                        <rect key="frame" x="30" y="354" width="151" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6B-kt-jGu" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="380" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="yGQ-57-yJq"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Relation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3N-TF-1Jd">
+                                        <rect key="frame" x="30" y="440" width="63" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Relation With Student" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNU-GJ-lQM" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="466" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="jQH-30-dll"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIo-TR-Ktm">
+                                        <rect key="frame" x="30" y="526" width="95" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Contact Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SnV-t5-7vq" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="552" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="oLb-We-PeZ"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKo-rC-q7l">
+                                        <rect key="frame" x="30" y="612" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTu-bF-CBr" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="638" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="WEp-r7-pfT"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profession" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-te-aRN">
+                                        <rect key="frame" x="30" y="698" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Profession" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRa-cK-hxa" customClass="KDTextField">
+                                        <rect key="frame" x="30" y="724" width="260" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hBE-1f-38R" id="xOf-Z4-Ygb"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U5-4e-jLt">
+                                        <rect key="frame" x="30" y="784" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.24313725490196078" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Update">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateButtonClicked:" destination="hBE-1f-38R" eventType="touchUpInside" id="xiy-97-185"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="hBE-1f-38R" id="FZ9-YA-0Np"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sJs-3F-ZAn"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="RKo-rC-q7l" id="sJB-cz-EV1"/>
+                        <outlet property="addressTextField" destination="kTu-bF-CBr" id="wrO-gP-hC6"/>
+                        <outlet property="confirmPasswordLabel" destination="VyD-rf-2r3" id="LCN-1w-BK5"/>
+                        <outlet property="confirmPasswordTextField" destination="V6B-kt-jGu" id="aLP-f9-QYl"/>
+                        <outlet property="contactNoLabel" destination="BIo-TR-Ktm" id="s4W-50-o1p"/>
+                        <outlet property="contactNoTextField" destination="SnV-t5-7vq" id="DeP-25-UZv"/>
+                        <outlet property="grNoLabel" destination="Tns-pT-2lV" id="tox-wU-y6W"/>
+                        <outlet property="grNoTextField" destination="qeQ-oj-egW" id="RBr-Hf-HWy"/>
+                        <outlet property="parentNameLabel" destination="gcA-Vh-GZg" id="NtO-DT-v30"/>
+                        <outlet property="parentNameTextField" destination="qBM-yW-btG" id="1ql-ia-JCI"/>
+                        <outlet property="parentScrollView" destination="GIx-aF-qvy" id="RcW-Nu-wsq"/>
+                        <outlet property="passwordLabel" destination="ejp-WK-qkP" id="rh1-Zi-bOb"/>
+                        <outlet property="passwordTextField" destination="nrt-cc-6gO" id="0Mg-Cj-kKG"/>
+                        <outlet property="professionLabel" destination="hmE-te-aRN" id="wLG-dd-Mql"/>
+                        <outlet property="professionTextField" destination="qRa-cK-hxa" id="NUO-0D-L7q"/>
+                        <outlet property="relationLabel" destination="N3N-TF-1Jd" id="xCg-Am-VGQ"/>
+                        <outlet property="relationTextField" destination="tNU-GJ-lQM" id="u5P-mE-RNY"/>
+                        <outlet property="schoolCodeLabel" destination="Obv-7L-hLQ" id="hEd-DG-igN"/>
+                        <outlet property="schoolCodeTextField" destination="SAh-9i-H7q" id="skx-Zi-mUa"/>
+                        <outlet property="updateButton" destination="3U5-4e-jLt" id="CiU-9t-L6O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ca-1p-rkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="-639"/>
+        </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="pe4-0c-QkT">
             <objects>
@@ -356,6 +544,7 @@
                         <outlet property="schoolName" destination="BmH-lH-jYa" id="mA6-lp-Tjw"/>
                         <outlet property="studentName" destination="cue-Qw-zW0" id="Uh6-UJ-Nlq"/>
                         <segue destination="PCV-uJ-Fjl" kind="push" identifier="DashboardToSwitchUserSegue" id="gDy-YU-7VQ"/>
+                        <segue destination="hBE-1f-38R" kind="push" identifier="DashboardToEduProfileSegue" id="vDS-DD-XeS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-7N-I2t" userLabel="First Responder" sceneMemberID="firstResponder"/>

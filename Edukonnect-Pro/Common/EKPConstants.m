@@ -14,6 +14,7 @@
 NSString *const REGISTRATION_SCREEN_TITLE = @"Registration";
 NSString *const LOGIN_SCREEN_TITLE = @"Login";
 NSString *const DASHBOARD_SCREEN_TITLE = @"Dashboard";
+NSString *const SWITCH_USER_SCREEN_TITLE = @"Switch User";
 
 #pragma mark Segue Names
 NSString *const REGISTRATION_SECCESSFUL = @"RegistrationSuccessfulSegue";

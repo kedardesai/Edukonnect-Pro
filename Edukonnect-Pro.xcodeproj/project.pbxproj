@@ -41,6 +41,7 @@
 		1EA3721E1A2E45CB00615958 /* EKPSchoolInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3721D1A2E45CB00615958 /* EKPSchoolInfoViewController.m */; };
 		1EA372231A2E461800615958 /* EKPSchoolInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA372221A2E461800615958 /* EKPSchoolInfoViewController.xib */; };
 		1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA372251A2E525C00615958 /* EKPSwitchUserViewController.m */; };
+		1EA3B76F1A32B7C100E88711 /* EKPEduProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3B76E1A32B7C100E88711 /* EKPEduProfileViewController.m */; };
 		1EA40FE81A264FF800416129 /* EKPMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */; };
 		1EA40FEC1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */; };
 		1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */; };
@@ -116,6 +117,8 @@
 		1EA372221A2E461800615958 /* EKPSchoolInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPSchoolInfoViewController.xib; sourceTree = "<group>"; };
 		1EA372241A2E525C00615958 /* EKPSwitchUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSwitchUserViewController.h; sourceTree = "<group>"; };
 		1EA372251A2E525C00615958 /* EKPSwitchUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSwitchUserViewController.m; sourceTree = "<group>"; };
+		1EA3B76D1A32B7C100E88711 /* EKPEduProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEduProfileViewController.h; sourceTree = "<group>"; };
+		1EA3B76E1A32B7C100E88711 /* EKPEduProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEduProfileViewController.m; sourceTree = "<group>"; };
 		1EA40FE61A264FF800416129 /* EKPMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPMenuCollectionViewCell.h; sourceTree = "<group>"; };
 		1EA40FE71A264FF800416129 /* EKPMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		1EA40FEB1A26510F00416129 /* EKPMenuCollectionViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell_iPhone.xib; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				1EA3721D1A2E45CB00615958 /* EKPSchoolInfoViewController.m */,
 				1EA372241A2E525C00615958 /* EKPSwitchUserViewController.h */,
 				1EA372251A2E525C00615958 /* EKPSwitchUserViewController.m */,
+				1EA3B76D1A32B7C100E88711 /* EKPEduProfileViewController.h */,
+				1EA3B76E1A32B7C100E88711 /* EKPEduProfileViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 			files = (
 				1B4A313D19DAC1390067B674 /* EKPConstants.m in Sources */,
 				1B4A313919D969F30067B674 /* KDTextField.m in Sources */,
+				1EA3B76F1A32B7C100E88711 /* EKPEduProfileViewController.m in Sources */,
 				1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */,
 				1EA3721E1A2E45CB00615958 /* EKPSchoolInfoViewController.m in Sources */,
 				1B4A310C19D967000067B674 /* main.m in Sources */,
