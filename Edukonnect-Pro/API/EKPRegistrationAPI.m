@@ -36,7 +36,7 @@
     NSMutableDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:webData options:kNilOptions error:&localError];
     
     if (localError) {
-        [EKPUtility showAlertWithTitle:FAILED_TITLE andMessage:[localError localizedDescription]];
+        [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
         return NO;
     }
     

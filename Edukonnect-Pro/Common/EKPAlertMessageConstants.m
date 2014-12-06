@@ -12,7 +12,8 @@
 
 #pragma mark AlertView Titles
 NSString *const SUCCESS_TITLE = @"Success";
-NSString *const FAILED_TITLE = @"Error";
+NSString *const FAILED_TITLE = @"Failed";
+NSString *const ERROR_TITLE = @"Error";
 NSString *const NETWORK_ERROR = @"Network Error";
 NSString *const CONFIRMATION_TITLE = @"Confirmation";
 NSString *const INFORMATION_TITLE = @"Information";
@@ -25,5 +26,10 @@ NSString *const REGISTRATION_FAIL = @"Registration Failed. Please try again...!"
 #pragma mark SwitchUser-Page Alert Messages
 
 NSString *const ALREADY_LOGGED_IN = @"You are already logged in with same credentials.";
+
+#pragma mark Edu Profile Page Alert Messages
+
+NSString *const PROFILE_UPDATED = @"Profile has been updated successfully.";
+NSString *const PROFILE_NOT_UPDATED = @"Profile has failed to update.";
 
 @end
