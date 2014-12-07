@@ -513,6 +513,13 @@
                                     <outlet property="delegate" destination="8NF-mM-e3e" id="Lsl-l1-iGX"/>
                                 </connections>
                             </collectionView>
+                            <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPT-cc-auQ">
+                                <rect key="frame" x="0.0" y="325" width="768" height="699"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8NF-mM-e3e" id="5hp-Bk-3Uf"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -529,17 +536,51 @@
                     <navigationItem key="navigationItem" id="1h7-er-ikF"/>
                     <connections>
                         <outlet property="dashboardMenuCollectionView" destination="iCU-kd-JjA" id="RBK-nP-9EB"/>
+                        <outlet property="eduResourcesWebView" destination="VPT-cc-auQ" id="ziZ-r1-0hi"/>
                         <outlet property="menuTabs" destination="BJ3-IF-PlC" id="qaI-fL-bxT"/>
                         <outlet property="schoolLogoImage" destination="vVh-so-Kg8" id="HJO-bj-5GC"/>
                         <outlet property="schoolName" destination="6x9-Rf-eum" id="xz1-yF-59V"/>
                         <outlet property="studentName" destination="dhP-8X-Mz1" id="I9g-ff-4U4"/>
                         <segue destination="YEv-H4-gt9" kind="push" identifier="DashboardToSwitchUserSegue" id="Cbz-Iy-4s2"/>
                         <segue destination="jsM-Op-YWq" kind="push" identifier="DashboardToEduProfileSegue" id="7qQ-aV-Cdd"/>
+                        <segue destination="9xT-7F-zKL" kind="push" identifier="DashboardToNoticeListSegue" id="IPF-uJ-hcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1586" y="-1700"/>
+        </scene>
+        <!--Notice List View Controller-->
+        <scene sceneID="Ujw-BP-KtC">
+            <objects>
+                <viewController storyboardIdentifier="EKPNoticeListViewController" id="9xT-7F-zKL" customClass="EKPNoticeListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZBE-6M-OvY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZuR-35-D2W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QP7-pY-cCt">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lz9-2k-lt2">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9xT-7F-zKL" id="tO2-ee-BKM"/>
+                                    <outlet property="delegate" destination="9xT-7F-zKL" id="lHL-bi-h6a"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RMO-S6-c59"/>
+                    <connections>
+                        <outlet property="noticeListTableView" destination="Lz9-2k-lt2" id="8JT-UX-qgT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Y7-Td-e8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456" y="-4821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O8c-1o-GMz">

@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "DXPopover.h"
 
-@interface EKPDashboardViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface EKPDashboardViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIImageView *schoolLogoImage;
 @property (nonatomic, strong) IBOutlet UILabel *schoolName;
 @property (nonatomic, strong) IBOutlet UILabel *studentName;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *menuTabs;
 @property (nonatomic, strong) IBOutlet UICollectionView *dashboardMenuCollectionView;
+@property (nonatomic, strong) IBOutlet UIWebView *eduResourcesWebView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIButton *settingBtn;
 

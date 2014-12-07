@@ -522,6 +522,13 @@
                                     <outlet property="delegate" destination="NnU-yl-2dO" id="uQn-oD-Xsf"/>
                                 </connections>
                             </collectionView>
+                            <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEY-8g-ciR">
+                                <rect key="frame" x="1" y="247" width="318" height="321"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NnU-yl-2dO" id="mem-Z0-e7w"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -539,17 +546,88 @@
                     <navigationItem key="navigationItem" id="nqY-Mj-OX6"/>
                     <connections>
                         <outlet property="dashboardMenuCollectionView" destination="TY0-t1-Pap" id="M3p-RJ-xvo"/>
+                        <outlet property="eduResourcesWebView" destination="YEY-8g-ciR" id="5qm-G8-ywN"/>
                         <outlet property="menuTabs" destination="Dii-gn-Vol" id="fCh-V2-5DU"/>
                         <outlet property="schoolLogoImage" destination="34G-8A-UYx" id="rOA-UG-tUR"/>
                         <outlet property="schoolName" destination="BmH-lH-jYa" id="mA6-lp-Tjw"/>
                         <outlet property="studentName" destination="cue-Qw-zW0" id="Uh6-UJ-Nlq"/>
                         <segue destination="PCV-uJ-Fjl" kind="push" identifier="DashboardToSwitchUserSegue" id="gDy-YU-7VQ"/>
                         <segue destination="hBE-1f-38R" kind="push" identifier="DashboardToEduProfileSegue" id="vDS-DD-XeS"/>
+                        <segue destination="KNP-eH-tw1" kind="push" identifier="DashboardToNoticeListSegue" id="Z3M-OG-zkM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-7N-I2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="779" y="31"/>
+        </scene>
+        <!--Notice List View Controller-->
+        <scene sceneID="sEz-Qr-2pK">
+            <objects>
+                <viewController storyboardIdentifier="EKPNoticeListViewController" id="KNP-eH-tw1" customClass="EKPNoticeListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4b7-u7-wdv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hzt-0j-odR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bvo-RD-4sl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="spx-ZU-5IX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noticeCell" id="Zv3-wc-4la">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zv3-wc-4la" id="jf8-uP-ZLN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YV6-JG-iM8">
+                                                    <rect key="frame" x="0.0" y="5" width="305" height="140"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="397-zU-WiZ">
+                                                            <rect key="frame" x="15" y="8" width="271" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4A-rP-3r3">
+                                                            <rect key="frame" x="15" y="31" width="192" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="103" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="white" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6t-RK-JCE">
+                                                            <rect key="frame" x="15" y="52" width="271" height="80"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KNP-eH-tw1" id="Za8-JF-Z4L"/>
+                                    <outlet property="delegate" destination="KNP-eH-tw1" id="xED-Zu-Ksd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I4U-U2-fvR"/>
+                    <connections>
+                        <outlet property="noticeListTableView" destination="spx-ZU-5IX" id="gop-Un-Qkq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyN-55-ah8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="-1135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tfj-oB-JbD">

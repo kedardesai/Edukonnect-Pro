@@ -63,6 +63,9 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     self.tableView.dataSource = self;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(showExtraMenus:)];
+    
+    [self.eduResourcesWebView setOpaque:NO];
+    [self.eduResourcesWebView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -106,15 +109,25 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    if (self.menuTabs.selectedSegmentIndex == 0) {
+        return 5;
+    } else {
+        return 5;
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     EKPMenuCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DashboardMenuCollectionViewCell" forIndexPath:indexPath];
     
-//    cell.backgroundColor = [UIColor loadScreenBackgroundColor];
-//    cell.menuIcon = // Set Image Icon here
+    EKPDashboardMenus dashboardMenu;
+    if (self.menuTabs.selectedSegmentIndex == 0) {
+        dashboardMenu = (EKPDashboardMenus) indexPath.row;
+    } else {
+        dashboardMenu = (EKPDashboardMenus) indexPath.row + 5 ;
+    }
+    
+    cell.ekpDashboardMenu = dashboardMenu;
     
     return cell;
 }
@@ -124,13 +137,73 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Selected CollectionViewCell : %ld", indexPath.row);
+    EKPMenuCollectionViewCell *cell = (EKPMenuCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
+    switch (cell.ekpDashboardMenu) {
+        case kEKPDashboardMenuNotice:
+            NSLog(@"Show Notice.");
+            [self performSegueWithIdentifier:@"DashboardToNoticeListSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuEvent:
+            NSLog(@"Show Events.");
+            break;
+            
+        case kEKPDashboardMenuResult:
+            NSLog(@"Show Results.");
+            break;
+            
+        case kEKPDashboardMenuTimeTable:
+            NSLog(@"Show Timetable.");
+            break;
+            
+        case kEKPDashboardMenuGallary:
+            NSLog(@"Show Photo Gallary.");
+            break;
+            
+        case kEKPDashboardMenuEduSen:
+            NSLog(@"Show WebView.");
+            break;
+            
+        case kEKPDashboardMenuLibrary:
+            NSLog(@"Show Library.");
+            break;
+            
+        case kEKPDashboardMenuTransport:
+            NSLog(@"Show Transport.");
+            break;
+            
+        case kEKPDashboardMenuBoarding:
+            NSLog(@"Show Boarding.");
+            break;
+            
+        case kEKPDashboardMenuPayment:
+            NSLog(@"Show Payment.");
+            break;
+            
+        default:
+            NSLog(@"Show Default Image.");
+            break;
+    }
 }
 
 #pragma mark UISegmentedControl Action Method
 
 - (void)eduTabSelected:(UISegmentedControl *)segmentedControl
 {
+    if (segmentedControl.selectedSegmentIndex == 0) { // For Edu Notice
+        [self.eduResourcesWebView setHidden:YES];
+        [self.dashboardMenuCollectionView setHidden:NO];
+        [self.dashboardMenuCollectionView reloadData];
+        
+    } else if (segmentedControl.selectedSegmentIndex == 1) { // For Edu Menu
+        [self.eduResourcesWebView setHidden:YES];
+        [self.dashboardMenuCollectionView setHidden:NO];
+        [self.dashboardMenuCollectionView reloadData];
+        
+    } else if (segmentedControl.selectedSegmentIndex == 2) { // For Edu Resources
+        [self.eduResourcesWebView setHidden:NO];
+        [self.dashboardMenuCollectionView setHidden:YES];
+    }
 }
 
 #pragma mark IBAction Methods

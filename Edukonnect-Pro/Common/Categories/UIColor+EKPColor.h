@@ -24,4 +24,6 @@
 
 + (UIColor *)loadDarkGrayBorderColor;
 
++ (UIColor *)loadTableViewCellBgColor;
+
 @end

@@ -28,7 +28,7 @@ typedef enum {
     kEKPDashboardMenuLibrary,
     kEKPDashboardMenuTransport,
     kEKPDashboardMenuBoarding,
-    kEKPDashboardMenuFees
+    kEKPDashboardMenuPayment
     
 } EKPDashboardMenus;
 

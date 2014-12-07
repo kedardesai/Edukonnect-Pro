@@ -47,4 +47,9 @@
     return [UIColor colorWithRed:200.0f/255.0f green:200.0f/255.0f blue:200.0f/255.0f alpha:1.0f];
 }
 
++ (UIColor *)loadTableViewCellBgColor
+{
+    return [UIColor colorWithRed:126.0f/255.0f green:126.0f/255.0f blue:126.0f/255.0f alpha:1.0f];
+}
+
 @end
