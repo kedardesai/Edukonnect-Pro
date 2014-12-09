@@ -14,4 +14,10 @@
 
 @property (nonatomic, strong) NSMutableArray *noticeListArray;
 
+@property (nonatomic) NSInteger pageId;
+
+@property (nonatomic) BOOL isNextPageAvailable;
+
+@property (nonatomic) BOOL isFirstLoad;
+
 @end

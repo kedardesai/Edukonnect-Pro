@@ -11,6 +11,7 @@
 #import "EKPUser.h"
 #import "EKPStudent.h"
 #import "EKPProfile.h"
+#import "EKPNotice.h"
 
 @interface EKPSingleton : NSObject
 
@@ -28,5 +29,8 @@
 
 + (void)saveCurrentProfile:(EKPProfile *)profile;
 + (EKPProfile *)loadCurrentProfile;
+
++ (void)saveNoticeList:(NSMutableArray *)noticeList;
++ (NSMutableArray *)loadNoticeList;
 
 @end

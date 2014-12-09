@@ -7,8 +7,12 @@
 //
 
 #import "EKPNoticeListViewController.h"
+#import "EKPNoticeAPI.h"
+#import "EKPNotice.h"
 
 @interface EKPNoticeListViewController ()
+
+- (void)callAPI;
 
 @end
 
@@ -22,9 +26,15 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.topItem.title = @"";
     
+    self.noticeListArray = [[NSMutableArray alloc] init];
+    
     [self.noticeListTableView setBackgroundView:nil];
     [self.noticeListTableView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     [self.noticeListTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.pageId = 0;
+    self.isNextPageAvailable = YES;
+    self.isFirstLoad = YES;
+    [self callAPI];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -39,6 +49,35 @@
 }
 
 
+#pragma mark Reusable-Code Methods
+
+- (void)callAPI
+{
+    if (self.isNextPageAvailable) {
+        self.pageId++;
+        NSMutableDictionary *resultDict = [EKPNoticeAPI getNoticesForPageId:self.pageId];
+        NSMutableArray *noticeArray = [[resultDict objectForKey:NOTICEBOARD_API_NOTICE] mutableCopy];
+        for (NSMutableDictionary *noticeDict in noticeArray) {
+            EKPNotice *noticeTemp = [[EKPNotice alloc] init];
+            noticeTemp.noticeId = [noticeDict objectForKey:NOTICEBOARD_API_NOTICE_ID];
+            noticeTemp.noticeHeading = [noticeDict objectForKey:NOTICEBOARD_API_HEADING];
+            noticeTemp.noticeMessage = [noticeDict objectForKey:NOTICEBOARD_API_MESSAGE_DETAILS];
+            noticeTemp.noticeTimeStamp = [noticeDict objectForKey:NOTICEBOARD_API_TIME_STAMP];
+            
+            [self.noticeListArray addObject:noticeTemp];
+        }
+        
+        if (self.pageId == 1) {
+            // Save Notice List in Singleton
+            [EKPSingleton saveNoticeList:self.noticeListArray];
+        }
+        self.isNextPageAvailable = [[resultDict objectForKey:NOTICEBOARD_API_NEXT_PAGE] boolValue];
+        
+        [self.noticeListTableView reloadData];
+    }
+}
+
+
 #pragma mark UITableViewDelegate and UITableViewDatasource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -48,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [self.noticeListArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,24 +98,40 @@
         cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"noticeCell"];
     }
     
-//    cell.textLabel.text = @"Hello";
+    self.isFirstLoad = NO;
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     [cell setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     
+    EKPNotice *currentNotice = [self.noticeListArray objectAtIndex:indexPath.row];
+    
     UIView *contentView = [cell.contentView viewWithTag:100];
     
     UILabel *headingLabel = (UILabel *) [contentView viewWithTag:101];
-    [headingLabel setText:@"Heading"];
+    [headingLabel setText:currentNotice.noticeHeading];
     
     UILabel *dateLabel = (UILabel *) [contentView viewWithTag:102];
-    [dateLabel setText:@"Date & Time"];
+    [dateLabel setText:currentNotice.noticeTimeStamp];
     
     UITextView *messageTextView = (UITextView *) [contentView viewWithTag:103];
-    [messageTextView setText:@"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
+    [messageTextView setText:currentNotice.noticeMessage];
     [messageTextView setTextColor:[UIColor whiteColor]];
     
     return cell;
+}
+
+
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height)
+    {
+        if (!self.isFirstLoad) {
+            [self callAPI];
+        }
+    }
 }
 
 /*

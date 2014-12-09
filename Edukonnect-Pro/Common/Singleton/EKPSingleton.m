@@ -103,7 +103,6 @@
 
 + (NSMutableArray *)loadStudentList
 {
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_STUDENT_LIST];
     NSMutableArray *studentListArray;
@@ -135,6 +134,33 @@
     NSData *encodedObject = [defaults objectForKey:EKP_CURRENT_PROFILE];
     EKPProfile *profileObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
     return profileObj;
+}
+
+#pragma mark Saving Notice List
+
++ (void)saveNoticeList:(NSMutableArray *)noticeList
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:noticeList];
+    [defaults setObject:data forKey:EKP_NOTICE_LIST];
+    [defaults synchronize];
+}
+
++ (NSMutableArray *)loadNoticeList
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_NOTICE_LIST];
+    NSMutableArray *noticeListArray;
+    if (dataRepresentingSavedArray != nil)
+    {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil)
+            noticeListArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        else
+            noticeListArray = [[NSMutableArray alloc] init];
+    }
+    
+    return noticeListArray;
 }
 
 

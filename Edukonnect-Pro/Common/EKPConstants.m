@@ -25,6 +25,7 @@ NSString *const EKP_USER = @"loggedUser";
 NSString *const EKP_CURRENT_STUDENT = @"loggedStudent";
 NSString *const EKP_STUDENT_LIST = @"studentList";
 NSString *const EKP_CURRENT_PROFILE = @"currentProfile";
+NSString *const EKP_NOTICE_LIST = @"noticeList";
 
 #pragma API-URL Constants
 NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
@@ -39,7 +40,7 @@ NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
 NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
 
-#pragma mark Login API Constants
+#pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
 NSString *const LOGIN_API_SCHOOL_ADDRESS = @"address";
 NSString *const LOGIN_API_SCHOOL_EMAIL = @"email";
@@ -54,6 +55,13 @@ NSString *const LOGIN_API_STUDENT_NAME = @"name";
 NSString *const LOGIN_API_STUDENT_ROLLNO = @"rollno";
 NSString *const LOGIN_API_STUDENT_SEX = @"sex";
 
+#pragma mark NOTICEBOARD-API Constants
+NSString *const NOTICEBOARD_API_NOTICE = @"notice";
+NSString *const NOTICEBOARD_API_NEXT_PAGE = @"nextpage";
+NSString *const NOTICEBOARD_API_NOTICE_ID = @"noticeid";
+NSString *const NOTICEBOARD_API_HEADING = @"heading";
+NSString *const NOTICEBOARD_API_MESSAGE_DETAILS = @"msg_details";
+NSString *const NOTICEBOARD_API_TIME_STAMP = @"timestamp";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";
