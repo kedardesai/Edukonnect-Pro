@@ -140,12 +140,11 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     EKPMenuCollectionViewCell *cell = (EKPMenuCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
     switch (cell.ekpDashboardMenu) {
         case kEKPDashboardMenuNotice:
-            NSLog(@"Show Notice.");
             [self performSegueWithIdentifier:@"DashboardToNoticeListSegue" sender:self];
             break;
             
         case kEKPDashboardMenuEvent:
-            NSLog(@"Show Events.");
+            [self performSegueWithIdentifier:@"DashboardToEventListSegue" sender:self];
             break;
             
         case kEKPDashboardMenuResult:

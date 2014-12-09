@@ -33,6 +33,7 @@
 		1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */; };
 		1E9CEB521A371B190069C150 /* EKPNoticeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB511A371B190069C150 /* EKPNoticeAPI.m */; };
 		1E9CEB551A3724CB0069C150 /* EKPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB541A3724CB0069C150 /* EKPNotice.m */; };
+		1E9CEB581A3730E10069C150 /* EKPEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */; };
 		1E9E96E31A0EA00E007B9585 /* EKPSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E96E21A0EA00E007B9585 /* EKPSchool.m */; };
 		1E9F01DD1A3420FF00AAC885 /* EKPNoticeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F01DC1A3420FF00AAC885 /* EKPNoticeListViewController.m */; };
 		1E9F01E31A34239700AAC885 /* EKPMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F01E01A34239700AAC885 /* EKPMenuCollectionViewCell.m */; };
@@ -108,6 +109,8 @@
 		1E9CEB511A371B190069C150 /* EKPNoticeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPNoticeAPI.m; sourceTree = "<group>"; };
 		1E9CEB531A3724CB0069C150 /* EKPNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPNotice.h; sourceTree = "<group>"; };
 		1E9CEB541A3724CB0069C150 /* EKPNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPNotice.m; sourceTree = "<group>"; };
+		1E9CEB561A3730E10069C150 /* EKPEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEventListViewController.h; sourceTree = "<group>"; };
+		1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEventListViewController.m; sourceTree = "<group>"; };
 		1E9E96E11A0EA00E007B9585 /* EKPSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchool.h; sourceTree = "<group>"; };
 		1E9E96E21A0EA00E007B9585 /* EKPSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchool.m; sourceTree = "<group>"; };
 		1E9F01DB1A3420FF00AAC885 /* EKPNoticeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPNoticeListViewController.h; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				1EA3B76E1A32B7C100E88711 /* EKPEduProfileViewController.m */,
 				1E9F01DB1A3420FF00AAC885 /* EKPNoticeListViewController.h */,
 				1E9F01DC1A3420FF00AAC885 /* EKPNoticeListViewController.m */,
+				1E9CEB561A3730E10069C150 /* EKPEventListViewController.h */,
+				1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
 				1E9CEB551A3724CB0069C150 /* EKPNotice.m in Sources */,
 				1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */,
+				1E9CEB581A3730E10069C150 /* EKPEventListViewController.m in Sources */,
 				1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */,
 				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
 				1EA3B7751A33408C00E88711 /* EKPProfile.m in Sources */,
