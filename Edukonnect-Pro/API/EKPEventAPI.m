@@ -15,7 +15,7 @@
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&classid=%@&pageid=%ld", BASE_API_URL, EVENT_API_URL, @"SCH002"/*currentStudent.studentSchoolCode*/, @"1"/*currentStudent.studentClass*/, (long)pageId];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&classid=%@&pageid=%ld", BASE_API_URL, EVENT_API_URL, /*@"SCH002"*/currentStudent.studentSchoolCode, /*@"1"*/currentStudent.studentClass, (long)pageId];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
