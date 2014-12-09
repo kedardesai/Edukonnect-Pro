@@ -163,5 +163,32 @@
     return noticeListArray;
 }
 
+#pragma mark Saving Event List
+
++ (void)saveEventList:(NSMutableArray *)eventList
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:eventList];
+    [defaults setObject:data forKey:EKP_EVENT_LIST];
+    [defaults synchronize];
+}
+
++ (NSMutableArray *)loadEventList
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_EVENT_LIST];
+    NSMutableArray *eventListArray;
+    if (dataRepresentingSavedArray != nil)
+    {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil)
+            eventListArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        else
+            eventListArray = [[NSMutableArray alloc] init];
+    }
+    
+    return eventListArray;
+}
+
 
 @end

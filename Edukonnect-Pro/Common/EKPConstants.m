@@ -26,6 +26,7 @@ NSString *const EKP_CURRENT_STUDENT = @"loggedStudent";
 NSString *const EKP_STUDENT_LIST = @"studentList";
 NSString *const EKP_CURRENT_PROFILE = @"currentProfile";
 NSString *const EKP_NOTICE_LIST = @"noticeList";
+NSString *const EKP_EVENT_LIST = @"eventList";
 
 #pragma API-URL Constants
 NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
@@ -62,6 +63,19 @@ NSString *const NOTICEBOARD_API_NOTICE_ID = @"noticeid";
 NSString *const NOTICEBOARD_API_HEADING = @"heading";
 NSString *const NOTICEBOARD_API_MESSAGE_DETAILS = @"msg_details";
 NSString *const NOTICEBOARD_API_TIME_STAMP = @"timestamp";
+
+#pragma mark EVENTS-API Constants
+NSString *const EVENT_API_EVENT = @"event";
+NSString *const EVENT_API_NEXT_PAGE = @"nextpage";
+NSString *const EVENT_API_ID = @"eventid";
+NSString *const EVENT_API_NAME = @"event_name";
+NSString *const EVENT_API_CLASS_ID = @"class_id";
+NSString *const EVENT_API_VENUE = @"venue";
+NSString *const EVENT_API_IMAGE = @"image";
+NSString *const EVENT_API_CREATED_BY = @"createdby";
+NSString *const EVENT_API_CREATED_DATE = @"createddate";
+NSString *const EVENT_API_EVENT_DATE = @"eventdate";
+NSString *const EVENT_API_EVENT_TIME = @"eventtime";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

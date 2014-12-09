@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPEventListViewController : UIViewController
+@interface EKPEventListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSMutableArray *eventListArray;
+
+@property (nonatomic, strong) IBOutlet UITableView *eventListTableView;
+
+@property (nonatomic) NSInteger pageId;
+@property (nonatomic) BOOL isNextPageAvailable;
+@property (nonatomic) BOOL isFirstLoad;
 
 @end
