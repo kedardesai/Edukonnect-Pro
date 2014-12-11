@@ -82,6 +82,8 @@
     [commentTextView setText:resultObj.resultComment];
     [commentTextView setTextColor:[UIColor whiteColor]];
     
+    [cell setBackgroundColor:[UIColor loadScreenBackgroundColor]];
+    
     return cell;
 }
 
