@@ -36,7 +36,8 @@ NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
 NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
 NSString *const NOTICE_API_URL = @"notice_list_response.php?";
 NSString *const EVENT_API_URL = @"event_class_response.php?";
-NSString *const RESULT_API_URL = @"resultlist_response.php?";
+NSString *const EXAM_LIST_API_URL = @"resultlist_response.php?";
+NSString *const RESULT_API_URL = @"result_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
 NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
@@ -76,6 +77,18 @@ NSString *const EVENT_API_CREATED_BY = @"createdby";
 NSString *const EVENT_API_CREATED_DATE = @"createddate";
 NSString *const EVENT_API_EVENT_DATE = @"eventdate";
 NSString *const EVENT_API_EVENT_TIME = @"eventtime";
+
+#pragma mark EXAM_LIST-API Constants
+NSString *const EXAM_ID = @"exam_id";
+NSString *const EXAM_NAME = @"name";
+NSString *const EXAM_DATE = @"date";
+
+#pragma mark RESULT-API Constants
+NSString *const RESULT_SUBJECT = @"subject";
+NSString *const RESULT_MARKS = @"marks";
+NSString *const RESULT_OUT_OF = @"outof";
+NSString *const RESULT_ATTENDANCE = @"attendance";
+NSString *const RESULT_COMMENT = @"comment";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

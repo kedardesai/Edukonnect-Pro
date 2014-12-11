@@ -148,7 +148,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             break;
             
         case kEKPDashboardMenuResult:
-            NSLog(@"Show Results.");
+            [self performSegueWithIdentifier:@"DashboardToExamListSegue" sender:self];
             break;
             
         case kEKPDashboardMenuTimeTable:
