@@ -78,6 +78,7 @@
 		1EC335601A06673600CADF22 /* EKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3355F1A06673600CADF22 /* EKPUser.m */; };
 		1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335621A067D3100CADF22 /* EKPLoginAPI.m */; };
 		1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335651A067D9400CADF22 /* EKPStudent.m */; };
+		1EFC45171A3B611200881984 /* EKPTimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC45161A3B611200881984 /* EKPTimetableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,8 @@
 		1EC335621A067D3100CADF22 /* EKPLoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginAPI.m; sourceTree = "<group>"; };
 		1EC335641A067D9400CADF22 /* EKPStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPStudent.h; sourceTree = "<group>"; };
 		1EC335651A067D9400CADF22 /* EKPStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPStudent.m; sourceTree = "<group>"; };
+		1EFC45151A3B611200881984 /* EKPTimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTimetableViewController.h; sourceTree = "<group>"; };
+		1EFC45161A3B611200881984 /* EKPTimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTimetableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +360,8 @@
 				1E9A82FC1A3A1B3000CD838F /* EKPExamListViewController.m */,
 				1E9A82FE1A3A251400CD838F /* EKPResultViewController.h */,
 				1E9A82FF1A3A251400CD838F /* EKPResultViewController.m */,
+				1EFC45151A3B611200881984 /* EKPTimetableViewController.h */,
+				1EFC45161A3B611200881984 /* EKPTimetableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				1E79928E1A37831E00383BE6 /* UIWebView+AFNetworking.m in Sources */,
 				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
 				1E79928B1A37831E00383BE6 /* UIImageView+AFNetworking.m in Sources */,
+				1EFC45171A3B611200881984 /* EKPTimetableViewController.m in Sources */,
 				1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */,
 				1E7992801A37831E00383BE6 /* AFHTTPSessionManager.m in Sources */,
 				1E7992851A37831E00383BE6 /* AFURLResponseSerialization.m in Sources */,

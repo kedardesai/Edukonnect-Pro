@@ -556,6 +556,7 @@
                         <segue destination="KNP-eH-tw1" kind="push" identifier="DashboardToNoticeListSegue" id="Z3M-OG-zkM"/>
                         <segue destination="DEL-ls-WFJ" kind="push" identifier="DashboardToEventListSegue" id="xsw-U2-DFZ"/>
                         <segue destination="x68-km-B0F" kind="push" identifier="DashboardToExamListSegue" id="XnS-Je-chR"/>
+                        <segue destination="t2x-IT-BsQ" kind="push" identifier="DashboardToTimetableSegue" id="9Cl-oC-mQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-7N-I2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -623,6 +624,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUE-Qp-e5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="105"/>
+        </scene>
+        <!--Timetable View Controller-->
+        <scene sceneID="XRW-yi-ylo">
+            <objects>
+                <viewController storyboardIdentifier="EKPTimetableViewController" id="t2x-IT-BsQ" customClass="EKPTimetableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tZy-66-SVW"/>
+                        <viewControllerLayoutGuide type="bottom" id="flE-wH-Qk0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qa9-xJ-bfS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lcj-Gc-9Y8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QUb-7F-sjY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QUb-7F-sjY" id="OL1-o1-Oaa">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4go-bz-Rss">
+                                                    <rect key="frame" x="20" y="15" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.24313725490196078" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="t2x-IT-BsQ" id="D7e-WR-SlK"/>
+                                    <outlet property="delegate" destination="t2x-IT-BsQ" id="mkC-g2-HHI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GkU-d4-tqh"/>
+                    <connections>
+                        <outlet property="timeTableDayListTableView" destination="Lcj-Gc-9Y8" id="jcu-cU-2h5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGw-5X-MCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="739"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="z8Q-xE-jCI">
