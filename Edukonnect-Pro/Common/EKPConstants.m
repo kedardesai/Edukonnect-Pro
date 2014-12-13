@@ -90,6 +90,14 @@ NSString *const RESULT_OUT_OF = @"outof";
 NSString *const RESULT_ATTENDANCE = @"attendance";
 NSString *const RESULT_COMMENT = @"comment";
 
+#pragma mark TIMETABLE-API Constants
+NSString *const TIMETABLE_API_DAY = @"day";
+NSString *const TIMETABLE_API_LECTURE = @"lecture";
+NSString *const TIMETABLE_API_START_TIME = @"start_time";
+NSString *const TIMETABLE_API_END_TIME = @"end_time";
+NSString *const TIMETABLE_API_STATUS = @"status";
+NSString *const TIMETABLE_API_MESSAGE = @"message";
+
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";
 NSString *const MESSAGE_KEY = @"message";

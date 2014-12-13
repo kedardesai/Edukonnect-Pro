@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPTimetableViewController : UIViewController
+@interface EKPTimetableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet UITableView *timeTableDayListTableView;
 
-@property (nonatomic, strong) NSMutableDictionary *timeTableDayListDict;
+@property (nonatomic, strong) NSMutableArray *timeTableDayListArray;
+
+@property (nonatomic, strong) NSMutableArray *selectedDayScheduleArray;
 
 @end

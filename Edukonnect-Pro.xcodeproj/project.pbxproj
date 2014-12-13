@@ -78,6 +78,8 @@
 		1EC335601A06673600CADF22 /* EKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3355F1A06673600CADF22 /* EKPUser.m */; };
 		1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335621A067D3100CADF22 /* EKPLoginAPI.m */; };
 		1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335651A067D9400CADF22 /* EKPStudent.m */; };
+		1ED3A5F51A3BF7F9007FEE6F /* EKPTimetableAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A5F41A3BF7F9007FEE6F /* EKPTimetableAPI.m */; };
+		1ED3A5F81A3C02BC007FEE6F /* EKPDayScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A5F71A3C02BC007FEE6F /* EKPDayScheduleViewController.m */; };
 		1EFC45171A3B611200881984 /* EKPTimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC45161A3B611200881984 /* EKPTimetableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +225,10 @@
 		1EC335621A067D3100CADF22 /* EKPLoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginAPI.m; sourceTree = "<group>"; };
 		1EC335641A067D9400CADF22 /* EKPStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPStudent.h; sourceTree = "<group>"; };
 		1EC335651A067D9400CADF22 /* EKPStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPStudent.m; sourceTree = "<group>"; };
+		1ED3A5F31A3BF7F9007FEE6F /* EKPTimetableAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTimetableAPI.h; sourceTree = "<group>"; };
+		1ED3A5F41A3BF7F9007FEE6F /* EKPTimetableAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTimetableAPI.m; sourceTree = "<group>"; };
+		1ED3A5F61A3C02BC007FEE6F /* EKPDayScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPDayScheduleViewController.h; sourceTree = "<group>"; };
+		1ED3A5F71A3C02BC007FEE6F /* EKPDayScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPDayScheduleViewController.m; sourceTree = "<group>"; };
 		1EFC45151A3B611200881984 /* EKPTimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTimetableViewController.h; sourceTree = "<group>"; };
 		1EFC45161A3B611200881984 /* EKPTimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTimetableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -362,6 +368,8 @@
 				1E9A82FF1A3A251400CD838F /* EKPResultViewController.m */,
 				1EFC45151A3B611200881984 /* EKPTimetableViewController.h */,
 				1EFC45161A3B611200881984 /* EKPTimetableViewController.m */,
+				1ED3A5F61A3C02BC007FEE6F /* EKPDayScheduleViewController.h */,
+				1ED3A5F71A3C02BC007FEE6F /* EKPDayScheduleViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -520,6 +528,8 @@
 				1E7992521A377C6F00383BE6 /* EKPEventAPI.m */,
 				1E9A82EF1A3A097C00CD838F /* EKPResultAPI.h */,
 				1E9A82F01A3A097C00CD838F /* EKPResultAPI.m */,
+				1ED3A5F31A3BF7F9007FEE6F /* EKPTimetableAPI.h */,
+				1ED3A5F41A3BF7F9007FEE6F /* EKPTimetableAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -715,6 +725,8 @@
 				1E7992831A37831E00383BE6 /* AFURLConnectionOperation.m in Sources */,
 				1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */,
 				1E7992811A37831E00383BE6 /* AFNetworkReachabilityManager.m in Sources */,
+				1ED3A5F51A3BF7F9007FEE6F /* EKPTimetableAPI.m in Sources */,
+				1ED3A5F81A3C02BC007FEE6F /* EKPDayScheduleViewController.m in Sources */,
 				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
 				1EA3B7751A33408C00E88711 /* EKPProfile.m in Sources */,
 				1E79927F1A37831E00383BE6 /* AFHTTPRequestOperationManager.m in Sources */,
