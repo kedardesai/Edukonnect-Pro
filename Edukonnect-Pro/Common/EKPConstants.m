@@ -98,6 +98,14 @@ NSString *const TIMETABLE_API_END_TIME = @"end_time";
 NSString *const TIMETABLE_API_STATUS = @"status";
 NSString *const TIMETABLE_API_MESSAGE = @"message";
 
+#pragma mark GALLERY-API Constants
+NSString *const GALLERY_API_GALLERY = @"gallery";
+NSString *const GALLERY_API_GALLERY_ID = @"gallery_id";
+NSString *const GALLERY_API_GALLERY_NAME = @"gallery_name";
+NSString *const GALLERY_API_GALLERY_DESC = @"description";
+NSString *const GALLERY_API_GALLERY_NEXT_PAGE = @"nextpage";
+NSString *const GALLERY_API_GALLERY_IMAGE_LINK = @"imagelink";
+
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";
 NSString *const MESSAGE_KEY = @"message";

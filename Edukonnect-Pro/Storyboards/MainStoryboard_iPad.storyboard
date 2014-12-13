@@ -547,6 +547,7 @@
                         <segue destination="dDV-GU-E0H" kind="push" identifier="DashboardToEventListSegue" id="wpC-tN-Dec"/>
                         <segue destination="tvi-zi-YzO" kind="push" identifier="DashboardToExamListSegue" id="jrF-IJ-Mj5"/>
                         <segue destination="3Ac-eQ-IRM" kind="push" identifier="DashboardToTimetableSegue" id="hlI-Df-Gmr"/>
+                        <segue destination="FbP-uj-UgD" kind="push" identifier="DashboardToGalleryListSegue" id="I9t-gW-5Kc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -601,6 +602,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEr-Fe-96W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2458" y="-1500"/>
+        </scene>
+        <!--Gallery List View Controller-->
+        <scene sceneID="dze-TH-Y9k">
+            <objects>
+                <viewController storyboardIdentifier="EKPGalleryListViewController" id="FbP-uj-UgD" customClass="EKPGalleryListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NVQ-gX-02F"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4e-2B-jEI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wz0-HR-GAC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fpn-ke-MOt">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="galleryFolderCell" id="GLI-9X-Ln3">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GLI-9X-Ln3" id="t0i-S6-Nih">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-DX-6nE">
+                                                    <rect key="frame" x="19" y="8" width="560" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-pV-4Eo">
+                                                    <rect key="frame" x="19" y="37" width="731" height="75"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FbP-uj-UgD" id="9Tg-aQ-fmg"/>
+                                    <outlet property="delegate" destination="FbP-uj-UgD" id="lzt-s6-ya4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ldh-d7-e18"/>
+                    <connections>
+                        <outlet property="galleryListTableView" destination="Fpn-ke-MOt" id="QXb-ia-Clw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Yd-cF-1uZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="-368"/>
         </scene>
         <!--Day Schedule View Controller-->
         <scene sceneID="HJN-OG-anK">

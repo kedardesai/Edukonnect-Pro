@@ -156,7 +156,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             break;
             
         case kEKPDashboardMenuGallary:
-            NSLog(@"Show Photo Gallary.");
+            [self performSegueWithIdentifier:@"DashboardToGalleryListSegue" sender:self];
             break;
             
         case kEKPDashboardMenuEduSen:
