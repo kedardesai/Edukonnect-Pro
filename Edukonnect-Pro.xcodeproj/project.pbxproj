@@ -31,6 +31,7 @@
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
 		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
 		1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */; };
+		1E466FC61A3E10750024D350 /* EKPEduSenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E466FC51A3E10750024D350 /* EKPEduSenViewController.m */; };
 		1E7992531A377C6F00383BE6 /* EKPEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7992521A377C6F00383BE6 /* EKPEventAPI.m */; };
 		1E7992561A377E3B00383BE6 /* EKPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7992551A377E3B00383BE6 /* EKPEvent.m */; };
 		1E79927E1A37831E00383BE6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E79925A1A37831E00383BE6 /* AFHTTPRequestOperation.m */; };
@@ -181,6 +182,8 @@
 		1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSingleton.h; sourceTree = "<group>"; };
 		1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSingleton.m; sourceTree = "<group>"; };
 		1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1E466FC41A3E10750024D350 /* EKPEduSenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEduSenViewController.h; sourceTree = "<group>"; };
+		1E466FC51A3E10750024D350 /* EKPEduSenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEduSenViewController.m; sourceTree = "<group>"; };
 		1E7992511A377C6F00383BE6 /* EKPEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEventAPI.h; sourceTree = "<group>"; };
 		1E7992521A377C6F00383BE6 /* EKPEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEventAPI.m; sourceTree = "<group>"; };
 		1E7992541A377E3B00383BE6 /* EKPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEvent.h; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 				1ED3A5F71A3C02BC007FEE6F /* EKPDayScheduleViewController.m */,
 				1ED3A68C1A3C99F0007FEE6F /* EKPGalleryListViewController.h */,
 				1ED3A68D1A3C99F0007FEE6F /* EKPGalleryListViewController.m */,
+				1E466FC41A3E10750024D350 /* EKPEduSenViewController.h */,
+				1E466FC51A3E10750024D350 /* EKPEduSenViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1095,6 +1100,7 @@
 				1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */,
 				1E7992801A37831E00383BE6 /* AFHTTPSessionManager.m in Sources */,
 				1E7992851A37831E00383BE6 /* AFURLResponseSerialization.m in Sources */,
+				1E466FC61A3E10750024D350 /* EKPEduSenViewController.m in Sources */,
 				1ED3A70A1A3CAF18007FEE6F /* PSTCollectionViewCell.m in Sources */,
 				1E9A82FD1A3A1B3000CD838F /* EKPExamListViewController.m in Sources */,
 				1ED3A70B1A3CAF18007FEE6F /* PSTCollectionViewController.m in Sources */,

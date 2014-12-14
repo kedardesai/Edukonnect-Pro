@@ -56,9 +56,9 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     self.popOver = [DXPopover new];
     _popoverWidth = 150;// CGRectGetWidth(self.view.bounds);
     
-    self.configMenusArray = [[NSMutableArray alloc] initWithObjects:@"Edu Profile", @"Switch Child", @"School Info", nil];
+    self.configMenusArray = [[NSMutableArray alloc] initWithObjects:@"Edu Profile", @"Switch Child", @"School Info", @"Facebook", @"Twitter", @"Google +", nil];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 150, 132)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 150, 264)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -160,7 +160,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             break;
             
         case kEKPDashboardMenuEduSen:
-            NSLog(@"Show WebView.");
+            [self performSegueWithIdentifier:@"DashboardToEduSenSegue" sender:self];
             break;
             
         case kEKPDashboardMenuLibrary:
@@ -202,6 +202,9 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     } else if (segmentedControl.selectedSegmentIndex == 2) { // For Edu Resources
         [self.eduResourcesWebView setHidden:NO];
         [self.dashboardMenuCollectionView setHidden:YES];
+        EKPStudent *currentStudent = [EKPSingleton loadStudent];
+        NSLog(@"URL ::: %@",[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]);
+        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
     }
 }
 
@@ -311,6 +314,18 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             }];
         }];
     }];
+}
+
+#pragma mark UIWebViewDelegate Methods
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"Loaded successfully.");
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Failed with ERROR ::: %@",[error localizedDescription]);
 }
 
 

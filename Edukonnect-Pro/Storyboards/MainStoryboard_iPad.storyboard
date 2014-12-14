@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="fB9-W9-Ltg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="fB9-W9-Ltg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -548,6 +548,7 @@
                         <segue destination="tvi-zi-YzO" kind="push" identifier="DashboardToExamListSegue" id="jrF-IJ-Mj5"/>
                         <segue destination="3Ac-eQ-IRM" kind="push" identifier="DashboardToTimetableSegue" id="hlI-Df-Gmr"/>
                         <segue destination="FbP-uj-UgD" kind="push" identifier="DashboardToGalleryListSegue" id="I9t-gW-5Kc"/>
+                        <segue destination="TZF-yV-r1q" kind="push" identifier="DashboardToEduSenSegue" id="WTo-St-ocN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -656,6 +657,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yd-cF-1uZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2458" y="-368"/>
+        </scene>
+        <!--Edu Sen View Controller-->
+        <scene sceneID="yIh-wU-cWJ">
+            <objects>
+                <viewController storyboardIdentifier="EKPEduSenViewController" id="TZF-yV-r1q" customClass="EKPEduSenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8al-6j-T6z"/>
+                        <viewControllerLayoutGuide type="bottom" id="DwG-q2-Lho"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fkz-xK-NEr">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsD-Da-KeX">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TZF-yV-r1q" id="1uW-Cf-vn4"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vYl-YE-49w"/>
+                    <connections>
+                        <outlet property="webView" destination="FsD-Da-KeX" id="wxj-J0-56r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlx-04-cJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="748"/>
         </scene>
         <!--Day Schedule View Controller-->
         <scene sceneID="HJN-OG-anK">
