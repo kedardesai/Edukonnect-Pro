@@ -29,7 +29,8 @@ NSString *const EKP_NOTICE_LIST = @"noticeList";
 NSString *const EKP_EVENT_LIST = @"eventList";
 
 #pragma API-URL Constants
-NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
+//NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
+NSString *const BASE_API_URL = @"http://main.edukonnect.net.in/";
 NSString *const REGISTRATION_API_URL = @"registration_response.php?";
 NSString *const LOGIN_API_URL = @"login_response.php?";
 NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
@@ -41,6 +42,8 @@ NSString *const RESULT_API_URL = @"result_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
 NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
+NSString *const TRANSPORT_LIST_API_URL = @"transport_list.php?";
+NSString *const BUS_LOCATION_API_URL = @"transport_details.php?";
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
@@ -105,6 +108,17 @@ NSString *const GALLERY_API_GALLERY_NAME = @"gallery_name";
 NSString *const GALLERY_API_GALLERY_DESC = @"description";
 NSString *const GALLERY_API_GALLERY_NEXT_PAGE = @"nextpage";
 NSString *const GALLERY_API_GALLERY_IMAGE_LINK = @"imagelink";
+
+#pragma mark TRANSPORT-API Constants
+NSString *const TRANSPORT_API_ID = @"transport_id";
+NSString *const TRANSPORT_API_ROUTE_NAME = @"route_name";
+NSString *const TRANSPORT_API_DRIVER_NAME = @"driver_name";
+NSString *const TRANSPORT_API_DESC = @"description";
+NSString *const TRANSPORT_API_ROUTE_FARE = @"route_fare";
+NSString *const TRANSPORT_API_MOBILE1 = @"mobile1";
+NSString *const TRANSPORT_API_MOBILE2 = @"mobile2";
+NSString *const TRANSPORT_API_LATITUDE = @"latitude";
+NSString *const TRANSPORT_API_LONGITUDE = @"longitude";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

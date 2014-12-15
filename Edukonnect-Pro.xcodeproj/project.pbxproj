@@ -64,6 +64,12 @@
 		1E9F01E31A34239700AAC885 /* EKPMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F01E01A34239700AAC885 /* EKPMenuCollectionViewCell.m */; };
 		1E9F01E41A34239700AAC885 /* EKPMenuCollectionViewCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9F01E11A34239700AAC885 /* EKPMenuCollectionViewCell_iPad.xib */; };
 		1E9F01E51A34239700AAC885 /* EKPMenuCollectionViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9F01E21A34239700AAC885 /* EKPMenuCollectionViewCell_iPhone.xib */; };
+		1EA159551A3F551C00860F1A /* EKPTransportAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA159541A3F551C00860F1A /* EKPTransportAPI.m */; };
+		1EA159581A3F568A00860F1A /* EKPTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA159571A3F568A00860F1A /* EKPTransport.m */; };
+		1EA1595B1A3F60F000860F1A /* EKPTransportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1595A1A3F60F000860F1A /* EKPTransportViewController.m */; };
+		1EA1595E1A3F654300860F1A /* EKPBusLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1595D1A3F654300860F1A /* EKPBusLocationViewController.m */; };
+		1EA159601A3F665000860F1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA1595F1A3F665000860F1A /* MapKit.framework */; };
+		1EA159651A3F6BC300860F1A /* EKPMapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA159641A3F6BC300860F1A /* EKPMapPin.m */; };
 		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
 		1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */; };
 		1EA3720F1A2E3AD000615958 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3720E1A2E3AD000615958 /* DXPopover.m */; };
@@ -248,6 +254,17 @@
 		1E9F01E01A34239700AAC885 /* EKPMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		1E9F01E11A34239700AAC885 /* EKPMenuCollectionViewCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell_iPad.xib; sourceTree = "<group>"; };
 		1E9F01E21A34239700AAC885 /* EKPMenuCollectionViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKPMenuCollectionViewCell_iPhone.xib; sourceTree = "<group>"; };
+		1EA159531A3F551C00860F1A /* EKPTransportAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTransportAPI.h; sourceTree = "<group>"; };
+		1EA159541A3F551C00860F1A /* EKPTransportAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTransportAPI.m; sourceTree = "<group>"; };
+		1EA159561A3F568A00860F1A /* EKPTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTransport.h; sourceTree = "<group>"; };
+		1EA159571A3F568A00860F1A /* EKPTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTransport.m; sourceTree = "<group>"; };
+		1EA159591A3F60F000860F1A /* EKPTransportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTransportViewController.h; sourceTree = "<group>"; };
+		1EA1595A1A3F60F000860F1A /* EKPTransportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTransportViewController.m; sourceTree = "<group>"; };
+		1EA1595C1A3F654300860F1A /* EKPBusLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPBusLocationViewController.h; sourceTree = "<group>"; };
+		1EA1595D1A3F654300860F1A /* EKPBusLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPBusLocationViewController.m; sourceTree = "<group>"; };
+		1EA1595F1A3F665000860F1A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1EA159631A3F6BC300860F1A /* EKPMapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPMapPin.h; sourceTree = "<group>"; };
+		1EA159641A3F6BC300860F1A /* EKPMapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPMapPin.m; sourceTree = "<group>"; };
 		1EA25F131A013D0100EAA661 /* UIColor+EKPColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EKPColor.h"; sourceTree = "<group>"; };
 		1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EKPColor.m"; sourceTree = "<group>"; };
 		1EA25F171A015B5D00EAA661 /* EKPRegistrationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPRegistrationAPI.h; sourceTree = "<group>"; };
@@ -386,6 +403,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA159601A3F665000860F1A /* MapKit.framework in Frameworks */,
 				1ED3A69C1A3CADE7007FEE6F /* ImageIO.framework in Frameworks */,
 				1ED3A69A1A3CADDE007FEE6F /* AssetsLibrary.framework in Frameworks */,
 				1ED3A6981A3CADD6007FEE6F /* QuartzCore.framework in Frameworks */,
@@ -431,6 +449,7 @@
 		1B4A30FE19D967000067B674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EA1595F1A3F665000860F1A /* MapKit.framework */,
 				1ED3A69B1A3CADE7007FEE6F /* ImageIO.framework */,
 				1ED3A6991A3CADDE007FEE6F /* AssetsLibrary.framework */,
 				1ED3A6971A3CADD6007FEE6F /* QuartzCore.framework */,
@@ -530,6 +549,10 @@
 				1ED3A68D1A3C99F0007FEE6F /* EKPGalleryListViewController.m */,
 				1E466FC41A3E10750024D350 /* EKPEduSenViewController.h */,
 				1E466FC51A3E10750024D350 /* EKPEduSenViewController.m */,
+				1EA159591A3F60F000860F1A /* EKPTransportViewController.h */,
+				1EA1595A1A3F60F000860F1A /* EKPTransportViewController.m */,
+				1EA1595C1A3F654300860F1A /* EKPBusLocationViewController.h */,
+				1EA1595D1A3F654300860F1A /* EKPBusLocationViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -537,6 +560,7 @@
 		1B4A313519D969AF0067B674 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1EA159621A3F6BAE00860F1A /* EKPMapPin */,
 				1ED3A69D1A3CAF18007FEE6F /* MWPhotoBrowser */,
 				1EA372101A2E451300615958 /* MJPopUp */,
 				1E9F01DE1A34239700AAC885 /* EKPMenuCollectionViewCell */,
@@ -674,6 +698,15 @@
 			path = KDTextField/EKPMenuCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		1EA159621A3F6BAE00860F1A /* EKPMapPin */ = {
+			isa = PBXGroup;
+			children = (
+				1EA159631A3F6BC300860F1A /* EKPMapPin.h */,
+				1EA159641A3F6BC300860F1A /* EKPMapPin.m */,
+			);
+			path = EKPMapPin;
+			sourceTree = "<group>";
+		};
 		1EA25F161A015B3B00EAA661 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +726,8 @@
 				1ED3A5F41A3BF7F9007FEE6F /* EKPTimetableAPI.m */,
 				1ED3A68F1A3CA132007FEE6F /* EKPGalleryAPI.h */,
 				1ED3A6901A3CA132007FEE6F /* EKPGalleryAPI.m */,
+				1EA159531A3F551C00860F1A /* EKPTransportAPI.h */,
+				1EA159541A3F551C00860F1A /* EKPTransportAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -744,6 +779,8 @@
 				1E9A82F31A3A142E00CD838F /* EKPExam.m */,
 				1E9A82F51A3A17A400CD838F /* EKPSubjectResult.h */,
 				1E9A82F61A3A17A400CD838F /* EKPSubjectResult.m */,
+				1EA159561A3F568A00860F1A /* EKPTransport.h */,
+				1EA159571A3F568A00860F1A /* EKPTransport.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1005,6 +1042,7 @@
 				1ED3A71C1A3CAF18007FEE6F /* SDWebImageDownloader.m in Sources */,
 				1ED3A71B1A3CAF18007FEE6F /* SDWebImageDecoder.m in Sources */,
 				1ED3A70F1A3CAF18007FEE6F /* PSTCollectionViewLayout.m in Sources */,
+				1EA159551A3F551C00860F1A /* EKPTransportAPI.m in Sources */,
 				1B4A313D19DAC1390067B674 /* EKPConstants.m in Sources */,
 				1B4A313919D969F30067B674 /* KDTextField.m in Sources */,
 				1EA3B76F1A32B7C100E88711 /* EKPEduProfileViewController.m in Sources */,
@@ -1068,6 +1106,7 @@
 				1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */,
 				1ED3A70E1A3CAF18007FEE6F /* PSTCollectionViewItemKey.m in Sources */,
 				1ED3A7071A3CAF18007FEE6F /* README.mdown in Sources */,
+				1EA159651A3F6BC300860F1A /* EKPMapPin.m in Sources */,
 				1ED3A7111A3CAF18007FEE6F /* PSTGridLayoutInfo.m in Sources */,
 				1E7992811A37831E00383BE6 /* AFNetworkReachabilityManager.m in Sources */,
 				1ED3A7061A3CAF18007FEE6F /* MBProgressHUD.m in Sources */,
@@ -1076,9 +1115,11 @@
 				1ED3A68E1A3C99F0007FEE6F /* EKPGalleryListViewController.m in Sources */,
 				1ED3A5F81A3C02BC007FEE6F /* EKPDayScheduleViewController.m in Sources */,
 				1ED3A7011A3CAF18007FEE6F /* MWPhotoBrowser.m in Sources */,
+				1EA1595B1A3F60F000860F1A /* EKPTransportViewController.m in Sources */,
 				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
 				1ED3A7091A3CAF18007FEE6F /* PSTCollectionView.m in Sources */,
 				1EA3B7751A33408C00E88711 /* EKPProfile.m in Sources */,
+				1EA159581A3F568A00860F1A /* EKPTransport.m in Sources */,
 				1E79927F1A37831E00383BE6 /* AFHTTPRequestOperationManager.m in Sources */,
 				1ED3A71A1A3CAF18007FEE6F /* SDWebImageCompat.m in Sources */,
 				1EA372151A2E451300615958 /* MJPopupBackgroundView.m in Sources */,
@@ -1092,6 +1133,7 @@
 				1EA3B7721A333C9100E88711 /* EKPProfileAPI.m in Sources */,
 				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,
 				1E79928E1A37831E00383BE6 /* UIWebView+AFNetworking.m in Sources */,
+				1EA1595E1A3F654300860F1A /* EKPBusLocationViewController.m in Sources */,
 				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
 				1E79928B1A37831E00383BE6 /* UIImageView+AFNetworking.m in Sources */,
 				1ED3A7171A3CAF18007FEE6F /* MKAnnotationView+WebCache.m in Sources */,
