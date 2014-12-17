@@ -45,6 +45,11 @@ NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
 NSString *const TRANSPORT_LIST_API_URL = @"transport_list.php?";
 NSString *const BUS_LOCATION_API_URL = @"transport_details.php?";
 NSString *const DORMITORIES_API_URL = @"dormitories.php?";
+NSString *const LIBRARY_BOOK_LIST_API_URL = @"lib_BookList.php?";
+NSString *const LIBRARY_BOOK_SEARCH_API_URL = @"lib_BookList_Search.php?";
+NSString *const LIBRARY_MY_BOOKS_API_URL = @"MyBookList.php?";
+NSString *const LIBRARY_REQUEST_BOOK_API_URL = @"RequestBook.php?";
+NSString *const LIBRARY_CANCEL_REQUEST_BOOK_API_URL = @"CancelRequestBook.php?";
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
@@ -128,6 +133,17 @@ NSString *const DORMITORIES_API_NAME = @"name";
 NSString *const DORMITORIES_API_ROOMS = @"number_of_room";
 NSString *const DORMITORIES_API_DESC = @"description";
 NSString *const DORMITORIES_API_NEXT_PAGE = @"nextpage";
+
+#pragma mark LIBRARY-API Constants
+NSString *const LIBRARY_API_TAG = @"book";
+NSString *const LIBRARY_API_ID = @"book_id";
+NSString *const LIBRARY_API_NAME = @"name";
+NSString *const LIBRARY_API_CATEGORY = @"category";
+NSString *const LIBRARY_API_DESC = @"description";
+NSString *const LIBRARY_API_AUTHOR = @"author";
+NSString *const LIBRARY_API_CLASS_ID = @"class_id";
+NSString *const LIBRARY_API_STATUS = @"status";
+NSString *const LIBRARY_API_NEXT_PAGE = @"nextpage";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

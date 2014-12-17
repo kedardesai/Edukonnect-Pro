@@ -561,6 +561,7 @@
                         <segue destination="u8s-Gp-vap" kind="push" identifier="DashboardToEduSenSegue" id="okC-Ue-61O"/>
                         <segue destination="12A-Hh-uZc" kind="push" identifier="DashboardToTransportSegue" id="0dY-hq-tPI"/>
                         <segue destination="ceJ-Lg-EaH" kind="push" identifier="DashboardToBoardingSegue" id="DkC-Pj-5EB"/>
+                        <segue destination="RZu-Fh-0DA" kind="push" identifier="DashboardToLibrarySegue" id="24d-7x-rc8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-7N-I2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -937,6 +938,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idX-Hp-nS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="3279"/>
+        </scene>
+        <!--Library View Controller-->
+        <scene sceneID="Een-C0-kQF">
+            <objects>
+                <viewController storyboardIdentifier="EKPLibraryViewController" id="RZu-Fh-0DA" customClass="EKPLibraryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ndg-UM-omw"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ZN-9O-4lZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Zv-rr-1Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I61-Im-4XA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryCell" id="BhP-RK-ekM">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BhP-RK-ekM" id="ie9-iJ-pLN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOd-5t-IZf">
+                                                    <rect key="frame" x="15" y="14" width="272" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RZu-Fh-0DA" id="aD0-jd-CCy"/>
+                                    <outlet property="delegate" destination="RZu-Fh-0DA" id="087-Cl-mm3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yyq-lB-XDl"/>
+                    <connections>
+                        <outlet property="libraryMenuListTableView" destination="I61-Im-4XA" id="kAz-kv-B4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Mm-R3-Jgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="3921"/>
         </scene>
         <!--Bus Location View Controller-->
         <scene sceneID="l3U-hJ-WbW">
