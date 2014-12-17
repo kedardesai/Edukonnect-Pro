@@ -172,7 +172,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             break;
             
         case kEKPDashboardMenuBoarding:
-            NSLog(@"Show Boarding.");
+            [self performSegueWithIdentifier:@"DashboardToBoardingSegue" sender:self];
             break;
             
         case kEKPDashboardMenuPayment:

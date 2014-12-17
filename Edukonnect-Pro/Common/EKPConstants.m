@@ -44,6 +44,7 @@ NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
 NSString *const TRANSPORT_LIST_API_URL = @"transport_list.php?";
 NSString *const BUS_LOCATION_API_URL = @"transport_details.php?";
+NSString *const DORMITORIES_API_URL = @"dormitories.php?";
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
@@ -119,6 +120,14 @@ NSString *const TRANSPORT_API_MOBILE1 = @"mobile1";
 NSString *const TRANSPORT_API_MOBILE2 = @"mobile2";
 NSString *const TRANSPORT_API_LATITUDE = @"latitude";
 NSString *const TRANSPORT_API_LONGITUDE = @"longitude";
+
+#pragma mark DORMITORY-API Constants
+NSString *const DORMITORIES_API_TAG = @"Dormitories";
+NSString *const DORMITORIES_API_ID = @"dormitory_id";
+NSString *const DORMITORIES_API_NAME = @"name";
+NSString *const DORMITORIES_API_ROOMS = @"number_of_room";
+NSString *const DORMITORIES_API_DESC = @"description";
+NSString *const DORMITORIES_API_NEXT_PAGE = @"nextpage";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";
