@@ -981,11 +981,84 @@
                     <navigationItem key="navigationItem" id="yyq-lB-XDl"/>
                     <connections>
                         <outlet property="libraryMenuListTableView" destination="I61-Im-4XA" id="kAz-kv-B4U"/>
+                        <segue destination="JzW-AC-arv" kind="push" identifier="LibraryToSearchSegue" id="vmp-hN-cBZ"/>
+                        <segue destination="GUK-qS-w7U" kind="push" identifier="LibraryToBookListSegue" id="B0U-vJ-aru"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Mm-R3-Jgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="3921"/>
+        </scene>
+        <!--Search Book View Controller-->
+        <scene sceneID="lJ2-XM-8qg">
+            <objects>
+                <viewController storyboardIdentifier="EKPSearchBookViewController" id="JzW-AC-arv" customClass="EKPSearchBookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zt3-ZL-0Q7"/>
+                        <viewControllerLayoutGuide type="bottom" id="2jv-PP-m49"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g1t-5G-Ufn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1j-yF-F9P" customClass="KDTextField">
+                                <rect key="frame" x="26" y="186" width="268" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JzW-AC-arv" id="E6f-ct-gde"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keyword" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haT-Bo-uP4">
+                                <rect key="frame" x="26" y="157" width="68" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUp-WD-0bR">
+                                <rect key="frame" x="26" y="260" width="268" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBtnClicked:" destination="JzW-AC-arv" eventType="touchUpInside" id="IhK-0v-Pcr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lwX-Bw-L19"/>
+                    <connections>
+                        <outlet property="keywordLabel" destination="haT-Bo-uP4" id="AsY-6R-t1w"/>
+                        <outlet property="keywordTextField" destination="f1j-yF-F9P" id="VIJ-Dc-8KQ"/>
+                        <outlet property="searchBtn" destination="LUp-WD-0bR" id="j09-Ku-sV0"/>
+                        <segue destination="GUK-qS-w7U" kind="push" identifier="SearchToBookListSegue" id="30Q-lo-Kep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuu-qJ-PC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="3883"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JP5-Yn-53g">
+            <objects>
+                <viewController id="GUK-qS-w7U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NhZ-Sh-Pgs"/>
+                        <viewControllerLayoutGuide type="bottom" id="77B-bg-cHd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d6C-fM-h3y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Xq-RO-s7h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ug-F8-7fs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043" y="3921"/>
         </scene>
         <!--Bus Location View Controller-->
         <scene sceneID="l3U-hJ-WbW">
@@ -1350,4 +1423,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="30Q-lo-Kep"/>
+    </inferredMetricsTieBreakers>
 </document>

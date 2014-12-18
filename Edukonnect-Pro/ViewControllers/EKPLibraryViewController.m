@@ -7,6 +7,10 @@
 //
 
 #import "EKPLibraryViewController.h"
+#import "EKPSearchBookViewController.h"
+#import "EKPBookListViewController.h"
+#import "EKPLibraryAPI.h"
+
 
 @interface EKPLibraryViewController ()
 
@@ -70,17 +74,55 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Clicked...");
+    NSString *segueIdentifier;
+    
+    self.bookListType = indexPath.row;
+    
+    switch (indexPath.row) {
+        case 0: // In case of All Books
+            segueIdentifier = @"LibraryToBookListSegue";
+            break;
+            
+        case 1: // In case of Search Books
+            segueIdentifier = @"LibraryToSearchSegue";
+            break;
+            
+        case 2: // In case of My Books
+            segueIdentifier = @"LibraryToBookListSegue";
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self performSegueWithIdentifier:segueIdentifier sender:self];
 }
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"LibraryToBookListSegue"]) {
+        // Go To Book List
+        NSMutableDictionary *resultDict = [[NSMutableDictionary alloc] init];
+        
+        if (self.bookListType == 0) {
+            resultDict = [EKPLibraryAPI getAllBooksForPageId:1];
+            
+        } else if (self.bookListType == 1) {
+            resultDict = [EKPLibraryAPI getMyBooksForPageId:1];
+        }
+        
+        EKPBookListViewController *bookListVC = (EKPBookListViewController *) segue.destinationViewController;
+        bookListVC.bookListDict = [[NSMutableDictionary alloc] initWithDictionary:resultDict];
+        bookListVC.bookListType = self.bookListType;
+        bookListVC.pageId = 1;
+        
+    } else if ([[segue identifier] isEqualToString:@"LibraryToSearchSegue"]) {
+        // Go To Search List
+        EKPSearchBookViewController *searchBookVC = (EKPSearchBookViewController *) segue.destinationViewController;
+        searchBookVC.bookListType = self.bookListType;
+    }
 }
-*/
 
 @end

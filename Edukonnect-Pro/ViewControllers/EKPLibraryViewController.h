@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) NSMutableArray *libraryMenuListArray;
 
+@property (nonatomic) NSInteger bookListType;
+
 @end
