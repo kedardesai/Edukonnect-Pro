@@ -109,7 +109,7 @@
         if (self.bookListType == 0) {
             resultDict = [EKPLibraryAPI getAllBooksForPageId:1];
             
-        } else if (self.bookListType == 1) {
+        } else if (self.bookListType == 2) {
             resultDict = [EKPLibraryAPI getMyBooksForPageId:1];
         }
         

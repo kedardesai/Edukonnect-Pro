@@ -26,4 +26,12 @@
 
 + (UIColor *)loadTableViewCellBgColor;
 
++ (UIColor *)loadMenuBgLightOrange;
+
++ (UIColor *)loadMenuBgDarkOrange;
+
++ (UIColor *)loadMenuBgLightSkyBlue;
+
++ (UIColor *)loadMenuBgDarkGreen;
+
 @end

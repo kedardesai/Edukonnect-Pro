@@ -33,6 +33,9 @@
 + (void)saveNoticeList:(NSMutableArray *)noticeList;
 + (NSMutableArray *)loadNoticeList;
 
++ (void)saveAlertList:(NSMutableArray *)alertList;
++ (NSMutableArray *)loadAlertList;
+
 + (void)saveEventList:(NSMutableArray *)eventList;
 + (NSMutableArray *)loadEventList;
 

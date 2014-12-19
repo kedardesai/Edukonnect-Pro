@@ -29,6 +29,7 @@ NSString *const EKP_STUDENT_LIST = @"studentList";
 NSString *const EKP_CURRENT_PROFILE = @"currentProfile";
 NSString *const EKP_NOTICE_LIST = @"noticeList";
 NSString *const EKP_EVENT_LIST = @"eventList";
+NSString *const EKP_ALERT_LIST = @"alertList";
 
 #pragma API-URL Constants
 //NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
@@ -37,7 +38,7 @@ NSString *const REGISTRATION_API_URL = @"registration_response.php?";
 NSString *const LOGIN_API_URL = @"login_response.php?";
 NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
 NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
-NSString *const NOTICE_API_URL = @"notice_list_response.php?";
+NSString *const ALERT_API_URL = @"notice_list_response.php?";
 NSString *const EVENT_API_URL = @"event_class_response.php?";
 NSString *const EXAM_LIST_API_URL = @"resultlist_response.php?";
 NSString *const RESULT_API_URL = @"result_response.php?";
@@ -59,6 +60,11 @@ NSString *const LOGIN_API_SCHOOL_ADDRESS = @"address";
 NSString *const LOGIN_API_SCHOOL_EMAIL = @"email";
 NSString *const LOGIN_API_SCHOOL_LOGO = @"logo";
 NSString *const LOGIN_API_SCHOOL_NAME = @"schoolname";
+NSString *const LOGIN_API_BASE_PATH = @"base_path";
+NSString *const LOGIN_API_FB_PATH = @"facebook_link";
+NSString *const LOGIN_API_TWITTER_PATH = @"twitter_link";
+NSString *const LOGIN_API_GOOGLEPLUS_PATH = @"googleplus_link";
+NSString *const LOGIN_API_ABOUT_SCHOOL = @"about_school";
 NSString *const LOGIN_API_STUDENT_DETAILS = @"student_details";
 NSString *const LOGIN_API_STUDENT_ADDRESS = @"address";
 NSString *const LOGIN_API_STUDENT_BIRTHDAY = @"birthday";
@@ -67,6 +73,7 @@ NSString *const LOGIN_API_STUDENT_GRNO = @"grno";
 NSString *const LOGIN_API_STUDENT_NAME = @"name";
 NSString *const LOGIN_API_STUDENT_ROLLNO = @"rollno";
 NSString *const LOGIN_API_STUDENT_SEX = @"sex";
+NSString *const LOGIN_API_STUDENT_ID = @"student_id";
 
 #pragma mark NOTICEBOARD-API Constants
 NSString *const NOTICEBOARD_API_NOTICE = @"notice";
@@ -75,6 +82,15 @@ NSString *const NOTICEBOARD_API_NOTICE_ID = @"noticeid";
 NSString *const NOTICEBOARD_API_HEADING = @"heading";
 NSString *const NOTICEBOARD_API_MESSAGE_DETAILS = @"msg_details";
 NSString *const NOTICEBOARD_API_TIME_STAMP = @"timestamp";
+
+#pragma mark ALERTS-API Constants
+NSString *const ALERT_API_NOTICE = @"notice";
+NSString *const ALERT_API_NEXT_PAGE = @"nextpage";
+NSString *const ALERT_API_NOTICE_ID = @"notice_id";
+NSString *const ALERT_API_HEADING = @"heading";
+NSString *const ALERT_API_MESSAGE = @"message";
+NSString *const ALERT_API_CREATED_BY = @"createdby";
+NSString *const ALERT_API_IS_SEEN = @"isseen";
 
 #pragma mark EVENTS-API Constants
 NSString *const EVENT_API_EVENT = @"event";

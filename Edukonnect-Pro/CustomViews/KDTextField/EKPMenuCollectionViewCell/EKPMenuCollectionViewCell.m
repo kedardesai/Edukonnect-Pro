@@ -41,57 +41,120 @@
     
     [self addSubview:self.cellView];
     
-    self.cellView.layer.borderColor = [[UIColor loadDarkGrayBorderColor] CGColor];
-    self.cellView.layer.borderWidth = 1.0f;
+    self.cellView.layer.borderColor = [[UIColor loadScreenBackgroundColor] CGColor];
+    self.colorView.layer.borderWidth = 0.6f;
+    self.colorView.layer.borderColor = [[UIColor loadScreenBackgroundColor] CGColor];
+    self.colorView.layer.cornerRadius = 6.0f;
 }
 
 - (void)showData
 {
     switch (self.ekpDashboardMenu) {
-        case kEKPDashboardMenuNotice:
-            NSLog(@"Show Notice.");
+        case kEKPDashboardMenuNoticeBoard:
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Noticeboard"]];
+            [self.nameLabel setText:@"Noticeboard"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuAlert:
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Alert"]];
+            [self.nameLabel setText:@"Alert"];
+            
+        }
             break;
             
         case kEKPDashboardMenuEvent:
-            NSLog(@"Show Events.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Events"]];
+            [self.nameLabel setText:@"Events"];
+            
+        }
             break;
             
         case kEKPDashboardMenuResult:
-            NSLog(@"Show Results.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Results"]];
+            [self.nameLabel setText:@"Results"];
+            
+        }
             break;
             
         case kEKPDashboardMenuTimeTable:
-            NSLog(@"Show Timetable.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Timetable"]];
+            [self.nameLabel setText:@"Timetable"];
+            
+        }
             break;
             
         case kEKPDashboardMenuGallary:
-            NSLog(@"Show Photo Gallary.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"PhotoGallery"]];
+            [self.nameLabel setText:@"Gallery"];
+            
+        }
             break;
             
         case kEKPDashboardMenuEduSen:
-            NSLog(@"Show WebView.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"EduSen"]];
+            [self.nameLabel setText:@"EduSen"];
+            
+        }
             break;
             
         case kEKPDashboardMenuLibrary:
-            NSLog(@"Show Library.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Library"]];
+            [self.nameLabel setText:@"Library"];
+            
+        }
             break;
             
         case kEKPDashboardMenuTransport:
-            NSLog(@"Show Transport.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Transport"]];
+            [self.nameLabel setText:@"Transport"];
+            
+        }
             break;
             
         case kEKPDashboardMenuBoarding:
-            NSLog(@"Show Boarding.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+            [self.nameLabel setText:@"Dormiatry"];
+            
+        }
             break;
             
         case kEKPDashboardMenuPayment:
-            NSLog(@"Show Payment.");
+        {
+            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Fees"]];
+            [self.nameLabel setText:@"Payment"];
+            
+        }
             break;
             
         default:
             NSLog(@"Show Default Image.");
             break;
     }
+    
+    self.nameLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 

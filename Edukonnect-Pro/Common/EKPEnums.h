@@ -18,7 +18,8 @@ typedef enum {
 
 typedef enum {
     // For Edu Notice
-    kEKPDashboardMenuNotice,
+    kEKPDashboardMenuNoticeBoard,
+    kEKPDashboardMenuAlert,
     kEKPDashboardMenuEvent,
     kEKPDashboardMenuResult,
     kEKPDashboardMenuTimeTable,

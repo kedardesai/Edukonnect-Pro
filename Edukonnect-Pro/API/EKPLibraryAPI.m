@@ -81,7 +81,7 @@
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&pageid=%ld&studentid=%@", BASE_API_URL, LIBRARY_MY_BOOKS_API_URL, currentStudent.studentSchoolCode, (long)pageId, currentStudent.studentGRNo];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&pageid=%ld&studentid=%@", BASE_API_URL, LIBRARY_MY_BOOKS_API_URL, currentStudent.studentSchoolCode, (long)pageId, currentStudent.studentId];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -114,7 +114,7 @@
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%ld&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_REQUEST_BOOK_API_URL, (long)bookId, currentStudent.studentGRNo, currentStudent.studentSchoolCode];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%ld&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_REQUEST_BOOK_API_URL, (long)bookId, currentStudent.studentId, currentStudent.studentSchoolCode];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -147,7 +147,7 @@
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%ld&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_CANCEL_REQUEST_BOOK_API_URL, (long)bookId, currentStudent.studentGRNo, currentStudent.studentSchoolCode];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%ld&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_CANCEL_REQUEST_BOOK_API_URL, (long)bookId, currentStudent.studentId, currentStudent.studentSchoolCode];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];

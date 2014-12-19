@@ -30,6 +30,10 @@
 		1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */; };
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
 		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
+		1E37F08D1A44AB06005BD6C0 /* EKPBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F08C1A44AB06005BD6C0 /* EKPBook.m */; };
+		1E37F0901A44C6C1005BD6C0 /* EKPAlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F08F1A44C6C1005BD6C0 /* EKPAlertAPI.m */; };
+		1E37F0931A44C7C3005BD6C0 /* EKPAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F0921A44C7C3005BD6C0 /* EKPAlert.m */; };
+		1E37F0961A44C900005BD6C0 /* EKPAlertListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F0951A44C900005BD6C0 /* EKPAlertListViewController.m */; };
 		1E454DE319FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */; };
 		1E466FC61A3E10750024D350 /* EKPEduSenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E466FC51A3E10750024D350 /* EKPEduSenViewController.m */; };
 		1E65819B1A41FDB3002FFD58 /* EKPDormitoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E65819A1A41FDB3002FFD58 /* EKPDormitoriesViewController.m */; };
@@ -194,6 +198,14 @@
 		1E2A1A9B1A001C61000B7695 /* EKPEnums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEnums.m; sourceTree = "<group>"; };
 		1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSingleton.h; sourceTree = "<group>"; };
 		1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSingleton.m; sourceTree = "<group>"; };
+		1E37F08B1A44AB06005BD6C0 /* EKPBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPBook.h; sourceTree = "<group>"; };
+		1E37F08C1A44AB06005BD6C0 /* EKPBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPBook.m; sourceTree = "<group>"; };
+		1E37F08E1A44C6C1005BD6C0 /* EKPAlertAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPAlertAPI.h; sourceTree = "<group>"; };
+		1E37F08F1A44C6C1005BD6C0 /* EKPAlertAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPAlertAPI.m; sourceTree = "<group>"; };
+		1E37F0911A44C7C3005BD6C0 /* EKPAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPAlert.h; sourceTree = "<group>"; };
+		1E37F0921A44C7C3005BD6C0 /* EKPAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPAlert.m; sourceTree = "<group>"; };
+		1E37F0941A44C900005BD6C0 /* EKPAlertListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPAlertListViewController.h; sourceTree = "<group>"; };
+		1E37F0951A44C900005BD6C0 /* EKPAlertListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPAlertListViewController.m; sourceTree = "<group>"; };
 		1E454DE219FEBB6D00C9C2D9 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		1E466FC41A3E10750024D350 /* EKPEduSenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEduSenViewController.h; sourceTree = "<group>"; };
 		1E466FC51A3E10750024D350 /* EKPEduSenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEduSenViewController.m; sourceTree = "<group>"; };
@@ -556,6 +568,8 @@
 				1EA3B76E1A32B7C100E88711 /* EKPEduProfileViewController.m */,
 				1E9F01DB1A3420FF00AAC885 /* EKPNoticeListViewController.h */,
 				1E9F01DC1A3420FF00AAC885 /* EKPNoticeListViewController.m */,
+				1E37F0941A44C900005BD6C0 /* EKPAlertListViewController.h */,
+				1E37F0951A44C900005BD6C0 /* EKPAlertListViewController.m */,
 				1E9CEB561A3730E10069C150 /* EKPEventListViewController.h */,
 				1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */,
 				1E9A82FB1A3A1B3000CD838F /* EKPExamListViewController.h */,
@@ -747,6 +761,8 @@
 				1EA3B7711A333C9100E88711 /* EKPProfileAPI.m */,
 				1E9CEB501A371B190069C150 /* EKPNoticeAPI.h */,
 				1E9CEB511A371B190069C150 /* EKPNoticeAPI.m */,
+				1E37F08E1A44C6C1005BD6C0 /* EKPAlertAPI.h */,
+				1E37F08F1A44C6C1005BD6C0 /* EKPAlertAPI.m */,
 				1E7992511A377C6F00383BE6 /* EKPEventAPI.h */,
 				1E7992521A377C6F00383BE6 /* EKPEventAPI.m */,
 				1E9A82EF1A3A097C00CD838F /* EKPResultAPI.h */,
@@ -806,6 +822,8 @@
 				1EA3B7741A33408C00E88711 /* EKPProfile.m */,
 				1E9CEB531A3724CB0069C150 /* EKPNotice.h */,
 				1E9CEB541A3724CB0069C150 /* EKPNotice.m */,
+				1E37F0911A44C7C3005BD6C0 /* EKPAlert.h */,
+				1E37F0921A44C7C3005BD6C0 /* EKPAlert.m */,
 				1E7992541A377E3B00383BE6 /* EKPEvent.h */,
 				1E7992551A377E3B00383BE6 /* EKPEvent.m */,
 				1E9A82F21A3A142E00CD838F /* EKPExam.h */,
@@ -816,6 +834,8 @@
 				1EA159571A3F568A00860F1A /* EKPTransport.m */,
 				1E65819C1A420043002FFD58 /* EKPDormitory.h */,
 				1E65819D1A420043002FFD58 /* EKPDormitory.m */,
+				1E37F08B1A44AB06005BD6C0 /* EKPBook.h */,
+				1E37F08C1A44AB06005BD6C0 /* EKPBook.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1089,6 +1109,7 @@
 				1ED3A7191A3CAF18007FEE6F /* SDImageCache.m in Sources */,
 				1ED3A7231A3CAF18007FEE6F /* UIImage+WebP.m in Sources */,
 				1ED3A7051A3CAF18007FEE6F /* DACircularProgressView.m in Sources */,
+				1E37F08D1A44AB06005BD6C0 /* EKPBook.m in Sources */,
 				1E7992871A37831E00383BE6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1ED3A7031A3CAF18007FEE6F /* MWTapDetectingView.m in Sources */,
 				1ED3A71E1A3CAF18007FEE6F /* SDWebImageManager.m in Sources */,
@@ -1149,11 +1170,13 @@
 				1ED3A7071A3CAF18007FEE6F /* README.mdown in Sources */,
 				1EA159651A3F6BC300860F1A /* EKPMapPin.m in Sources */,
 				1E6581A71A421133002FFD58 /* EKPLibraryViewController.m in Sources */,
+				1E37F0961A44C900005BD6C0 /* EKPAlertListViewController.m in Sources */,
 				1ED3A7111A3CAF18007FEE6F /* PSTGridLayoutInfo.m in Sources */,
 				1E7992811A37831E00383BE6 /* AFNetworkReachabilityManager.m in Sources */,
 				1ED3A7061A3CAF18007FEE6F /* MBProgressHUD.m in Sources */,
 				1ED3A7141A3CAF18007FEE6F /* PSTGridLayoutSection.m in Sources */,
 				1ED3A5F51A3BF7F9007FEE6F /* EKPTimetableAPI.m in Sources */,
+				1E37F0931A44C7C3005BD6C0 /* EKPAlert.m in Sources */,
 				1ED3A68E1A3C99F0007FEE6F /* EKPGalleryListViewController.m in Sources */,
 				1ED3A5F81A3C02BC007FEE6F /* EKPDayScheduleViewController.m in Sources */,
 				1ED3A7011A3CAF18007FEE6F /* MWPhotoBrowser.m in Sources */,
@@ -1170,6 +1193,7 @@
 				1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */,
 				1ED3A7001A3CAF18007FEE6F /* MWPhoto.m in Sources */,
 				1ED3A7221A3CAF18007FEE6F /* UIImage+MultiFormat.m in Sources */,
+				1E37F0901A44C6C1005BD6C0 /* EKPAlertAPI.m in Sources */,
 				1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */,
 				1ED3A7101A3CAF18007FEE6F /* PSTCollectionViewUpdateItem.m in Sources */,
 				1EA3B7721A333C9100E88711 /* EKPProfileAPI.m in Sources */,

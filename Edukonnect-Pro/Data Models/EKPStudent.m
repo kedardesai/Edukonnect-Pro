@@ -18,6 +18,23 @@
         self.studentSchoolCode = @"";
         self.studentUsername = @"";
         self.studentPassword = @"";
+        self.studentAboutSchool = @"";
+        self.studentAddress = @"";
+        self.studentBasePath = @"";
+        self.studentBirthday = @"";
+        self.studentClass = @"";
+        self.studentFBLink = @"";
+        self.studentGooglePlusLink = @"";
+        self.studentGRNo = @"";
+        self.studentId = @"";
+        self.studentName = @"";
+        self.studentRollNo = @"";
+        self.studentSchoolAddress = @"";
+        self.studentSchoolEmail = @"";
+        self.studentSchoolLogo = @"";
+        self.studentSchoolName = @"";
+        self.studentSex = @"";
+        self.studentTwitterLink = @"";
     }
     
     return self;
@@ -43,6 +60,12 @@
         self.studentName = [decoder decodeObjectForKey:@"studentName"];
         self.studentRollNo = [decoder decodeObjectForKey:@"studentRollNo"];
         self.studentSex = [decoder decodeObjectForKey:@"studentSex"];
+        self.studentTwitterLink = [decoder decodeObjectForKey:@"studentTwitterLink"];
+        self.studentId = [decoder decodeObjectForKey:@"studentId"];
+        self.studentGooglePlusLink = [decoder decodeObjectForKey:@"studentGooglePlusLink"];
+        self.studentFBLink = [decoder decodeObjectForKey:@"studentFBLink"];
+        self.studentBasePath = [decoder decodeObjectForKey:@"studentBasePath"];
+        self.studentAboutSchool = [decoder decodeObjectForKey:@"studentAboutSchool"];
     }
     return self;
 }
@@ -66,6 +89,12 @@
     [encoder encodeObject:self.studentName forKey:@"studentName"];
     [encoder encodeObject:self.studentRollNo forKey:@"studentRollNo"];
     [encoder encodeObject:self.studentSex forKey:@"studentSex"];
+    [encoder encodeObject:self.studentTwitterLink forKey:@"studentTwitterLink"];
+    [encoder encodeObject:self.studentId forKey:@"studentId"];
+    [encoder encodeObject:self.studentGooglePlusLink forKey:@"studentGooglePlusLink"];
+    [encoder encodeObject:self.studentFBLink forKey:@"studentFBLink"];
+    [encoder encodeObject:self.studentBasePath forKey:@"studentBasePath"];
+    [encoder encodeObject:self.studentAboutSchool forKey:@"studentAboutSchool"];
 }
 
 #pragma mark Public Methods
@@ -85,6 +114,24 @@
     
     if (![[schoolDict objectForKey:LOGIN_API_SCHOOL_NAME] isEqual:[NSNull null]])
         studentObject.studentSchoolName = [schoolDict objectForKey:LOGIN_API_SCHOOL_NAME];
+    
+    if (![[schoolDict objectForKey:LOGIN_API_ABOUT_SCHOOL] isEqual:[NSNull null]])
+        studentObject.studentSchoolName = [schoolDict objectForKey:LOGIN_API_SCHOOL_NAME];
+    
+    if (![[schoolDict objectForKey:LOGIN_API_ABOUT_SCHOOL] isEqual:[NSNull null]])
+        studentObject.studentAboutSchool = [schoolDict objectForKey:LOGIN_API_ABOUT_SCHOOL];
+    
+    if (![[schoolDict objectForKey:LOGIN_API_BASE_PATH] isEqual:[NSNull null]])
+        studentObject.studentBasePath = [schoolDict objectForKey:LOGIN_API_BASE_PATH];
+    
+    if (![[schoolDict objectForKey:LOGIN_API_FB_PATH] isEqual:[NSNull null]])
+        studentObject.studentFBLink = [schoolDict objectForKey:LOGIN_API_FB_PATH];
+    
+    if (![[schoolDict objectForKey:LOGIN_API_GOOGLEPLUS_PATH] isEqual:[NSNull null]])
+        studentObject.studentGooglePlusLink = [schoolDict objectForKey:LOGIN_API_GOOGLEPLUS_PATH];
+    
+    if (![[schoolDict objectForKey:LOGIN_API_TWITTER_PATH] isEqual:[NSNull null]])
+        studentObject.studentTwitterLink = [schoolDict objectForKey:LOGIN_API_TWITTER_PATH];
     
     // student_details
     NSDictionary *studentDict = (NSDictionary *)[detailsDict objectForKey:LOGIN_API_STUDENT_DETAILS];
@@ -109,6 +156,9 @@
     
     if (![[studentDict objectForKey:LOGIN_API_STUDENT_SEX] isEqual:[NSNull null]])
         studentObject.studentSex = [studentDict objectForKey:LOGIN_API_STUDENT_SEX];
+    
+    if (![[studentDict objectForKey:LOGIN_API_STUDENT_ID] isEqual:[NSNull null]])
+        studentObject.studentId = [studentDict objectForKey:LOGIN_API_STUDENT_ID];
 }
 
 - (BOOL)isEqualToStudent:(EKPStudent *)studentObject
@@ -153,6 +203,24 @@
         return NO;
     
     if (![[self studentSex] isEqual:[studentObject studentSex]])
+        return NO;
+    
+    if (![[self studentAboutSchool] isEqual:[studentObject studentAboutSchool]])
+        return NO;
+    
+    if (![[self studentBasePath] isEqual:[studentObject studentBasePath]])
+        return NO;
+    
+    if (![[self studentFBLink] isEqual:[studentObject studentFBLink]])
+        return NO;
+    
+    if (![[self studentGooglePlusLink] isEqual:[studentObject studentGooglePlusLink]])
+        return NO;
+    
+    if (![[self studentId] isEqual:[studentObject studentId]])
+        return NO;
+    
+    if (![[self studentTwitterLink] isEqual:[studentObject studentTwitterLink]])
         return NO;
     
     return YES;

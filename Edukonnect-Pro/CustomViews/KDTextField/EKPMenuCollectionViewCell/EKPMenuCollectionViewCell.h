@@ -14,4 +14,9 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *menuIcon;
 
+@property (nonatomic, strong) IBOutlet UIView *colorView;
+
+@property (nonatomic, strong) IBOutlet UILabel *nameLabel;
+
+
 @end

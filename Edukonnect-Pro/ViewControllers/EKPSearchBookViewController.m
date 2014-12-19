@@ -106,6 +106,7 @@
         bookListVC.bookListDict = [[NSMutableDictionary alloc] initWithDictionary:resultDict];
         bookListVC.bookListType = self.bookListType;
         bookListVC.pageId = 1;
+        bookListVC.searchKeyword = self.keywordTextField.text;
     }
 }
 

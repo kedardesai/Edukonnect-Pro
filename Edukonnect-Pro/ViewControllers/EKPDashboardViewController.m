@@ -110,7 +110,8 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if (self.menuTabs.selectedSegmentIndex == 0) {
-        return 5;
+        return 6;
+        
     } else {
         return 5;
     }
@@ -124,7 +125,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     if (self.menuTabs.selectedSegmentIndex == 0) {
         dashboardMenu = (EKPDashboardMenus) indexPath.row;
     } else {
-        dashboardMenu = (EKPDashboardMenus) indexPath.row + 5 ;
+        dashboardMenu = (EKPDashboardMenus) indexPath.row + 6;
     }
     
     cell.ekpDashboardMenu = dashboardMenu;
@@ -139,8 +140,12 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 {
     EKPMenuCollectionViewCell *cell = (EKPMenuCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
     switch (cell.ekpDashboardMenu) {
-        case kEKPDashboardMenuNotice:
+        case kEKPDashboardMenuNoticeBoard:
             [self performSegueWithIdentifier:@"DashboardToNoticeListSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuAlert:
+            [self performSegueWithIdentifier:@"DashboardToAlertSegue" sender:self];
             break;
             
         case kEKPDashboardMenuEvent:

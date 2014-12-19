@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSMutableArray *bookListArray;
 
+@property (nonatomic, strong) NSString *searchKeyword;
+
 @property (nonatomic) NSInteger pageId;
 @property (nonatomic) NSInteger bookListType;
 @property (nonatomic) BOOL isNextPageAvailable;

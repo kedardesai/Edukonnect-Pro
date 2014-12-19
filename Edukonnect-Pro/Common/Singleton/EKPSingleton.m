@@ -163,6 +163,33 @@
     return noticeListArray;
 }
 
+#pragma mark Saving ALERT List
+
++ (void)saveAlertList:(NSMutableArray *)alertList
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:alertList];
+    [defaults setObject:data forKey:EKP_ALERT_LIST];
+    [defaults synchronize];
+}
+
++ (NSMutableArray *)loadAlertList
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_ALERT_LIST];
+    NSMutableArray *noticeListArray;
+    if (dataRepresentingSavedArray != nil)
+    {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil)
+            noticeListArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        else
+            noticeListArray = [[NSMutableArray alloc] init];
+    }
+    
+    return noticeListArray;
+}
+
 #pragma mark Saving Event List
 
 + (void)saveEventList:(NSMutableArray *)eventList

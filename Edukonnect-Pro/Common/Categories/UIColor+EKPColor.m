@@ -52,4 +52,24 @@
     return [UIColor colorWithRed:126.0f/255.0f green:126.0f/255.0f blue:126.0f/255.0f alpha:1.0f];
 }
 
++ (UIColor *)loadMenuBgLightOrange
+{
+    return [UIColor colorWithRed:255.0f/255.0f green:182.0f/255.0f blue:1.0f/255.0f alpha:1.0f];
+}
+
++ (UIColor *)loadMenuBgDarkOrange
+{
+    return [UIColor colorWithRed:249.0f/255.0f green:142.0f/255.0f blue:51.0f/255.0f alpha:1.0f];
+}
+
++ (UIColor *)loadMenuBgLightSkyBlue
+{
+    return [UIColor colorWithRed:46.0f/255.0f green:193.0f/255.0f blue:204.0f/255.0f alpha:1.0f];
+}
+
++ (UIColor *)loadMenuBgDarkGreen
+{
+    return [UIColor colorWithRed:35.0f/255.0f green:174.0f/255.0f blue:137.0f/255.0f alpha:1.0f];
+}
+
 @end

@@ -17,6 +17,11 @@
 @property (nonatomic, strong) NSString *studentSchoolEmail;
 @property (nonatomic, strong) NSString *studentSchoolLogo;
 @property (nonatomic, strong) NSString *studentSchoolName;
+@property (nonatomic, strong) NSString *studentAboutSchool;
+@property (nonatomic, strong) NSString *studentFBLink;
+@property (nonatomic, strong) NSString *studentGooglePlusLink;
+@property (nonatomic, strong) NSString *studentTwitterLink;
+@property (nonatomic, strong) NSString *studentBasePath;
 @property (nonatomic, strong) NSString *studentAddress;
 @property (nonatomic, strong) NSString *studentBirthday;
 @property (nonatomic, strong) NSString *studentClass;
@@ -24,6 +29,7 @@
 @property (nonatomic, strong) NSString *studentName;
 @property (nonatomic, strong) NSString *studentRollNo;
 @property (nonatomic, strong) NSString *studentSex;
+@property (nonatomic, strong) NSString *studentId;
 
 - (void)setDetailsWithStudent:(EKPStudent *)studentObject andDictionary:(NSDictionary *)detailsDict;
 - (BOOL)isEqualToStudent:(EKPStudent *)studentObject;
