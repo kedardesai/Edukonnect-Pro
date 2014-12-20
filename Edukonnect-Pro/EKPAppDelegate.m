@@ -7,6 +7,10 @@
 //
 
 #import "EKPAppDelegate.h"
+#import "EKPUser.h"
+#import "EKPStudent.h"
+//#import "EKPLoginViewController.h"
+//#import "EKPDashboardViewController.h"
 
 @implementation EKPAppDelegate
 
@@ -31,9 +35,21 @@
     
     UIStoryboard *storyboard = [EKPUtility getStoryboardForCurrentDevice];
     
+    EKPUser *currentUser = [EKPSingleton loadUser];
+    if (currentUser) { // Already Registered
+        
+        EKPStudent *currentStudent = [EKPSingleton loadStudent];
+        if (currentStudent) { // Already LoggedIn
+            [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
+        } else {
+            [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"] animated:NO];
+        }
+    }
+    
+    
 //    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"];
     
-    [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
+//    [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
     // EKPDashboardViewController
     // EKPLoginViewController
     

@@ -72,6 +72,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"%@", LOGIN_SCREEN_TITLE];
+    [self.navigationItem setHidesBackButton:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

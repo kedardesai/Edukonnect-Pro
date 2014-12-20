@@ -56,6 +56,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     [super viewDidLoad];
     self.navigationController.navigationBar.topItem.title = @"";
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage loadScreenBackgroundImage]]];
+    self.navigationController.navigationItem.hidesBackButton = YES;
     
     self.popOver = [DXPopover new];
     _popoverWidth = 150;// CGRectGetWidth(self.view.bounds);
@@ -83,6 +84,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"%@", DASHBOARD_SCREEN_TITLE];
+    [self.navigationItem setHidesBackButton:YES animated:YES];
     
     EKPStudent *student = [EKPSingleton loadStudent];
     [self.schoolName setText:student.studentSchoolName];
