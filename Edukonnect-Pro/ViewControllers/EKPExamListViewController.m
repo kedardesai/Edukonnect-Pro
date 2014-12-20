@@ -35,13 +35,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Exam List";
+    self.title = [NSString stringWithFormat:@"Exam List"];
+    self.examListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.examListTableView.delegate = nil;
-    self.examListTableView = nil;
+//    self.examListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning {

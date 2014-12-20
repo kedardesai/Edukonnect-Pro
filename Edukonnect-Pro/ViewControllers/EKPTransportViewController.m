@@ -37,13 +37,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Transport List";
+    self.title = [NSString stringWithFormat:@"Transport List"];
+    self.transportListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.transportListTableView.delegate = nil;
-    self.transportListTableView = nil;
+//    self.transportListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

@@ -40,13 +40,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Dormitory List";
+    self.title = [NSString stringWithFormat:@"Dormitory List"];
+    self.dormitoriesListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.dormitoriesListTableView.delegate = nil;
-    self.dormitoriesListTableView = nil;
+//    self.dormitoriesListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

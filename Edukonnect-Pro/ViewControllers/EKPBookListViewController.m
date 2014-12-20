@@ -56,12 +56,13 @@
         default:
             break;
     }
+    self.bookListTableView.delegate = nil;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.bookListTableView.delegate = nil;
-    self.bookListTableView = nil;
+//    self.bookListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

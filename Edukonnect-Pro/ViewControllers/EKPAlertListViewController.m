@@ -40,12 +40,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"Alert List"];
+    self.alertListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.alertListTableView.delegate = nil;
-    self.alertListTableView = nil;
+//    self.alertListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

@@ -35,7 +35,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Result";
+    self.title = [NSString stringWithFormat:@"Result"];
+    self.resultListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated

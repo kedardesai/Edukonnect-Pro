@@ -38,13 +38,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Gallery List";
+    self.title = [NSString stringWithFormat:@"Gallery List"];
+    self.galleryListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.galleryListTableView.delegate = nil;
-    self.galleryListTableView = nil;
+//    self.galleryListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

@@ -38,13 +38,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Event List";
+    self.title = [NSString stringWithFormat:@"Event List"];
+    self.eventListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.eventListTableView.delegate = nil;
-    self.eventListTableView = nil;
+//    self.eventListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

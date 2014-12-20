@@ -34,7 +34,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.dayScheduleTableView.delegate = nil;
-    self.dayScheduleTableView = nil;
+//    self.dayScheduleTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

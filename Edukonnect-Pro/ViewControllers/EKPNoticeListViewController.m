@@ -42,12 +42,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"Notice List"];
+    self.noticeListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.noticeListTableView.delegate = nil;
-    self.noticeListTableView = nil;
+//    self.noticeListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

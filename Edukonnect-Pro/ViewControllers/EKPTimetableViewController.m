@@ -32,13 +32,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Timetable";
+    self.title = [NSString stringWithFormat:@"Timetable"];
+    self.timeTableDayListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.timeTableDayListTableView.delegate = nil;
-    self.timeTableDayListTableView = nil;
+//    self.timeTableDayListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

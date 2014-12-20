@@ -35,13 +35,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Library";
+    self.title = [NSString stringWithFormat:@"Library"];
+    self.libraryMenuListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.libraryMenuListTableView.delegate = nil;
-    self.libraryMenuListTableView = nil;
+//    self.libraryMenuListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

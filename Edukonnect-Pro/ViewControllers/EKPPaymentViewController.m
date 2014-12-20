@@ -35,13 +35,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.title = @"Fees";
+    self.title = [NSString stringWithFormat:@"Fees"];
+    self.paymentListTableView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.paymentListTableView.delegate = nil;
-    self.paymentListTableView = nil;
+//    self.paymentListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

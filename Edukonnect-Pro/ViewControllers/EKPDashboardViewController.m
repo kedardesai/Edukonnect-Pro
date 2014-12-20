@@ -32,6 +32,9 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 - (void)showEduProfile;
 - (void)showSwitchUser;
 - (void)showSchoolInfo;
+- (void)showFBLink;
+- (void)showGooglePlusLink;
+- (void)showTwitterLink;
 
 @end
 
@@ -225,7 +228,8 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
         [self.dashboardMenuCollectionView setHidden:YES];
         EKPStudent *currentStudent = [EKPSingleton loadStudent];
         NSLog(@"URL ::: %@",[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]);
-        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
+//        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
+        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.4parents.mobi/index.php"]]];
     }
 }
 
@@ -247,6 +251,24 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 {
     // Show Edu Profile Page
     [self performSegueWithIdentifier:@"DashboardToEduProfileSegue" sender:self];
+}
+
+- (void)showFBLink
+{
+    EKPStudent *student = [EKPSingleton loadStudent];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentFBLink]];
+}
+
+- (void)showGooglePlusLink
+{
+    EKPStudent *student = [EKPSingleton loadStudent];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentGooglePlusLink]];
+}
+
+- (void)showTwitterLink
+{
+    EKPStudent *student = [EKPSingleton loadStudent];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentTwitterLink]];
 }
 
 - (void)showExtraMenus:(id)sender
@@ -283,7 +305,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    cell.textLabel.text = self.self.configMenusArray[indexPath.row];
+    cell.textLabel.text = self.configMenusArray[indexPath.row];
     
     return cell;
 }
@@ -304,6 +326,18 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             
         case 2:
             [self showSchoolInfo];
+            break;
+            
+        case 3:
+            [self showFBLink];
+            break;
+            
+        case 4:
+            [self showTwitterLink];
+            break;
+            
+        case 5:
+            [self showGooglePlusLink];
             break;
             
         default:
