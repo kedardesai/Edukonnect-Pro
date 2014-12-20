@@ -153,13 +153,23 @@
 - (void)callAPI
 {
     if (self.isNextPageAvailable) {
-        self.pageId++;
-        NSMutableDictionary *resultDict = [EKPGalleryAPI getGalleryFolderListForPageId:self.pageId];
-        self.galleryListArray = [[resultDict objectForKey:GALLERY_API_GALLERY] mutableCopy];
         
-        self.isNextPageAvailable = [[resultDict objectForKey:GALLERY_API_GALLERY_NEXT_PAGE] boolValue];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            // Do something...
+            
+            self.pageId++;
+            NSMutableDictionary *resultDict = [EKPGalleryAPI getGalleryFolderListForPageId:self.pageId];
+            self.galleryListArray = [[resultDict objectForKey:GALLERY_API_GALLERY] mutableCopy];
+            
+            self.isNextPageAvailable = [[resultDict objectForKey:GALLERY_API_GALLERY_NEXT_PAGE] boolValue];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [self.galleryListTableView reloadData];
+            });
+        });
         
-        [self.galleryListTableView reloadData];
     }
 }
 

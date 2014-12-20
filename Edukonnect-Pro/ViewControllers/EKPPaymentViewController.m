@@ -30,7 +30,17 @@
     [self.paymentListTableView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     [self.paymentListTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-    self.paymentListArray = [EKPFeesAPI getPaymentList];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        // Do something...
+        
+        self.paymentListArray = [EKPFeesAPI getPaymentList];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -60,31 +60,41 @@
 - (void)callAPI
 {
     if (self.isNextPageAvailable) {
-        self.pageId++;
-        NSMutableDictionary *resultDict = [EKPEventAPI getEventsForPageId:self.pageId];
-        NSMutableArray *eventArray = [[resultDict objectForKey:EVENT_API_EVENT] mutableCopy];
-        for (NSMutableDictionary *eventDict in eventArray) {
-            EKPEvent *eventTemp = [[EKPEvent alloc] init];
-            eventTemp.eventId = [eventDict objectForKey:EVENT_API_ID];
-            eventTemp.eventName = [eventDict objectForKey:EVENT_API_NAME];
-            eventTemp.eventImage = [eventDict objectForKey:EVENT_API_IMAGE];
-            eventTemp.eventClassId = [eventDict objectForKey:EVENT_API_CLASS_ID];
-            eventTemp.eventCreatedBy = [eventDict objectForKey:EVENT_API_CREATED_BY];
-            eventTemp.eventCreatedDate = [eventDict objectForKey:EVENT_API_CREATED_DATE];
-            eventTemp.eventEventDate = [eventDict objectForKey:EVENT_API_EVENT_DATE];
-            eventTemp.eventEventTime = [eventDict objectForKey:EVENT_API_EVENT_TIME];
-            eventTemp.eventVenue = [eventDict objectForKey:EVENT_API_VENUE];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            // Do something...
             
-            [self.eventListArray addObject:eventTemp];
-        }
+            self.pageId++;
+            NSMutableDictionary *resultDict = [EKPEventAPI getEventsForPageId:self.pageId];
+            NSMutableArray *eventArray = [[resultDict objectForKey:EVENT_API_EVENT] mutableCopy];
+            for (NSMutableDictionary *eventDict in eventArray) {
+                EKPEvent *eventTemp = [[EKPEvent alloc] init];
+                eventTemp.eventId = [eventDict objectForKey:EVENT_API_ID];
+                eventTemp.eventName = [eventDict objectForKey:EVENT_API_NAME];
+                eventTemp.eventImage = [eventDict objectForKey:EVENT_API_IMAGE];
+                eventTemp.eventClassId = [eventDict objectForKey:EVENT_API_CLASS_ID];
+                eventTemp.eventCreatedBy = [eventDict objectForKey:EVENT_API_CREATED_BY];
+                eventTemp.eventCreatedDate = [eventDict objectForKey:EVENT_API_CREATED_DATE];
+                eventTemp.eventEventDate = [eventDict objectForKey:EVENT_API_EVENT_DATE];
+                eventTemp.eventEventTime = [eventDict objectForKey:EVENT_API_EVENT_TIME];
+                eventTemp.eventVenue = [eventDict objectForKey:EVENT_API_VENUE];
+                
+                [self.eventListArray addObject:eventTemp];
+            }
+            
+            if (self.pageId == 1) {
+                // Save Notice List in Singleton
+                [EKPSingleton saveEventList:self.eventListArray];
+            }
+            self.isNextPageAvailable = [[resultDict objectForKey:EVENT_API_NEXT_PAGE] boolValue];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [self.eventListTableView reloadData];
+            });
+        });
         
-        if (self.pageId == 1) {
-            // Save Notice List in Singleton
-            [EKPSingleton saveEventList:self.eventListArray];
-        }
-        self.isNextPageAvailable = [[resultDict objectForKey:EVENT_API_NEXT_PAGE] boolValue];
-        
-        [self.eventListTableView reloadData];
     }
 }
 

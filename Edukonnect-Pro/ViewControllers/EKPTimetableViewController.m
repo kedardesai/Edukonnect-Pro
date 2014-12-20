@@ -27,7 +27,18 @@
     [self.timeTableDayListTableView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     
     self.navigationController.navigationBar.topItem.title = @"";
-    self.timeTableDayListArray = [EKPTimetableAPI getTimetable];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        // Do something...
+        
+        self.timeTableDayListArray = [EKPTimetableAPI getTimetable];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

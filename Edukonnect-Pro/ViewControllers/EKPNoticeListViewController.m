@@ -35,8 +35,6 @@
     self.isNextPageAvailable = YES;
     self.isFirstLoad = YES;
     [self callAPI];
-    
-    [self.noticeListTableView setFrame:self.view.frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -63,26 +61,36 @@
 - (void)callAPI
 {
     if (self.isNextPageAvailable) {
-        self.pageId++;
-        NSMutableDictionary *resultDict = [EKPNoticeAPI getNoticesForPageId:self.pageId];
-        NSMutableArray *noticeArray = [[resultDict objectForKey:NOTICEBOARD_API_NOTICE] mutableCopy];
-        for (NSMutableDictionary *noticeDict in noticeArray) {
-            EKPNotice *noticeTemp = [[EKPNotice alloc] init];
-            noticeTemp.noticeId = [noticeDict objectForKey:NOTICEBOARD_API_NOTICE_ID];
-            noticeTemp.noticeHeading = [noticeDict objectForKey:NOTICEBOARD_API_HEADING];
-            noticeTemp.noticeMessage = [noticeDict objectForKey:NOTICEBOARD_API_MESSAGE_DETAILS];
-            noticeTemp.noticeTimeStamp = [noticeDict objectForKey:NOTICEBOARD_API_TIME_STAMP];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            // Do something...
             
-            [self.noticeListArray addObject:noticeTemp];
-        }
+            self.pageId++;
+            NSMutableDictionary *resultDict = [EKPNoticeAPI getNoticesForPageId:self.pageId];
+            NSMutableArray *noticeArray = [[resultDict objectForKey:NOTICEBOARD_API_NOTICE] mutableCopy];
+            for (NSMutableDictionary *noticeDict in noticeArray) {
+                EKPNotice *noticeTemp = [[EKPNotice alloc] init];
+                noticeTemp.noticeId = [noticeDict objectForKey:NOTICEBOARD_API_NOTICE_ID];
+                noticeTemp.noticeHeading = [noticeDict objectForKey:NOTICEBOARD_API_HEADING];
+                noticeTemp.noticeMessage = [noticeDict objectForKey:NOTICEBOARD_API_MESSAGE_DETAILS];
+                noticeTemp.noticeTimeStamp = [noticeDict objectForKey:NOTICEBOARD_API_TIME_STAMP];
+                
+                [self.noticeListArray addObject:noticeTemp];
+            }
+            
+            if (self.pageId == 1) {
+                // Save Notice List in Singleton
+                [EKPSingleton saveNoticeList:self.noticeListArray];
+            }
+            self.isNextPageAvailable = [[resultDict objectForKey:NOTICEBOARD_API_NEXT_PAGE] boolValue];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [self.noticeListTableView reloadData];
+            });
+        });
         
-        if (self.pageId == 1) {
-            // Save Notice List in Singleton
-            [EKPSingleton saveNoticeList:self.noticeListArray];
-        }
-        self.isNextPageAvailable = [[resultDict objectForKey:NOTICEBOARD_API_NEXT_PAGE] boolValue];
-        
-        [self.noticeListTableView reloadData];
     }
 }
 

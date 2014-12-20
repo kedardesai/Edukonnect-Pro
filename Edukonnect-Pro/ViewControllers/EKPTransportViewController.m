@@ -26,7 +26,17 @@
     // Do any additional setup after loading the view.
     
     self.transportListArray = [[NSMutableArray alloc] init];
-    self.transportListArray = [EKPTransportAPI getTransportList];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        // Do something...
+        
+        self.transportListArray = [EKPTransportAPI getTransportList];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
     
     [self.transportListTableView setBackgroundView:nil];
     [self.transportListTableView setBackgroundColor:[UIColor loadScreenBackgroundColor]];

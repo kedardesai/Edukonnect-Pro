@@ -66,6 +66,7 @@
 		1E9A82FD1A3A1B3000CD838F /* EKPExamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A82FC1A3A1B3000CD838F /* EKPExamListViewController.m */; };
 		1E9A83001A3A251400CD838F /* EKPResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A82FF1A3A251400CD838F /* EKPResultViewController.m */; };
 		1E9ADCB11A45E6FE0066F99B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9ADCB01A45E6FD0066F99B /* MBProgressHUD.m */; };
+		1E9ADCB41A4606E40066F99B /* EKPBackgroundFetchAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9ADCB31A4606E40066F99B /* EKPBackgroundFetchAPI.m */; };
 		1E9CEB521A371B190069C150 /* EKPNoticeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB511A371B190069C150 /* EKPNoticeAPI.m */; };
 		1E9CEB551A3724CB0069C150 /* EKPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB541A3724CB0069C150 /* EKPNotice.m */; };
 		1E9CEB581A3730E10069C150 /* EKPEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */; };
@@ -273,6 +274,8 @@
 		1E9A82FF1A3A251400CD838F /* EKPResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPResultViewController.m; sourceTree = "<group>"; };
 		1E9ADCAF1A45E6FD0066F99B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		1E9ADCB01A45E6FD0066F99B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1E9ADCB21A4606E40066F99B /* EKPBackgroundFetchAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPBackgroundFetchAPI.h; sourceTree = "<group>"; };
+		1E9ADCB31A4606E40066F99B /* EKPBackgroundFetchAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPBackgroundFetchAPI.m; sourceTree = "<group>"; };
 		1E9CEB501A371B190069C150 /* EKPNoticeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPNoticeAPI.h; sourceTree = "<group>"; };
 		1E9CEB511A371B190069C150 /* EKPNoticeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPNoticeAPI.m; sourceTree = "<group>"; };
 		1E9CEB531A3724CB0069C150 /* EKPNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPNotice.h; sourceTree = "<group>"; };
@@ -798,6 +801,8 @@
 				1E6581A31A4209D5002FFD58 /* EKPLibraryAPI.m */,
 				1E9E008F1A455E0100A76699 /* EKPFeesAPI.h */,
 				1E9E00901A455E0100A76699 /* EKPFeesAPI.m */,
+				1E9ADCB21A4606E40066F99B /* EKPBackgroundFetchAPI.h */,
+				1E9ADCB31A4606E40066F99B /* EKPBackgroundFetchAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1172,6 +1177,7 @@
 				1ED3A71D1A3CAF18007FEE6F /* SDWebImageDownloaderOperation.m in Sources */,
 				1E79928A1A37831E00383BE6 /* UIButton+AFNetworking.m in Sources */,
 				1E9CEB551A3724CB0069C150 /* EKPNotice.m in Sources */,
+				1E9ADCB41A4606E40066F99B /* EKPBackgroundFetchAPI.m in Sources */,
 				1ED3A7021A3CAF18007FEE6F /* MWTapDetectingImageView.m in Sources */,
 				1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */,
 				1E7992821A37831E00383BE6 /* AFSecurityPolicy.m in Sources */,

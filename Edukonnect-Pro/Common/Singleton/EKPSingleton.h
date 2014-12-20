@@ -39,4 +39,7 @@
 + (void)saveEventList:(NSMutableArray *)eventList;
 + (NSMutableArray *)loadEventList;
 
++ (void)saveLastNotificationId:(NSString *)notificationId;
++ (NSString *)loadLastNotificationId;
+
 @end

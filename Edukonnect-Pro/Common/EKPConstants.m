@@ -30,6 +30,7 @@ NSString *const EKP_CURRENT_PROFILE = @"currentProfile";
 NSString *const EKP_NOTICE_LIST = @"noticeList";
 NSString *const EKP_EVENT_LIST = @"eventList";
 NSString *const EKP_ALERT_LIST = @"alertList";
+NSString *const EKP_NOTIFICATION_ID = @"notificationId";
 
 #pragma API-URL Constants
 //NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
@@ -53,7 +54,9 @@ NSString *const LIBRARY_BOOK_SEARCH_API_URL = @"lib_BookList_Search.php?";
 NSString *const LIBRARY_MY_BOOKS_API_URL = @"MyBookList.php?";
 NSString *const LIBRARY_REQUEST_BOOK_API_URL = @"RequestBook.php?";
 NSString *const LIBRARY_CANCEL_REQUEST_BOOK_API_URL = @"CancelRequestBook.php?";
+NSString *const LIBRARY_BOOK_AVAILABILITY_API_URL = @"AvailableBookCount.php?";
 NSString *const PAYMENT_API_URL = @"invoice.php?";
+NSString *const PULL_NOTIFICATION_API_URL = @"broadcast.php?";
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
@@ -172,6 +175,11 @@ NSString *const PAYMENT_API_DESC = @"description";
 NSString *const PAYMENT_API_AMOUNT = @"amount";
 NSString *const PAYMENT_API_STATUS = @"status";
 NSString *const PAYMENT_API_DUE_DATE = @"duedate";
+
+#pragma mark PULL_NOTIFICATION Constants
+NSString *const NOTIFICATION_API_ID = @"id";
+NSString *const NOTIFICATION_API_HEADING = @"heading";
+NSString *const NOTIFICATION_API_TYPE = @"type";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

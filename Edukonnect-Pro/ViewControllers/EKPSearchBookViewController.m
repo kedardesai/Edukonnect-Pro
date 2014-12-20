@@ -23,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.view setBackgroundColor:[UIColor loadScreenBackgroundColor]];
+    
     [self.keywordLabel setTextColor:[UIColor loadComponentNormalColor]];
     
     [self.keywordTextField setTextFieldtype:kTextFieldTypeCustom];

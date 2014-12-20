@@ -111,7 +111,7 @@
 {
     if ([[segue identifier] isEqualToString:@"LibraryToBookListSegue"]) {
         // Go To Book List
-        NSMutableDictionary *resultDict = [[NSMutableDictionary alloc] init];
+        __block NSMutableDictionary *resultDict = [[NSMutableDictionary alloc] init];
         
         if (self.bookListType == 0) {
             resultDict = [EKPLibraryAPI getAllBooksForPageId:1];

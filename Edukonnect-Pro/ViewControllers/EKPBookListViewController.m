@@ -14,6 +14,7 @@
 
 - (void)callAPI;
 - (void)parseData;
+- (void)requestBook:(UIButton *)senderBtn;
 
 @end
 
@@ -81,15 +82,49 @@
         // Call API
         switch (self.bookListType) {
             case 0: // All Book List
-                self.bookListDict = [EKPLibraryAPI getAllBooksForPageId:self.pageId];
+            {
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    // Do something...
+                    
+                    self.bookListDict = [EKPLibraryAPI getAllBooksForPageId:self.pageId];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    });
+                });
+            }
                 break;
                 
             case 1: // Searched Book List
-                self.bookListDict = [EKPLibraryAPI getBooksForKeyword:self.searchKeyword andForPageId:self.pageId];
+            {
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    // Do something...
+                    
+                    self.bookListDict = [EKPLibraryAPI getBooksForKeyword:self.searchKeyword andForPageId:self.pageId];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    });
+                });
+                
                 break;
+            }
                 
             case 2: // My Book List
-                self.bookListDict = [EKPLibraryAPI getMyBooksForPageId:self.pageId];
+            {
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    // Do something...
+                    
+                    self.bookListDict = [EKPLibraryAPI getMyBooksForPageId:self.pageId];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    });
+                });
+            }
                 break;
                 
             default:
@@ -158,6 +193,21 @@
     [descTextView setText:bookTemp.bookDesc];
     [descTextView setTextColor:[UIColor whiteColor]];
     
+    UIButton *requestBtn = (UIButton *) [contentView viewWithTag:107];
+    [requestBtn addTarget:self action:@selector(requestBook:) forControlEvents:UIControlEventTouchUpInside];
+    requestBtn.layer.cornerRadius = 2.0;
+    requestBtn.layer.masksToBounds = NO;
+    requestBtn.layer.shadowOffset = CGSizeMake(2, 2);
+    requestBtn.layer.shadowRadius = 5;
+    requestBtn.layer.shadowOpacity = 0.5;
+    [requestBtn.titleLabel setShadowOffset:CGSizeMake(1.0f, 1.0f)];
+    if ([EKPLibraryAPI getAvailibility:bookTemp.bookId]) {
+        [requestBtn setHidden:NO];
+    } else {
+        [requestBtn setHidden:YES];
+    }
+    
+    
     return cell;
 }
 
@@ -171,6 +221,19 @@
         if (!self.isFirstLoad) {
             [self callAPI];
         }
+    }
+}
+
+#pragma mark Code-Reusable Methods
+
+- (void)requestBook:(UIButton *)senderBtn
+{
+    UITableViewCell *cell = (UITableViewCell *) senderBtn.superview.superview.superview;
+    NSIndexPath *indexPath = [self.bookListTableView indexPathForCell:cell];
+    EKPBook *bookTemp = [self.bookListArray objectAtIndex:indexPath.row];
+    BOOL status = [EKPLibraryAPI requestBook:bookTemp.bookId];
+    if (status) {
+        [EKPUtility showAlertWithTitle:@"SUCCESS" andMessage:@"Book Requested Successfully."];
     }
 }
 

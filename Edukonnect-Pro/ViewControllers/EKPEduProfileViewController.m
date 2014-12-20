@@ -228,13 +228,26 @@
         self.currentProfile.profileContactNumber = self.contactNoTextField.text;
         self.currentProfile.profileAddress = self.addressTextField.text;
         self.currentProfile.profileProfession = self.professionTextField.text;
-        BOOL status = [EKPProfileAPI updateProfile:self.currentProfile];
-        if (status) {
-            [EKPUtility showAlertWithTitle:SUCCESS_TITLE andMessage:PROFILE_UPDATED];
-            [EKPSingleton saveCurrentProfile:self.currentProfile];
-        } else {
-            [EKPUtility showAlertWithTitle:FAILED_TITLE andMessage:PROFILE_NOT_UPDATED];
-        }
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        __block BOOL status;
+        
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            // Do something...
+            status = [EKPProfileAPI updateProfile:self.currentProfile];
+            if (status) {
+                // school_details
+                [EKPUtility showAlertWithTitle:SUCCESS_TITLE andMessage:PROFILE_UPDATED];
+                [EKPSingleton saveCurrentProfile:self.currentProfile];
+                
+            } else {
+                [EKPUtility showAlertWithTitle:FAILED_TITLE andMessage:PROFILE_NOT_UPDATED];
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+        });
     }
 }
 

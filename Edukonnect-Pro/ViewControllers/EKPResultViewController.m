@@ -30,7 +30,18 @@
     
     self.navigationController.navigationBar.topItem.title = @"";
     
-    self.resultListArray = [EKPResultAPI getResultForExamId:self.examId];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        // Do something...
+        
+        self.resultListArray = [EKPResultAPI getResultForExamId:self.examId];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

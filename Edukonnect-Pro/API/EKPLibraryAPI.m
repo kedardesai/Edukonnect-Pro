@@ -109,12 +109,12 @@
     return responseDict;
 }
 
-+ (BOOL)requestBook:(NSInteger)bookId
++ (BOOL)requestBook:(NSString *)bookId
 {
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%ld&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_REQUEST_BOOK_API_URL, (long)bookId, currentStudent.studentId, currentStudent.studentSchoolCode];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%@&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_REQUEST_BOOK_API_URL, bookId, currentStudent.studentId, currentStudent.studentSchoolCode];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -127,7 +127,7 @@
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);
         [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
-        return nil;
+        return NO;
     }
     
     NSError *localError = nil;
@@ -136,18 +136,18 @@
     
     if (localError) {
         [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
-        return nil;
+        return NO;
     }
     
     return [[dictionary objectForKey:STATUS_KEY] boolValue];
 }
 
-+ (BOOL)cancelRequestBook:(NSInteger)bookId
++ (BOOL)cancelRequestBook:(NSString *)bookId
 {
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%ld&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_CANCEL_REQUEST_BOOK_API_URL, (long)bookId, currentStudent.studentId, currentStudent.studentSchoolCode];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@book_id=%@&student_id=%@&schoolcode=%@", BASE_API_URL, LIBRARY_CANCEL_REQUEST_BOOK_API_URL, bookId, currentStudent.studentId, currentStudent.studentSchoolCode];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -160,7 +160,7 @@
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);
         [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
-        return nil;
+        return NO;
     }
     
     NSError *localError = nil;
@@ -169,7 +169,40 @@
     
     if (localError) {
         [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
-        return nil;
+        return NO;
+    }
+    
+    return [[dictionary objectForKey:STATUS_KEY] boolValue];
+}
+
++ (BOOL)getAvailibility:(NSString *)bookId
+{
+    EKPStudent *currentStudent = [EKPSingleton loadStudent];
+    
+    //Web Service Call
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&book_id=%@", BASE_API_URL, LIBRARY_BOOK_AVAILABILITY_API_URL, currentStudent.studentSchoolCode, bookId];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+    [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [theRequest setHTTPMethod:@"GET"];
+    
+    NSURLResponse* response;
+    NSError* error = nil;
+    NSMutableData *webData = [NSURLConnection sendSynchronousRequest:theRequest  returningResponse:&response error:&error].mutableCopy;
+    
+    if (error) {
+        NSLog(@"ERROR ::: %@", [error localizedDescription]);
+        [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
+        return NO;
+    }
+    
+    NSError *localError = nil;
+    
+    NSMutableDictionary *dictionary = [[NSJSONSerialization JSONObjectWithData:webData options:kNilOptions error:&localError] mutableCopy];
+    
+    if (localError) {
+        [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
+        return NO;
     }
     
     return [[dictionary objectForKey:STATUS_KEY] boolValue];

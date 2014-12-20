@@ -39,7 +39,10 @@
 
 + (void)saveUserWithUser:(EKPUser *)userObj
 {
-    
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:userObj];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:EKP_USER];
+    [defaults synchronize];
 }
 
 + (EKPUser *)loadUser
@@ -76,14 +79,12 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_STUDENT_LIST];
     
-    NSMutableArray *studentListArray;
+    NSMutableArray *studentListArray = [[NSMutableArray alloc] init];
     if (dataRepresentingSavedArray != nil)
     {
         NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
         if (oldSavedArray != nil)
-            studentListArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
-        else
-            studentListArray = [[NSMutableArray alloc] init];
+            studentListArray = [oldSavedArray mutableCopy];
     }
     
     BOOL isAddedPreviously = NO;
@@ -96,6 +97,7 @@
     if (!isAddedPreviously) {
         [studentListArray addObject:student];
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:studentListArray];
+        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         [defaults setObject:data forKey:EKP_STUDENT_LIST];
         [defaults synchronize];
     }
@@ -105,6 +107,7 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *dataRepresentingSavedArray = [defaults objectForKey:EKP_STUDENT_LIST];
+    NSLog(@"%@",[[NSString alloc] initWithData:dataRepresentingSavedArray encoding:NSUTF8StringEncoding]);
     NSMutableArray *studentListArray;
     if (dataRepresentingSavedArray != nil)
     {
@@ -215,6 +218,22 @@
     }
     
     return eventListArray;
+}
+
+#pragma mark Saving Pull Notification Data
+
++ (void)saveLastNotificationId:(NSString *)notificationId
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:notificationId forKey:EKP_NOTIFICATION_ID];
+    [defaults synchronize];
+}
+
++ (NSString *)loadLastNotificationId
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *notificationId = [defaults objectForKey:EKP_NOTIFICATION_ID];
+    return notificationId;
 }
 
 

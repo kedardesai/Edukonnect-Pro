@@ -20,4 +20,5 @@
     #import "UIImage+EKPImage.h"
     #import "UIColor+EKPColor.h"
     #import "UIFont+EKPFont.h"
+    #import "MBProgressHUD.h"
 #endif

@@ -16,8 +16,10 @@
 
 + (NSMutableDictionary *)getMyBooksForPageId:(NSInteger)pageId;
 
-+ (BOOL)requestBook:(NSInteger)bookId;
++ (BOOL)requestBook:(NSString *)bookId;
 
-+ (BOOL)cancelRequestBook:(NSInteger)bookId;
++ (BOOL)cancelRequestBook:(NSString *)bookId;
+
++ (BOOL)getAvailibility:(NSString *)bookId;
 
 @end

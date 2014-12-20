@@ -9,6 +9,7 @@
 #import "EKPAppDelegate.h"
 #import "EKPUser.h"
 #import "EKPStudent.h"
+#import "EKPBackgroundFetchAPI.h"
 //#import "EKPLoginViewController.h"
 //#import "EKPDashboardViewController.h"
 
@@ -27,11 +28,7 @@
     [self.window setBackgroundColor:[UIColor loadScreenBackgroundColor]];
 
     
-    // To navigate direct to Dashboard if needed
-    
-//    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-//    window.rootViewController = [storyboard instantiateInitialViewController];
-    
+    // To navigate direct to Dashboard or Login if needed
     
     UIStoryboard *storyboard = [EKPUtility getStoryboardForCurrentDevice];
     
@@ -46,12 +43,7 @@
         }
     }
     
-    
-//    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"];
-    
-//    [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
-    // EKPDashboardViewController
-    // EKPLoginViewController
+    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     
     return YES;
 }
@@ -81,6 +73,48 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark Background-Fetch Data Methods
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray *oldNotifications = [app scheduledLocalNotifications];
+    
+    // Clear out the old notification before scheduling a new one.
+    if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+    
+    NSMutableArray *studentList = [EKPSingleton loadStudentList];
+    
+    for (EKPStudent *student in studentList) {
+        // Create a new notification.
+        NSMutableDictionary *responseDictionary = [EKPBackgroundFetchAPI checkForBackgroundUpdatesForSchoolCode:student.studentSchoolCode andStudentId:student.studentId].mutableCopy;
+        if (responseDictionary) {
+            NSString *currentNotificationId = [responseDictionary objectForKey:NOTIFICATION_API_ID];
+            NSString *previousNotificationId = [EKPSingleton loadLastNotificationId];
+            
+            if (![currentNotificationId isEqualToString:previousNotificationId]) {
+                NSDate *now = [NSDate date];
+                UILocalNotification *instantAlarm = [[UILocalNotification alloc] init];
+                if (instantAlarm)
+                {
+                    instantAlarm.fireDate = now;
+                    instantAlarm.timeZone = [NSTimeZone defaultTimeZone];
+                    instantAlarm.repeatInterval = 0;
+                    instantAlarm.alertBody = [responseDictionary objectForKey:NOTIFICATION_API_HEADING];
+                    [app scheduleLocalNotification:instantAlarm];
+                    [EKPSingleton saveLastNotificationId:currentNotificationId];
+                }
+            }
+            completionHandler(UIBackgroundFetchResultNewData);
+            
+        } else {
+            completionHandler(UIBackgroundFetchResultNoData);
+        }
+    }
+    
 }
 
 @end

@@ -19,7 +19,8 @@
 
 #pragma mark UIViewLifeCycle Methods
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.examListArray = [[NSMutableArray alloc] init];
@@ -28,7 +29,17 @@
     [self.examListTableView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     
     self.navigationController.navigationBar.topItem.title = @"";
-    self.examListArray = [EKPResultAPI getExamList];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        // Do something...
+        
+        self.examListArray = [EKPResultAPI getExamList];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
     
     [self.examListTableView setFrame:self.view.bounds];
 }
@@ -45,7 +56,8 @@
 //    self.examListTableView = nil;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

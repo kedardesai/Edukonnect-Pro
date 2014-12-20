@@ -61,22 +61,32 @@
 - (void)callAPI
 {
     if (self.isNextPageAvailable) {
-        self.pageId++;
-        NSMutableDictionary *resultDict = [EKPDormitoryAPI getDormitoryListWithPageId:self.pageId];
-        NSMutableArray *dormitoryArray = [[resultDict objectForKey:DORMITORIES_API_TAG] mutableCopy];
-        for (NSMutableDictionary *dormitoryDict in dormitoryArray) {
-            EKPDormitory *obj = [[EKPDormitory alloc] init];
-            obj.dormitoryId = [dormitoryDict objectForKey:DORMITORIES_API_ID];
-            obj.dormitoryName = [dormitoryDict objectForKey:DORMITORIES_API_NAME];
-            obj.dormitoryNumberOfRooms = [dormitoryDict objectForKey:DORMITORIES_API_ROOMS];
-            obj.dormitoryDesc = [dormitoryDict objectForKey:DORMITORIES_API_DESC];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            // Do something...
             
-            [self.dormitoriesListArray addObject:obj];
-        }
+            self.pageId++;
+            NSMutableDictionary *resultDict = [EKPDormitoryAPI getDormitoryListWithPageId:self.pageId];
+            NSMutableArray *dormitoryArray = [[resultDict objectForKey:DORMITORIES_API_TAG] mutableCopy];
+            for (NSMutableDictionary *dormitoryDict in dormitoryArray) {
+                EKPDormitory *obj = [[EKPDormitory alloc] init];
+                obj.dormitoryId = [dormitoryDict objectForKey:DORMITORIES_API_ID];
+                obj.dormitoryName = [dormitoryDict objectForKey:DORMITORIES_API_NAME];
+                obj.dormitoryNumberOfRooms = [dormitoryDict objectForKey:DORMITORIES_API_ROOMS];
+                obj.dormitoryDesc = [dormitoryDict objectForKey:DORMITORIES_API_DESC];
+                
+                [self.dormitoriesListArray addObject:obj];
+            }
+            
+            self.isNextPageAvailable = [[resultDict objectForKey:DORMITORIES_API_NEXT_PAGE] boolValue];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [self.dormitoriesListTableView reloadData];
+            });
+        });
         
-        self.isNextPageAvailable = [[resultDict objectForKey:DORMITORIES_API_NEXT_PAGE] boolValue];
-        
-        [self.dormitoriesListTableView reloadData];
     }
 }
 

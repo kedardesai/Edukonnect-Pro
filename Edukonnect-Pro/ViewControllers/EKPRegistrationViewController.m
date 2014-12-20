@@ -9,7 +9,6 @@
 #import "EKPRegistrationViewController.h"
 #import "KDTextField.h"
 #import "EKPRegistrationAPI.h"
-#import "MBProgressHUD.h"
 
 @interface EKPRegistrationViewController ()
 
@@ -168,20 +167,10 @@
         user.userMobile = self.mobileTextField.text;
         user.userEmail = self.emailTextField.text;
         
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        
-        __block BOOL result;
-        
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            // Do something...
-            result = [EKPRegistrationAPI registerUserWith:user];
-            if (result) {
-                [EKPSingleton saveUserWithUser:user];
-            }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
-            });
-        });
+        BOOL result = [EKPRegistrationAPI registerUserWith:user];
+        if (result) {
+            [EKPSingleton saveUserWithUser:user];
+        }
         
         return result;
     }
