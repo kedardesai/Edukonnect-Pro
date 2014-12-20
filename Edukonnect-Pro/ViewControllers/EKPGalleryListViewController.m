@@ -92,10 +92,17 @@
     NSDictionary *folderDict = [self.galleryListArray objectAtIndex:indexPath.row];
     NSMutableArray *photos = [[EKPGalleryAPI getPhotoListForGalleryId:[folderDict objectForKey:GALLERY_API_GALLERY_ID]] mutableCopy];
     
+    // basePath/uploads/gallery_image/imagePath
+    
     [self.photoListArray removeAllObjects];
     
+    EKPStudent *student = [EKPSingleton loadStudent];
+    
     for (NSDictionary *imageDict in photos) {
-        [self.photoListArray addObject:[MWPhoto photoWithURL:[NSURL URLWithString:[imageDict objectForKey:GALLERY_API_GALLERY_IMAGE_LINK]]]];
+        
+        NSLog(@"%@", [NSString stringWithFormat:@"http://%@/uploads/gallery_image/%@", student.studentBasePath, [imageDict objectForKey:GALLERY_API_GALLERY_IMAGE_LINK]]);
+        
+        [self.photoListArray addObject:[MWPhoto photoWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/gallery_image/%@", student.studentBasePath, [imageDict objectForKey:GALLERY_API_GALLERY_IMAGE_LINK]]]]];
     }
     
 //    [self.photoListArray addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b.jpg"]]];
