@@ -30,6 +30,8 @@
     
     [self.studentListTableView setBackgroundView:nil];
     [self.studentListTableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage loadScreenBackgroundImage]]];
+    
+    [self.studentListTableView setFrame:self.view.bounds];
 }
 
 -(void)viewWillAppear:(BOOL)animated

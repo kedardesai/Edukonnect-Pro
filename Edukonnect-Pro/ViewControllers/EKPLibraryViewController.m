@@ -38,6 +38,12 @@
     self.title = @"Library";
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.libraryMenuListTableView.delegate = nil;
+    self.libraryMenuListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -35,6 +35,12 @@
     self.title = @"Timetable";
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.timeTableDayListTableView.delegate = nil;
+    self.timeTableDayListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

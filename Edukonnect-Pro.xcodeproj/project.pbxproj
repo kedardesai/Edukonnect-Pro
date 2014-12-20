@@ -68,6 +68,9 @@
 		1E9CEB521A371B190069C150 /* EKPNoticeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB511A371B190069C150 /* EKPNoticeAPI.m */; };
 		1E9CEB551A3724CB0069C150 /* EKPNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB541A3724CB0069C150 /* EKPNotice.m */; };
 		1E9CEB581A3730E10069C150 /* EKPEventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */; };
+		1E9E008E1A453A8500A76699 /* EKPPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E008D1A453A8500A76699 /* EKPPaymentViewController.m */; };
+		1E9E00911A455E0100A76699 /* EKPFeesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E00901A455E0100A76699 /* EKPFeesAPI.m */; };
+		1E9E00941A45793500A76699 /* EKPPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E00931A45793500A76699 /* EKPPayment.m */; };
 		1E9E96E31A0EA00E007B9585 /* EKPSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E96E21A0EA00E007B9585 /* EKPSchool.m */; };
 		1E9F01DD1A3420FF00AAC885 /* EKPNoticeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F01DC1A3420FF00AAC885 /* EKPNoticeListViewController.m */; };
 		1E9F01E31A34239700AAC885 /* EKPMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F01E01A34239700AAC885 /* EKPMenuCollectionViewCell.m */; };
@@ -275,6 +278,12 @@
 		1E9CEB541A3724CB0069C150 /* EKPNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPNotice.m; sourceTree = "<group>"; };
 		1E9CEB561A3730E10069C150 /* EKPEventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEventListViewController.h; sourceTree = "<group>"; };
 		1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEventListViewController.m; sourceTree = "<group>"; };
+		1E9E008C1A453A8500A76699 /* EKPPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPPaymentViewController.h; sourceTree = "<group>"; };
+		1E9E008D1A453A8500A76699 /* EKPPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPPaymentViewController.m; sourceTree = "<group>"; };
+		1E9E008F1A455E0100A76699 /* EKPFeesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPFeesAPI.h; sourceTree = "<group>"; };
+		1E9E00901A455E0100A76699 /* EKPFeesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPFeesAPI.m; sourceTree = "<group>"; };
+		1E9E00921A45793500A76699 /* EKPPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPPayment.h; sourceTree = "<group>"; };
+		1E9E00931A45793500A76699 /* EKPPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPPayment.m; sourceTree = "<group>"; };
 		1E9E96E11A0EA00E007B9585 /* EKPSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchool.h; sourceTree = "<group>"; };
 		1E9E96E21A0EA00E007B9585 /* EKPSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchool.m; sourceTree = "<group>"; };
 		1E9F01DB1A3420FF00AAC885 /* EKPNoticeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPNoticeListViewController.h; sourceTree = "<group>"; };
@@ -596,6 +605,8 @@
 				1EA1EE021A4361BB00722529 /* EKPSearchBookViewController.m */,
 				1EA1EE041A43667600722529 /* EKPBookListViewController.h */,
 				1EA1EE051A43667600722529 /* EKPBookListViewController.m */,
+				1E9E008C1A453A8500A76699 /* EKPPaymentViewController.h */,
+				1E9E008D1A453A8500A76699 /* EKPPaymentViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -777,6 +788,8 @@
 				1E6581A01A420182002FFD58 /* EKPDormitoryAPI.m */,
 				1E6581A21A4209D5002FFD58 /* EKPLibraryAPI.h */,
 				1E6581A31A4209D5002FFD58 /* EKPLibraryAPI.m */,
+				1E9E008F1A455E0100A76699 /* EKPFeesAPI.h */,
+				1E9E00901A455E0100A76699 /* EKPFeesAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -836,6 +849,8 @@
 				1E65819D1A420043002FFD58 /* EKPDormitory.m */,
 				1E37F08B1A44AB06005BD6C0 /* EKPBook.h */,
 				1E37F08C1A44AB06005BD6C0 /* EKPBook.m */,
+				1E9E00921A45793500A76699 /* EKPPayment.h */,
+				1E9E00931A45793500A76699 /* EKPPayment.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1112,6 +1127,7 @@
 				1E37F08D1A44AB06005BD6C0 /* EKPBook.m in Sources */,
 				1E7992871A37831E00383BE6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1ED3A7031A3CAF18007FEE6F /* MWTapDetectingView.m in Sources */,
+				1E9E008E1A453A8500A76699 /* EKPPaymentViewController.m in Sources */,
 				1ED3A71E1A3CAF18007FEE6F /* SDWebImageManager.m in Sources */,
 				1ED3A7181A3CAF18007FEE6F /* NSData+ImageContentType.m in Sources */,
 				1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */,
@@ -1124,6 +1140,7 @@
 				1E65819B1A41FDB3002FFD58 /* EKPDormitoriesViewController.m in Sources */,
 				1E9CEB521A371B190069C150 /* EKPNoticeAPI.m in Sources */,
 				1ED3A7081A3CAF18007FEE6F /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
+				1E9E00941A45793500A76699 /* EKPPayment.m in Sources */,
 				1E9A82F11A3A097C00CD838F /* EKPResultAPI.m in Sources */,
 				1B4A310C19D967000067B674 /* main.m in Sources */,
 				1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */,
@@ -1203,6 +1220,7 @@
 				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
 				1E79928B1A37831E00383BE6 /* UIImageView+AFNetworking.m in Sources */,
 				1ED3A7171A3CAF18007FEE6F /* MKAnnotationView+WebCache.m in Sources */,
+				1E9E00911A455E0100A76699 /* EKPFeesAPI.m in Sources */,
 				1EFC45171A3B611200881984 /* EKPTimetableViewController.m in Sources */,
 				1ED3A6FE1A3CAF18007FEE6F /* MWGridCell.m in Sources */,
 				1B4A313419D9687B0067B674 /* EKPRegistrationViewController.m in Sources */,

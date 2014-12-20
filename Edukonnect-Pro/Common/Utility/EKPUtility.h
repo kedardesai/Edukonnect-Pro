@@ -16,5 +16,6 @@
 
 + (EKPUserDeviceType)getUserDeviceType;
 + (UIStoryboard *)getStoryboardForCurrentDevice;
++ (NSString *)getDateForTimeStamp:(NSString *)timeStamp;
 
 @end

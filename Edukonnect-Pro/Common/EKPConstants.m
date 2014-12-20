@@ -53,6 +53,7 @@ NSString *const LIBRARY_BOOK_SEARCH_API_URL = @"lib_BookList_Search.php?";
 NSString *const LIBRARY_MY_BOOKS_API_URL = @"MyBookList.php?";
 NSString *const LIBRARY_REQUEST_BOOK_API_URL = @"RequestBook.php?";
 NSString *const LIBRARY_CANCEL_REQUEST_BOOK_API_URL = @"CancelRequestBook.php?";
+NSString *const PAYMENT_API_URL = @"invoice.php?";
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
@@ -162,6 +163,15 @@ NSString *const LIBRARY_API_AUTHOR = @"author";
 NSString *const LIBRARY_API_CLASS_ID = @"class_id";
 NSString *const LIBRARY_API_STATUS = @"status";
 NSString *const LIBRARY_API_NEXT_PAGE = @"nextpage";
+
+#pragma mark PAYMENT-API Constants
+NSString *const PAYMENT_API_TAG = @"invoice";
+NSString *const PAYMENT_API_INVOICE_ID = @"invoice_id";
+NSString *const PAYMENT_API_TITLE = @"title";
+NSString *const PAYMENT_API_DESC = @"description";
+NSString *const PAYMENT_API_AMOUNT = @"amount";
+NSString *const PAYMENT_API_STATUS = @"status";
+NSString *const PAYMENT_API_DUE_DATE = @"duedate";
 
 #pragma mark Response Keys
 NSString *const STATUS_KEY = @"status";

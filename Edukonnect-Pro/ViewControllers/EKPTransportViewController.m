@@ -40,6 +40,12 @@
     self.title = @"Transport List";
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.transportListTableView.delegate = nil;
+    self.transportListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

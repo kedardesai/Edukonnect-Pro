@@ -41,6 +41,12 @@
     self.title = @"Gallery List";
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.galleryListTableView.delegate = nil;
+    self.galleryListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

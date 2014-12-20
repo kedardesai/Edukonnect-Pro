@@ -38,6 +38,12 @@
     self.title = @"Result";
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.resultListTableView.delegate = nil;
+    self.resultListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

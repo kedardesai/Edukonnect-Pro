@@ -43,6 +43,12 @@
     self.title = @"Dormitory List";
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.dormitoriesListTableView.delegate = nil;
+    self.dormitoriesListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

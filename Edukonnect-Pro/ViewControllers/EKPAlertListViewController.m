@@ -33,11 +33,19 @@
     self.isNextPageAvailable = YES;
     self.isFirstLoad = YES;
     [self callAPI];
+    
+    [self.alertListTableView setFrame:self.view.bounds];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"Alert List"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.alertListTableView.delegate = nil;
+    self.alertListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,7 +119,8 @@
     [headingLabel setText:currentAlert.noticeHeading];
     
     UITextView *messageTextView = (UITextView *) [contentView viewWithTag:102];
-    [messageTextView setText:currentAlert.noticeMessage];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[currentAlert.noticeMessage dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    messageTextView.attributedText = attributedString;
     [messageTextView setTextColor:[UIColor whiteColor]];
     
     return cell;

@@ -31,6 +31,12 @@
     self.title = [dict objectForKey:TIMETABLE_API_DAY];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.dayScheduleTableView.delegate = nil;
+    self.dayScheduleTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

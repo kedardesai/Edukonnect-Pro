@@ -32,11 +32,19 @@
     self.isNextPageAvailable = YES;
     self.isFirstLoad = YES;
     [self callAPI];
+    
+    [self.eventListTableView setFrame:self.view.bounds];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = @"Event List";
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.eventListTableView.delegate = nil;
+    self.eventListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning

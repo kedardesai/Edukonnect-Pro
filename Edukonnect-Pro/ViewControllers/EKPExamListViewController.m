@@ -29,11 +29,19 @@
     
     self.navigationController.navigationBar.topItem.title = @"";
     self.examListArray = [EKPResultAPI getExamList];
+    
+    [self.examListTableView setFrame:self.view.bounds];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = @"Exam List";
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.examListTableView.delegate = nil;
+    self.examListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning {

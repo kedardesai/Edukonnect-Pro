@@ -50,4 +50,15 @@
     return storyboard;
 }
 
++ (NSString *)getDateForTimeStamp:(NSString *)timeStamp
+{
+    NSDate * myDate = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    
+    NSString *stringFromDate = [formatter stringFromDate:myDate];
+    
+    return stringFromDate;
+}
+
 @end

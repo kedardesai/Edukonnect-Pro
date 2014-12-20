@@ -58,6 +58,12 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.bookListTableView.delegate = nil;
+    self.bookListTableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

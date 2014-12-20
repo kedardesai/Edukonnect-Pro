@@ -35,11 +35,19 @@
     self.isNextPageAvailable = YES;
     self.isFirstLoad = YES;
     [self callAPI];
+    
+    [self.noticeListTableView setFrame:self.view.frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"Notice List"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.noticeListTableView.delegate = nil;
+    self.noticeListTableView = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,10 +120,11 @@
     [headingLabel setText:currentNotice.noticeHeading];
     
     UILabel *dateLabel = (UILabel *) [contentView viewWithTag:102];
-    [dateLabel setText:currentNotice.noticeTimeStamp];
+    [dateLabel setText:[EKPUtility getDateForTimeStamp:currentNotice.noticeTimeStamp]];
     
     UITextView *messageTextView = (UITextView *) [contentView viewWithTag:103];
-    [messageTextView setText:currentNotice.noticeMessage];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[currentNotice.noticeMessage dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    messageTextView.attributedText = attributedString;
     [messageTextView setTextColor:[UIColor whiteColor]];
     
     return cell;
@@ -128,6 +137,7 @@
 {
     if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height)
     {
+        NSLog(@"%d",self.isFirstLoad);
         if (!self.isFirstLoad) {
             [self callAPI];
         }

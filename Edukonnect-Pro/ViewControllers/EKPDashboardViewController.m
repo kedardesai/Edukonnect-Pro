@@ -10,6 +10,7 @@
 #import "EKPMenuCollectionViewCell.h"
 #import "EKPSchoolInfoViewController.h"
 #import "UIViewController+MJPopupViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 {
@@ -62,7 +63,15 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(showExtraMenus:)];
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *backBtnImage = [UIImage imageNamed:@"Settings"];
+    [backBtn setBackgroundImage:backBtnImage forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(showExtraMenus:) forControlEvents:UIControlEventTouchUpInside];
+    backBtn.frame = CGRectMake(0, 0, 25, 25);
+    UIView *backButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [backButtonView addSubview:backBtn];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:backButtonView];
+    self.navigationItem.rightBarButtonItem = backButton;
     
     [self.eduResourcesWebView setOpaque:NO];
     [self.eduResourcesWebView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
@@ -73,9 +82,16 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     self.title = [NSString stringWithFormat:@"%@", DASHBOARD_SCREEN_TITLE];
     
     EKPStudent *student = [EKPSingleton loadStudent];
-//    [self.schoolLogoImage ] // Set Image
     [self.schoolName setText:student.studentSchoolName];
     [self.studentName setText:student.studentName];
+    
+//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/logo.png", student.studentBasePath]]];
+//    UIImage *logoImage = [UIImage imageWithData:data];
+//    [self.schoolLogoImage setImage:logoImage];
+    
+    [self.schoolLogoImage setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/logo.png", student.studentBasePath]]];
+    [self.schoolLogoImage setContentMode:UIViewContentModeScaleAspectFit];
+    NSLog(@"%@",[NSString stringWithFormat:@"%@/uploads/logo.png", student.studentBasePath]);
     
     CGRect segmentedControlFrame = self.menuTabs.frame;
     segmentedControlFrame.size.height = 50;
@@ -181,7 +197,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
             break;
             
         case kEKPDashboardMenuPayment:
-            NSLog(@"Show Payment.");
+            [self performSegueWithIdentifier:@"DashboardToPaymentSegue" sender:self];
             break;
             
         default:
@@ -235,7 +251,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 
 - (void)showExtraMenus:(id)sender
 {
-    UIBarButtonItem *settingButton = (UIBarButtonItem *)sender;
+    UIBarButtonItem *settingButton = self.navigationItem.rightBarButtonItem;
     [self updateTableViewFrame];
     UIView *settingView = [settingButton valueForKey:@"view"];
     CGPoint startPoint = CGPointMake(CGRectGetMidX(settingView.frame), CGRectGetMaxY(settingView.frame) + 20);

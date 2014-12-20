@@ -40,8 +40,18 @@
     busLocation.longitude= longitude;
     EKPMapPin *pin = [[EKPMapPin alloc] initWithCoordinates:busLocation placeName:@"Start" description:@""];
     [self.mapView addAnnotation:pin];
+    [self.mapView setMapType:MKMapTypeStandard];
+    
+    MKCoordinateRegion region = { {0.0, 0.0 }, { 0.0, 0.0 } };
+    region.center.latitude = latitude ;
+    region.center.longitude = longitude;
+    region.span.longitudeDelta = 0.015f;
+    region.span.latitudeDelta = 0.015f;
+    [self.mapView setRegion:region animated:YES];
     
     [self.view addSubview:self.mapView];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
