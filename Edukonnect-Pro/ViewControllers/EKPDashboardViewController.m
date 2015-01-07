@@ -79,6 +79,8 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     
     [self.eduResourcesWebView setOpaque:NO];
     [self.eduResourcesWebView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
+    [self.dashboardMenuCollectionView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
+    [self.dashboardMenuCollectionView setBackgroundView:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -150,6 +152,7 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
     }
     
     cell.ekpDashboardMenu = dashboardMenu;
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }

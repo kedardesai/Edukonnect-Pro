@@ -12,7 +12,7 @@
 @interface EKPMapPin : NSObject <MKAnnotation>
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
-@property (nonatomic) NSString *title;
+@property (nonatomic, strong) NSString *title;
 
 - (id)initWithCoordinates:(CLLocationCoordinate2D)location placeName:(NSString *)placeName description:(NSString *)description;
 
