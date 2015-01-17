@@ -12,11 +12,11 @@
 #import "UIViewController+MJPopupViewController.h"
 #import "UIImageView+AFNetworking.h"
 
-static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
-{
-    CGFloat diff = high - low;
-    return (((CGFloat) rand() / RAND_MAX) * diff) + low;
-}
+//static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
+//{
+//    CGFloat diff = high - low;
+//    return (((CGFloat) rand() / RAND_MAX) * diff) + low;
+//}
 
 @interface EKPDashboardViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -243,6 +243,8 @@ static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 - (void)showSchoolInfo
 {
     EKPSchoolInfoViewController *aboutUsVC = [[EKPSchoolInfoViewController alloc] initWithNibName:@"EKPSchoolInfoViewController" bundle:nil];
+    EKPStudent *currentStudent = [EKPSingleton loadStudent];
+    aboutUsVC.aboutUsData = currentStudent.studentAboutSchool;
     [self presentPopupViewController:aboutUsVC animationType:MJPopupViewAnimationFade];
 }
 

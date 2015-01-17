@@ -14,4 +14,6 @@
 @property (nonatomic, strong) IBOutlet UIView *lineView;
 @property (nonatomic, strong) IBOutlet UITextView *aboutUsTextView;
 
+@property (nonatomic, strong) NSString *aboutUsData;
+
 @end

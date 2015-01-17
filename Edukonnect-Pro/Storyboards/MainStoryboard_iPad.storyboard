@@ -562,6 +562,7 @@
                         <segue destination="hoI-WN-ONa" kind="push" identifier="DashboardToBoardingSegue" id="1Lp-3D-x9a"/>
                         <segue destination="jG0-fN-fdH" kind="push" identifier="DashboardToLibrarySegue" id="cY6-Xh-VMd"/>
                         <segue destination="Y4Y-X8-gmw" kind="push" identifier="DashboardToPaymentSegue" id="0GD-Yh-MZu"/>
+                        <segue destination="KAJ-iT-Sgt" kind="push" identifier="DashboardToAlertSegue" id="jlx-Vp-WBr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -980,6 +981,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sCy-No-MBM"/>
                     <connections>
                         <outlet property="alertListTableView" destination="94b-ar-8ic" id="xj3-Km-bzT"/>
                     </connections>

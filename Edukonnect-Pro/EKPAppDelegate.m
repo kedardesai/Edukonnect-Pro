@@ -23,7 +23,7 @@
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor loadNavigationBarColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTranslucent:YES];
+//    [[UINavigationBar appearance] setTranslucent:YES];
     
     [self.window setBackgroundColor:[UIColor loadScreenBackgroundColor]];
 
