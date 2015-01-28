@@ -26,7 +26,7 @@
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);
         [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
-        return NO;
+        return nil;
     }
     
     NSError *localError = nil;
@@ -35,7 +35,7 @@
     
     if (localError) {
         [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
-        return NO;
+        return nil;
     }
     
     return dictionary;

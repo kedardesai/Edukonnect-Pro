@@ -28,7 +28,7 @@
     [self.webView setOpaque:NO];
     [self.webView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     
-    EKPStudent *currentStudent = [EKPSingleton loadStudent];
+//    EKPStudent *currentStudent = [EKPSingleton loadStudent];
 //    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@edusen/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.edusen.net.in/index.php"]]];

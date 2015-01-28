@@ -26,7 +26,7 @@
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);
         [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
-        return nil;
+        return NO;
     }
     
     NSError *localError = nil;
@@ -35,10 +35,10 @@
     
     if (localError) {
         [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
-        return nil;
+        return NO;
     }
     
-    BOOL status = [dictionary objectForKey:STATUS_KEY];
+    BOOL status = [[dictionary objectForKey:STATUS_KEY] boolValue];
     return status;
 }
 
