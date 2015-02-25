@@ -44,7 +44,7 @@
     self.schoolCodeTextField.layer.shadowOpacity = 0.5;
     
     [self.userNameLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.userNameTextField setTextFieldtype:kTextFieldTypeEmail];
+    [self.userNameTextField setTextFieldtype:kTextFieldTypeCustom];
     [self.userNameTextField setIsAnimated:YES];
     [self.userNameTextField setNormalBorderColor:[UIColor loadComponentNormalColor] errorBorderColor:[UIColor loadComponentAlertColor] normalTextColor:[UIColor blackColor] errorTextColor:[UIColor blackColor] normalBorderWidth:0.6 errorBorderWidth:0.6];
     self.userNameTextField.layer.cornerRadius = 2.0;

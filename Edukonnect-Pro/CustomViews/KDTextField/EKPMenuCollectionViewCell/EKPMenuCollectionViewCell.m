@@ -135,7 +135,7 @@
         {
             [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-            [self.nameLabel setText:@"Dormiatry"];
+            [self.nameLabel setText:@"Dormiotry"];
             
         }
             break;
