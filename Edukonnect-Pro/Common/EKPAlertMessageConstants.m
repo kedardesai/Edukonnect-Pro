@@ -19,17 +19,19 @@ NSString *const CONFIRMATION_TITLE = @"Confirmation";
 NSString *const INFORMATION_TITLE = @"Information";
 
 #pragma mark Registration-Page Alert Messages
-
 NSString *const REGISTRATION_SUCCESS = @"Registration Successfully Done.";
 NSString *const REGISTRATION_FAIL = @"Registration Failed. Please try again...!";
 
 #pragma mark SwitchUser-Page Alert Messages
-
 NSString *const ALREADY_LOGGED_IN = @"You are already logged in with same credentials.";
 
 #pragma mark Edu Profile Page Alert Messages
-
 NSString *const PROFILE_UPDATED = @"Profile has been updated successfully.";
 NSString *const PROFILE_NOT_UPDATED = @"Profile has failed to update.";
+
+#pragma mark External Links Alert Messages
+NSString *const INVALID_FB_LINK = @"Invalid Facebook link.";
+NSString *const INVALID_GOOGLEPLUS_LINK = @"Invalid Google+ link.";
+NSString *const INVALID_TWITTER_LINK = @"Invalid Twitter link.";
 
 @end

@@ -872,11 +872,101 @@
                     <navigationItem key="navigationItem" id="VrB-Tw-0eG"/>
                     <connections>
                         <outlet property="dormitoriesListTableView" destination="Tx0-Ar-e3v" id="Tzx-WL-naV"/>
+                        <segue destination="2Ep-lO-MkJ" kind="push" identifier="EventListToDetailsSegue" id="5pM-Jc-skZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4p-1q-LxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2458" y="3065"/>
+        </scene>
+        <!--Event Details View Controller-->
+        <scene sceneID="8C8-UH-Dg5">
+            <objects>
+                <viewController storyboardIdentifier="EKPEventDetailsViewController" id="2Ep-lO-MkJ" customClass="EKPEventDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jDw-ey-b7t"/>
+                        <viewControllerLayoutGuide type="bottom" id="z99-Id-SeD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VxZ-Ff-JWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-qB-gAC">
+                                <rect key="frame" x="28" y="72" width="713" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwl-sP-aGs">
+                                <rect key="frame" x="28" y="110" width="713" height="290"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-Xr-Q70">
+                                <rect key="frame" x="28" y="417" width="46" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtA-ua-jtJ">
+                                <rect key="frame" x="82" y="417" width="379" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWb-PE-Ffc">
+                                <rect key="frame" x="28" y="455" width="48" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba7-rQ-W86">
+                                <rect key="frame" x="84" y="455" width="168" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Venue :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU1-MK-Y8K">
+                                <rect key="frame" x="28" y="484" width="57" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyS-Vm-1IA">
+                                <rect key="frame" x="28" y="513" width="713" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOv-Nb-rce">
+                                <rect key="frame" x="431" y="444" width="44" height="44"/>
+                                <state key="normal" image="Checkbox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="isGoingBtnClicked:" destination="2Ep-lO-MkJ" eventType="touchUpInside" id="MYE-Vc-dxi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is Going" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-MW-6RM">
+                                <rect key="frame" x="483" y="455" width="64" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PYc-8Q-0pI"/>
+                    <connections>
+                        <outlet property="eventDate" destination="CtA-ua-jtJ" id="wLU-wG-9lG"/>
+                        <outlet property="eventImageView" destination="lwl-sP-aGs" id="yhL-Vy-H3Z"/>
+                        <outlet property="eventIsGoingBtn" destination="JOv-Nb-rce" id="FNh-oj-kJz"/>
+                        <outlet property="eventNameLabel" destination="tll-qB-gAC" id="2Mu-c4-pUU"/>
+                        <outlet property="eventTime" destination="Ba7-rQ-W86" id="yYx-c6-9zp"/>
+                        <outlet property="eventVenue" destination="YyS-Vm-1IA" id="8uD-2r-xHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qk-hM-uXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3334" y="3065"/>
         </scene>
         <!--Library View Controller-->
         <scene sceneID="0ro-Gh-olK">
@@ -1624,6 +1714,9 @@
             <point key="canvasLocation" x="-948" y="-1700"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Checkbox" width="20" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
         <simulatedOrientationMetrics key="orientation"/>

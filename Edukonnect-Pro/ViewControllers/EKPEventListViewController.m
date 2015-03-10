@@ -10,6 +10,7 @@
 #import "EKPEvent.h"
 #import "EKPEventAPI.h"
 #import "UIImageView+AFNetworking.h"
+#import "EKPEventDetailsViewController.h"
 
 @interface EKPEventListViewController ()
 
@@ -79,6 +80,7 @@
                 eventTemp.eventEventDate = [eventDict objectForKey:EVENT_API_EVENT_DATE];
                 eventTemp.eventEventTime = [eventDict objectForKey:EVENT_API_EVENT_TIME];
                 eventTemp.eventVenue = [eventDict objectForKey:EVENT_API_VENUE];
+                eventTemp.eventIsGoingControlToShow = [eventDict objectForKey:EVENT_API_ISGOINGCONTROL];
                 
                 [self.eventListArray addObject:eventTemp];
             }
@@ -129,10 +131,10 @@
     
     UIView *contentView = [cell.contentView viewWithTag:100];
     
-    if (![currentEvent.eventImage isEqual:[NSNull null]]) {
-        UIImageView *eventImage = (UIImageView *) [contentView viewWithTag:101];
-        [eventImage setImageWithURL:[NSURL URLWithString:currentEvent.eventImage]];
-    }
+//    if (![currentEvent.eventImage isEqual:[NSNull null]]) {
+//        UIImageView *eventImage = (UIImageView *) [contentView viewWithTag:101];
+//        [eventImage setImageWithURL:[NSURL URLWithString:currentEvent.eventImage]];
+//    }
     
     UILabel *headingLabel = (UILabel *) [contentView viewWithTag:102];
     [headingLabel setText:currentEvent.eventName];
@@ -141,7 +143,7 @@
     [venueLabel setText:currentEvent.eventVenue];
     
     UILabel *dateLabel = (UILabel *) [contentView viewWithTag:106];
-    [dateLabel setText:currentEvent.eventEventDate];
+    [dateLabel setText:[EKPUtility getDateForTimeStamp:currentEvent.eventEventDate]];
     
     UILabel *timeLabel = (UILabel *) [contentView viewWithTag:108];
     [timeLabel setText:currentEvent.eventEventTime];
@@ -149,8 +151,16 @@
     return cell;
 }
 
+#pragma mark UITableViewDelegate Methods
 
-#pragma mark UIScrollViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"EventListToDetailsSegue" sender:self];
+}
+
+
+#pragma mark UIScrollViewDelegate Methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -162,14 +172,19 @@
     }
 }
 
-/*
-#pragma mark - Navigation
+
+#pragma mark Navigation Methods
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"EventListToDetailsSegue"]) { // Go to Event Details
+        EKPEventDetailsViewController *destinationController = (EKPEventDetailsViewController *)[segue destinationViewController];
+        destinationController.selectedEvent = [self.eventListArray objectAtIndex:self.selectedIndexPath.row];
+    }
 }
-*/
 
 @end

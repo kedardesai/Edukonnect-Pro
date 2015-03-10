@@ -98,6 +98,7 @@
 		1EA3B7721A333C9100E88711 /* EKPProfileAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3B7711A333C9100E88711 /* EKPProfileAPI.m */; };
 		1EA3B7751A33408C00E88711 /* EKPProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3B7741A33408C00E88711 /* EKPProfile.m */; };
 		1EA40FEF1A265DF900416129 /* UIFont+EKPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */; };
+		1EAFE61C1AA9B34A00617AA9 /* EKPEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAFE61B1AA9B34A00617AA9 /* EKPEventDetailsViewController.m */; };
 		1EC335601A06673600CADF22 /* EKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3355F1A06673600CADF22 /* EKPUser.m */; };
 		1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335621A067D3100CADF22 /* EKPLoginAPI.m */; };
 		1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC335651A067D9400CADF22 /* EKPStudent.m */; };
@@ -334,6 +335,8 @@
 		1EA3B7741A33408C00E88711 /* EKPProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPProfile.m; sourceTree = "<group>"; };
 		1EA40FED1A265DF900416129 /* UIFont+EKPFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+EKPFont.h"; sourceTree = "<group>"; };
 		1EA40FEE1A265DF900416129 /* UIFont+EKPFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+EKPFont.m"; sourceTree = "<group>"; };
+		1EAFE61A1AA9B34A00617AA9 /* EKPEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEventDetailsViewController.h; sourceTree = "<group>"; };
+		1EAFE61B1AA9B34A00617AA9 /* EKPEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEventDetailsViewController.m; sourceTree = "<group>"; };
 		1EC3355E1A06673600CADF22 /* EKPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPUser.h; sourceTree = "<group>"; };
 		1EC3355F1A06673600CADF22 /* EKPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUser.m; sourceTree = "<group>"; };
 		1EC335611A067D3100CADF22 /* EKPLoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginAPI.h; sourceTree = "<group>"; };
@@ -582,6 +585,8 @@
 				1E37F0951A44C900005BD6C0 /* EKPAlertListViewController.m */,
 				1E9CEB561A3730E10069C150 /* EKPEventListViewController.h */,
 				1E9CEB571A3730E10069C150 /* EKPEventListViewController.m */,
+				1EAFE61A1AA9B34A00617AA9 /* EKPEventDetailsViewController.h */,
+				1EAFE61B1AA9B34A00617AA9 /* EKPEventDetailsViewController.m */,
 				1E9A82FB1A3A1B3000CD838F /* EKPExamListViewController.h */,
 				1E9A82FC1A3A1B3000CD838F /* EKPExamListViewController.m */,
 				1E9A82FE1A3A251400CD838F /* EKPResultViewController.h */,
@@ -1231,6 +1236,7 @@
 				1E7992801A37831E00383BE6 /* AFHTTPSessionManager.m in Sources */,
 				1E7992851A37831E00383BE6 /* AFURLResponseSerialization.m in Sources */,
 				1E466FC61A3E10750024D350 /* EKPEduSenViewController.m in Sources */,
+				1EAFE61C1AA9B34A00617AA9 /* EKPEventDetailsViewController.m in Sources */,
 				1E9ADCB11A45E6FE0066F99B /* MBProgressHUD.m in Sources */,
 				1ED3A70A1A3CAF18007FEE6F /* PSTCollectionViewCell.m in Sources */,
 				1E9A82FD1A3A1B3000CD838F /* EKPExamListViewController.m in Sources */,

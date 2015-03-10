@@ -18,4 +18,6 @@
 @property (nonatomic) BOOL isNextPageAvailable;
 @property (nonatomic) BOOL isFirstLoad;
 
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+
 @end

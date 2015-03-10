@@ -19,5 +19,6 @@
 @property (nonatomic, strong) NSString *eventCreatedDate;
 @property (nonatomic, strong) NSString *eventEventDate;
 @property (nonatomic, strong) NSString *eventEventTime;
+@property (nonatomic, strong) NSString *eventIsGoingControlToShow;
 
 @end

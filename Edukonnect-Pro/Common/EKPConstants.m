@@ -108,6 +108,7 @@ NSString *const EVENT_API_CREATED_BY = @"createdby";
 NSString *const EVENT_API_CREATED_DATE = @"createddate";
 NSString *const EVENT_API_EVENT_DATE = @"eventdate";
 NSString *const EVENT_API_EVENT_TIME = @"eventtime";
+NSString *const EVENT_API_ISGOINGCONTROL = @"is_going_control_to_show";
 
 #pragma mark EXAM_LIST-API Constants
 NSString *const EXAM_ID = @"exam_id";

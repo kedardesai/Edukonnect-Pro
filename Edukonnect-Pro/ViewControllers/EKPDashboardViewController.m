@@ -263,19 +263,31 @@
 - (void)showFBLink
 {
     EKPStudent *student = [EKPSingleton loadStudent];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentFBLink]];
+    NSLog(@"student.studentFBLink::: %@",student.studentFBLink);
+    BOOL isValid = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentFBLink]];
+    if (!isValid) {
+        [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:INVALID_FB_LINK];
+    }
 }
 
 - (void)showGooglePlusLink
 {
     EKPStudent *student = [EKPSingleton loadStudent];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentGooglePlusLink]];
+    NSLog(@"student.studentGooglePlusLink::: %@",student.studentGooglePlusLink);
+    BOOL isValid = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentGooglePlusLink]];
+    if (!isValid) {
+        [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:INVALID_GOOGLEPLUS_LINK];
+    }
 }
 
 - (void)showTwitterLink
 {
     EKPStudent *student = [EKPSingleton loadStudent];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentTwitterLink]];
+    NSLog(@"student.studentTwitterLink::: %@",student.studentTwitterLink);
+    BOOL isValid = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:student.studentTwitterLink]];
+    if (!isValid) {
+        [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:INVALID_TWITTER_LINK];
+    }
 }
 
 - (void)showExtraMenus:(id)sender
