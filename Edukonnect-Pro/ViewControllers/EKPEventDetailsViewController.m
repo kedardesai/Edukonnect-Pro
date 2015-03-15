@@ -28,10 +28,14 @@
     self.eventNameLabel.text = self.selectedEvent.eventName;
     self.eventDate.text = [EKPUtility getDateForTimeStamp:self.selectedEvent.eventEventDate];
     self.eventTime.text = self.selectedEvent.eventEventTime;
-    self.eventVenue.text = self.selectedEvent.eventVenue;
+//    self.eventVenue.text = self.selectedEvent.eventVenue;
+    
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[self.selectedEvent.eventVenue dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    self.eventVenue.attributedText = attributedString;
     
     EKPStudent *student = [EKPSingleton loadStudent];
-    [self.eventImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/events_image/%@.jpg", student.studentBasePath, self.selectedEvent.eventImage]]];
+    
+    [self.eventImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/uploads/events_image/%ld.jpg", student.studentBasePath, [self.selectedEvent.eventImage integerValue]]]];
     
     if (![self.selectedEvent.eventIsGoingControlToShow boolValue]) {
         [self.eventIsGoingBtn setHidden:YES];

@@ -140,8 +140,12 @@
     UILabel *headingLabel = (UILabel *) [contentView viewWithTag:102];
     [headingLabel setText:currentEvent.eventName];
     
-    UILabel *venueLabel = (UILabel *) [contentView viewWithTag:104];
-    [venueLabel setText:currentEvent.eventVenue];
+//    UILabel *venueLabel = (UILabel *) [contentView viewWithTag:104];
+//    [venueLabel setText:currentEvent.eventVenue];
+    
+//    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[self.selectedEvent.eventVenue dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+//    self.eventVenue.attributedText = attributedString;
+//    [self.eventVenue setTextColor:[UIColor whiteColor]];
     
     UILabel *dateLabel = (UILabel *) [contentView viewWithTag:106];
     [dateLabel setText:[EKPUtility getDateForTimeStamp:currentEvent.eventEventDate]];

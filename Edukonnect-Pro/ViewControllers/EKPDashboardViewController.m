@@ -96,7 +96,7 @@
 //    UIImage *logoImage = [UIImage imageWithData:data];
 //    [self.schoolLogoImage setImage:logoImage];
     
-    [self.schoolLogoImage setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/logo.png", student.studentBasePath]]];
+    [self.schoolLogoImage setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/uploads/logo.png", student.studentBasePath]]];
     [self.schoolLogoImage setContentMode:UIViewContentModeScaleAspectFit];
     NSLog(@"%@",[NSString stringWithFormat:@"%@/uploads/logo.png", student.studentBasePath]);
     

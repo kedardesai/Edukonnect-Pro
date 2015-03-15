@@ -102,7 +102,7 @@
         
         NSLog(@"%@", [NSString stringWithFormat:@"http://%@/uploads/gallery_image/%@", student.studentBasePath, [imageDict objectForKey:GALLERY_API_GALLERY_IMAGE_LINK]]);
         
-        [self.photoListArray addObject:[MWPhoto photoWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/gallery_image/%@", student.studentBasePath, [imageDict objectForKey:GALLERY_API_GALLERY_IMAGE_LINK]]]]];
+        [self.photoListArray addObject:[MWPhoto photoWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/uploads/gallery_image/%@", student.studentBasePath, [imageDict objectForKey:GALLERY_API_GALLERY_IMAGE_LINK]]]]];
     }
     
 //    [self.photoListArray addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b.jpg"]]];

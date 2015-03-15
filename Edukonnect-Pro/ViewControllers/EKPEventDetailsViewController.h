@@ -15,7 +15,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *eventImageView;
 @property (nonatomic, strong) IBOutlet UILabel *eventDate;
 @property (nonatomic, strong) IBOutlet UILabel *eventTime;
-@property (nonatomic, strong) IBOutlet UILabel *eventVenue;
+@property (nonatomic, strong) IBOutlet UITextView *eventVenue;
 @property (nonatomic, strong) IBOutlet UIButton *eventIsGoingBtn;
 @property (nonatomic, strong) IBOutlet UILabel *eventIsGoingLabel;
 
