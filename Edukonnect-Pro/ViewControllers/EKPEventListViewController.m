@@ -70,6 +70,7 @@
             NSMutableDictionary *resultDict = [EKPEventAPI getEventsForPageId:self.pageId];
             NSMutableArray *eventArray = [[resultDict objectForKey:EVENT_API_EVENT] mutableCopy];
             for (NSMutableDictionary *eventDict in eventArray) {
+                NSLog(@"eventDict ::: %@", eventDict);
                 EKPEvent *eventTemp = [[EKPEvent alloc] init];
                 eventTemp.eventId = [eventDict objectForKey:EVENT_API_ID];
                 eventTemp.eventName = [eventDict objectForKey:EVENT_API_NAME];

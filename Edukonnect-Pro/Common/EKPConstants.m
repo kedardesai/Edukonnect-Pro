@@ -57,6 +57,11 @@ NSString *const LIBRARY_CANCEL_REQUEST_BOOK_API_URL = @"CancelRequestBook.php?";
 NSString *const LIBRARY_BOOK_AVAILABILITY_API_URL = @"AvailableBookCount.php?";
 NSString *const PAYMENT_API_URL = @"invoice.php?";
 NSString *const PULL_NOTIFICATION_API_URL = @"broadcast.php?";
+NSString *const EVENT_ISGOING_CHECK_API_URL = @"is_going_check.php?";
+NSString *const EVENT_ISGOING_API_URL = @"is_going_response.php?";
+//http://main.edukonnect.net.in/is_going_check.php?schoolcode=sch001&student_id=1&event_id=1
+//http://main.edukonnect.net.in/is_going_response.php?schoolcode=SCH001&event_id=1&student_id=1
+
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";

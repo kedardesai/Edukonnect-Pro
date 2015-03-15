@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iH5-96-ijC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iH5-96-ijC">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1697,6 +1697,7 @@
                         <outlet property="eventDate" destination="i6v-j8-xmU" id="eR6-Fz-M0I"/>
                         <outlet property="eventImageView" destination="tEW-e7-42V" id="LeB-70-qK9"/>
                         <outlet property="eventIsGoingBtn" destination="avg-vc-0AR" id="NMk-cS-KSV"/>
+                        <outlet property="eventIsGoingLabel" destination="5u2-DH-Nzm" id="cEt-5q-mRA"/>
                         <outlet property="eventNameLabel" destination="Yax-g5-XDY" id="pGZ-Qw-5dQ"/>
                         <outlet property="eventTime" destination="V3Z-Xv-dgh" id="NU4-Eh-SIB"/>
                         <outlet property="eventVenue" destination="vEe-Sm-nYR" id="POo-Td-94v"/>

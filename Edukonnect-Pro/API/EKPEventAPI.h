@@ -11,5 +11,7 @@
 @interface EKPEventAPI : NSObject
 
 + (NSMutableDictionary *)getEventsForPageId:(NSInteger)pageId;
++ (BOOL)userIsGoingToEvent:(NSString *)eventId;
++ (BOOL)checkIsGoing:(NSString *)eventId;
 
 @end

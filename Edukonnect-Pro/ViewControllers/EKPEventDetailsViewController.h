@@ -17,6 +17,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *eventTime;
 @property (nonatomic, strong) IBOutlet UILabel *eventVenue;
 @property (nonatomic, strong) IBOutlet UIButton *eventIsGoingBtn;
+@property (nonatomic, strong) IBOutlet UILabel *eventIsGoingLabel;
 
 @property (nonatomic, strong) EKPEvent *selectedEvent;
 
