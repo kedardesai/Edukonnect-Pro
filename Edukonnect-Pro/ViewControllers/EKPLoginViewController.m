@@ -172,6 +172,7 @@
         student.studentUsername = self.userNameTextField.text;
         student.studentPassword = self.passwordTextField.text;
         NSDictionary *resultDict = [EKPLoginAPI loginUserWith:student];
+        NSLog(@"resultDict ::: %@", resultDict);
         BOOL status = [[resultDict objectForKey:STATUS_KEY] boolValue];
         if (status) {
             // school_details
@@ -179,6 +180,8 @@
             
             [EKPSingleton saveStudent:student];
             [EKPSingleton addStudentToList:student];
+        } else {
+            [EKPUtility showAlertWithTitle:@"Failed To Login" andMessage:@"Unable to login. Please check your username and password."];
         }
         
         return status;

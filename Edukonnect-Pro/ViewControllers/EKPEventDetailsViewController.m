@@ -29,7 +29,9 @@
     self.eventDate.text = [EKPUtility getDateForTimeStamp:self.selectedEvent.eventEventDate];
     self.eventTime.text = self.selectedEvent.eventEventTime;
     self.eventVenue.text = self.selectedEvent.eventVenue;
-    [self.eventImageView setImageWithURL:[NSURL URLWithString:self.selectedEvent.eventImage]];
+    
+    EKPStudent *student = [EKPSingleton loadStudent];
+    [self.eventImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/uploads/events_image/%@.jpg", student.studentBasePath, self.selectedEvent.eventImage]]];
     
     if (![self.selectedEvent.eventIsGoingControlToShow boolValue]) {
         [self.eventIsGoingBtn setHidden:YES];
