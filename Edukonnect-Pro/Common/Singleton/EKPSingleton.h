@@ -23,6 +23,7 @@
 
 + (void)saveStudent:(EKPStudent *)student;
 + (EKPStudent *)loadStudent;
++ (void)removeStudent;
 
 + (void)addStudentToList:(EKPStudent *)student;
 + (NSMutableArray *)loadStudentList;
@@ -41,5 +42,9 @@
 
 + (void)saveLastNotificationId:(NSString *)notificationId;
 + (NSString *)loadLastNotificationId;
+
++ (void)saveUserRole:(NSString *)userRole;
++ (NSString *)loadUserRole;
++ (void)removeUserRole;
 
 @end

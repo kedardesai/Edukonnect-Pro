@@ -9,15 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "KDTextField.h"
 
-@interface EKPRegistrationViewController : UIViewController <KDTextFieldDelegate, UITextFieldDelegate>
+@interface EKPRegistrationViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UILabel *nameLabel;
-@property (nonatomic, strong) IBOutlet UILabel *mobileLabel;
-@property (nonatomic, strong) IBOutlet UILabel *emailLabel;
-@property (nonatomic, strong) IBOutlet KDTextField *nameTextField;
-@property (nonatomic, strong) IBOutlet KDTextField *mobileTextField;
-@property (nonatomic, strong) IBOutlet KDTextField *emailTextField;
-@property (nonatomic, strong) IBOutlet UIButton *registrationBtn;
-
+@property (nonatomic, strong) NSMutableArray *userRolesArray;
+@property (nonatomic, strong) IBOutlet UITableView *roleTableView;
 
 @end

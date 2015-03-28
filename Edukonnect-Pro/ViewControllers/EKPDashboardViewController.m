@@ -11,6 +11,7 @@
 #import "EKPSchoolInfoViewController.h"
 #import "UIViewController+MJPopupViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "EKPRegistrationViewController.h"
 
 //static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 //{
@@ -21,11 +22,6 @@
 @interface EKPDashboardViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     CGFloat _popoverWidth;
-//    CGSize _popoverArrowSize;
-//    CGFloat _popoverCornerRadius;
-//    CGFloat _animationIn;
-//    CGFloat _animationOut;
-//    BOOL _animationSpring;
 }
 
 - (void)eduTabSelected:(UISegmentedControl *)segmentedControl;
@@ -35,6 +31,7 @@
 - (void)showFBLink;
 - (void)showGooglePlusLink;
 - (void)showTwitterLink;
+- (void)userLogOut;
 
 @end
 
@@ -61,9 +58,15 @@
     self.popOver = [DXPopover new];
     _popoverWidth = 150;// CGRectGetWidth(self.view.bounds);
     
-    self.configMenusArray = [[NSMutableArray alloc] initWithObjects:@"Edu Profile", @"Switch Child", @"School Info", @"Facebook", @"Twitter", @"Google +", nil];
+    self.configMenusArray = [[NSMutableArray alloc] initWithObjects:@"Edu Profile", @"Switch Child", @"School Info", @"Facebook", @"Twitter", @"Google +", @"Log Out", nil];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 150, 264)];
+    CGFloat tableHeight = [_configMenusArray count]*44;
+    
+    if (tableHeight>320) {
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 150, 300)];
+    } else {
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 150, tableHeight)];
+    }
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -305,6 +308,16 @@
     };
 }
 
+- (void)userLogOut
+{
+    [EKPSingleton removeUserRole];
+    [EKPSingleton removeStudent];
+    
+    UIStoryboard *currentStoryboard = [EKPUtility getStoryboardForCurrentDevice];
+    EKPRegistrationViewController *commonWebVC = (EKPRegistrationViewController *) [currentStoryboard instantiateViewControllerWithIdentifier:@"EKPRegistrationViewController"];
+    [self.navigationController pushViewController:commonWebVC animated:YES];
+}
+
 #pragma mark UITableViewDelegate and UITableViewDatasource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -357,6 +370,10 @@
             
         case 5:
             [self showGooglePlusLink];
+            break;
+            
+        case 6:
+            [self userLogOut];
             break;
             
         default:

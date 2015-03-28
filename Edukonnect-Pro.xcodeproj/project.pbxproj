@@ -41,6 +41,7 @@
 		1E6581A11A420182002FFD58 /* EKPDormitoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6581A01A420182002FFD58 /* EKPDormitoryAPI.m */; };
 		1E6581A41A4209D5002FFD58 /* EKPLibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6581A31A4209D5002FFD58 /* EKPLibraryAPI.m */; };
 		1E6581A71A421133002FFD58 /* EKPLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6581A61A421133002FFD58 /* EKPLibraryViewController.m */; };
+		1E7675121AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7675111AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m */; };
 		1E7992531A377C6F00383BE6 /* EKPEventAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7992521A377C6F00383BE6 /* EKPEventAPI.m */; };
 		1E7992561A377E3B00383BE6 /* EKPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7992551A377E3B00383BE6 /* EKPEvent.m */; };
 		1E79927E1A37831E00383BE6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E79925A1A37831E00383BE6 /* AFHTTPRequestOperation.m */; };
@@ -223,6 +224,8 @@
 		1E6581A31A4209D5002FFD58 /* EKPLibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLibraryAPI.m; sourceTree = "<group>"; };
 		1E6581A51A421133002FFD58 /* EKPLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLibraryViewController.h; sourceTree = "<group>"; };
 		1E6581A61A421133002FFD58 /* EKPLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLibraryViewController.m; sourceTree = "<group>"; };
+		1E7675101AC6A7AA001E1CFB /* EKPCommonWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPCommonWebViewViewController.h; sourceTree = "<group>"; };
+		1E7675111AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPCommonWebViewViewController.m; sourceTree = "<group>"; };
 		1E7992511A377C6F00383BE6 /* EKPEventAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEventAPI.h; sourceTree = "<group>"; };
 		1E7992521A377C6F00383BE6 /* EKPEventAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEventAPI.m; sourceTree = "<group>"; };
 		1E7992541A377E3B00383BE6 /* EKPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEvent.h; sourceTree = "<group>"; };
@@ -569,6 +572,8 @@
 				1EA3721F1A2E45E400615958 /* Xib */,
 				1B4A313219D9687B0067B674 /* EKPRegistrationViewController.h */,
 				1B4A313319D9687B0067B674 /* EKPRegistrationViewController.m */,
+				1E7675101AC6A7AA001E1CFB /* EKPCommonWebViewViewController.h */,
+				1E7675111AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m */,
 				1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */,
 				1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */,
 				1B09EEAE19DBD5B00049F667 /* EKPDashboardViewController.h */,
@@ -1179,6 +1184,7 @@
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
 				1E7992891A37831E00383BE6 /* UIAlertView+AFNetworking.m in Sources */,
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
+				1E7675121AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m in Sources */,
 				1ED3A6FD1A3CAF18007FEE6F /* MWCaptionView.m in Sources */,
 				1ED3A7121A3CAF18007FEE6F /* PSTGridLayoutItem.m in Sources */,
 				1EA1EE061A43667600722529 /* EKPBookListViewController.m in Sources */,

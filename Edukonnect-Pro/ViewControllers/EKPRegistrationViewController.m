@@ -16,6 +16,7 @@
 
 @implementation EKPRegistrationViewController
 
+
 #pragma mark UIViewLifeCycle Methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,44 +34,13 @@
     self.navigationController.navigationBar.topItem.title = @"";
     [self.view setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     
-    [self.nameLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.nameTextField setTextFieldtype:kTextFieldTypeString];
-    [self.nameTextField setIsAnimated:YES];
-    [self.nameTextField setNormalBorderColor:[UIColor loadComponentNormalColor] errorBorderColor:[UIColor loadComponentAlertColor] normalTextColor:[UIColor blackColor] errorTextColor:[UIColor blackColor] normalBorderWidth:0.6 errorBorderWidth:0.6];
-    self.nameTextField.layer.cornerRadius = 2.0;
-    self.nameTextField.layer.shadowOffset = CGSizeMake(1, 1);
-    self.nameTextField.layer.shadowRadius = 5;
-    self.nameTextField.layer.shadowOpacity = 0.5;
-    
-    [self.mobileLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.mobileTextField setTextFieldtype:kTextFieldTypeMobile];
-    [self.mobileTextField setIsAnimated:YES];
-    [self.mobileTextField setNormalBorderColor:[UIColor loadComponentNormalColor] errorBorderColor:[UIColor loadComponentAlertColor] normalTextColor:[UIColor blackColor] errorTextColor:[UIColor blackColor] normalBorderWidth:0.6 errorBorderWidth:0.6];
-    self.mobileTextField.layer.cornerRadius = 2.0;
-    self.mobileTextField.layer.shadowOffset = CGSizeMake(1, 1);
-    self.mobileTextField.layer.shadowRadius = 5;
-    self.mobileTextField.layer.shadowOpacity = 0.5;
-    
-    [self.emailLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.emailTextField setTextFieldtype:kTextFieldTypeEmail];
-    [self.emailTextField setIsAnimated:YES];
-    [self.emailTextField setNormalBorderColor:[UIColor loadComponentNormalColor] errorBorderColor:[UIColor loadComponentAlertColor] normalTextColor:[UIColor blackColor] errorTextColor:[UIColor blackColor] normalBorderWidth:0.6 errorBorderWidth:0.6];
-    self.emailTextField.layer.cornerRadius = 2.0;
-    self.emailTextField.layer.shadowOffset = CGSizeMake(1, 1);
-    self.emailTextField.layer.shadowRadius = 5;
-    self.emailTextField.layer.shadowOpacity = 0.5;
-    
-    self.registrationBtn.layer.cornerRadius = 2.0;
-    self.registrationBtn.layer.masksToBounds = NO;
-    self.registrationBtn.layer.shadowOffset = CGSizeMake(2, 2);
-    self.registrationBtn.layer.shadowRadius = 5;
-    self.registrationBtn.layer.shadowOpacity = 0.5;
-    [self.registrationBtn.titleLabel setShadowOffset:CGSizeMake(1.0f, 1.0f)];
+    _userRolesArray = [[NSMutableArray alloc] initWithObjects:ADMIN_ROLE, PARENT_ROLE, TEACHER_ROLE, STUDENT_ROLE, GUEST_ROLE, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.title = [NSString stringWithFormat:@"%@", REGISTRATION_SCREEN_TITLE];
+    [self.navigationItem setHidesBackButton:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,103 +49,66 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark Code-Reusable Methods
 
-- (void)setLeftViewForTextField
+#pragma mark UITableViewDatasource Methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    UIView *usernameLeftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    UIImageView *imageViewUsername = [[UIImageView alloc] initWithFrame:CGRectMake(10, 9, 20, 20)];
-    [imageViewUsername setContentMode:UIViewContentModeScaleAspectFit];
-    [imageViewUsername setImage:[UIImage imageNamed:@"Username"]];
-    [usernameLeftView addSubview:imageViewUsername];
-    [self.nameTextField setLeftView:usernameLeftView];
-    [self.nameTextField setLeftViewMode:UITextFieldViewModeAlways];
-    
-    UIView *passwordLeftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    UIImageView *imageViewPassword = [[UIImageView alloc] initWithFrame:CGRectMake(10, 9, 20, 20)];
-    [imageViewPassword setImage:[UIImage imageNamed:@"Password"]];
-    [imageViewPassword setContentMode:UIViewContentModeScaleAspectFit];
-    [passwordLeftView addSubview:imageViewPassword];
-    [self.mobileTextField setLeftView:passwordLeftView];
-    [self.mobileTextField setLeftViewMode:UITextFieldViewModeAlways];
-    
-    UIView *emailLeftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    UIImageView *imageViewemail = [[UIImageView alloc] initWithFrame:CGRectMake(10, 9, 20, 20)];
-    [imageViewemail setImage:[UIImage imageNamed:@"Password"]];
-    [imageViewemail setContentMode:UIViewContentModeScaleAspectFit];
-    [emailLeftView addSubview:imageViewemail];
-    [self.emailTextField setLeftView:emailLeftView];
-    [self.emailTextField setLeftViewMode:UITextFieldViewModeAlways];
+    return 1;
 }
 
-#pragma mark KDTextFieldDelegate Methods
-
-- (void)onError:(NSError *)error withTextField:(KDTextField *)textField
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    [self showAlertViewWithTitle:@"Error - Invalid Text" andMessage:[error localizedDescription]];
-    if (textField == self.nameTextField) {
-        [self.nameLabel setTextColor:[UIColor loadComponentAlertColor]];
-        
-    } else if (textField == self.mobileTextField) {
-        [self.mobileLabel setTextColor:[UIColor loadComponentAlertColor]];
-        
-    } else if (textField == self.emailTextField) {
-        [self.emailLabel setTextColor:[UIColor loadComponentAlertColor]];
+    return [_userRolesArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifier = @"userRoleCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    UILabel *roleLabel =  (UILabel *) [cell.contentView viewWithTag:100];
+    [roleLabel setText:[_userRolesArray objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Select Your Role.";
+}
+
+
+#pragma mark UITableViewDatasource Methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [EKPSingleton saveUserRole:[_userRolesArray objectAtIndex:indexPath.row]];
+    
+    switch (indexPath.row) {
+        case 0: // For Admin
+            [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+            break;
+            
+        case 1: // For Parent
+            [self performSegueWithIdentifier:@"RegisteredSuccessfullySegue" sender:self];
+            break;
+            
+        case 2: // For Teacher
+            [self performSegueWithIdentifier:@"RegisteredSuccessfullySegue" sender:self];
+            break;
+            
+        case 3: // For Student
+            [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+            break;
+            
+        case 4: // For Guest
+            [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+            break;
+            
+        default:
+            break;
     }
-}
-
-- (void)onSucess:(KDTextField *)textField
-{
-//    [self showAlertViewWithTitle:@"Success" andMessage:textField.text];
-}
-
-- (BOOL)addCustomValidation:(KDTextField *)textField
-{
-    NSLog(@"Add Custom Validation here for password");
-    return YES;
-}
-
-#pragma mark UITextFieldDelegate Methods
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return NO;
-}
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    return YES;
-}
-
-#pragma maek UINavigation
-
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
-    [self.nameLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.mobileLabel setTextColor:[UIColor loadComponentNormalColor]];
-    [self.emailLabel setTextColor:[UIColor loadComponentNormalColor]];
-    
-    [self.nameTextField validateTextFieldAnimated:YES];
-    [self.mobileTextField validateTextFieldAnimated:YES];
-    [self.emailTextField validateTextFieldAnimated:YES];
-    
-    if (self.nameTextField.isValid && self.mobileTextField.isValid && self.mobileTextField.isValid) {
-        // Validate Inputs here
-        EKPUser *user = [[EKPUser alloc] init];
-        user.userName = self.nameTextField.text;
-        user.userMobile = self.mobileTextField.text;
-        user.userEmail = self.emailTextField.text;
-        
-        BOOL result = [EKPRegistrationAPI registerUserWith:user];
-        if (result) {
-            [EKPSingleton saveUserWithUser:user];
-        }
-        
-        return result;
-    }
-    
-    return NO;
 }
 
 @end

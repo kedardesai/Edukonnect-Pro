@@ -21,7 +21,7 @@
     
     NSURLResponse* response;
     NSError* error = nil;
-    NSMutableData *webData = [NSURLConnection sendSynchronousRequest:theRequest  returningResponse:&response error:&error].mutableCopy;
+    NSMutableData *webData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:&response error:&error].mutableCopy;
     
     if (error) {
         NSLog(@"ERROR ::: %@", [error localizedDescription]);

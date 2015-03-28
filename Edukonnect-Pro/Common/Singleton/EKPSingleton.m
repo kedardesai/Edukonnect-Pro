@@ -71,6 +71,13 @@
     return studentObj;
 }
 
++ (void)removeStudent
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:EKP_CURRENT_STUDENT];
+    [defaults synchronize];
+}
+
 #pragma mark Student List
 
 + (void)addStudentToList:(EKPStudent *)student
@@ -237,4 +244,26 @@
 }
 
 
+#pragma mark User-Role Data
+
++ (void)saveUserRole:(NSString *)userRole
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:userRole forKey:EKP_USER_ROLE];
+    [defaults synchronize];
+}
+
++ (NSString *)loadUserRole
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userRole = [defaults objectForKey:EKP_USER_ROLE];
+    return userRole;
+}
+
++ (void)removeUserRole
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:EKP_USER_ROLE];
+    [defaults synchronize];
+}
 @end

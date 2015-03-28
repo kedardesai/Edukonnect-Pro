@@ -10,8 +10,17 @@
 
 @implementation EKPConstants
 
+
+#pragma mark User-Role Constants
+NSString *const ADMIN_ROLE = @"Admin";
+NSString *const TEACHER_ROLE = @"Teacher";
+NSString *const PARENT_ROLE = @"Parent";
+NSString *const STUDENT_ROLE = @"Student";
+NSString *const GUEST_ROLE = @"Guest";
+
+
 #pragma mark Screen-Title Constants 
-NSString *const REGISTRATION_SCREEN_TITLE = @"Registration";
+NSString *const REGISTRATION_SCREEN_TITLE = @"Select Who You Are!";
 NSString *const LOGIN_SCREEN_TITLE = @"Login";
 NSString *const DASHBOARD_SCREEN_TITLE = @"Dashboard";
 NSString *const SWITCH_USER_SCREEN_TITLE = @"Switch User";
@@ -31,12 +40,13 @@ NSString *const EKP_NOTICE_LIST = @"noticeList";
 NSString *const EKP_EVENT_LIST = @"eventList";
 NSString *const EKP_ALERT_LIST = @"alertList";
 NSString *const EKP_NOTIFICATION_ID = @"notificationId";
+NSString *const EKP_USER_ROLE = @"userRole";
 
 #pragma API-URL Constants
 //NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
 NSString *const BASE_API_URL = @"http://main.edukonnect.net.in/";
 NSString *const REGISTRATION_API_URL = @"registration_response.php?";
-NSString *const LOGIN_API_URL = @"login_response.php?";
+NSString *const LOGIN_API_URL = @"login_responsenew.php?"; // login_response
 NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
 NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
 NSString *const ALERT_API_URL = @"notice_list_response.php?";

@@ -32,15 +32,20 @@
     
     UIStoryboard *storyboard = [EKPUtility getStoryboardForCurrentDevice];
     
-    EKPUser *currentUser = [EKPSingleton loadUser];
-    if (currentUser) { // Already Registered
+    NSString *userRole = [EKPSingleton loadUserRole];
+    if (userRole) { // Already Registered
         
-        EKPStudent *currentStudent = [EKPSingleton loadStudent];
-        if (currentStudent) { // Already LoggedIn
-            [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
+        if ([userRole isEqualToString:PARENT_ROLE] || [userRole isEqualToString:TEACHER_ROLE]) {
+            EKPStudent *currentStudent = [EKPSingleton loadStudent];
+            if (currentStudent) { // Already LoggedIn
+                [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
+            } else {
+                [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"] animated:NO];
+            }
         } else {
-            [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"] animated:NO];
+            [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPCommonWebViewViewController"] animated:NO];
         }
+        
     }
     
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
