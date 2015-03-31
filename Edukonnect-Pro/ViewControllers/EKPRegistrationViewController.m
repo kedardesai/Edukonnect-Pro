@@ -103,7 +103,7 @@
             break;
             
         case 4: // For Guest
-            [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+            [self performSegueWithIdentifier:@"GuestLoginSegue" sender:self];
             break;
             
         default:

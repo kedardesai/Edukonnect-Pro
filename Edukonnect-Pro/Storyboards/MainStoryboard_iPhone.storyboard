@@ -50,6 +50,7 @@
                         <outlet property="roleTableView" destination="Qr8-sH-LRN" id="2Xc-Ls-DAb"/>
                         <segue destination="CDb-t5-kMa" kind="push" identifier="RegisteredSuccessfullySegue" id="AFU-XS-cxR"/>
                         <segue destination="wkZ-BJ-VEN" kind="push" identifier="ShowWebViewSegue" id="qdI-BY-dxJ"/>
+                        <segue destination="jQY-A1-QE8" kind="push" identifier="GuestLoginSegue" id="vrH-8y-fZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I4-rD-ZbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,6 +181,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI8-Ix-9xT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="675"/>
+        </scene>
+        <!--Guest Info View Controller-->
+        <scene sceneID="hqg-17-mRh">
+            <objects>
+                <viewController storyboardIdentifier="EKPGuestInfoViewController" id="jQY-A1-QE8" customClass="EKPGuestInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7MV-My-4Ce"/>
+                        <viewControllerLayoutGuide type="bottom" id="laZ-ab-aNO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5bw-G0-3p8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BDV-h9-st2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYn-qa-D1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="1313"/>
         </scene>
         <!--Switch User View Controller-->
         <scene sceneID="SBX-Jy-48s">
@@ -471,12 +491,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dii-gn-Vol">
-                                <rect key="frame" x="-4" y="189" width="328" height="41"/>
+                                <rect key="frame" x="-4" y="189" width="328" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cj5-aM-FJF"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Edu Notice" width="110"/>
+                                    <segment title="Edu Notice"/>
                                     <segment title="Edu Menu" width="106"/>
                                     <segment title="Edu Resources" width="110"/>
                                 </segments>

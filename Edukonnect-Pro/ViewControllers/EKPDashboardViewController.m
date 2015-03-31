@@ -84,6 +84,26 @@
     [self.eduResourcesWebView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     [self.dashboardMenuCollectionView setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     [self.dashboardMenuCollectionView setBackgroundView:nil];
+    
+    NSLog(@"version : %@",[EKPSingleton loadVersion]);
+    NSLog(@"userRole : %@",[EKPSingleton loadUserRole]);
+    
+    if ([[EKPSingleton loadUserRole] isEqualToString:TEACHER_ROLE]) {
+        [_menuTabs removeSegmentAtIndex:1 animated:YES];
+        
+    } else if ([[EKPSingleton loadUserRole] isEqualToString:GUEST_ROLE]) {
+        [_menuTabs removeSegmentAtIndex:0 animated:YES];
+        [_menuTabs removeSegmentAtIndex:1 animated:YES];
+        
+    } else if (![[EKPSingleton loadVersion] isEqualToString:PRO_VERSION]) {
+        [_menuTabs removeSegmentAtIndex:1 animated:YES];
+    }
+    
+    CGFloat actualWidth = _menuTabs.frame.size.width - _menuTabs.frame.origin.x;
+    for (NSInteger i=0; i<[_menuTabs numberOfSegments]; i++) {
+        [_menuTabs setWidth:actualWidth/[_menuTabs numberOfSegments] forSegmentAtIndex:i];
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -116,7 +136,6 @@
     
     NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     [[UISegmentedControl appearance] setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -148,10 +167,21 @@
     EKPMenuCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DashboardMenuCollectionViewCell" forIndexPath:indexPath];
     
     EKPDashboardMenus dashboardMenu;
-    if (self.menuTabs.selectedSegmentIndex == 0) {
-        dashboardMenu = (EKPDashboardMenus) indexPath.row;
-    } else {
-        dashboardMenu = (EKPDashboardMenus) indexPath.row + 6;
+    switch (self.menuTabs.selectedSegmentIndex) {
+        case 0: // For Edu Alerts
+            dashboardMenu = (EKPDashboardMenus) indexPath.row;
+            break;
+            
+        case 1: // For Edu Menu
+            dashboardMenu = (EKPDashboardMenus) indexPath.row + 6; // 6 menus from Edu Alerts
+            break;
+            
+        case 2: // For Edu Resources
+            dashboardMenu = (EKPDashboardMenus) indexPath.row + 11; // 6 menus from Edu Alerts and 5 menus from Edu Menu
+            break;
+            
+        default:
+            break;
     }
     
     cell.ekpDashboardMenu = dashboardMenu;
@@ -221,24 +251,28 @@
 
 - (void)eduTabSelected:(UISegmentedControl *)segmentedControl
 {
-    if (segmentedControl.selectedSegmentIndex == 0) { // For Edu Notice
-        [self.eduResourcesWebView setHidden:YES];
-        [self.dashboardMenuCollectionView setHidden:NO];
-        [self.dashboardMenuCollectionView reloadData];
-        
-    } else if (segmentedControl.selectedSegmentIndex == 1) { // For Edu Menu
-        [self.eduResourcesWebView setHidden:YES];
-        [self.dashboardMenuCollectionView setHidden:NO];
-        [self.dashboardMenuCollectionView reloadData];
-        
-    } else if (segmentedControl.selectedSegmentIndex == 2) { // For Edu Resources
-        [self.eduResourcesWebView setHidden:NO];
-        [self.dashboardMenuCollectionView setHidden:YES];
-        EKPStudent *currentStudent = [EKPSingleton loadStudent];
-        NSLog(@"URL ::: %@",[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]);
-//        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
-        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.4parents.mobi/index.php"]]];
-    }
+    
+    [self.dashboardMenuCollectionView setHidden:NO];
+    [self.dashboardMenuCollectionView reloadData];
+    
+//    if (segmentedControl.selectedSegmentIndex == 0) { // For Edu Notice
+//        [self.eduResourcesWebView setHidden:YES];
+//        [self.dashboardMenuCollectionView setHidden:NO];
+//        [self.dashboardMenuCollectionView reloadData];
+//        
+//    } else if (segmentedControl.selectedSegmentIndex == 1) { // For Edu Menu
+//        [self.eduResourcesWebView setHidden:YES];
+//        [self.dashboardMenuCollectionView setHidden:NO];
+//        [self.dashboardMenuCollectionView reloadData];
+//        
+//    } else if (segmentedControl.selectedSegmentIndex == 2) { // For Edu Resources
+//        [self.eduResourcesWebView setHidden:NO];
+//        [self.dashboardMenuCollectionView setHidden:YES];
+//        EKPStudent *currentStudent = [EKPSingleton loadStudent];
+//        NSLog(@"URL ::: %@",[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]);
+////        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@eduresources/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
+//        [self.eduResourcesWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.4parents.mobi/index.php"]]];
+//    }
 }
 
 #pragma mark IBAction Methods

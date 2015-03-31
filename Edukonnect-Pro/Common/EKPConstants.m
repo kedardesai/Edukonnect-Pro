@@ -19,6 +19,10 @@ NSString *const STUDENT_ROLE = @"Student";
 NSString *const GUEST_ROLE = @"Guest";
 
 
+#pragma mark Version Constants
+NSString *const PRO_VERSION = @"pro";
+
+
 #pragma mark Screen-Title Constants 
 NSString *const REGISTRATION_SCREEN_TITLE = @"Select Who You Are!";
 NSString *const LOGIN_SCREEN_TITLE = @"Login";
@@ -41,6 +45,7 @@ NSString *const EKP_EVENT_LIST = @"eventList";
 NSString *const EKP_ALERT_LIST = @"alertList";
 NSString *const EKP_NOTIFICATION_ID = @"notificationId";
 NSString *const EKP_USER_ROLE = @"userRole";
+NSString *const EKP_VERSION = @"version";
 
 #pragma API-URL Constants
 //NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";

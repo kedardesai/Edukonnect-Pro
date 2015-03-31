@@ -47,4 +47,7 @@
 + (NSString *)loadUserRole;
 + (void)removeUserRole;
 
++ (void)saveVersion:(NSString *)version;
++ (NSString *)loadVersion;
+
 @end

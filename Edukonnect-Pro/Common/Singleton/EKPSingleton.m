@@ -266,4 +266,19 @@
     [defaults removeObjectForKey:EKP_USER_ROLE];
     [defaults synchronize];
 }
+
++ (void)saveVersion:(NSString *)version
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:version forKey:EKP_VERSION];
+    [defaults synchronize];
+}
+
++ (NSString *)loadVersion
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userRole = [defaults objectForKey:EKP_VERSION];
+    return userRole;
+}
+
 @end

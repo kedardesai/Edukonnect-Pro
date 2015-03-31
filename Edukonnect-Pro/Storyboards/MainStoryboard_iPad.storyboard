@@ -50,6 +50,7 @@
                         <outlet property="roleTableView" destination="Qve-Ws-quw" id="GGx-VA-QU8"/>
                         <segue destination="rnR-xx-hu6" kind="push" identifier="RegisteredSuccessfullySegue" id="gOg-gB-DQS"/>
                         <segue destination="lOA-Fs-Z4S" kind="push" identifier="ShowWebViewSegue" id="iW1-hf-mye"/>
+                        <segue destination="pbY-tB-VUC" kind="push" identifier="GuestLoginSegue" id="hMb-c5-0o2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZc-3t-jyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,6 +181,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yn-Dn-jCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="738" y="-576"/>
+        </scene>
+        <!--Guest Info View Controller-->
+        <scene sceneID="gek-BF-BIW">
+            <objects>
+                <viewController storyboardIdentifier="EKPGuestInfoViewController" id="pbY-tB-VUC" customClass="EKPGuestInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="29k-KU-479"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Cm-8i-lx9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ses-aR-sPn">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XNX-qT-EOz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWZ-4f-Gd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="588"/>
         </scene>
         <!--Switch User View Controller-->
         <scene sceneID="TjN-Ub-2D8">

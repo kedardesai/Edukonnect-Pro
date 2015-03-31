@@ -27,6 +27,7 @@
 		1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */; };
 		1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314B19DAC2510067B674 /* EKPUtility.m */; };
 		1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */; };
+		1E171E911AC9D3AC00B7C410 /* EKPGuestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */; };
 		1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */; };
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
 		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
@@ -197,6 +198,8 @@
 		1B4A314B19DAC2510067B674 /* EKPUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUtility.m; sourceTree = "<group>"; };
 		1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginViewController.h; sourceTree = "<group>"; };
 		1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginViewController.m; sourceTree = "<group>"; };
+		1E171E8F1AC9D3AC00B7C410 /* EKPGuestInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPGuestInfoViewController.h; sourceTree = "<group>"; };
+		1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPGuestInfoViewController.m; sourceTree = "<group>"; };
 		1E2A1A971A001B0D000B7695 /* UIImage+EKPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKPImage.h"; sourceTree = "<group>"; };
 		1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EKPImage.m"; sourceTree = "<group>"; };
 		1E2A1A9A1A001C61000B7695 /* EKPEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEnums.h; sourceTree = "<group>"; };
@@ -574,6 +577,8 @@
 				1B4A313319D9687B0067B674 /* EKPRegistrationViewController.m */,
 				1E7675101AC6A7AA001E1CFB /* EKPCommonWebViewViewController.h */,
 				1E7675111AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m */,
+				1E171E8F1AC9D3AC00B7C410 /* EKPGuestInfoViewController.h */,
+				1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */,
 				1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */,
 				1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */,
 				1B09EEAE19DBD5B00049F667 /* EKPDashboardViewController.h */,
@@ -1212,6 +1217,7 @@
 				1ED3A68E1A3C99F0007FEE6F /* EKPGalleryListViewController.m in Sources */,
 				1ED3A5F81A3C02BC007FEE6F /* EKPDayScheduleViewController.m in Sources */,
 				1ED3A7011A3CAF18007FEE6F /* MWPhotoBrowser.m in Sources */,
+				1E171E911AC9D3AC00B7C410 /* EKPGuestInfoViewController.m in Sources */,
 				1EA1595B1A3F60F000860F1A /* EKPTransportViewController.m in Sources */,
 				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
 				1ED3A7091A3CAF18007FEE6F /* PSTCollectionView.m in Sources */,

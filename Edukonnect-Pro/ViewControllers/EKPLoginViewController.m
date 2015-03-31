@@ -180,6 +180,7 @@
             
             [EKPSingleton saveStudent:student];
             [EKPSingleton addStudentToList:student];
+            [EKPSingleton saveVersion:[resultDict objectForKey:EKP_VERSION]];
         } else {
             [EKPUtility showAlertWithTitle:@"Failed To Login" andMessage:@"Unable to login. Please check your username and password."];
         }
