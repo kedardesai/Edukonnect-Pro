@@ -29,7 +29,14 @@ typedef enum {
     kEKPDashboardMenuLibrary,
     kEKPDashboardMenuTransport,
     kEKPDashboardMenuBoarding,
-    kEKPDashboardMenuPayment
+    kEKPDashboardMenuPayment,
+    // For Edu Resources
+    kEKPDashboardMenuParenting,
+    kEKPDashboardMenuBehavioralIssue,
+    kEKPDashboardMenuBehavioralLocator,
+    kEKPDashboardMenuPersonCareerCounselling,
+    kEKPDashboardMenuKnowledgeCorner,
+    kEKPDashboardMenuComingSoon
     
 } EKPDashboardMenus;
 

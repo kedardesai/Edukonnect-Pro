@@ -52,99 +52,153 @@
     switch (self.ekpDashboardMenu) {
         case kEKPDashboardMenuNoticeBoard:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Noticeboard"]];
-            [self.nameLabel setText:@"Noticeboard"];
+//            [self.nameLabel setText:@"Noticeboard"];
             
         }
             break;
             
         case kEKPDashboardMenuAlert:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Alert"]];
-            [self.nameLabel setText:@"Alert"];
+//            [self.nameLabel setText:@"Alert"];
             
         }
             break;
             
         case kEKPDashboardMenuEvent:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Events"]];
-            [self.nameLabel setText:@"Events"];
+//            [self.nameLabel setText:@"Events"];
             
         }
             break;
             
         case kEKPDashboardMenuResult:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Results"]];
-            [self.nameLabel setText:@"Results"];
+//            [self.nameLabel setText:@"Results"];
             
         }
             break;
             
         case kEKPDashboardMenuTimeTable:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Timetable"]];
-            [self.nameLabel setText:@"Timetable"];
+//            [self.nameLabel setText:@"Timetable"];
             
         }
             break;
             
         case kEKPDashboardMenuGallary:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"PhotoGallery"]];
-            [self.nameLabel setText:@"Gallery"];
+//            [self.nameLabel setText:@"Gallery"];
             
         }
             break;
             
         case kEKPDashboardMenuEduSen:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"EduSen"]];
-            [self.nameLabel setText:@"EduSen"];
+//            [self.nameLabel setText:@"EduSen"];
             
         }
             break;
             
         case kEKPDashboardMenuLibrary:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Library"]];
-            [self.nameLabel setText:@"Library"];
+//            [self.nameLabel setText:@"Library"];
             
         }
             break;
             
         case kEKPDashboardMenuTransport:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Transport"]];
-            [self.nameLabel setText:@"Transport"];
+//            [self.nameLabel setText:@"Transport"];
             
         }
             break;
             
         case kEKPDashboardMenuBoarding:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-            [self.nameLabel setText:@"Dormiotry"];
+//            [self.nameLabel setText:@"Dormiotry"];
             
         }
             break;
             
         case kEKPDashboardMenuPayment:
         {
-            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Fees"]];
-            [self.nameLabel setText:@"Payment"];
+//            [self.nameLabel setText:@"Payment"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuParenting:
+        {
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+//            [self.nameLabel setText:@"Dormiotry"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuBehavioralIssue:
+        {
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+//            [self.nameLabel setText:@"Dormiotry"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuBehavioralLocator:
+        {
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+//            [self.nameLabel setText:@"Dormiotry"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuPersonCareerCounselling:
+        {
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+//            [self.nameLabel setText:@"Dormiotry"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuKnowledgeCorner:
+        {
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+//            [self.nameLabel setText:@"Dormiotry"];
+            
+        }
+            break;
+            
+        case kEKPDashboardMenuComingSoon:
+        {
+//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
+//            [self.nameLabel setText:@"Dormiotry"];
             
         }
             break;

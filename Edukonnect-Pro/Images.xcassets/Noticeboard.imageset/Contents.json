@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Noticeboard.png"
+      "filename" : "2.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Noticeboard@2x.png"
+      "filename" : "2-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Noticeboard@3x.png"
+      "filename" : "2-2.png"
     }
   ],
   "info" : {
