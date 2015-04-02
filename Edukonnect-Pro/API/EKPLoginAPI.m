@@ -12,8 +12,9 @@
 
 + (NSDictionary *)loginUserWith:(EKPStudent *)student
 {
+    EKPUser *currentUser = [EKPSingleton loadUser];
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, student.studentSchoolCode, student.studentUsername, student.studentPassword];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&username=%@&password=%@&deviceid=%@", BASE_API_URL, LOGIN_API_URL, student.studentSchoolCode, student.studentUsername, student.studentPassword, currentUser.userDeviceId];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
