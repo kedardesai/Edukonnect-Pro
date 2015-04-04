@@ -15,6 +15,11 @@
     return [UIColor colorWithRed:223.0f/255.0f green:223.0f/255.0f blue:223.0f/255.0f alpha:1.0f];
 }
 
++ (UIColor *)loadMenuBorderColor
+{
+    return [UIColor colorWithRed:200.0f/255.0f green:200.0f/255.0f blue:200.0f/255.0f alpha:1.0f];
+}
+
 + (UIColor *)loadNavigationBarColor
 {
     return [UIColor colorWithRed:0.0f/255.0f green:62.0f/255.0f blue:96.0f/255.0f alpha:1.0f];

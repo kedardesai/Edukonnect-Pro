@@ -12,6 +12,7 @@
 #import "UIViewController+MJPopupViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "EKPRegistrationViewController.h"
+#import "EKPEduResourceWebViewController.h"
 
 //static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 //{
@@ -154,12 +155,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (self.menuTabs.selectedSegmentIndex == 0) {
-        return 6;
-        
-    } else {
-        return 5;
-    }
+//    if (self.menuTabs.selectedSegmentIndex == 0) {
+//        return 6;
+//        
+//    } else {
+//        return 5;
+//    }
+    
+    return 6;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -173,11 +176,18 @@
             break;
             
         case 1: // For Edu Menu
-            dashboardMenu = (EKPDashboardMenus) indexPath.row + 6; // 6 menus from Edu Alerts
+        {
+            if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
+                dashboardMenu = (EKPDashboardMenus) indexPath.row + 6; // 6 menus from Edu Alerts
+                
+            } else {
+                dashboardMenu = (EKPDashboardMenus) indexPath.row + 12; // 6 menus from Edu Alerts
+            }
+        }
             break;
             
         case 2: // For Edu Resources
-            dashboardMenu = (EKPDashboardMenus) indexPath.row + 11; // 6 menus from Edu Alerts and 5 menus from Edu Menu
+            dashboardMenu = (EKPDashboardMenus) indexPath.row + 12; // 6 menus from Edu Alerts and 5 menus from Edu Menu
             break;
             
         default:
@@ -196,7 +206,10 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     EKPMenuCollectionViewCell *cell = (EKPMenuCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
-    switch (cell.ekpDashboardMenu) {
+    
+    _selectedMenu = cell.ekpDashboardMenu;
+    
+    switch (_selectedMenu) {
         case kEKPDashboardMenuNoticeBoard:
             [self performSegueWithIdentifier:@"DashboardToNoticeListSegue" sender:self];
             break;
@@ -210,7 +223,14 @@
             break;
             
         case kEKPDashboardMenuResult:
-            [self performSegueWithIdentifier:@"DashboardToExamListSegue" sender:self];
+        {
+            if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
+                [self performSegueWithIdentifier:@"DashboardToExamListSegue" sender:self];
+            } else {
+//                [self performSegueWithIdentifier:@"DashboardToLeaveSegue" sender:self];
+                [EKPUtility showAlertWithTitle:@"Coming Soon..." andMessage:nil];
+            }
+        }
             break;
             
         case kEKPDashboardMenuTimeTable:
@@ -233,8 +253,13 @@
             [self performSegueWithIdentifier:@"DashboardToTransportSegue" sender:self];
             break;
             
-        case kEKPDashboardMenuBoarding:
+        case kEKPDashboardMenuHomework:
             [self performSegueWithIdentifier:@"DashboardToBoardingSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuSchoolSupport:
+//            [self performSegueWithIdentifier:@"DashboardToSchoolSupportSegue" sender:self];
+            [EKPUtility showAlertWithTitle:@"Comming Soon..." andMessage:nil];
             break;
             
         case kEKPDashboardMenuPayment:
@@ -242,7 +267,7 @@
             break;
             
         default:
-            NSLog(@"Show Default Image.");
+            [self performSegueWithIdentifier:@"DashboardToEduResourceSegue" sender:self];
             break;
     }
 }
@@ -441,6 +466,7 @@
     }];
 }
 
+
 #pragma mark UIWebViewDelegate Methods
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -451,6 +477,17 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"Failed with ERROR ::: %@",[error localizedDescription]);
+}
+
+
+#pragma mark Navigation Methods
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"DashboardToEduResourceSegue"]) {
+        EKPEduResourceWebViewController *viewController = (EKPEduResourceWebViewController *)[segue destinationViewController];
+        viewController.selectedMenu = _selectedMenu;
+    }
 }
 
 

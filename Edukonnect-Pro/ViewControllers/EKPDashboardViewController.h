@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) DXPopover *popOver;
 
+@property (nonatomic) EKPDashboardMenus selectedMenu;
+
 - (void)showExtraMenus:(id)sender;
 
 @end

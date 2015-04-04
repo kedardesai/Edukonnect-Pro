@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "8.png"
+      "filename" : "transport.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "8-1.png"
+      "filename" : "transport-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "8-2.png"
+      "filename" : "transport-2.png"
     }
   ],
   "info" : {

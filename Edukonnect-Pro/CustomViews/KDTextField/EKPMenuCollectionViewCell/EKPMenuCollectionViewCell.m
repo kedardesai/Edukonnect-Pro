@@ -43,7 +43,7 @@
     
     self.cellView.layer.borderColor = [[UIColor loadScreenBackgroundColor] CGColor];
     self.colorView.layer.borderWidth = 0.6f;
-    self.colorView.layer.borderColor = [[UIColor loadScreenBackgroundColor] CGColor];
+    self.colorView.layer.borderColor = [[UIColor loadMenuBorderColor] CGColor];
     self.colorView.layer.cornerRadius = 6.0f;
 }
 
@@ -52,154 +52,138 @@
     switch (self.ekpDashboardMenu) {
         case kEKPDashboardMenuNoticeBoard:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Noticeboard"]];
-//            [self.nameLabel setText:@"Noticeboard"];
-            
+            [self.nameLabel setText:@"Noticeboard"];
         }
             break;
             
         case kEKPDashboardMenuAlert:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Alert"]];
-//            [self.nameLabel setText:@"Alert"];
-            
+            [self.nameLabel setText:@"Alert"];
         }
             break;
             
         case kEKPDashboardMenuEvent:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Events"]];
-//            [self.nameLabel setText:@"Events"];
-            
+            [self.nameLabel setText:@"Events"];
         }
             break;
             
         case kEKPDashboardMenuResult:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Results"]];
-//            [self.nameLabel setText:@"Results"];
-            
+            if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
+                [self.menuIcon setImage:[UIImage imageNamed:@"Results"]];
+                [self.nameLabel setText:@"Results"];
+            } else {
+                [self.menuIcon setImage:[UIImage imageNamed:@"Leave"]];
+                [self.nameLabel setText:@"Leave"];
+            }
         }
             break;
             
         case kEKPDashboardMenuTimeTable:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Timetable"]];
-//            [self.nameLabel setText:@"Timetable"];
-            
+            [self.nameLabel setText:@"Timetable"];
         }
             break;
             
         case kEKPDashboardMenuGallary:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"PhotoGallery"]];
-//            [self.nameLabel setText:@"Gallery"];
-            
+            [self.nameLabel setText:@"Gallery"];
         }
             break;
             
         case kEKPDashboardMenuEduSen:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"EduSen"]];
-//            [self.nameLabel setText:@"EduSen"];
-            
+            [self.nameLabel setText:@"EduSen"];
         }
             break;
             
         case kEKPDashboardMenuLibrary:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightSkyBlue]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Library"]];
-//            [self.nameLabel setText:@"Library"];
-            
+            [self.nameLabel setText:@"Library"];
         }
             break;
             
         case kEKPDashboardMenuTransport:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Transport"]];
-//            [self.nameLabel setText:@"Transport"];
-            
+            [self.nameLabel setText:@"Transport"];
         }
             break;
             
-        case kEKPDashboardMenuBoarding:
+        case kEKPDashboardMenuHomework:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
+            [self.menuIcon setImage:[UIImage imageNamed:@"Homework"]];
+            [self.nameLabel setText:@"Homework"];
+        }
+            break;
             
+        case kEKPDashboardMenuSchoolSupport:
+        {
+            [self.menuIcon setImage:[UIImage imageNamed:@"SchoolSupport"]];
+            [self.nameLabel setText:@"School Support"];
         }
             break;
             
         case kEKPDashboardMenuPayment:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgLightOrange]];
             [self.menuIcon setImage:[UIImage imageNamed:@"Fees"]];
-//            [self.nameLabel setText:@"Payment"];
-            
+            [self.nameLabel setText:@"Payment"];
         }
             break;
             
         case kEKPDashboardMenuParenting:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
-            
+            [self.menuIcon setImage:[UIImage imageNamed:@"EffectiveParenting"]];
+            [self.nameLabel setText:@"Effective Parenting"];
         }
             break;
             
         case kEKPDashboardMenuBehavioralIssue:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
-            
+            [self.menuIcon setImage:[UIImage imageNamed:@"BehaviouralIssues"]];
+            [self.nameLabel setText:@"Behavioural Issues"];
         }
             break;
             
-        case kEKPDashboardMenuBehavioralLocator:
+        case kEKPDashboardMenuLocator:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
-            
+            [self.menuIcon setImage:[UIImage imageNamed:@"Locator"]];
+            [self.nameLabel setText:@"Locator"];
         }
             break;
             
         case kEKPDashboardMenuPersonCareerCounselling:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
-            
+            [self.menuIcon setImage:[UIImage imageNamed:@"PersonCareerCounseling"]];
+            [self.nameLabel setText:@"Career Counseling"];
         }
             break;
             
         case kEKPDashboardMenuKnowledgeCorner:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
-            
+            if ([[EKPSingleton loadUserRole] isEqualToString:TEACHER_ROLE]) {
+                [self.menuIcon setImage:[UIImage imageNamed:@"KnowledgeCentre"]];
+                [self.nameLabel setText:@"Knowledge Centre"];
+                
+            } else {
+                [self.menuIcon setImage:[UIImage imageNamed:@"ComingSoon"]];
+                [self.nameLabel setText:@"Coming Soon..."];
+            }
         }
             break;
             
         case kEKPDashboardMenuComingSoon:
         {
-//            [self.colorView setBackgroundColor:[UIColor loadMenuBgDarkGreen]];
-            [self.menuIcon setImage:[UIImage imageNamed:@"Dormiatry"]];
-//            [self.nameLabel setText:@"Dormiotry"];
-            
+            [self.menuIcon setImage:[UIImage imageNamed:@"ComingSoon"]];
+            [self.nameLabel setText:@"Coming Soon..."];
         }
             break;
             

@@ -10,6 +10,7 @@
                 <outlet property="cellView" destination="iN0-l3-epB" id="f6H-4D-f3L"/>
                 <outlet property="colorView" destination="CVe-bJ-QzP" id="19s-ef-aup"/>
                 <outlet property="menuIcon" destination="bRW-d3-eTO" id="Ecm-Lg-cOZ"/>
+                <outlet property="nameLabel" destination="gFi-FV-QiE" id="gyF-y4-QoS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,11 +21,17 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVe-bJ-QzP">
                     <rect key="frame" x="5" y="5" width="96" height="96"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFi-FV-QiE">
+                            <rect key="frame" x="8" y="62" width="80" height="26"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRW-d3-eTO">
-                            <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                            <rect key="frame" x="23" y="8" width="50" height="50"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

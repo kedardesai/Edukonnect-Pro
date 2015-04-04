@@ -31,7 +31,7 @@
 //    EKPStudent *currentStudent = [EKPSingleton loadStudent];
 //    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@edusen/%@username=%@&password=%@", BASE_API_URL, LOGIN_API_URL, currentStudent.studentUsername, currentStudent.studentPassword]]]];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.edusen.net.in/index.php"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edusen.edukonnect.net.in"]]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

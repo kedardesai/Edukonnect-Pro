@@ -570,6 +570,9 @@
                         <segue destination="jG0-fN-fdH" kind="push" identifier="DashboardToLibrarySegue" id="cY6-Xh-VMd"/>
                         <segue destination="Y4Y-X8-gmw" kind="push" identifier="DashboardToPaymentSegue" id="0GD-Yh-MZu"/>
                         <segue destination="KAJ-iT-Sgt" kind="push" identifier="DashboardToAlertSegue" id="jlx-Vp-WBr"/>
+                        <segue destination="4m7-3o-tLD" kind="push" identifier="DashboardToSchoolSupportSegue" id="fJ0-8G-LXz"/>
+                        <segue destination="kCk-Qh-0UN" kind="push" identifier="DashboardToLeaveSegue" id="sn2-DP-Ea2"/>
+                        <segue destination="APv-hT-joa" kind="push" identifier="DashboardToEduResourceSegue" id="FqY-Du-ZFP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1172,6 +1175,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27J-dV-rZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2454" y="6540"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cTE-ge-Dh5">
+            <objects>
+                <viewController id="4m7-3o-tLD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GEx-f2-Xg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="WRs-eD-5XM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9TB-Xa-fhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dx4-Iy-RPs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaU-RE-xeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="7688"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iV1-va-Chh">
+            <objects>
+                <viewController id="kCk-Qh-0UN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M2D-iO-vI9"/>
+                        <viewControllerLayoutGuide type="bottom" id="fRe-lP-BYW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XkA-9q-oF9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EhL-Ry-Rde"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4L1-pc-ohY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="8840"/>
+        </scene>
+        <!--Edu Resource Web View Controller-->
+        <scene sceneID="wNN-QE-EKu">
+            <objects>
+                <viewController storyboardIdentifier="EKPEduResourceWebViewController" id="APv-hT-joa" customClass="EKPEduResourceWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="usm-PN-I2H"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdC-7k-8au"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NYi-dj-XX4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yP0-mI-7Ga"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWh-Di-Bl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="10008"/>
         </scene>
         <!--Search Book View Controller-->
         <scene sceneID="jyv-qs-I8z">

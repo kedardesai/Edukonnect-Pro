@@ -51,7 +51,7 @@ NSString *const EKP_VERSION = @"version";
 //NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
 NSString *const BASE_API_URL = @"http://main.edukonnect.net.in/";
 NSString *const REGISTRATION_API_URL = @"registration_response.php?";
-NSString *const LOGIN_API_URL = @"login_responsenew.php?"; // login_response
+NSString *const LOGIN_API_URL = @"login_response.php?"; // login_response.php // login_responsenew.php
 NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
 NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
 NSString *const ALERT_API_URL = @"notice_list_response.php?";
@@ -74,6 +74,13 @@ NSString *const PAYMENT_API_URL = @"invoice.php?";
 NSString *const PULL_NOTIFICATION_API_URL = @"broadcast.php?";
 NSString *const EVENT_ISGOING_CHECK_API_URL = @"is_going_check.php?";
 NSString *const EVENT_ISGOING_API_URL = @"is_going_response.php?";
+NSString *const EFFECTIVE_PARENTING_URL = @"http://4parents.mobi/effective_parenting.php";
+NSString *const BEHAVIOURAL_ISSUES_URL = @"http://4parents.mobi/behavioral.php";
+NSString *const LOCATOR_URL = @"http://4parents.mobi/locator.php";
+NSString *const CAREER_COUNSELING_URL = @"http://4parents.mobi/career.php";
+NSString *const KNOWLEDGE_CENTRE_URL = @"http://4parents.mobi/teacherdashboard.php";
+
+
 //http://main.edukonnect.net.in/is_going_check.php?schoolcode=sch001&student_id=1&event_id=1
 //http://main.edukonnect.net.in/is_going_response.php?schoolcode=SCH001&event_id=1&student_id=1
 
