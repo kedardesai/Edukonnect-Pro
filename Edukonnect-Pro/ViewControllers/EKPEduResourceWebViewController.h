@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPEduResourceWebViewController : UIViewController <UIWebViewDelegate>
+@interface EKPEduResourceWebViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic) EKPDashboardMenus selectedMenu;
 

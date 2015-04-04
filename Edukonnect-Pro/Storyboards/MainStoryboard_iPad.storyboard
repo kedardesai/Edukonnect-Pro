@@ -1225,9 +1225,21 @@
                     <view key="view" contentMode="scaleToFill" id="NYi-dj-XX4">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TpW-pl-knW">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="APv-hT-joa" id="ffj-FX-b5f"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yP0-mI-7Ga"/>
+                    <connections>
+                        <outlet property="webView" destination="TpW-pl-knW" id="6g7-f3-jPC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWh-Di-Bl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
