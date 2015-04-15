@@ -49,7 +49,6 @@
                     <connections>
                         <outlet property="roleTableView" destination="Qve-Ws-quw" id="GGx-VA-QU8"/>
                         <segue destination="rnR-xx-hu6" kind="push" identifier="RegisteredSuccessfullySegue" id="gOg-gB-DQS"/>
-                        <segue destination="lOA-Fs-Z4S" kind="push" identifier="ShowWebViewSegue" id="iW1-hf-mye"/>
                         <segue destination="pbY-tB-VUC" kind="push" identifier="GuestLoginSegue" id="hMb-c5-0o2"/>
                     </connections>
                 </viewController>
@@ -145,6 +144,7 @@
                         <outlet property="schoolCodeTextField" destination="bzg-OG-VX4" id="gD5-eN-WBg"/>
                         <outlet property="userNameLabel" destination="fkd-QO-MA5" id="NTm-eU-sIk"/>
                         <outlet property="userNameTextField" destination="liz-cO-7f0" id="xN0-q4-VAB"/>
+                        <segue destination="lOA-Fs-Z4S" kind="push" identifier="ShowWebViewSegue" id="jXR-aJ-CXo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZI-tO-xev" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yn-Dn-jCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-576"/>
+            <point key="canvasLocation" x="1586" y="-540"/>
         </scene>
         <!--Guest Info View Controller-->
         <scene sceneID="gek-BF-BIW">
@@ -193,13 +193,59 @@
                     <view key="view" contentMode="scaleToFill" id="ses-aR-sPn">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="e8K-dy-zrY">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GuestInformationCell" id="aVa-sW-8iy">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aVa-sW-8iy" id="yLm-I8-Xlc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K8E-Hh-ezg">
+                                                    <rect key="frame" x="31" y="5" width="588" height="34"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GuestRegistrationCell" id="DXJ-UR-yvB">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DXJ-UR-yvB" id="PPv-lu-UWV">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpc-hm-v3t">
+                                                    <rect key="frame" x="31" y="5" width="707" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                                    <state key="normal" title="Submit">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pbY-tB-VUC" id="9WB-q4-FIu"/>
+                                    <outlet property="delegate" destination="pbY-tB-VUC" id="hus-Wg-1e7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="XNX-qT-EOz"/>
+                    <connections>
+                        <outlet property="guestFormTableView" destination="e8K-dy-zrY" id="8z9-CE-jtX"/>
+                        <segue destination="lOA-Fs-Z4S" kind="push" identifier="GuestLoginSegue" id="M7n-6v-Oxd"/>
+                        <segue destination="8NF-mM-e3e" kind="push" identifier="GuestLoginSegue" id="L0N-tg-yVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWZ-4f-Gd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="588"/>
+            <point key="canvasLocation" x="738" y="-540"/>
         </scene>
         <!--Switch User View Controller-->
         <scene sceneID="TjN-Ub-2D8">
@@ -1195,10 +1241,10 @@
             </objects>
             <point key="canvasLocation" x="2454" y="7688"/>
         </scene>
-        <!--View Controller-->
+        <!--Leave View Controller-->
         <scene sceneID="iV1-va-Chh">
             <objects>
-                <viewController id="kCk-Qh-0UN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EKPLeaveViewController" id="kCk-Qh-0UN" customClass="EKPLeaveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M2D-iO-vI9"/>
                         <viewControllerLayoutGuide type="bottom" id="fRe-lP-BYW"/>
@@ -1206,9 +1252,68 @@
                     <view key="view" contentMode="scaleToFill" id="XkA-9q-oF9">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-NN-M4s">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="927"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaveCell" id="57N-bo-uTF">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="57N-bo-uTF" id="dnb-P9-wLC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oW6-fT-pXc">
+                                                    <rect key="frame" x="0.0" y="10" width="730" height="180"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-sX-Igi">
+                                                            <rect key="frame" x="18" y="8" width="363" height="28"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbI-yY-Vqw">
+                                                            <rect key="frame" x="18" y="44" width="672" height="120"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-JI-JPd">
+                                                            <rect key="frame" x="612" y="8" width="105" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kCk-Qh-0UN" id="H0W-5A-oMy"/>
+                                    <outlet property="delegate" destination="kCk-Qh-0UN" id="X1X-vE-S6h"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKt-Ae-LbN">
+                                <rect key="frame" x="132" y="954" width="504" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Apply Leave">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="applyLeavesClicked:" destination="kCk-Qh-0UN" eventType="touchUpInside" id="PDl-3i-C1t"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EhL-Ry-Rde"/>
+                    <connections>
+                        <outlet property="applyLeaveButton" destination="wKt-Ae-LbN" id="Z7X-xU-7qm"/>
+                        <outlet property="tableView" destination="hgG-NN-M4s" id="FUv-ng-DBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L1-pc-ohY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1789,6 +1894,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="L0N-tg-yVL"/>
+        <segue reference="M7n-6v-Oxd"/>
         <segue reference="zpA-ta-84U"/>
     </inferredMetricsTieBreakers>
 </document>

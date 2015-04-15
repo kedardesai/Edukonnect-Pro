@@ -281,4 +281,30 @@
     return userRole;
 }
 
+
+#pragma mark Saving Current Teacher
+
++ (void)saveTeacher:(EKPTeacher *)teacherObj
+{
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:teacherObj];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:EKP_CURRENT_TEACHER];
+    [defaults synchronize];
+}
+
++ (EKPTeacher *)loadTeacher
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:EKP_CURRENT_TEACHER];
+    EKPTeacher *teacherObj = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return teacherObj;
+}
+
++ (void)removeTeacher
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:EKP_CURRENT_TEACHER];
+    [defaults synchronize];
+}
+
 @end

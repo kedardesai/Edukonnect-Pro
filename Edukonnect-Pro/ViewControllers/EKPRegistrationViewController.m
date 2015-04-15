@@ -87,7 +87,7 @@
     
     switch (indexPath.row) {
         case 0: // For Admin
-            [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+            [self performSegueWithIdentifier:@"RegisteredSuccessfullySegue" sender:self];
             break;
             
         case 1: // For Parent
@@ -99,7 +99,7 @@
             break;
             
         case 3: // For Student
-            [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+            [self performSegueWithIdentifier:@"RegisteredSuccessfullySegue" sender:self];
             break;
             
         case 4: // For Guest

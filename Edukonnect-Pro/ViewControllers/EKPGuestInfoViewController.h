@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPGuestInfoViewController : UIViewController
+@interface EKPGuestInfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UITableView *guestFormTableView;
+
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end

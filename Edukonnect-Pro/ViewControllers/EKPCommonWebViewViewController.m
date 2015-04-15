@@ -29,7 +29,9 @@
     
     NSString *userRole = [EKPSingleton loadUserRole];
     if ([userRole isEqualToString:ADMIN_ROLE]) { // For Admin
-//        _urlString = // url for Admin
+        EKPStudent *currentStudent = [EKPSingleton loadStudent];
+        NSArray *creds = [currentStudent.studentUsername componentsSeparatedByString:@"@"];
+        _urlString = [NSString stringWithFormat:@"%@/index.php?login/loginmobi/admin/%@/%@/%@", currentStudent.studentBasePath, creds[0], creds[1], currentStudent.studentPassword];// url for Admin
         
     } else if ([userRole isEqualToString:STUDENT_ROLE]) { // For Student
 //        _urlString = // url for Student

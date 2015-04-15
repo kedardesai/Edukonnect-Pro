@@ -38,6 +38,7 @@ NSString *const REGISTRATION_SECCESSFUL = @"RegistrationSuccessfulSegue";
 NSString *const EKP_THEME = @"selectedTheme";
 NSString *const EKP_USER = @"loggedUser";
 NSString *const EKP_CURRENT_STUDENT = @"loggedStudent";
+NSString *const EKP_CURRENT_TEACHER = @"loggedTeacher";
 NSString *const EKP_STUDENT_LIST = @"studentList";
 NSString *const EKP_CURRENT_PROFILE = @"currentProfile";
 NSString *const EKP_NOTICE_LIST = @"noticeList";
@@ -51,11 +52,13 @@ NSString *const EKP_VERSION = @"version";
 //NSString *const BASE_API_URL = @"http://mainedukonnect.sbminfotech.com/";
 NSString *const BASE_API_URL = @"http://main.edukonnect.net.in/";
 NSString *const REGISTRATION_API_URL = @"registration_response.php?";
-NSString *const LOGIN_API_URL = @"login_response.php?"; // login_response.php // login_responsenew.php
+NSString *const LOGIN_API_URL = @"login_responsenew.php?"; // login_response.php // login_responsenew.php
+NSString *const SPECIAL_LOGIN_API_URL = @"login_response_type.php?";
 NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
 NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
 NSString *const ALERT_API_URL = @"notice_list_response.php?";
 NSString *const EVENT_API_URL = @"event_class_response.php?";
+NSString *const LEAVE_LIST_API_URL = @"leavelist_response.php?";
 NSString *const EXAM_LIST_API_URL = @"resultlist_response.php?";
 NSString *const RESULT_API_URL = @"result_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
@@ -87,6 +90,7 @@ NSString *const KNOWLEDGE_CENTRE_URL = @"http://4parents.mobi/teacherdashboard.p
 
 #pragma mark Login-API Constants
 NSString *const LOGIN_API_SCHOOL_DETAILS = @"school_details";
+NSString *const LOGIN_API_TEACHER_DETAILS = @"teacher_details";
 NSString *const LOGIN_API_SCHOOL_ADDRESS = @"address";
 NSString *const LOGIN_API_SCHOOL_EMAIL = @"email";
 NSString *const LOGIN_API_SCHOOL_LOGO = @"logo";
@@ -105,6 +109,12 @@ NSString *const LOGIN_API_STUDENT_NAME = @"name";
 NSString *const LOGIN_API_STUDENT_ROLLNO = @"rollno";
 NSString *const LOGIN_API_STUDENT_SEX = @"sex";
 NSString *const LOGIN_API_STUDENT_ID = @"student_id";
+NSString *const LOGIN_API_TEACHER_ID = @"teacher_id";
+NSString *const LOGIN_API_TEACHER_NAME = @"name";
+NSString *const LOGIN_API_TEACHER_DOB = @"birthday";
+NSString *const LOGIN_API_TEACHER_SEX = @"sex";
+NSString *const LOGIN_API_TEACHER_ADDRESS = @"address";
+NSString *const LOGIN_API_TEACHER_PHONE = @"phone";
 
 #pragma mark NOTICEBOARD-API Constants
 NSString *const NOTICEBOARD_API_NOTICE = @"notice";
@@ -203,6 +213,16 @@ NSString *const PAYMENT_API_DESC = @"description";
 NSString *const PAYMENT_API_AMOUNT = @"amount";
 NSString *const PAYMENT_API_STATUS = @"status";
 NSString *const PAYMENT_API_DUE_DATE = @"duedate";
+
+#pragma mark LEAVE-API Constants
+NSString *const LEAVE_API_TAG = @"leaves";
+NSString *const LEAVE_API_ID = @"leave_id";
+NSString *const LEAVE_API_NOTE = @"leave_note";
+NSString *const LEAVE_API_START_DT = @"start_date";
+NSString *const LEAVE_API_END_DT = @"end_date";
+NSString *const LEAVE_API_DAY_TYPE = @"full_half_day";
+NSString *const LEAVE_API_STATUS = @"status";
+NSString *const LEAVE_API_DAYS = @"days";
 
 #pragma mark PULL_NOTIFICATION Constants
 NSString *const NOTIFICATION_API_ID = @"id";

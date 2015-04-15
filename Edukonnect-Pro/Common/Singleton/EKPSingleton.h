@@ -12,6 +12,7 @@
 #import "EKPStudent.h"
 #import "EKPProfile.h"
 #import "EKPNotice.h"
+#import "EKPTeacher.h"
 
 @interface EKPSingleton : NSObject
 
@@ -49,5 +50,9 @@
 
 + (void)saveVersion:(NSString *)version;
 + (NSString *)loadVersion;
+
++ (void)saveTeacher:(EKPTeacher *)teacherObj;
++ (EKPTeacher *)loadTeacher;
++ (void)removeTeacher;
 
 @end

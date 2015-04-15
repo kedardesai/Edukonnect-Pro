@@ -13,4 +13,6 @@
 
 + (NSDictionary *)loginUserWith:(EKPStudent *)student;
 
++ (NSDictionary *)loginUserWith:(EKPStudent *)student andType:(NSString *)userType;
+
 @end

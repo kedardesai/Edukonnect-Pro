@@ -92,13 +92,15 @@
     if ([[EKPSingleton loadUserRole] isEqualToString:TEACHER_ROLE]) {
         [_menuTabs removeSegmentAtIndex:1 animated:YES];
         
-    } else if ([[EKPSingleton loadUserRole] isEqualToString:GUEST_ROLE]) {
-        [_menuTabs removeSegmentAtIndex:0 animated:YES];
+    } else if ([[EKPSingleton loadUserRole] isEqualToString:GUEST_ROLE] || [[EKPSingleton loadUserRole] isEqualToString:STUDENT_ROLE]) {
         [_menuTabs removeSegmentAtIndex:1 animated:YES];
+        [_menuTabs removeSegmentAtIndex:0 animated:YES];
         
     } else if (![[EKPSingleton loadVersion] isEqualToString:PRO_VERSION]) {
         [_menuTabs removeSegmentAtIndex:1 animated:YES];
+        
     }
+    [_menuTabs setSelectedSegmentIndex:0];
     
     CGFloat actualWidth = _menuTabs.frame.size.width - _menuTabs.frame.origin.x;
     for (NSInteger i=0; i<[_menuTabs numberOfSegments]; i++) {
@@ -172,7 +174,13 @@
     EKPDashboardMenus dashboardMenu;
     switch (self.menuTabs.selectedSegmentIndex) {
         case 0: // For Edu Alerts
-            dashboardMenu = (EKPDashboardMenus) indexPath.row;
+            if ([[EKPSingleton loadUserRole] isEqualToString:STUDENT_ROLE] || [[EKPSingleton loadUserRole] isEqualToString:GUEST_ROLE]) {
+                dashboardMenu = (EKPDashboardMenus) indexPath.row + 12;
+                
+            } else {
+                dashboardMenu = (EKPDashboardMenus) indexPath.row;
+            }
+            
             break;
             
         case 1: // For Edu Menu
@@ -227,8 +235,8 @@
             if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
                 [self performSegueWithIdentifier:@"DashboardToExamListSegue" sender:self];
             } else {
-//                [self performSegueWithIdentifier:@"DashboardToLeaveSegue" sender:self];
-                [EKPUtility showAlertWithTitle:@"Coming Soon..." andMessage:nil];
+                [self performSegueWithIdentifier:@"DashboardToLeaveSegue" sender:self];
+//                [EKPUtility showAlertWithTitle:@"Coming Soon..." andMessage:nil];
             }
         }
             break;

@@ -31,6 +31,10 @@
 		1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */; };
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
 		1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */; };
+		1E2D867B1ADAC9A5001DDBA5 /* EKPLeaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D867A1ADAC9A5001DDBA5 /* EKPLeaveViewController.m */; };
+		1E2D867E1ADADC0B001DDBA5 /* EKPLeaveAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D867D1ADADC0B001DDBA5 /* EKPLeaveAPI.m */; };
+		1E2D86811ADAE03F001DDBA5 /* EKPTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D86801ADAE03F001DDBA5 /* EKPTeacher.m */; };
+		1E2D86841ADAF1CB001DDBA5 /* EKPLeave.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D86831ADAF1CB001DDBA5 /* EKPLeave.m */; };
 		1E37F08D1A44AB06005BD6C0 /* EKPBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F08C1A44AB06005BD6C0 /* EKPBook.m */; };
 		1E37F0901A44C6C1005BD6C0 /* EKPAlertAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F08F1A44C6C1005BD6C0 /* EKPAlertAPI.m */; };
 		1E37F0931A44C7C3005BD6C0 /* EKPAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E37F0921A44C7C3005BD6C0 /* EKPAlert.m */; };
@@ -207,6 +211,14 @@
 		1E2A1A9B1A001C61000B7695 /* EKPEnums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEnums.m; sourceTree = "<group>"; };
 		1E2A1A9E1A001D05000B7695 /* EKPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSingleton.h; sourceTree = "<group>"; };
 		1E2A1A9F1A001D05000B7695 /* EKPSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSingleton.m; sourceTree = "<group>"; };
+		1E2D86791ADAC9A5001DDBA5 /* EKPLeaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLeaveViewController.h; sourceTree = "<group>"; };
+		1E2D867A1ADAC9A5001DDBA5 /* EKPLeaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLeaveViewController.m; sourceTree = "<group>"; };
+		1E2D867C1ADADC0B001DDBA5 /* EKPLeaveAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLeaveAPI.h; sourceTree = "<group>"; };
+		1E2D867D1ADADC0B001DDBA5 /* EKPLeaveAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLeaveAPI.m; sourceTree = "<group>"; };
+		1E2D867F1ADAE03F001DDBA5 /* EKPTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTeacher.h; sourceTree = "<group>"; };
+		1E2D86801ADAE03F001DDBA5 /* EKPTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTeacher.m; sourceTree = "<group>"; };
+		1E2D86821ADAF1CB001DDBA5 /* EKPLeave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLeave.h; sourceTree = "<group>"; };
+		1E2D86831ADAF1CB001DDBA5 /* EKPLeave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLeave.m; sourceTree = "<group>"; };
 		1E37F08B1A44AB06005BD6C0 /* EKPBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPBook.h; sourceTree = "<group>"; };
 		1E37F08C1A44AB06005BD6C0 /* EKPBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPBook.m; sourceTree = "<group>"; };
 		1E37F08E1A44C6C1005BD6C0 /* EKPAlertAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPAlertAPI.h; sourceTree = "<group>"; };
@@ -628,6 +640,8 @@
 				1E9E008D1A453A8500A76699 /* EKPPaymentViewController.m */,
 				1E3D70F81ACFF3FB000E64A7 /* EKPEduResourceWebViewController.h */,
 				1E3D70F91ACFF3FB000E64A7 /* EKPEduResourceWebViewController.m */,
+				1E2D86791ADAC9A5001DDBA5 /* EKPLeaveViewController.h */,
+				1E2D867A1ADAC9A5001DDBA5 /* EKPLeaveViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -823,6 +837,8 @@
 				1E9E00901A455E0100A76699 /* EKPFeesAPI.m */,
 				1E9ADCB21A4606E40066F99B /* EKPBackgroundFetchAPI.h */,
 				1E9ADCB31A4606E40066F99B /* EKPBackgroundFetchAPI.m */,
+				1E2D867C1ADADC0B001DDBA5 /* EKPLeaveAPI.h */,
+				1E2D867D1ADADC0B001DDBA5 /* EKPLeaveAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -862,6 +878,8 @@
 				1EC3355F1A06673600CADF22 /* EKPUser.m */,
 				1EC335641A067D9400CADF22 /* EKPStudent.h */,
 				1EC335651A067D9400CADF22 /* EKPStudent.m */,
+				1E2D867F1ADAE03F001DDBA5 /* EKPTeacher.h */,
+				1E2D86801ADAE03F001DDBA5 /* EKPTeacher.m */,
 				1E9E96E11A0EA00E007B9585 /* EKPSchool.h */,
 				1E9E96E21A0EA00E007B9585 /* EKPSchool.m */,
 				1EA3B7731A33408C00E88711 /* EKPProfile.h */,
@@ -884,6 +902,8 @@
 				1E37F08C1A44AB06005BD6C0 /* EKPBook.m */,
 				1E9E00921A45793500A76699 /* EKPPayment.h */,
 				1E9E00931A45793500A76699 /* EKPPayment.m */,
+				1E2D86821ADAF1CB001DDBA5 /* EKPLeave.h */,
+				1E2D86831ADAF1CB001DDBA5 /* EKPLeave.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1152,6 +1172,7 @@
 				1E37F08D1A44AB06005BD6C0 /* EKPBook.m in Sources */,
 				1E7992871A37831E00383BE6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1ED3A7031A3CAF18007FEE6F /* MWTapDetectingView.m in Sources */,
+				1E2D86841ADAF1CB001DDBA5 /* EKPLeave.m in Sources */,
 				1E9E008E1A453A8500A76699 /* EKPPaymentViewController.m in Sources */,
 				1ED3A71E1A3CAF18007FEE6F /* SDWebImageManager.m in Sources */,
 				1ED3A7181A3CAF18007FEE6F /* NSData+ImageContentType.m in Sources */,
@@ -1213,6 +1234,7 @@
 				1ED3A70E1A3CAF18007FEE6F /* PSTCollectionViewItemKey.m in Sources */,
 				1EA159651A3F6BC300860F1A /* EKPMapPin.m in Sources */,
 				1E6581A71A421133002FFD58 /* EKPLibraryViewController.m in Sources */,
+				1E2D867E1ADADC0B001DDBA5 /* EKPLeaveAPI.m in Sources */,
 				1E37F0961A44C900005BD6C0 /* EKPAlertListViewController.m in Sources */,
 				1ED3A7111A3CAF18007FEE6F /* PSTGridLayoutInfo.m in Sources */,
 				1E7992811A37831E00383BE6 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1224,6 +1246,7 @@
 				1ED3A7011A3CAF18007FEE6F /* MWPhotoBrowser.m in Sources */,
 				1E171E911AC9D3AC00B7C410 /* EKPGuestInfoViewController.m in Sources */,
 				1EA1595B1A3F60F000860F1A /* EKPTransportViewController.m in Sources */,
+				1E2D86811ADAE03F001DDBA5 /* EKPTeacher.m in Sources */,
 				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
 				1ED3A7091A3CAF18007FEE6F /* PSTCollectionView.m in Sources */,
 				1EA3B7751A33408C00E88711 /* EKPProfile.m in Sources */,
@@ -1259,6 +1282,7 @@
 				1ED3A70A1A3CAF18007FEE6F /* PSTCollectionViewCell.m in Sources */,
 				1E9A82FD1A3A1B3000CD838F /* EKPExamListViewController.m in Sources */,
 				1ED3A70B1A3CAF18007FEE6F /* PSTCollectionViewController.m in Sources */,
+				1E2D867B1ADAC9A5001DDBA5 /* EKPLeaveViewController.m in Sources */,
 				1E9F01E31A34239700AAC885 /* EKPMenuCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

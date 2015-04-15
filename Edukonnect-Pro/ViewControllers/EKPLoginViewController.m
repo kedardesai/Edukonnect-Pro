@@ -10,6 +10,7 @@
 #import "KDTextField.h"
 #import "EKPLoginAPI.h"
 #import "EKPStudent.h"
+#import "EKPTeacher.h"
 
 @interface EKPLoginViewController ()
 
@@ -171,21 +172,64 @@
         student.studentSchoolCode = self.schoolCodeTextField.text;
         student.studentUsername = self.userNameTextField.text;
         student.studentPassword = self.passwordTextField.text;
-        NSDictionary *resultDict = [EKPLoginAPI loginUserWith:student];
-        NSLog(@"resultDict ::: %@", resultDict);
-        BOOL status = [[resultDict objectForKey:STATUS_KEY] boolValue];
-        if (status) {
-            // school_details
-            [student setDetailsWithStudent:student andDictionary:resultDict];
-            
-            [EKPSingleton saveStudent:student];
-            [EKPSingleton addStudentToList:student];
-            [EKPSingleton saveVersion:[resultDict objectForKey:EKP_VERSION]];
-        } else {
-            [EKPUtility showAlertWithTitle:@"Failed To Login" andMessage:@"Unable to login. Please check your username and password."];
+        if ([identifier isEqualToString:@"LoginSuccessfulSegue"]) {
+            if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE] || [[EKPSingleton loadUserRole] isEqualToString:TEACHER_ROLE] || [[EKPSingleton loadUserRole] isEqualToString:STUDENT_ROLE]) {
+                NSDictionary *resultDict;
+                if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
+                    resultDict = [EKPLoginAPI loginUserWith:student];
+                } else {
+                    resultDict = [EKPLoginAPI loginUserWith:student andType:[EKPSingleton loadUserRole]];
+                }
+                NSLog(@"resultDict ::: %@", resultDict);
+                BOOL status = [[resultDict objectForKey:STATUS_KEY] boolValue];
+                if (status) {
+                    // school_details
+                    [student setDetailsWithStudent:student andDictionary:resultDict];
+                    if ([[EKPSingleton loadUserRole] isEqualToString:TEACHER_ROLE]) {
+                        EKPTeacher *teacherObj = [[EKPTeacher alloc] init];
+                        [teacherObj setDetailsWithTeacher:teacherObj andDictionary:[resultDict objectForKey:LOGIN_API_TEACHER_DETAILS]];
+                        [EKPSingleton saveTeacher:teacherObj];
+                    }
+                    
+                    [EKPSingleton saveStudent:student];
+                    [EKPSingleton addStudentToList:student];
+                    
+                    if (![[resultDict objectForKey:EKP_VERSION] isKindOfClass:[NSNull class]]) {
+                        [EKPSingleton saveVersion:[resultDict objectForKey:EKP_VERSION]];
+                        
+                    } else {
+                        [EKPSingleton saveVersion:@"basic"];
+                    }
+                } else {
+                    [EKPUtility showAlertWithTitle:@"Failed To Login" andMessage:@"Unable to login. Please check your username and password."];
+                }
+                
+                return status;
+            } else {
+                NSDictionary *resultDict = [EKPLoginAPI loginUserWith:student andType:[EKPSingleton loadUserRole]];
+                NSLog(@"resultDict ::: %@", resultDict);
+                BOOL status = [[resultDict objectForKey:STATUS_KEY] boolValue];
+                if (status) {
+                    // school_details
+                    [student setDetailsWithStudent:student andDictionary:resultDict];
+                    
+                    [EKPSingleton saveStudent:student];
+                    [EKPSingleton addStudentToList:student];
+                    if (![[resultDict objectForKey:EKP_VERSION] isKindOfClass:[NSNull class]]) {
+                        [EKPSingleton saveVersion:[resultDict objectForKey:EKP_VERSION]];
+                        
+                    } else {
+                        [EKPSingleton saveVersion:@"basic"];
+                    }
+                } else {
+                    [EKPUtility showAlertWithTitle:@"Failed To Login" andMessage:@"Unable to login. Please check your username and password."];
+                }
+                
+                if (status) {
+                    [self performSegueWithIdentifier:@"ShowWebViewSegue" sender:self];
+                }
+            }
         }
-        
-        return status;
     }
     
     return NO;

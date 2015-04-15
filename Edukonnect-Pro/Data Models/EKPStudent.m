@@ -135,30 +135,31 @@
     
     // student_details
     NSDictionary *studentDict = (NSDictionary *)[detailsDict objectForKey:LOGIN_API_STUDENT_DETAILS];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_ADDRESS] isEqual:[NSNull null]])
-        studentObject.studentAddress = [studentDict objectForKey:LOGIN_API_STUDENT_ADDRESS];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_BIRTHDAY] isEqual:[NSNull null]])
-        studentObject.studentBirthday = [studentDict objectForKey:LOGIN_API_STUDENT_BIRTHDAY];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_CLASS] isEqual:[NSNull null]])
-        studentObject.studentClass = [studentDict objectForKey:LOGIN_API_STUDENT_CLASS];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_GRNO] isEqual:[NSNull null]])
-        studentObject.studentGRNo = [studentDict objectForKey:LOGIN_API_STUDENT_GRNO];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_NAME] isEqual:[NSNull null]])
-        studentObject.studentName = [studentDict objectForKey:LOGIN_API_STUDENT_NAME];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_ROLLNO] isEqual:[NSNull null]])
-        studentObject.studentRollNo = [studentDict objectForKey:LOGIN_API_STUDENT_ROLLNO];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_SEX] isEqual:[NSNull null]])
-        studentObject.studentSex = [studentDict objectForKey:LOGIN_API_STUDENT_SEX];
-    
-    if (![[studentDict objectForKey:LOGIN_API_STUDENT_ID] isEqual:[NSNull null]])
-        studentObject.studentId = [studentDict objectForKey:LOGIN_API_STUDENT_ID];
+    if (![studentDict isKindOfClass:[NSNull class]]) {
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_ADDRESS] isEqual:[NSNull null]])
+            studentObject.studentAddress = [studentDict objectForKey:LOGIN_API_STUDENT_ADDRESS];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_BIRTHDAY] isEqual:[NSNull null]])
+            studentObject.studentBirthday = [studentDict objectForKey:LOGIN_API_STUDENT_BIRTHDAY];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_CLASS] isEqual:[NSNull null]])
+            studentObject.studentClass = [studentDict objectForKey:LOGIN_API_STUDENT_CLASS];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_GRNO] isEqual:[NSNull null]])
+            studentObject.studentGRNo = [studentDict objectForKey:LOGIN_API_STUDENT_GRNO];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_NAME] isEqual:[NSNull null]])
+            studentObject.studentName = [studentDict objectForKey:LOGIN_API_STUDENT_NAME];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_ROLLNO] isEqual:[NSNull null]])
+            studentObject.studentRollNo = [studentDict objectForKey:LOGIN_API_STUDENT_ROLLNO];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_SEX] isEqual:[NSNull null]])
+            studentObject.studentSex = [studentDict objectForKey:LOGIN_API_STUDENT_SEX];
+        
+        if (![[studentDict objectForKey:LOGIN_API_STUDENT_ID] isEqual:[NSNull null]])
+            studentObject.studentId = [studentDict objectForKey:LOGIN_API_STUDENT_ID];
+    }
 }
 
 - (BOOL)isEqualToStudent:(EKPStudent *)studentObject
