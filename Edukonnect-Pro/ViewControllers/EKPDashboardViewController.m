@@ -266,8 +266,8 @@
             break;
             
         case kEKPDashboardMenuSchoolSupport:
-//            [self performSegueWithIdentifier:@"DashboardToSchoolSupportSegue" sender:self];
-            [EKPUtility showAlertWithTitle:@"Comming Soon..." andMessage:nil];
+            [self performSegueWithIdentifier:@"DashboardToSchoolSupportSegue" sender:self];
+//            [EKPUtility showAlertWithTitle:@"Comming Soon..." andMessage:nil];
             break;
             
         case kEKPDashboardMenuPayment:
@@ -495,6 +495,9 @@
     if ([[segue identifier] isEqualToString:@"DashboardToEduResourceSegue"]) {
         EKPEduResourceWebViewController *viewController = (EKPEduResourceWebViewController *)[segue destinationViewController];
         viewController.selectedMenu = _selectedMenu;
+    } else if ([[segue identifier] isEqualToString:@"DashboardToSchoolSupportSegue"]) {
+        id vc = [segue destinationViewController];
+        NSLog(@"vc class :: %@", [vc class]);
     }
 }
 

@@ -616,9 +616,9 @@
                         <segue destination="jG0-fN-fdH" kind="push" identifier="DashboardToLibrarySegue" id="cY6-Xh-VMd"/>
                         <segue destination="Y4Y-X8-gmw" kind="push" identifier="DashboardToPaymentSegue" id="0GD-Yh-MZu"/>
                         <segue destination="KAJ-iT-Sgt" kind="push" identifier="DashboardToAlertSegue" id="jlx-Vp-WBr"/>
-                        <segue destination="4m7-3o-tLD" kind="push" identifier="DashboardToSchoolSupportSegue" id="fJ0-8G-LXz"/>
                         <segue destination="kCk-Qh-0UN" kind="push" identifier="DashboardToLeaveSegue" id="sn2-DP-Ea2"/>
                         <segue destination="APv-hT-joa" kind="push" identifier="DashboardToEduResourceSegue" id="FqY-Du-ZFP"/>
+                        <segue destination="dhg-C6-fWf" kind="push" identifier="DashboardToSchoolSupportSegue" id="3EP-jM-hvj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jb-81-1jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1222,25 +1222,6 @@
             </objects>
             <point key="canvasLocation" x="2454" y="6540"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="cTE-ge-Dh5">
-            <objects>
-                <viewController id="4m7-3o-tLD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GEx-f2-Xg4"/>
-                        <viewControllerLayoutGuide type="bottom" id="WRs-eD-5XM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9TB-Xa-fhQ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Dx4-Iy-RPs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PaU-RE-xeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2454" y="7688"/>
-        </scene>
         <!--Leave View Controller-->
         <scene sceneID="iV1-va-Chh">
             <objects>
@@ -1304,6 +1285,7 @@
                                 </state>
                                 <connections>
                                     <action selector="applyLeavesClicked:" destination="kCk-Qh-0UN" eventType="touchUpInside" id="PDl-3i-C1t"/>
+                                    <segue destination="PEl-GI-85o" kind="push" id="HCx-kj-Zy6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1317,7 +1299,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L1-pc-ohY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="8840"/>
+            <point key="canvasLocation" x="2456" y="7768"/>
+        </scene>
+        <!--Leave Appication View Controller-->
+        <scene sceneID="2tK-1u-iLK">
+            <objects>
+                <viewController storyboardIdentifier="EKPLeaveAppicationViewController" id="PEl-GI-85o" customClass="EKPLeaveAppicationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aIL-iE-eU3"/>
+                        <viewControllerLayoutGuide type="bottom" id="KYo-AT-d8c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gyv-Pi-EoY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGx-d9-TEw">
+                                <rect key="frame" x="213" y="127" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isk-sz-Wx5" customClass="KDTextField">
+                                <rect key="frame" x="326" y="123" width="45" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dd5-I2-ilr" customClass="KDTextField">
+                                <rect key="frame" x="393" y="123" width="45" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7WE-s7-wmN" customClass="KDTextField">
+                                <rect key="frame" x="461" y="123" width="95" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K87-Vr-FQx">
+                                <rect key="frame" x="213" y="177" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-mc-FEd" customClass="KDTextField">
+                                <rect key="frame" x="326" y="173" width="45" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISS-9O-wXn" customClass="KDTextField">
+                                <rect key="frame" x="393" y="173" width="45" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBQ-ul-0gk" customClass="KDTextField">
+                                <rect key="frame" x="461" y="173" width="95" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCi-Nk-llW" customClass="KDTextField">
+                                <rect key="frame" x="326" y="224" width="230" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reason" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpq-fx-U1I">
+                                <rect key="frame" x="213" y="228" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Half Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gb-Av-vOt">
+                                <rect key="frame" x="213" y="274" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRu-it-035">
+                                <rect key="frame" x="326" y="269" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVx-Kb-J1S">
+                                <rect key="frame" x="213" y="319" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnClicked:" destination="PEl-GI-85o" eventType="touchUpInside" id="ejw-6B-WIq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dtn-lQ-Cpb"/>
+                    <connections>
+                        <outlet property="leaveEndDay" destination="o9t-mc-FEd" id="EA4-z6-Lej"/>
+                        <outlet property="leaveEndMonth" destination="ISS-9O-wXn" id="jhC-gX-5dj"/>
+                        <outlet property="leaveEndYear" destination="DBQ-ul-0gk" id="qcm-6z-JNs"/>
+                        <outlet property="leaveNote" destination="UCi-Nk-llW" id="vHB-xQ-EX4"/>
+                        <outlet property="leaveStartDay" destination="isk-sz-Wx5" id="DbX-IJ-dHS"/>
+                        <outlet property="leaveStartMonth" destination="dd5-I2-ilr" id="clM-y0-ceX"/>
+                        <outlet property="leaveStartYear" destination="7WE-s7-wmN" id="vnA-c0-H1c"/>
+                        <outlet property="leaveTypeLabel" destination="7gb-Av-vOt" id="QlA-If-RHV"/>
+                        <outlet property="leaveTypeSwitch" destination="hRu-it-035" id="Ive-cU-qIY"/>
+                        <outlet property="submitBtn" destination="nVx-Kb-J1S" id="bgB-TU-5ud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rv-sx-n12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3366" y="7768"/>
         </scene>
         <!--Edu Resource Web View Controller-->
         <scene sceneID="wNN-QE-EKu">
@@ -1348,7 +1436,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWh-Di-Bl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="10008"/>
+            <point key="canvasLocation" x="2456" y="8936"/>
+        </scene>
+        <!--School Support List View Controller-->
+        <scene sceneID="5d3-lh-3X2">
+            <objects>
+                <viewController storyboardIdentifier="EKPSchoolSupportListViewController" id="dhg-C6-fWf" customClass="EKPSchoolSupportListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Ea-qn-Okh"/>
+                        <viewControllerLayoutGuide type="bottom" id="z6p-dk-18S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZkQ-uX-KVF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="npb-Iu-tTM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8L-2r-aHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460" y="10092"/>
         </scene>
         <!--Search Book View Controller-->
         <scene sceneID="jyv-qs-I8z">

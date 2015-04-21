@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WYPopoverController.h"
 
-@interface EKPLeaveViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface EKPLeaveViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, WYPopoverControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 

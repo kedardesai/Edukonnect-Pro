@@ -402,7 +402,7 @@ NSString *const ERROR_INVALID_MOBILE_NUMBER = @"Invalid number entered."; // Cod
 //    [self validateTextFieldAnimated:self.isAnimated];
 //    
 //    if (!self.inValidError) { // In case textField.text is valid
-//        [self.delegate doneWithNumberPad:self];
+        [self.delegate doneWithNumberPad:self];
         [self resignFirstResponder];
 //    }
 }

@@ -1,22 +1,21 @@
 //
-//  EKPLeaveAPI.m
+//  EKPSchoolSupportAPI.m
 //  Edukonnect-Pro
 //
-//  Created by Edupsyche on 4/12/15.
+//  Created by Edupsyche on 4/20/15.
 //  Copyright (c) 2015 Kedar Desai. All rights reserved.
 //
 
-#import "EKPLeaveAPI.h"
+#import "EKPSchoolSupportAPI.h"
 
-@implementation EKPLeaveAPI
+@implementation EKPSchoolSupportAPI
 
-+ (NSMutableArray *)listOfLeavesForPageId:(NSInteger)pageId
++ (NSMutableDictionary *)getSchoolSupportQueriesListForPageId:(NSInteger)pageId
 {
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
-    EKPTeacher *currentTeacher = [EKPSingleton loadTeacher];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&teacher_id=%@&pageid=%ld", BASE_API_URL, LEAVE_LIST_API_URL, /*@"SCH002"*/currentStudent.studentSchoolCode, /*@"1"*/currentTeacher.teacherId, (long)pageId];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&student_id=%@&pageid=%ld", BASE_API_URL, SCHOOL_SUPPORT_API_URL,currentStudent.studentSchoolCode, currentStudent.studentId, (long)pageId];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -41,26 +40,16 @@
         return nil;
     }
     
-    NSArray *dataArray = [dictionary objectForKey:LEAVE_API_TAG];
-    NSMutableArray *leavesArray = [[NSMutableArray alloc] init];
-    
-    for (NSDictionary *leaveDict in dataArray) {
-        EKPLeave *leaveObj = [[EKPLeave alloc] init];
-        [leaveObj setLeaveDetailsWithDictionary:leaveDict];
-        [leavesArray addObject:leaveObj];
-    }
-    
-    return leavesArray;
+    return dictionary;
 }
 
-+ (BOOL)applyLeaveWithObject:(EKPLeave *)leaveObj
++ (BOOL)submitNewSchoolSupportQuery:(EKPSchoolSupport *)schoolSupportObj
 {
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
-    EKPTeacher *currentTeacher = [EKPSingleton loadTeacher];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&teacher_id=%@&leave_note=%@&start_date=%@&end_date=%@&full_half_day=%@&days=%@", BASE_API_URL, LEAVE_LIST_API_URL, /*@"SCH002"*/currentStudent.studentSchoolCode, /*@"1"*/currentTeacher.teacherId, leaveObj.leaveNote, leaveObj.leaveDtFrom, leaveObj.leaveDtTo, leaveObj.leaveDayType, leaveObj.leaveDays];
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&student_id=%@&question=%@&created_date=%@&created_by=%@", BASE_API_URL, SCHOOL_SUPPORT_QUERY_API_URL, currentStudent.studentSchoolCode, currentStudent.studentId, schoolSupportObj.schoolSupportQuestion, schoolSupportObj.schoolSupportCreatedDate, schoolSupportObj.schoolSupportCreatedBy];
+    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];;
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [theRequest setHTTPMethod:@"GET"];
@@ -84,7 +73,7 @@
         return nil;
     }
     
-    return [dictionary objectForKey:STATUS_KEY];
+    return [[dictionary objectForKey:STATUS_KEY] boolValue];
 }
 
 @end

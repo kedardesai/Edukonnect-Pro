@@ -27,6 +27,8 @@
 		1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A313F19DAC15E0067B674 /* EKPAlertMessageConstants.m */; };
 		1B4A314C19DAC2510067B674 /* EKPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314B19DAC2510067B674 /* EKPUtility.m */; };
 		1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */; };
+		1E016F671AE4218B00FAA46E /* EKPSchoolSupportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E016F661AE4218B00FAA46E /* EKPSchoolSupportListViewController.m */; };
+		1E016F6A1AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */; };
 		1E171E911AC9D3AC00B7C410 /* EKPGuestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */; };
 		1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */; };
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
@@ -95,6 +97,9 @@
 		1EA1EE061A43667600722529 /* EKPBookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1EE051A43667600722529 /* EKPBookListViewController.m */; };
 		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
 		1EA25F191A015B5D00EAA661 /* EKPRegistrationAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */; };
+		1EA2C0421AE035980022D654 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2C03F1AE035980022D654 /* WYPopoverController.m */; };
+		1EA2C0431AE035980022D654 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2C0411AE035980022D654 /* WYStoryboardPopoverSegue.m */; };
+		1EA2C0461AE03DD40022D654 /* EKPLeaveAppicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2C0451AE03DD40022D654 /* EKPLeaveAppicationViewController.m */; };
 		1EA3720F1A2E3AD000615958 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA3720E1A2E3AD000615958 /* DXPopover.m */; };
 		1EA372151A2E451300615958 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA372121A2E451300615958 /* MJPopupBackgroundView.m */; };
 		1EA372161A2E451300615958 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA372141A2E451300615958 /* UIViewController+MJPopupViewController.m */; };
@@ -159,6 +164,8 @@
 		1ED3A7261A3CAF18007FEE6F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A6FB1A3CAF18007FEE6F /* UIView+WebCacheOperation.m */; };
 		1ED3A7271A3CAF18007FEE6F /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1ED3A6FC1A3CAF18007FEE6F /* MWPhotoBrowser.bundle */; };
 		1EFC45171A3B611200881984 /* EKPTimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC45161A3B611200881984 /* EKPTimetableViewController.m */; };
+		1EFC687F1AE57CCA00C42233 /* EKPSchoolSupportAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC687E1AE57CCA00C42233 /* EKPSchoolSupportAPI.m */; };
+		1EFC68821AE5810100C42233 /* EKPSchoolSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC68811AE5810100C42233 /* EKPSchoolSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +210,10 @@
 		1B4A314B19DAC2510067B674 /* EKPUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPUtility.m; sourceTree = "<group>"; };
 		1B4A314D19DACABE0067B674 /* EKPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLoginViewController.h; sourceTree = "<group>"; };
 		1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLoginViewController.m; sourceTree = "<group>"; };
+		1E016F651AE4218B00FAA46E /* EKPSchoolSupportListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolSupportListViewController.h; sourceTree = "<group>"; };
+		1E016F661AE4218B00FAA46E /* EKPSchoolSupportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolSupportListViewController.m; sourceTree = "<group>"; };
+		1E016F681AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolSupportQueryViewController.h; sourceTree = "<group>"; };
+		1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolSupportQueryViewController.m; sourceTree = "<group>"; };
 		1E171E8F1AC9D3AC00B7C410 /* EKPGuestInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPGuestInfoViewController.h; sourceTree = "<group>"; };
 		1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPGuestInfoViewController.m; sourceTree = "<group>"; };
 		1E2A1A971A001B0D000B7695 /* UIImage+EKPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKPImage.h"; sourceTree = "<group>"; };
@@ -337,6 +348,12 @@
 		1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EKPColor.m"; sourceTree = "<group>"; };
 		1EA25F171A015B5D00EAA661 /* EKPRegistrationAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPRegistrationAPI.h; sourceTree = "<group>"; };
 		1EA25F181A015B5D00EAA661 /* EKPRegistrationAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPRegistrationAPI.m; sourceTree = "<group>"; };
+		1EA2C03E1AE035980022D654 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		1EA2C03F1AE035980022D654 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		1EA2C0401AE035980022D654 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		1EA2C0411AE035980022D654 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		1EA2C0441AE03DD40022D654 /* EKPLeaveAppicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPLeaveAppicationViewController.h; sourceTree = "<group>"; };
+		1EA2C0451AE03DD40022D654 /* EKPLeaveAppicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPLeaveAppicationViewController.m; sourceTree = "<group>"; };
 		1EA3720D1A2E3AD000615958 /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
 		1EA3720E1A2E3AD000615958 /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		1EA372111A2E451300615958 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
@@ -463,6 +480,10 @@
 		1ED3A6FC1A3CAF18007FEE6F /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
 		1EFC45151A3B611200881984 /* EKPTimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTimetableViewController.h; sourceTree = "<group>"; };
 		1EFC45161A3B611200881984 /* EKPTimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTimetableViewController.m; sourceTree = "<group>"; };
+		1EFC687D1AE57CCA00C42233 /* EKPSchoolSupportAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolSupportAPI.h; sourceTree = "<group>"; };
+		1EFC687E1AE57CCA00C42233 /* EKPSchoolSupportAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolSupportAPI.m; sourceTree = "<group>"; };
+		1EFC68801AE5810100C42233 /* EKPSchoolSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolSupport.h; sourceTree = "<group>"; };
+		1EFC68811AE5810100C42233 /* EKPSchoolSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolSupport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -642,6 +663,12 @@
 				1E3D70F91ACFF3FB000E64A7 /* EKPEduResourceWebViewController.m */,
 				1E2D86791ADAC9A5001DDBA5 /* EKPLeaveViewController.h */,
 				1E2D867A1ADAC9A5001DDBA5 /* EKPLeaveViewController.m */,
+				1EA2C0441AE03DD40022D654 /* EKPLeaveAppicationViewController.h */,
+				1EA2C0451AE03DD40022D654 /* EKPLeaveAppicationViewController.m */,
+				1E016F651AE4218B00FAA46E /* EKPSchoolSupportListViewController.h */,
+				1E016F661AE4218B00FAA46E /* EKPSchoolSupportListViewController.m */,
+				1E016F681AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.h */,
+				1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -649,6 +676,7 @@
 		1B4A313519D969AF0067B674 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1EA2C03D1AE035980022D654 /* WYPopoverController */,
 				1E9ADCAE1A45E6FD0066F99B /* MBProgressHUD */,
 				1EA159621A3F6BAE00860F1A /* EKPMapPin */,
 				1ED3A69D1A3CAF18007FEE6F /* MWPhotoBrowser */,
@@ -839,8 +867,21 @@
 				1E9ADCB31A4606E40066F99B /* EKPBackgroundFetchAPI.m */,
 				1E2D867C1ADADC0B001DDBA5 /* EKPLeaveAPI.h */,
 				1E2D867D1ADADC0B001DDBA5 /* EKPLeaveAPI.m */,
+				1EFC687D1AE57CCA00C42233 /* EKPSchoolSupportAPI.h */,
+				1EFC687E1AE57CCA00C42233 /* EKPSchoolSupportAPI.m */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		1EA2C03D1AE035980022D654 /* WYPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				1EA2C03E1AE035980022D654 /* WYPopoverController.h */,
+				1EA2C03F1AE035980022D654 /* WYPopoverController.m */,
+				1EA2C0401AE035980022D654 /* WYStoryboardPopoverSegue.h */,
+				1EA2C0411AE035980022D654 /* WYStoryboardPopoverSegue.m */,
+			);
+			path = WYPopoverController;
 			sourceTree = "<group>";
 		};
 		1EA3720C1A2E3AD000615958 /* DXPopover */ = {
@@ -904,6 +945,8 @@
 				1E9E00931A45793500A76699 /* EKPPayment.m */,
 				1E2D86821ADAF1CB001DDBA5 /* EKPLeave.h */,
 				1E2D86831ADAF1CB001DDBA5 /* EKPLeave.m */,
+				1EFC68801AE5810100C42233 /* EKPSchoolSupport.h */,
+				1EFC68811AE5810100C42233 /* EKPSchoolSupport.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1169,6 +1212,7 @@
 				1ED3A7191A3CAF18007FEE6F /* SDImageCache.m in Sources */,
 				1ED3A7231A3CAF18007FEE6F /* UIImage+WebP.m in Sources */,
 				1ED3A7051A3CAF18007FEE6F /* DACircularProgressView.m in Sources */,
+				1EFC687F1AE57CCA00C42233 /* EKPSchoolSupportAPI.m in Sources */,
 				1E37F08D1A44AB06005BD6C0 /* EKPBook.m in Sources */,
 				1E7992871A37831E00383BE6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1ED3A7031A3CAF18007FEE6F /* MWTapDetectingView.m in Sources */,
@@ -1203,6 +1247,7 @@
 				1E6581A41A4209D5002FFD58 /* EKPLibraryAPI.m in Sources */,
 				1E7992561A377E3B00383BE6 /* EKPEvent.m in Sources */,
 				1ED3A7041A3CAF18007FEE6F /* MWZoomingScrollView.m in Sources */,
+				1EA2C0461AE03DD40022D654 /* EKPLeaveAppicationViewController.m in Sources */,
 				1EA372161A2E451300615958 /* UIViewController+MJPopupViewController.m in Sources */,
 				1EA3720F1A2E3AD000615958 /* DXPopover.m in Sources */,
 				1ED3A7201A3CAF18007FEE6F /* UIButton+WebCache.m in Sources */,
@@ -1215,6 +1260,7 @@
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,
 				1E7992891A37831E00383BE6 /* UIAlertView+AFNetworking.m in Sources */,
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
+				1EA2C0421AE035980022D654 /* WYPopoverController.m in Sources */,
 				1E7675121AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m in Sources */,
 				1ED3A6FD1A3CAF18007FEE6F /* MWCaptionView.m in Sources */,
 				1ED3A7121A3CAF18007FEE6F /* PSTGridLayoutItem.m in Sources */,
@@ -1227,6 +1273,7 @@
 				1EC335631A067D3100CADF22 /* EKPLoginAPI.m in Sources */,
 				1E7992821A37831E00383BE6 /* AFSecurityPolicy.m in Sources */,
 				1E7992861A37831E00383BE6 /* AFURLSessionManager.m in Sources */,
+				1E016F671AE4218B00FAA46E /* EKPSchoolSupportListViewController.m in Sources */,
 				1ED3A70D1A3CAF18007FEE6F /* PSTCollectionViewFlowLayout.m in Sources */,
 				1E9CEB581A3730E10069C150 /* EKPEventListViewController.m in Sources */,
 				1E7992831A37831E00383BE6 /* AFURLConnectionOperation.m in Sources */,
@@ -1249,8 +1296,10 @@
 				1E2D86811ADAE03F001DDBA5 /* EKPTeacher.m in Sources */,
 				1EA372261A2E525C00615958 /* EKPSwitchUserViewController.m in Sources */,
 				1ED3A7091A3CAF18007FEE6F /* PSTCollectionView.m in Sources */,
+				1E016F6A1AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m in Sources */,
 				1EA3B7751A33408C00E88711 /* EKPProfile.m in Sources */,
 				1EA159581A3F568A00860F1A /* EKPTransport.m in Sources */,
+				1EA2C0431AE035980022D654 /* WYStoryboardPopoverSegue.m in Sources */,
 				1E79927F1A37831E00383BE6 /* AFHTTPRequestOperationManager.m in Sources */,
 				1ED3A71A1A3CAF18007FEE6F /* SDWebImageCompat.m in Sources */,
 				1EA372151A2E451300615958 /* MJPopupBackgroundView.m in Sources */,
@@ -1263,6 +1312,7 @@
 				1EC335661A067D9400CADF22 /* EKPStudent.m in Sources */,
 				1ED3A7101A3CAF18007FEE6F /* PSTCollectionViewUpdateItem.m in Sources */,
 				1EA3B7721A333C9100E88711 /* EKPProfileAPI.m in Sources */,
+				1EFC68821AE5810100C42233 /* EKPSchoolSupport.m in Sources */,
 				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,
 				1E79928E1A37831E00383BE6 /* UIWebView+AFNetworking.m in Sources */,
 				1EA1595E1A3F654300860F1A /* EKPBusLocationViewController.m in Sources */,

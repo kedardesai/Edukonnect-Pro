@@ -620,9 +620,9 @@
                         <segue destination="RZu-Fh-0DA" kind="push" identifier="DashboardToLibrarySegue" id="24d-7x-rc8"/>
                         <segue destination="J2b-8C-RF1" kind="push" identifier="DashboardToAlertSegue" id="94m-be-3fU"/>
                         <segue destination="JZi-Lr-bHm" kind="push" identifier="DashboardToPaymentSegue" id="7Wu-2T-Wzj"/>
-                        <segue destination="nqn-IO-nFu" kind="push" identifier="DashboardToSchoolSupportSegue" id="POj-OS-VvH"/>
                         <segue destination="X8J-4r-4XB" kind="push" identifier="DashboardToLeaveSegue" id="6cs-7T-CeH"/>
                         <segue destination="XcP-WD-4fh" kind="push" identifier="DashboardToEduResourceSegue" id="0Xr-Zt-HfR"/>
+                        <segue destination="iOg-rH-Zau" kind="push" identifier="DashboardToSchoolSupportSegue" id="LUR-2Z-YWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-7N-I2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1240,25 +1240,6 @@
             </objects>
             <point key="canvasLocation" x="1200" y="5213"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8g8-w4-RQd">
-            <objects>
-                <viewController id="nqn-IO-nFu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bMZ-am-oao"/>
-                        <viewControllerLayoutGuide type="bottom" id="QSM-UZ-nbc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gZ2-69-16O">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="upJ-de-fDW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xke-qW-wPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1199" y="5853"/>
-        </scene>
         <!--Leave View Controller-->
         <scene sceneID="LGG-Ze-7l0">
             <objects>
@@ -1322,6 +1303,7 @@
                                 </state>
                                 <connections>
                                     <action selector="applyLeavesClicked:" destination="X8J-4r-4XB" eventType="touchUpInside" id="yJV-gU-le5"/>
+                                    <segue destination="UIC-aw-P7x" kind="push" identifier="AppleLeaveSegue" id="nHS-0s-F0R"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1335,7 +1317,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3I-1I-CIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="6499"/>
+            <point key="canvasLocation" x="1199" y="5911"/>
+        </scene>
+        <!--Leave Appication View Controller-->
+        <scene sceneID="s5q-Ki-zgd">
+            <objects>
+                <viewController storyboardIdentifier="EKPLeaveAppicationViewController" id="UIC-aw-P7x" customClass="EKPLeaveAppicationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6gT-WU-fcW"/>
+                        <viewControllerLayoutGuide type="bottom" id="bC9-mx-fm1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zR6-sF-Plu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-OA-JsG">
+                                <rect key="frame" x="38" y="106" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aym-yk-Mx0" customClass="KDTextField">
+                                <rect key="frame" x="127" y="103" width="39" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-UR-NRR" customClass="KDTextField">
+                                <rect key="frame" x="174" y="103" width="39" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbc-0z-lxW" customClass="KDTextField">
+                                <rect key="frame" x="221" y="103" width="61" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-hp-799">
+                                <rect key="frame" x="38" y="153" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2G-0M-tc0" customClass="KDTextField">
+                                <rect key="frame" x="127" y="150" width="39" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sA-eA-wm6" customClass="KDTextField">
+                                <rect key="frame" x="174" y="150" width="39" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6Q-d1-QUJ" customClass="KDTextField">
+                                <rect key="frame" x="221" y="150" width="61" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pL9-hM-Z1I" customClass="KDTextField">
+                                <rect key="frame" x="127" y="199" width="155" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reason" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFT-9M-Cw5">
+                                <rect key="frame" x="38" y="208" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lG2-yJ-y33">
+                                <rect key="frame" x="127" y="246" width="51" height="31"/>
+                            </switch>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Half Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5Z-XD-Wax">
+                                <rect key="frame" x="38" y="251" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-HH-8oj">
+                                <rect key="frame" x="38" y="293" width="244" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnClicked:" destination="UIC-aw-P7x" eventType="touchUpInside" id="dx7-gV-s4C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aVW-NB-PRA"/>
+                    <connections>
+                        <outlet property="leaveEndDay" destination="C2G-0M-tc0" id="jvE-VX-CBw"/>
+                        <outlet property="leaveEndMonth" destination="9sA-eA-wm6" id="oaF-tu-3qB"/>
+                        <outlet property="leaveEndYear" destination="j6Q-d1-QUJ" id="SZt-dR-ePu"/>
+                        <outlet property="leaveNote" destination="pL9-hM-Z1I" id="SKF-b8-Y0t"/>
+                        <outlet property="leaveStartDay" destination="aym-yk-Mx0" id="Iu1-sm-7Z3"/>
+                        <outlet property="leaveStartMonth" destination="Ftq-UR-NRR" id="yDE-vm-UxG"/>
+                        <outlet property="leaveStartYear" destination="gbc-0z-lxW" id="GII-Jz-Abq"/>
+                        <outlet property="leaveTypeLabel" destination="v5Z-XD-Wax" id="kOf-eK-WBk"/>
+                        <outlet property="leaveTypeSwitch" destination="lG2-yJ-y33" id="h3T-jS-ZOe"/>
+                        <outlet property="submitBtn" destination="ceT-HH-8oj" id="Fcy-34-yy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mr7-xN-5Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="5911"/>
         </scene>
         <!--Edu Resource Web View Controller-->
         <scene sceneID="4JW-ys-C2D">
@@ -1366,7 +1454,150 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1J-Tx-9Dj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="7139"/>
+            <point key="canvasLocation" x="1199" y="6551"/>
+        </scene>
+        <!--School Support List View Controller-->
+        <scene sceneID="JYs-QA-ppp">
+            <objects>
+                <viewController storyboardIdentifier="EKPSchoolSupportListViewController" id="iOg-rH-Zau" customClass="EKPSchoolSupportListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LH0-OJ-qCe"/>
+                        <viewControllerLayoutGuide type="bottom" id="nKw-VL-HvA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6RE-4l-EXw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="b4c-Gw-NV2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQueryCell" id="5fo-g7-bwb">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5fo-g7-bwb" id="mWn-sn-S4p">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6T-rg-n2R">
+                                                    <rect key="frame" x="0.0" y="5" width="305" height="100"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8x-e8-wW1">
+                                                            <rect key="frame" x="8" y="7" width="289" height="61"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zso-zK-pdc">
+                                                            <rect key="frame" x="8" y="73" width="119" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.86589591733870963" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="responseQueryCell" id="INU-zh-RNs">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="INU-zh-RNs" id="a2U-th-rUB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-bJ-xaj">
+                                                    <rect key="frame" x="15" y="5" width="305" height="100.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-95-NuB">
+                                                            <rect key="frame" x="8" y="7" width="289" height="61"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-3b-Mhb">
+                                                            <rect key="frame" x="188" y="75" width="109" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iOg-rH-Zau" id="1TV-NV-uQk"/>
+                                    <outlet property="delegate" destination="iOg-rH-Zau" id="Y54-2Q-9dr"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEg-Ne-Rke">
+                                <rect key="frame" x="32" y="513" width="256" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="New Query">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addQueryBtnClicked:" destination="iOg-rH-Zau" eventType="touchUpInside" id="3Ic-Tj-8lh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="agJ-Ah-2oX"/>
+                    <connections>
+                        <outlet property="addQueryBtn" destination="DEg-Ne-Rke" id="yFv-Qr-1sl"/>
+                        <outlet property="tableView" destination="b4c-Gw-NV2" id="Rqb-q4-CH7"/>
+                        <segue destination="9kg-wP-4vl" kind="push" identifier="AddNewQuerySegue" id="shJ-yu-GCE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uG-yE-L4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="7201"/>
+        </scene>
+        <!--School Support Query View Controller-->
+        <scene sceneID="2JN-Om-oRK">
+            <objects>
+                <viewController storyboardIdentifier="EKPSchoolSupportQueryViewController" id="9kg-wP-4vl" customClass="EKPSchoolSupportQueryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BEZ-AK-ngt"/>
+                        <viewControllerLayoutGuide type="bottom" id="KeV-Ar-GGd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Az-pR-ANj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Question" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp3-3n-dBg" customClass="KDTextField">
+                                <rect key="frame" x="28" y="108" width="265" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9kg-wP-4vl" id="rYg-po-MN5"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-kM-eZH">
+                                <rect key="frame" x="50" y="166" width="221" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.24313725489999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnClicked:" destination="9kg-wP-4vl" eventType="touchUpInside" id="RcU-EV-fzV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZFu-DI-VWu"/>
+                    <connections>
+                        <outlet property="questionTextField" destination="hp3-3n-dBg" id="PpE-8n-7eR"/>
+                        <outlet property="submitBtn" destination="zbt-kM-eZH" id="783-3e-kds"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rk-I9-xM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="7201"/>
         </scene>
         <!--Search Book View Controller-->
         <scene sceneID="lJ2-XM-8qg">

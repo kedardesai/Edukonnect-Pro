@@ -29,6 +29,8 @@ NSString *const LOGIN_SCREEN_TITLE = @"Login";
 NSString *const DASHBOARD_SCREEN_TITLE = @"Dashboard";
 NSString *const SWITCH_USER_SCREEN_TITLE = @"Switch User";
 NSString *const SEARCH_BOOK_SCREEN_TITLE = @"Search Book";
+NSString *const SCHOOL_SUPORT_SCREEN_TITLE = @"School Support";
+NSString *const SCHOOL_SUPORT_QUERY_SCREEN_TITLE = @"Add New Query";
 
 
 #pragma mark Segue Names
@@ -59,6 +61,7 @@ NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
 NSString *const ALERT_API_URL = @"notice_list_response.php?";
 NSString *const EVENT_API_URL = @"event_class_response.php?";
 NSString *const LEAVE_LIST_API_URL = @"leavelist_response.php?";
+NSString *const LEAVE_APPLY_API_URL = @"leaveadd_response.php?";
 NSString *const EXAM_LIST_API_URL = @"resultlist_response.php?";
 NSString *const RESULT_API_URL = @"result_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
@@ -82,6 +85,8 @@ NSString *const BEHAVIOURAL_ISSUES_URL = @"http://4parents.mobi/behavioral.php";
 NSString *const LOCATOR_URL = @"http://4parents.mobi/locator.php";
 NSString *const CAREER_COUNSELING_URL = @"http://4parents.mobi/career.php";
 NSString *const KNOWLEDGE_CENTRE_URL = @"http://4parents.mobi/teacherdashboard.php";
+NSString *const SCHOOL_SUPPORT_API_URL = @"schoolsupportlist_response.php?";
+NSString *const SCHOOL_SUPPORT_QUERY_API_URL = @"schoolsupport_addquestion.php?";
 
 
 //http://main.edukonnect.net.in/is_going_check.php?schoolcode=sch001&student_id=1&event_id=1
@@ -223,6 +228,16 @@ NSString *const LEAVE_API_END_DT = @"end_date";
 NSString *const LEAVE_API_DAY_TYPE = @"full_half_day";
 NSString *const LEAVE_API_STATUS = @"status";
 NSString *const LEAVE_API_DAYS = @"days";
+
+#pragma mark SHOOL_SUPPORT-API Constants
+NSString *const SCHOOL_SUPPORT_API_TAG = @"school_support";
+NSString *const SCHOOL_SUPPORT_API_ID = @"id";
+NSString *const SCHOOL_SUPPORT_API_QUESTION = @"question";
+NSString *const SCHOOL_SUPPORT_API_TYPE = @"type";
+NSString *const SCHOOL_SUPPORT_API_CREATED_DT = @"created_date";
+NSString *const SCHOOL_SUPPORT_API_CREATED_BY = @"created_by";
+NSString *const SCHOOL_SUPPORT_API_IS_SEEN = @"is_seen";
+NSString *const SCHOOL_SUPPORT_API_NEXT_PAGE = @"nextpage";
 
 #pragma mark PULL_NOTIFICATION Constants
 NSString *const NOTIFICATION_API_ID = @"id";

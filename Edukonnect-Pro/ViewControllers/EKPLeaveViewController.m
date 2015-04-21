@@ -12,6 +12,9 @@
 
 @interface EKPLeaveViewController ()
 
+@property (nonatomic, strong) UIDatePicker *datepicker;
+@property (nonatomic, strong) WYPopoverController *popOverForDatePicker;
+
 @end
 
 @implementation EKPLeaveViewController
@@ -26,8 +29,12 @@
     
     _pageId = 1;
     _isNextPageAvailable = false;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     _dataArray = [[NSMutableArray alloc] initWithArray:[EKPLeaveAPI listOfLeavesForPageId:_pageId]];
-    
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +83,32 @@
 - (IBAction)applyLeavesClicked:(UIButton *)applyLeaveButton
 {
     NSLog(@"applyLeavesClicked...");
+    
+//    UIViewController *viewController = [[UIViewController alloc]init];
+//    UIView *viewForDatePicker = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+//    
+//    _datepicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+//    _datepicker.datePickerMode = UIDatePickerModeDate;
+//    _datepicker.hidden = NO;
+//    _datepicker.date = [NSDate date];
+//    [_datepicker addTarget:self action:@selector(dateSelected:) forControlEvents:UIControlEventValueChanged];
+//    
+//    [viewForDatePicker addSubview:_datepicker];
+//    [viewController.view addSubview:viewForDatePicker];
+//    
+//    _popOverForDatePicker = [[WYPopoverController alloc] initWithContentViewController:viewController];
+//    _popOverForDatePicker.delegate = self;
+//    [_popOverForDatePicker setPopoverContentSize:CGSizeMake(300, 300) animated:NO];
+//    [_popOverForDatePicker presentPopoverFromRect:applyLeaveButton.frame inView:self.view  permittedArrowDirections:(UIPopoverArrowDirectionUp|UIPopoverArrowDirectionDown| UIPopoverArrowDirectionLeft|UIPopoverArrowDirectionRight) animated:YES];
 }
+
+//-(void)dateSelected:(id)sender
+//{
+//    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+//    df.dateStyle = NSDateFormatterMediumStyle;
+//    NSLog(@"%@",[NSString stringWithFormat:@"%@",[df stringFromDate:_datepicker.date]]);
+//}
+
 
 /*
 #pragma mark - Navigation
