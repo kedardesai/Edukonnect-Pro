@@ -239,6 +239,17 @@ NSString *const SCHOOL_SUPPORT_API_CREATED_BY = @"created_by";
 NSString *const SCHOOL_SUPPORT_API_IS_SEEN = @"is_seen";
 NSString *const SCHOOL_SUPPORT_API_NEXT_PAGE = @"nextpage";
 
+#pragma mark HOMEWORK Constants
+NSString *const HOMEWORK_API_TAG = @"homework";
+NSString *const HOMEWORK_API_ID = @"id";
+NSString *const HOMEWORK_API_HEADING = @"heading";
+NSString *const HOMEWORK_API_DETAILS = @"details";
+NSString *const HOMEWORK_API_DT = @"date";
+NSString *const HOMEWORK_API_IS_FILE_UPLOADED = @"is_file_uploaded";
+NSString *const HOMEWORK_API_CREATED_BY = @"created_by";
+NSString *const HOMEWORK_API_FILE_EXT = @"fileExt";
+
+
 #pragma mark PULL_NOTIFICATION Constants
 NSString *const NOTIFICATION_API_ID = @"id";
 NSString *const NOTIFICATION_API_HEADING = @"heading";

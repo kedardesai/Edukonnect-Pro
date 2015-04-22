@@ -80,7 +80,7 @@
     }
     
     if (![[dict objectForKey:SCHOOL_SUPPORT_API_IS_SEEN] isKindOfClass:[NSNull class]]) {
-        _schoolSupportIsSeen = [dict objectForKey:SCHOOL_SUPPORT_API_IS_SEEN];
+        _schoolSupportIsSeen = [[dict objectForKey:SCHOOL_SUPPORT_API_IS_SEEN] boolValue];
     }
 }
 

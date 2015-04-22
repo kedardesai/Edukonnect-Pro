@@ -93,6 +93,9 @@
 		1EA1595E1A3F654300860F1A /* EKPBusLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1595D1A3F654300860F1A /* EKPBusLocationViewController.m */; };
 		1EA159601A3F665000860F1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA1595F1A3F665000860F1A /* MapKit.framework */; };
 		1EA159651A3F6BC300860F1A /* EKPMapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA159641A3F6BC300860F1A /* EKPMapPin.m */; };
+		1EA1B5551AE81DCE00FA773A /* EKPHomework.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1B5541AE81DCE00FA773A /* EKPHomework.m */; };
+		1EA1B5581AE81DE100FA773A /* EKPHomeworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1B5571AE81DE100FA773A /* EKPHomeworkAPI.m */; };
+		1EA1B55B1AE824C200FA773A /* EKPHomeworkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1B55A1AE824C200FA773A /* EKPHomeworkListViewController.m */; };
 		1EA1EE031A4361BB00722529 /* EKPSearchBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1EE021A4361BB00722529 /* EKPSearchBookViewController.m */; };
 		1EA1EE061A43667600722529 /* EKPBookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1EE051A43667600722529 /* EKPBookListViewController.m */; };
 		1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA25F141A013D0100EAA661 /* UIColor+EKPColor.m */; };
@@ -340,6 +343,12 @@
 		1EA1595F1A3F665000860F1A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1EA159631A3F6BC300860F1A /* EKPMapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPMapPin.h; sourceTree = "<group>"; };
 		1EA159641A3F6BC300860F1A /* EKPMapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPMapPin.m; sourceTree = "<group>"; };
+		1EA1B5531AE81DCE00FA773A /* EKPHomework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPHomework.h; sourceTree = "<group>"; };
+		1EA1B5541AE81DCE00FA773A /* EKPHomework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPHomework.m; sourceTree = "<group>"; };
+		1EA1B5561AE81DE100FA773A /* EKPHomeworkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPHomeworkAPI.h; sourceTree = "<group>"; };
+		1EA1B5571AE81DE100FA773A /* EKPHomeworkAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPHomeworkAPI.m; sourceTree = "<group>"; };
+		1EA1B5591AE824C200FA773A /* EKPHomeworkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPHomeworkListViewController.h; sourceTree = "<group>"; };
+		1EA1B55A1AE824C200FA773A /* EKPHomeworkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPHomeworkListViewController.m; sourceTree = "<group>"; };
 		1EA1EE011A4361BB00722529 /* EKPSearchBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSearchBookViewController.h; sourceTree = "<group>"; };
 		1EA1EE021A4361BB00722529 /* EKPSearchBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSearchBookViewController.m; sourceTree = "<group>"; };
 		1EA1EE041A43667600722529 /* EKPBookListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPBookListViewController.h; sourceTree = "<group>"; };
@@ -669,6 +678,8 @@
 				1E016F661AE4218B00FAA46E /* EKPSchoolSupportListViewController.m */,
 				1E016F681AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.h */,
 				1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */,
+				1EA1B5591AE824C200FA773A /* EKPHomeworkListViewController.h */,
+				1EA1B55A1AE824C200FA773A /* EKPHomeworkListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -869,6 +880,8 @@
 				1E2D867D1ADADC0B001DDBA5 /* EKPLeaveAPI.m */,
 				1EFC687D1AE57CCA00C42233 /* EKPSchoolSupportAPI.h */,
 				1EFC687E1AE57CCA00C42233 /* EKPSchoolSupportAPI.m */,
+				1EA1B5561AE81DE100FA773A /* EKPHomeworkAPI.h */,
+				1EA1B5571AE81DE100FA773A /* EKPHomeworkAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -947,6 +960,8 @@
 				1E2D86831ADAF1CB001DDBA5 /* EKPLeave.m */,
 				1EFC68801AE5810100C42233 /* EKPSchoolSupport.h */,
 				1EFC68811AE5810100C42233 /* EKPSchoolSupport.m */,
+				1EA1B5531AE81DCE00FA773A /* EKPHomework.h */,
+				1EA1B5541AE81DCE00FA773A /* EKPHomework.m */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -1261,6 +1276,8 @@
 				1E7992891A37831E00383BE6 /* UIAlertView+AFNetworking.m in Sources */,
 				1EC335601A06673600CADF22 /* EKPUser.m in Sources */,
 				1EA2C0421AE035980022D654 /* WYPopoverController.m in Sources */,
+				1EA1B5581AE81DE100FA773A /* EKPHomeworkAPI.m in Sources */,
+				1EA1B5551AE81DCE00FA773A /* EKPHomework.m in Sources */,
 				1E7675121AC6A7AA001E1CFB /* EKPCommonWebViewViewController.m in Sources */,
 				1ED3A6FD1A3CAF18007FEE6F /* MWCaptionView.m in Sources */,
 				1ED3A7121A3CAF18007FEE6F /* PSTGridLayoutItem.m in Sources */,
@@ -1316,6 +1333,7 @@
 				1EA25F151A013D0100EAA661 /* UIColor+EKPColor.m in Sources */,
 				1E79928E1A37831E00383BE6 /* UIWebView+AFNetworking.m in Sources */,
 				1EA1595E1A3F654300860F1A /* EKPBusLocationViewController.m in Sources */,
+				1EA1B55B1AE824C200FA773A /* EKPHomeworkListViewController.m in Sources */,
 				1B09EEB019DBD5B00049F667 /* EKPDashboardViewController.m in Sources */,
 				1E79928B1A37831E00383BE6 /* UIImageView+AFNetworking.m in Sources */,
 				1ED3A7171A3CAF18007FEE6F /* MKAnnotationView+WebCache.m in Sources */,
