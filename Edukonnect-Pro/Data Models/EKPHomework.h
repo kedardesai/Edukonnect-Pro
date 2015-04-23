@@ -18,4 +18,6 @@
 @property (nonatomic, strong) NSString *homeworkCreatedBy;
 @property (nonatomic, strong) NSString *homeworkFileExt;
 
+- (void)setHomeworkDetailsWithDictionary:(NSDictionary *)dict;
+
 @end

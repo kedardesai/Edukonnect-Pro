@@ -612,7 +612,7 @@
                         <segue destination="FbP-uj-UgD" kind="push" identifier="DashboardToGalleryListSegue" id="I9t-gW-5Kc"/>
                         <segue destination="TZF-yV-r1q" kind="push" identifier="DashboardToEduSenSegue" id="WTo-St-ocN"/>
                         <segue destination="175-bB-HBh" kind="push" identifier="DashboardToTransportSegue" id="baW-dV-5YU"/>
-                        <segue destination="hoI-WN-ONa" kind="push" identifier="DashboardToBoardingSegue" id="1Lp-3D-x9a"/>
+                        <segue destination="hoI-WN-ONa" kind="push" identifier="DashboardToHomeworkSegue" id="1Lp-3D-x9a"/>
                         <segue destination="jG0-fN-fdH" kind="push" identifier="DashboardToLibrarySegue" id="cY6-Xh-VMd"/>
                         <segue destination="Y4Y-X8-gmw" kind="push" identifier="DashboardToPaymentSegue" id="0GD-Yh-MZu"/>
                         <segue destination="KAJ-iT-Sgt" kind="push" identifier="DashboardToAlertSegue" id="jlx-Vp-WBr"/>
@@ -862,10 +862,10 @@
             </objects>
             <point key="canvasLocation" x="2454" y="1900"/>
         </scene>
-        <!--Dormitories View Controller-->
+        <!--Homework List View Controller-->
         <scene sceneID="0w3-4h-ASI">
             <objects>
-                <viewController storyboardIdentifier="EKPDormitoriesViewController" id="hoI-WN-ONa" customClass="EKPDormitoriesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EKPHomeworkListViewController" id="hoI-WN-ONa" customClass="EKPHomeworkListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7if-dM-oUi"/>
                         <viewControllerLayoutGuide type="bottom" id="woe-Pn-Lya"/>
@@ -892,19 +892,13 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Of Rooms :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-be-JPB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-be-JPB">
                                                             <rect key="frame" x="16" y="42" width="154" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJm-nO-u0E">
-                                                            <rect key="frame" x="178" y="43" width="255" height="21"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNq-cp-dkh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNq-cp-dkh">
                                                             <rect key="frame" x="16" y="71" width="698" height="94"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -918,8 +912,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="hoI-WN-ONa" id="ZVg-Wr-yn3"/>
-                                    <outlet property="delegate" destination="hoI-WN-ONa" id="PWY-Dc-f22"/>
+                                    <outlet property="dataSource" destination="hoI-WN-ONa" id="K29-dZ-mrp"/>
+                                    <outlet property="delegate" destination="hoI-WN-ONa" id="kjw-5t-tWc"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -927,12 +921,44 @@
                     </view>
                     <navigationItem key="navigationItem" id="VrB-Tw-0eG"/>
                     <connections>
-                        <outlet property="dormitoriesListTableView" destination="Tx0-Ar-e3v" id="Tzx-WL-naV"/>
+                        <outlet property="tableView" destination="Tx0-Ar-e3v" id="lxr-DF-RTH"/>
+                        <segue destination="Wdb-tB-Bij" kind="push" identifier="ShowHomeworkFileSegue" id="2XT-mp-h2h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4p-1q-LxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2458" y="3065"/>
+        </scene>
+        <!--Homework Details View Controller-->
+        <scene sceneID="9sl-Wd-87T">
+            <objects>
+                <viewController storyboardIdentifier="EKPHomeworkDetailsViewController" id="Wdb-tB-Bij" customClass="EKPHomeworkDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ksa-ms-tbw"/>
+                        <viewControllerLayoutGuide type="bottom" id="llL-94-xXl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="39c-Ls-hfL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWe-QT-Mtu">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Wdb-tB-Bij" id="nK2-gl-qN3"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IFM-qC-EFe"/>
+                    <connections>
+                        <outlet property="webView" destination="uWe-QT-Mtu" id="lPt-qM-hMM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6o-cn-Ju5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3334" y="3065"/>
         </scene>
         <!--Event Details View Controller-->
         <scene sceneID="8C8-UH-Dg5">
@@ -1575,7 +1601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDp-sl-GRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3322" y="4164"/>
+            <point key="canvasLocation" x="3322" y="4229"/>
         </scene>
         <!--Book List View Controller-->
         <scene sceneID="alu-2X-jiS">

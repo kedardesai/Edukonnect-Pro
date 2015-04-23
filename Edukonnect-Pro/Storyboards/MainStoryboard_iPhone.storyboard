@@ -616,7 +616,7 @@
                         <segue destination="aa9-E9-EQf" kind="push" identifier="DashboardToGalleryListSegue" id="T3f-1D-Gkm"/>
                         <segue destination="u8s-Gp-vap" kind="push" identifier="DashboardToEduSenSegue" id="okC-Ue-61O"/>
                         <segue destination="12A-Hh-uZc" kind="push" identifier="DashboardToTransportSegue" id="0dY-hq-tPI"/>
-                        <segue destination="ceJ-Lg-EaH" kind="push" identifier="DashboardToBoardingSegue" id="DkC-Pj-5EB"/>
+                        <segue destination="ceJ-Lg-EaH" kind="push" identifier="DashboardToHomeworkSegue" id="DkC-Pj-5EB"/>
                         <segue destination="RZu-Fh-0DA" kind="push" identifier="DashboardToLibrarySegue" id="24d-7x-rc8"/>
                         <segue destination="J2b-8C-RF1" kind="push" identifier="DashboardToAlertSegue" id="94m-be-3fU"/>
                         <segue destination="JZi-Lr-bHm" kind="push" identifier="DashboardToPaymentSegue" id="7Wu-2T-Wzj"/>
@@ -948,10 +948,10 @@
             </objects>
             <point key="canvasLocation" x="1200" y="2631"/>
         </scene>
-        <!--Dormitories View Controller-->
+        <!--Homework List View Controller-->
         <scene sceneID="aHf-YB-JZR">
             <objects>
-                <viewController storyboardIdentifier="EKPDormitoriesViewController" id="ceJ-Lg-EaH" customClass="EKPDormitoriesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EKPHomeworkListViewController" id="ceJ-Lg-EaH" customClass="EKPHomeworkListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qlO-8d-Rz3"/>
                         <viewControllerLayoutGuide type="bottom" id="dKh-Ek-r4T"/>
@@ -964,7 +964,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dormitoryCell" id="WnS-WH-gNK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeworkCell" id="WnS-WH-gNK">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WnS-WH-gNK" id="BXP-ZM-m18">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -978,19 +978,13 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Of Rooms :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIj-yX-PYd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIj-yX-PYd">
                                                             <rect key="frame" x="14" y="32" width="131" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFL-Y2-Lmz">
-                                                            <rect key="frame" x="153" y="32" width="147" height="21"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-hI-uQi">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-hI-uQi">
                                                             <rect key="frame" x="14" y="53" width="286" height="49"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1004,8 +998,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="ceJ-Lg-EaH" id="JBk-w1-N0o"/>
-                                    <outlet property="delegate" destination="ceJ-Lg-EaH" id="Fex-5K-OCB"/>
+                                    <outlet property="dataSource" destination="ceJ-Lg-EaH" id="Jdc-LH-xtl"/>
+                                    <outlet property="delegate" destination="ceJ-Lg-EaH" id="Fw1-K6-Vez"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -1017,12 +1011,44 @@
                     </view>
                     <navigationItem key="navigationItem" id="iZz-O2-Brv"/>
                     <connections>
-                        <outlet property="dormitoriesListTableView" destination="HVv-wA-et1" id="gVo-sP-w49"/>
+                        <outlet property="tableView" destination="HVv-wA-et1" id="zVZ-CW-Af1"/>
+                        <segue destination="GgA-85-MLy" kind="push" identifier="ShowHomeworkFileSegue" id="jLX-EN-gMJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idX-Hp-nS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="3279"/>
+        </scene>
+        <!--Homework Details View Controller-->
+        <scene sceneID="Cef-RP-fgf">
+            <objects>
+                <viewController storyboardIdentifier="EKPHomeworkDetailsViewController" id="GgA-85-MLy" customClass="EKPHomeworkDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P0W-tR-pym"/>
+                        <viewControllerLayoutGuide type="bottom" id="3JI-64-9xe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sJO-5t-3ab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Gp-FV-gAO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GgA-85-MLy" id="nXH-R2-r9z"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOr-wo-wjr"/>
+                    <connections>
+                        <outlet property="webView" destination="7Gp-FV-gAO" id="aTh-Ui-HLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDe-xK-HvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="3279"/>
         </scene>
         <!--Library View Controller-->
         <scene sceneID="Een-C0-kQF">

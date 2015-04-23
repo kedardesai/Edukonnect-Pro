@@ -29,6 +29,7 @@
 		1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4A314E19DACABE0067B674 /* EKPLoginViewController.m */; };
 		1E016F671AE4218B00FAA46E /* EKPSchoolSupportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E016F661AE4218B00FAA46E /* EKPSchoolSupportListViewController.m */; };
 		1E016F6A1AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */; };
+		1E0CB0E41AE95BC200D70F08 /* EKPHomeworkDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0CB0E31AE95BC200D70F08 /* EKPHomeworkDetailsViewController.m */; };
 		1E171E911AC9D3AC00B7C410 /* EKPGuestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */; };
 		1E2A1A991A001B0D000B7695 /* UIImage+EKPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A981A001B0D000B7695 /* UIImage+EKPImage.m */; };
 		1E2A1A9C1A001C61000B7695 /* EKPEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A1A9B1A001C61000B7695 /* EKPEnums.m */; };
@@ -217,6 +218,8 @@
 		1E016F661AE4218B00FAA46E /* EKPSchoolSupportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolSupportListViewController.m; sourceTree = "<group>"; };
 		1E016F681AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolSupportQueryViewController.h; sourceTree = "<group>"; };
 		1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPSchoolSupportQueryViewController.m; sourceTree = "<group>"; };
+		1E0CB0E21AE95BC200D70F08 /* EKPHomeworkDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPHomeworkDetailsViewController.h; sourceTree = "<group>"; };
+		1E0CB0E31AE95BC200D70F08 /* EKPHomeworkDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPHomeworkDetailsViewController.m; sourceTree = "<group>"; };
 		1E171E8F1AC9D3AC00B7C410 /* EKPGuestInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPGuestInfoViewController.h; sourceTree = "<group>"; };
 		1E171E901AC9D3AC00B7C410 /* EKPGuestInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPGuestInfoViewController.m; sourceTree = "<group>"; };
 		1E2A1A971A001B0D000B7695 /* UIImage+EKPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKPImage.h"; sourceTree = "<group>"; };
@@ -680,6 +683,8 @@
 				1E016F691AE4219D00FAA46E /* EKPSchoolSupportQueryViewController.m */,
 				1EA1B5591AE824C200FA773A /* EKPHomeworkListViewController.h */,
 				1EA1B55A1AE824C200FA773A /* EKPHomeworkListViewController.m */,
+				1E0CB0E21AE95BC200D70F08 /* EKPHomeworkDetailsViewController.h */,
+				1E0CB0E31AE95BC200D70F08 /* EKPHomeworkDetailsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1270,6 +1275,7 @@
 				1ED3A6FF1A3CAF18007FEE6F /* MWGridViewController.m in Sources */,
 				1B4A314019DAC15E0067B674 /* EKPAlertMessageConstants.m in Sources */,
 				1E79928D1A37831E00383BE6 /* UIRefreshControl+AFNetworking.m in Sources */,
+				1E0CB0E41AE95BC200D70F08 /* EKPHomeworkDetailsViewController.m in Sources */,
 				1ED3A71F1A3CAF18007FEE6F /* SDWebImagePrefetcher.m in Sources */,
 				1E65819E1A420043002FFD58 /* EKPDormitory.m in Sources */,
 				1B4A311019D967000067B674 /* EKPAppDelegate.m in Sources */,

@@ -31,6 +31,7 @@ NSString *const SWITCH_USER_SCREEN_TITLE = @"Switch User";
 NSString *const SEARCH_BOOK_SCREEN_TITLE = @"Search Book";
 NSString *const SCHOOL_SUPORT_SCREEN_TITLE = @"School Support";
 NSString *const SCHOOL_SUPORT_QUERY_SCREEN_TITLE = @"Add New Query";
+NSString *const HOMEWORK_SCREEN_TITLE = @"Homework";
 
 
 #pragma mark Segue Names
@@ -87,6 +88,7 @@ NSString *const CAREER_COUNSELING_URL = @"http://4parents.mobi/career.php";
 NSString *const KNOWLEDGE_CENTRE_URL = @"http://4parents.mobi/teacherdashboard.php";
 NSString *const SCHOOL_SUPPORT_API_URL = @"schoolsupportlist_response.php?";
 NSString *const SCHOOL_SUPPORT_QUERY_API_URL = @"schoolsupport_addquestion.php?";
+NSString *const HOMEWORK_API_URL = @"homework_response.php?";
 
 
 //http://main.edukonnect.net.in/is_going_check.php?schoolcode=sch001&student_id=1&event_id=1

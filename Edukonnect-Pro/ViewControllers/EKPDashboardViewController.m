@@ -262,7 +262,7 @@
             break;
             
         case kEKPDashboardMenuHomework:
-            [self performSegueWithIdentifier:@"DashboardToBoardingSegue" sender:self];
+            [self performSegueWithIdentifier:@"DashboardToHomeworkSegue" sender:self];
             break;
             
         case kEKPDashboardMenuSchoolSupport:

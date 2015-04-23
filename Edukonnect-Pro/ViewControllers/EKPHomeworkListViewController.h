@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EKPHomeworkListViewController : UIViewController
+@interface EKPHomeworkListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic) NSInteger pageId;
 
 @end

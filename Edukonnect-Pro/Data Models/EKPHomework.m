@@ -60,7 +60,7 @@
 
 #pragma mark Public Methods
 
-- (void)setSchoolSupportDetailsWithDictionary:(NSDictionary *)dict
+- (void)setHomeworkDetailsWithDictionary:(NSDictionary *)dict
 {
     if (![[dict objectForKey:HOMEWORK_API_CREATED_BY] isKindOfClass:[NSNull class]]) {
         _homeworkCreatedBy = [dict objectForKey:HOMEWORK_API_CREATED_BY];
