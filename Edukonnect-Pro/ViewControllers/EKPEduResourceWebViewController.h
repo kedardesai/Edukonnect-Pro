@@ -14,4 +14,11 @@
 
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *backBtn;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *stopBtn;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *refreshBtn;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *forwardBtn;
+
+@property (nonatomic, strong) NSString *refreshUrlString;
+
 @end

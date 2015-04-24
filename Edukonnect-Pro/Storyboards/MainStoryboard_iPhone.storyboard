@@ -1470,11 +1470,43 @@
                                     <outlet property="delegate" destination="XcP-WD-4fh" id="0dp-ou-hIB"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zqy-zv-dad">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="4IC-jp-Kc0">
+                                        <connections>
+                                            <action selector="goBack" destination="Dzx-Z8-x3b" id="mCz-Kl-xzf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xDO-6d-emj"/>
+                                    <barButtonItem systemItem="stop" id="mPf-gu-5YU">
+                                        <connections>
+                                            <action selector="stopLoading" destination="Dzx-Z8-x3b" id="jOJ-SC-nHs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mfb-0d-C2a"/>
+                                    <barButtonItem systemItem="refresh" id="bWW-yB-XyO">
+                                        <connections>
+                                            <action selector="reload" destination="Dzx-Z8-x3b" id="k4c-yG-sh3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vdT-a1-r8p"/>
+                                    <barButtonItem systemItem="fastForward" id="2lL-pD-n8S">
+                                        <connections>
+                                            <action selector="goForward" destination="Dzx-Z8-x3b" id="zAf-yQ-ckG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="woU-DZ-4nr"/>
                     <connections>
+                        <outlet property="backBtn" destination="4IC-jp-Kc0" id="3td-cb-NJ9"/>
+                        <outlet property="forwardBtn" destination="2lL-pD-n8S" id="7Ba-B0-MRY"/>
+                        <outlet property="refreshBtn" destination="bWW-yB-XyO" id="4w9-Pb-SF8"/>
+                        <outlet property="stopBtn" destination="mPf-gu-5YU" id="bf2-LJ-pzh"/>
                         <outlet property="webView" destination="Dzx-Z8-x3b" id="qMS-Xa-LO9"/>
                     </connections>
                 </viewController>
@@ -2217,11 +2249,32 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lx5-Sa-dPK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="3uh-r8-i8g" kind="relationship" relationship="rootViewController" id="XYh-Wj-Ms8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZq-mi-ohw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R2b-J9-l0q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aez-ff-eyW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I1s-IN-mHK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="IPu-OW-Mbg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CjL-Cz-mmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391" y="31"/>
         </scene>

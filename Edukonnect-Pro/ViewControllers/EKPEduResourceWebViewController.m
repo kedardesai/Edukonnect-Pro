@@ -19,7 +19,8 @@
 
 #pragma mark UIViewLifeCycle Methods
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -82,6 +83,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"Loaded Succesfully...");
+    
+//    webView
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
