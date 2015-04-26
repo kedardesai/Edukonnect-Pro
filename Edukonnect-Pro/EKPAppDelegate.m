@@ -10,6 +10,7 @@
 #import "EKPUser.h"
 #import "EKPStudent.h"
 #import "EKPBackgroundFetchAPI.h"
+#import "EKPLoginAPI.h"
 //#import "EKPLoginViewController.h"
 //#import "EKPDashboardViewController.h"
 
@@ -37,7 +38,15 @@
         
         if ([userRole isEqualToString:PARENT_ROLE] || [userRole isEqualToString:TEACHER_ROLE]) {
             EKPStudent *currentStudent = [EKPSingleton loadStudent];
-            if (currentStudent) { // Already LoggedIn
+            NSDictionary *resultDict;
+            if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
+                resultDict = [EKPLoginAPI loginUserWith:currentStudent];
+            } else {
+                resultDict = [EKPLoginAPI loginUserWith:currentStudent andType:[EKPSingleton loadUserRole]];
+            }
+            NSLog(@"resultDict ::: %@", resultDict);
+            BOOL status = [[resultDict objectForKey:STATUS_KEY] boolValue];
+            if (status) { // Already LoggedIn
                 [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPDashboardViewController"] animated:NO];
             } else {
                 [(UINavigationController*)self.window.rootViewController pushViewController:[storyboard instantiateViewControllerWithIdentifier:@"EKPLoginViewController"] animated:NO];

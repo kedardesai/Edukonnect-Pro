@@ -13,6 +13,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "EKPRegistrationViewController.h"
 #import "EKPEduResourceWebViewController.h"
+#import "EKPEduResourceAPI.h"
 
 //static CGFloat randomFloatBetweenLowAndHigh(CGFloat low, CGFloat high)
 //{
@@ -274,8 +275,32 @@
             [self performSegueWithIdentifier:@"DashboardToPaymentSegue" sender:self];
             break;
             
-        default:
+        case kEKPDashboardMenuBehavioralIssue:
+            [EKPEduResourceAPI pushLeadForEduResources:@"Behavioral Issue"];
             [self performSegueWithIdentifier:@"DashboardToEduResourceSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuKnowledgeCorner:
+            [EKPEduResourceAPI pushLeadForEduResources:@"Knowledge Corner"];
+            [self performSegueWithIdentifier:@"DashboardToEduResourceSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuLocator:
+            [EKPEduResourceAPI pushLeadForEduResources:@"Locator"];
+            [self performSegueWithIdentifier:@"DashboardToEduResourceSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuParenting:
+            [EKPEduResourceAPI pushLeadForEduResources:@"Parenting"];
+            [self performSegueWithIdentifier:@"DashboardToEduResourceSegue" sender:self];
+            break;
+            
+        case kEKPDashboardMenuPersonCareerCounselling:
+            [EKPEduResourceAPI pushLeadForEduResources:@"Person Career Counselling"];
+            [self performSegueWithIdentifier:@"DashboardToEduResourceSegue" sender:self];
+            break;
+            
+        default:
             break;
     }
 }

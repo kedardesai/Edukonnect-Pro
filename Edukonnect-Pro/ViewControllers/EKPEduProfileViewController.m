@@ -248,6 +248,31 @@
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
             });
         });
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        __block BOOL statusPassword;
+        
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+            // Do something...
+            EKPStudent *currentStudent = [EKPSingleton loadStudent];
+            if (![_passwordTextField.text isEqualToString:currentStudent.studentPassword]) {
+                statusPassword = [EKPProfileAPI changePassword:currentStudent.studentPassword with:_passwordTextField.text];
+            }
+            
+            if (statusPassword) {
+                // school_details
+                [EKPUtility showAlertWithTitle:SUCCESS_TITLE andMessage:PASSWORD_UPDATED];
+                [currentStudent setStudentPassword:_passwordTextField.text];
+                [EKPSingleton saveStudent:currentStudent];
+                
+            } else {
+                [EKPUtility showAlertWithTitle:FAILED_TITLE andMessage:PASSWORD_NOT_UPDATED];
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+        });
     }
 }
 

@@ -42,4 +42,37 @@
     return status;
 }
 
++ (BOOL)changePassword:(NSString *)newPassword with:(NSString *)oldPassword
+{
+    EKPStudent *currentStudent = [EKPSingleton loadStudent];
+    //Web Service Call
+    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&student_id=%@&old_password=%@&updated_password=%@", BASE_API_URL, UPDATE_PASSWORD_API_URL, currentStudent.studentSchoolCode, currentStudent.studentId, oldPassword, newPassword];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+    [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [theRequest setHTTPMethod:@"GET"];
+    
+    NSURLResponse* response;
+    NSError* error = nil;
+    NSMutableData *webData = [NSURLConnection sendSynchronousRequest:theRequest  returningResponse:&response error:&error].mutableCopy;
+    
+    if (error) {
+        NSLog(@"ERROR ::: %@", [error localizedDescription]);
+        [EKPUtility showAlertWithTitle:NETWORK_ERROR andMessage:[error localizedDescription]];
+        return NO;
+    }
+    
+    NSError *localError = nil;
+    
+    NSMutableDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:webData options:kNilOptions error:&localError];
+    
+    if (localError) {
+        [EKPUtility showAlertWithTitle:ERROR_TITLE andMessage:[localError localizedDescription]];
+        return NO;
+    }
+    
+    BOOL status = [[dictionary objectForKey:STATUS_KEY] boolValue];
+    return status;
+}
+
 @end

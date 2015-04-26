@@ -12,4 +12,6 @@
 
 + (BOOL)updateProfile:(EKPProfile *)profile;
 
++ (BOOL)changePassword:(NSString *)newPassword with:(NSString *)oldPassword;
+
 @end

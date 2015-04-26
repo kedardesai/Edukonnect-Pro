@@ -7,6 +7,7 @@
 //
 
 #import "EKPTimetableAPI.h"
+#import "EKPTeacher.h"
 
 @implementation EKPTimetableAPI
 
@@ -15,8 +16,19 @@
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     //Web Service Call
-    NSString *urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&classid=%@", BASE_API_URL, TIMETABLE_API_URL, currentStudent.studentSchoolCode, currentStudent.studentClass];
+    NSString *urlString;
+    
+    if ([EKPSingleton loadUserRole] == TEACHER_ROLE) {
+        
+        EKPTeacher *currentTeacher = [EKPSingleton loadTeacher];
+        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&teacher_id=%@", BASE_API_URL, TIMETABLE_TEACHER_API_URL, currentStudent.studentSchoolCode, currentTeacher.teacherId];
+        
+    } else {
+        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&classid=%@", BASE_API_URL, TIMETABLE_API_URL, currentStudent.studentSchoolCode, currentStudent.studentClass];
+    }
+    
     NSURL *url = [NSURL URLWithString:urlString];
+    
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [theRequest setHTTPMethod:@"GET"];

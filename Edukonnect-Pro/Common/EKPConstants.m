@@ -58,14 +58,18 @@ NSString *const REGISTRATION_API_URL = @"registration_response.php?";
 NSString *const LOGIN_API_URL = @"login_responsenew.php?"; // login_response.php // login_responsenew.php
 NSString *const SPECIAL_LOGIN_API_URL = @"login_response_type.php?";
 NSString *const EDIT_PROFILE_API_URL = @"editprofile_response.php?";
+NSString *const UPDATE_PASSWORD_API_URL = @"update_password.php?";
 NSString *const NOTICEBOARD_API_URL = @"noticeboard_response.php?";
 NSString *const ALERT_API_URL = @"notice_list_response.php?";
+NSString *const ALERT_TEACHER_API_URL = @"teacher_inbox_list_response.php?";
 NSString *const EVENT_API_URL = @"event_class_response.php?";
+NSString *const EVENT_TEACHER_API_URL = @"event_response.php?";
 NSString *const LEAVE_LIST_API_URL = @"leavelist_response.php?";
 NSString *const LEAVE_APPLY_API_URL = @"leaveadd_response.php?";
 NSString *const EXAM_LIST_API_URL = @"resultlist_response.php?";
 NSString *const RESULT_API_URL = @"result_response.php?";
 NSString *const TIMETABLE_API_URL = @"timetable_response.php?";
+NSString *const TIMETABLE_TEACHER_API_URL = @"timetable_response_teacher.php?";
 NSString *const GALLARY_API_URL = @"gallerylist_response.php?";
 NSString *const GALLARY_IMAGE_API_URL = @"gallery_image_response.php?";
 NSString *const TRANSPORT_LIST_API_URL = @"transport_list.php?";
@@ -89,6 +93,7 @@ NSString *const KNOWLEDGE_CENTRE_URL = @"http://4parents.mobi/teacherdashboard.p
 NSString *const SCHOOL_SUPPORT_API_URL = @"schoolsupportlist_response.php?";
 NSString *const SCHOOL_SUPPORT_QUERY_API_URL = @"schoolsupport_addquestion.php?";
 NSString *const HOMEWORK_API_URL = @"homework_response.php?";
+NSString *const EDU_RESOURCE_PUSH_LEAD = @"resources_statics_response.php?";
 
 
 //http://main.edukonnect.net.in/is_going_check.php?schoolcode=sch001&student_id=1&event_id=1

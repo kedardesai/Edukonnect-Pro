@@ -170,11 +170,43 @@
                                     <outlet property="delegate" destination="wkZ-BJ-VEN" id="21T-U4-l71"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-j7-fo3">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="SYC-1l-r5e">
+                                        <connections>
+                                            <action selector="goBack" destination="uYK-Fk-TME" id="Apq-C0-5Kt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ew0-v3-Cd7"/>
+                                    <barButtonItem systemItem="stop" id="Msi-pU-dLs">
+                                        <connections>
+                                            <action selector="stopLoading" destination="uYK-Fk-TME" id="AxM-Kt-cdR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="szl-Fg-xjt"/>
+                                    <barButtonItem systemItem="refresh" id="f57-eu-tZ2">
+                                        <connections>
+                                            <action selector="reload" destination="uYK-Fk-TME" id="asn-mz-Erx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hKd-Pa-M8Z"/>
+                                    <barButtonItem systemItem="fastForward" id="4M3-LE-KFW">
+                                        <connections>
+                                            <action selector="goForward" destination="uYK-Fk-TME" id="9Lp-Es-dHZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="bxm-DO-Vuz"/>
                     <connections>
+                        <outlet property="backBtn" destination="SYC-1l-r5e" id="yXq-v1-LUC"/>
+                        <outlet property="forwardBtn" destination="4M3-LE-KFW" id="WbL-CM-YEX"/>
+                        <outlet property="refreshBtn" destination="f57-eu-tZ2" id="nul-6f-b1p"/>
+                        <outlet property="stopBtn" destination="Msi-pU-dLs" id="CD3-50-oi8"/>
                         <outlet property="webView" destination="uYK-Fk-TME" id="JPs-zb-hqU"/>
                     </connections>
                 </viewController>
@@ -825,6 +857,34 @@
                                     <outlet property="delegate" destination="u8s-Gp-vap" id="rMc-Ah-1Jk"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-xj-B0e">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="2xm-mK-4wd">
+                                        <connections>
+                                            <action selector="goBack" destination="XSx-Uj-MLi" id="Vzf-t3-lVp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tvx-No-NVG"/>
+                                    <barButtonItem systemItem="stop" id="HSL-Q8-NfE">
+                                        <connections>
+                                            <action selector="stopLoading" destination="XSx-Uj-MLi" id="vrU-uZ-gpu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Uj5-qf-Rsx"/>
+                                    <barButtonItem systemItem="refresh" id="l2f-c1-Dh5">
+                                        <connections>
+                                            <action selector="reload" destination="XSx-Uj-MLi" id="Wnd-fJ-wlQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JWs-Vw-it2"/>
+                                    <barButtonItem systemItem="fastForward" id="nGb-mw-3Sk">
+                                        <connections>
+                                            <action selector="goForward" destination="XSx-Uj-MLi" id="bYO-n9-1Jp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -834,6 +894,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="2Zg-Th-ifY"/>
                     <connections>
+                        <outlet property="backBtn" destination="2xm-mK-4wd" id="p1V-Xu-wBj"/>
+                        <outlet property="forwardBtn" destination="nGb-mw-3Sk" id="hO8-Vd-qXT"/>
+                        <outlet property="refreshBtn" destination="l2f-c1-Dh5" id="D3L-ym-eAh"/>
+                        <outlet property="stopBtn" destination="HSL-Q8-NfE" id="sSC-Sp-h7J"/>
                         <outlet property="webView" destination="XSx-Uj-MLi" id="wKM-gK-iS5"/>
                     </connections>
                 </viewController>
@@ -1360,7 +1424,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-OA-JsG">
                                 <rect key="frame" x="38" y="106" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aym-yk-Mx0" customClass="KDTextField">
@@ -1381,7 +1445,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-hp-799">
                                 <rect key="frame" x="38" y="153" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2G-0M-tc0" customClass="KDTextField">
@@ -1407,7 +1471,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reason" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFT-9M-Cw5">
                                 <rect key="frame" x="38" y="208" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lG2-yJ-y33">
@@ -1416,7 +1480,7 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Half Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5Z-XD-Wax">
                                 <rect key="frame" x="38" y="251" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceT-HH-8oj">
@@ -1541,13 +1605,13 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8x-e8-wW1">
                                                             <rect key="frame" x="8" y="7" width="289" height="61"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zso-zK-pdc">
                                                             <rect key="frame" x="8" y="73" width="119" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -1567,13 +1631,13 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-95-NuB">
                                                             <rect key="frame" x="8" y="7" width="289" height="61"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-3b-Mhb">
                                                             <rect key="frame" x="188" y="75" width="109" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>

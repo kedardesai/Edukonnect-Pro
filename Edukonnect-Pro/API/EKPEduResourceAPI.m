@@ -1,31 +1,28 @@
 //
-//  EKPAlertAPI.m
+//  EKPEduResourceAPI.m
 //  Edukonnect-Pro
 //
-//  Created by Edupsyche on 12/20/14.
-//  Copyright (c) 2014 Kedar Desai. All rights reserved.
+//  Created by Edupsyche on 4/25/15.
+//  Copyright (c) 2015 Kedar Desai. All rights reserved.
 //
 
-#import "EKPAlertAPI.h"
-#import "EKPTeacher.h"
+#import "EKPEduResourceAPI.h"
 
-@implementation EKPAlertAPI
+@implementation EKPEduResourceAPI
 
-+ (NSMutableDictionary *)getAlertsForPageId:(NSInteger)pageId
++ (BOOL)pushLeadForEduResources:(NSString *)menuString
 {
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
-    //Web Service Call
-    NSString *urlString;
-    if ([EKPSingleton loadUserRole] == TEACHER_ROLE) {
-        EKPTeacher *currentTeacher = [EKPSingleton loadTeacher];
-        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&teacher_id=%@&pageid=%ld", BASE_API_URL, ALERT_TEACHER_API_URL,currentStudent.studentSchoolCode, currentTeacher.teacherId, (long)pageId];
-        
-    } else {
-        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&student_id=%@&pageid=%ld", BASE_API_URL, ALERT_API_URL,currentStudent.studentSchoolCode, currentStudent.studentId, (long)pageId];
-    }
+    NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+    [dateformate setDateFormat:@"dd/mm/yyyy"]; // Date formater
+    NSString *dateString = [dateformate stringFromDate:[NSDate date]]; // Convert date to string
+    NSLog(@"date :%@",dateString);
     
-    NSURL *url = [NSURL URLWithString:urlString];
+    //Web Service Call
+    NSString *urlString = [NSString stringWithFormat:@"%@%@type=%@&student_id=%@&schoolcode=%@&date=%@&deviceid=%@", BASE_API_URL, EDU_RESOURCE_PUSH_LEAD, menuString, currentStudent.studentId, currentStudent.studentSchoolCode, dateString, [[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+    
+    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [theRequest setHTTPMethod:@"GET"];
@@ -49,7 +46,7 @@
         return nil;
     }
     
-    return dictionary;
+    return [[dictionary objectForKey:STATUS_KEY] boolValue];
 }
 
 @end

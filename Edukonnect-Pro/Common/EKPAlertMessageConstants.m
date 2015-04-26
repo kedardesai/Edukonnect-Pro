@@ -28,6 +28,8 @@ NSString *const ALREADY_LOGGED_IN = @"You are already logged in with same creden
 #pragma mark Edu Profile Page Alert Messages
 NSString *const PROFILE_UPDATED = @"Profile has been updated successfully.";
 NSString *const PROFILE_NOT_UPDATED = @"Profile has failed to update.";
+NSString *const PASSWORD_UPDATED = @"Profile has failed to update.";
+NSString *const PASSWORD_NOT_UPDATED = @"Profile has failed to update.";
 
 #pragma mark External Links Alert Messages
 NSString *const INVALID_FB_LINK = @"Invalid Facebook link.";

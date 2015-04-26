@@ -167,6 +167,7 @@
 		1ED3A7251A3CAF18007FEE6F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A6F91A3CAF18007FEE6F /* UIImageView+WebCache.m */; };
 		1ED3A7261A3CAF18007FEE6F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A6FB1A3CAF18007FEE6F /* UIView+WebCacheOperation.m */; };
 		1ED3A7271A3CAF18007FEE6F /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1ED3A6FC1A3CAF18007FEE6F /* MWPhotoBrowser.bundle */; };
+		1EEAC4F11AEBAA0D004799B2 /* EKPEduResourceAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEAC4F01AEBAA0D004799B2 /* EKPEduResourceAPI.m */; };
 		1EFC45171A3B611200881984 /* EKPTimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC45161A3B611200881984 /* EKPTimetableViewController.m */; };
 		1EFC687F1AE57CCA00C42233 /* EKPSchoolSupportAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC687E1AE57CCA00C42233 /* EKPSchoolSupportAPI.m */; };
 		1EFC68821AE5810100C42233 /* EKPSchoolSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFC68811AE5810100C42233 /* EKPSchoolSupport.m */; };
@@ -490,6 +491,8 @@
 		1ED3A6FA1A3CAF18007FEE6F /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		1ED3A6FB1A3CAF18007FEE6F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		1ED3A6FC1A3CAF18007FEE6F /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
+		1EEAC4EF1AEBAA0D004799B2 /* EKPEduResourceAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPEduResourceAPI.h; sourceTree = "<group>"; };
+		1EEAC4F01AEBAA0D004799B2 /* EKPEduResourceAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPEduResourceAPI.m; sourceTree = "<group>"; };
 		1EFC45151A3B611200881984 /* EKPTimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPTimetableViewController.h; sourceTree = "<group>"; };
 		1EFC45161A3B611200881984 /* EKPTimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPTimetableViewController.m; sourceTree = "<group>"; };
 		1EFC687D1AE57CCA00C42233 /* EKPSchoolSupportAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPSchoolSupportAPI.h; sourceTree = "<group>"; };
@@ -887,6 +890,8 @@
 				1EFC687E1AE57CCA00C42233 /* EKPSchoolSupportAPI.m */,
 				1EA1B5561AE81DE100FA773A /* EKPHomeworkAPI.h */,
 				1EA1B5571AE81DE100FA773A /* EKPHomeworkAPI.m */,
+				1EEAC4EF1AEBAA0D004799B2 /* EKPEduResourceAPI.h */,
+				1EEAC4F01AEBAA0D004799B2 /* EKPEduResourceAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1253,6 +1258,7 @@
 				1E9E00941A45793500A76699 /* EKPPayment.m in Sources */,
 				1E9A82F11A3A097C00CD838F /* EKPResultAPI.m in Sources */,
 				1B4A310C19D967000067B674 /* main.m in Sources */,
+				1EEAC4F11AEBAA0D004799B2 /* EKPEduResourceAPI.m in Sources */,
 				1E2A1AA01A001D05000B7695 /* EKPSingleton.m in Sources */,
 				1B4A314F19DACABE0067B674 /* EKPLoginViewController.m in Sources */,
 				1E9E96E31A0EA00E007B9585 /* EKPSchool.m in Sources */,

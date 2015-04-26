@@ -12,6 +12,10 @@
 
 @interface EKPBusLocationViewController ()
 
+@property (nonatomic, strong) EKPMapPin *pin;
+
+- (void)showBusLocation:(id)sender;
+
 @end
 
 @implementation EKPBusLocationViewController
@@ -31,27 +35,13 @@
     self.mapView.mapType = MKMapTypeHybrid;
     self.mapView.delegate = self;
     
-    NSMutableDictionary *coordinateDict = [EKPTransportAPI getLocationForBus:self.selectedTransportObj.transportId];
-    double latitude = [[coordinateDict objectForKey:TRANSPORT_API_LATITUDE] doubleValue];
-    double longitude = [[coordinateDict objectForKey:TRANSPORT_API_LONGITUDE] doubleValue];
-    
-    CLLocationCoordinate2D busLocation;
-    busLocation.latitude = latitude;
-    busLocation.longitude= longitude;
-    EKPMapPin *pin = [[EKPMapPin alloc] initWithCoordinates:busLocation placeName:@"Start" description:@""];
-    [self.mapView addAnnotation:pin];
-    [self.mapView setMapType:MKMapTypeStandard];
-    
-    MKCoordinateRegion region = { {0.0, 0.0 }, { 0.0, 0.0 } };
-    region.center.latitude = latitude ;
-    region.center.longitude = longitude;
-    region.span.longitudeDelta = 0.015f;
-    region.span.latitudeDelta = 0.015f;
-    [self.mapView setRegion:region animated:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(showBusLocation:)
+                                   userInfo:nil
+                                    repeats:YES];
     
     [self.view addSubview:self.mapView];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -63,6 +53,30 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark Code-Reusable Methods
+
+- (void)showBusLocation:(id)sender
+{
+    NSMutableDictionary *coordinateDict = [EKPTransportAPI getLocationForBus:self.selectedTransportObj.transportId];
+    double latitude = [[coordinateDict objectForKey:TRANSPORT_API_LATITUDE] doubleValue];
+    double longitude = [[coordinateDict objectForKey:TRANSPORT_API_LONGITUDE] doubleValue];
+    
+    CLLocationCoordinate2D busLocation;
+    busLocation.latitude = latitude;
+    busLocation.longitude= longitude;
+    _pin = [[EKPMapPin alloc] initWithCoordinates:busLocation placeName:@"Start" description:@""];
+    [self.mapView addAnnotation:_pin];
+    [self.mapView setMapType:MKMapTypeStandard];
+    
+    MKCoordinateRegion region = { {0.0, 0.0 }, { 0.0, 0.0 } };
+    region.center.latitude = latitude ;
+    region.center.longitude = longitude;
+    region.span.longitudeDelta = 0.015f;
+    region.span.latitudeDelta = 0.015f;
+    [self.mapView setRegion:region animated:YES];
 }
 
 /*

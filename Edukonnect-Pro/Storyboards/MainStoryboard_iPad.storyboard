@@ -170,11 +170,43 @@
                                     <outlet property="delegate" destination="lOA-Fs-Z4S" id="diS-Hp-qfa"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcC-Di-VXA">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="0pL-XR-C0J">
+                                        <connections>
+                                            <action selector="goBack" destination="3m4-9B-HYb" id="uOT-sd-GUm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JkL-y9-Wjb"/>
+                                    <barButtonItem systemItem="stop" id="KyL-t8-14k">
+                                        <connections>
+                                            <action selector="stopLoading" destination="3m4-9B-HYb" id="zTq-Mc-grI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="997-oe-d29"/>
+                                    <barButtonItem systemItem="refresh" id="m9c-LY-YVL">
+                                        <connections>
+                                            <action selector="reload" destination="3m4-9B-HYb" id="QYV-uT-HTd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LKW-Mo-CiC"/>
+                                    <barButtonItem systemItem="fastForward" id="bTN-dh-XBq">
+                                        <connections>
+                                            <action selector="goForward" destination="3m4-9B-HYb" id="sAz-wL-ChY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ngS-tm-d0o"/>
                     <connections>
+                        <outlet property="backBtn" destination="0pL-XR-C0J" id="5Ay-n1-8od"/>
+                        <outlet property="forwardBtn" destination="bTN-dh-XBq" id="2Ph-Tw-M4I"/>
+                        <outlet property="refreshBtn" destination="m9c-LY-YVL" id="b6u-o2-vfn"/>
+                        <outlet property="stopBtn" destination="KyL-t8-14k" id="pwu-Mq-Hct"/>
                         <outlet property="webView" destination="3m4-9B-HYb" id="a9f-qo-O26"/>
                     </connections>
                 </viewController>
@@ -747,11 +779,43 @@
                                     <outlet property="delegate" destination="TZF-yV-r1q" id="1uW-Cf-vn4"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dN6-1s-WTU">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="y1D-ab-Yps">
+                                        <connections>
+                                            <action selector="goBack" destination="FsD-Da-KeX" id="KKj-pA-nS3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="T5p-Pg-0bq"/>
+                                    <barButtonItem systemItem="stop" id="wld-VZ-oCq">
+                                        <connections>
+                                            <action selector="stopLoading" destination="FsD-Da-KeX" id="vQa-gw-Sym"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vwh-QI-7g3"/>
+                                    <barButtonItem systemItem="refresh" id="jng-Ue-7Lq">
+                                        <connections>
+                                            <action selector="reload" destination="FsD-Da-KeX" id="THt-b2-hpM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iOr-n6-ZhR"/>
+                                    <barButtonItem systemItem="fastForward" id="gVM-K7-URU">
+                                        <connections>
+                                            <action selector="goForward" destination="FsD-Da-KeX" id="Vvr-NM-Ccf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vYl-YE-49w"/>
                     <connections>
+                        <outlet property="backBtn" destination="y1D-ab-Yps" id="MEM-pT-MRv"/>
+                        <outlet property="forwardBtn" destination="gVM-K7-URU" id="wXv-aU-HGh"/>
+                        <outlet property="refreshBtn" destination="jng-Ue-7Lq" id="9eu-Yz-C7l"/>
+                        <outlet property="stopBtn" destination="wld-VZ-oCq" id="pJ2-dh-Oue"/>
                         <outlet property="webView" destination="FsD-Da-KeX" id="wxj-J0-56r"/>
                     </connections>
                 </viewController>
@@ -1452,11 +1516,43 @@
                                     <outlet property="delegate" destination="APv-hT-joa" id="ffj-FX-b5f"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kS-i1-WcT">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="iQR-fs-eJV">
+                                        <connections>
+                                            <action selector="goBack" destination="TpW-pl-knW" id="K4K-oA-1cA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QdD-Pk-IE4"/>
+                                    <barButtonItem systemItem="stop" id="zHP-ZX-aMg">
+                                        <connections>
+                                            <action selector="stopLoading" destination="TpW-pl-knW" id="KjF-lV-rYF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TLx-Nt-Q7k"/>
+                                    <barButtonItem systemItem="refresh" id="Gf6-7c-LYw">
+                                        <connections>
+                                            <action selector="reload" destination="TpW-pl-knW" id="EqV-ZY-GQu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Rmx-1n-NBv"/>
+                                    <barButtonItem systemItem="fastForward" id="6Yd-Fi-wQ8">
+                                        <connections>
+                                            <action selector="goForward" destination="TpW-pl-knW" id="k5X-Tw-BNv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yP0-mI-7Ga"/>
                     <connections>
+                        <outlet property="backBtn" destination="iQR-fs-eJV" id="epZ-z1-r8f"/>
+                        <outlet property="forwardBtn" destination="6Yd-Fi-wQ8" id="IEg-X8-bqN"/>
+                        <outlet property="refreshBtn" destination="Gf6-7c-LYw" id="iqE-Y5-ZWg"/>
+                        <outlet property="stopBtn" destination="zHP-ZX-aMg" id="V4b-H8-ZN8"/>
                         <outlet property="webView" destination="TpW-pl-knW" id="6g7-f3-jPC"/>
                     </connections>
                 </viewController>
