@@ -33,9 +33,11 @@
         // Do something...
         
         self.timeTableDayListArray = [EKPTimetableAPI getTimetable];
+        NSLog(@"self.timeTableDayListArray ::: %@",self.timeTableDayListArray);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.timeTableDayListTableView reloadData];
         });
     });
     
@@ -83,6 +85,8 @@
     
     UILabel *dayName = (UILabel *) [cell.contentView viewWithTag:100];
     [dayName setText:[dayScheduleDict objectForKey:TIMETABLE_API_DAY]];
+    
+    NSLog(@"dayName : %@",[dayName text]);
     
     [cell setBackgroundColor:[UIColor loadScreenBackgroundColor]];
     

@@ -186,7 +186,7 @@
 /* Begin PBXFileReference section */
 		1B09EEAE19DBD5B00049F667 /* EKPDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPDashboardViewController.h; sourceTree = "<group>"; };
 		1B09EEAF19DBD5B00049F667 /* EKPDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPDashboardViewController.m; sourceTree = "<group>"; };
-		1B4A30FC19D967000067B674 /* Edukonnect-Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edukonnect-Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4A30FC19D967000067B674 /* Edukonnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edukonnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4A30FF19D967000067B674 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B4A310119D967000067B674 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1B4A310319D967000067B674 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -543,7 +543,7 @@
 		1B4A30FD19D967000067B674 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B4A30FC19D967000067B674 /* Edukonnect-Pro.app */,
+				1B4A30FC19D967000067B674 /* Edukonnect.app */,
 				1B4A311719D967000067B674 /* Edukonnect-ProTests.xctest */,
 			);
 			name = Products;
@@ -1133,7 +1133,7 @@
 			);
 			name = "Edukonnect-Pro";
 			productName = "Edukonnect-Pro";
-			productReference = 1B4A30FC19D967000067B674 /* Edukonnect-Pro.app */;
+			productReference = 1B4A30FC19D967000067B674 /* Edukonnect.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1B4A311619D967000067B674 /* Edukonnect-ProTests */ = {
@@ -1172,7 +1172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B4A30F719D967000067B674 /* Build configuration list for PBXProject "Edukonnect-Pro" */;
+			buildConfigurationList = 1B4A30F719D967000067B674 /* Build configuration list for PBXProject "Edukonnect" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1487,7 +1487,7 @@
 				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
 				INFOPLIST_FILE = "Edukonnect-Pro/Edukonnect-Pro-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Edukonnect;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1508,7 +1508,7 @@
 				GCC_PREFIX_HEADER = "Edukonnect-Pro/Edukonnect-Pro-Prefix.pch";
 				INFOPLIST_FILE = "Edukonnect-Pro/Edukonnect-Pro-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Edukonnect;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1560,7 +1560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B4A30F719D967000067B674 /* Build configuration list for PBXProject "Edukonnect-Pro" */ = {
+		1B4A30F719D967000067B674 /* Build configuration list for PBXProject "Edukonnect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B4A312619D967000067B674 /* Debug */,

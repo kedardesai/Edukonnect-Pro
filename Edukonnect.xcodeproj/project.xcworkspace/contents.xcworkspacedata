@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Edukonnect-Pro.xcodeproj">
+      location = "self:Edukonnect.xcodeproj">
    </FileRef>
 </Workspace>

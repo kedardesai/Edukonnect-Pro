@@ -18,13 +18,13 @@
     //Web Service Call
     NSString *urlString;
     
-    if ([EKPSingleton loadUserRole] == TEACHER_ROLE) {
+    if ([EKPSingleton loadUserRole] == PARENT_ROLE) {
         
-        EKPTeacher *currentTeacher = [EKPSingleton loadTeacher];
-        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&teacher_id=%@", BASE_API_URL, TIMETABLE_TEACHER_API_URL, currentStudent.studentSchoolCode, currentTeacher.teacherId];
+        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&classid=%@", BASE_API_URL, TIMETABLE_API_URL, currentStudent.studentSchoolCode, currentStudent.studentClass];
         
     } else {
-        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&classid=%@", BASE_API_URL, TIMETABLE_API_URL, currentStudent.studentSchoolCode, currentStudent.studentClass];
+        EKPTeacher *currentTeacher = [EKPSingleton loadTeacher];
+        urlString = [NSString stringWithFormat:@"%@%@schoolcode=%@&teacher_id=%@", BASE_API_URL, TIMETABLE_TEACHER_API_URL, currentStudent.studentSchoolCode, currentTeacher.teacherId];
     }
     
     NSURL *url = [NSURL URLWithString:urlString];

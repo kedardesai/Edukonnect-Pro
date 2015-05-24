@@ -67,6 +67,8 @@
             break;
     }
     
+    NSLog(@"self.url ::: %@", self.url);
+    
     if (_selectedMenu != kEKPDashboardMenuComingSoon) {
         [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:self.url]];
     }
@@ -80,9 +82,15 @@
 
 #pragma mark UIWebViewDelegate Methods
 
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"Loaded Succesfully...");
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     
 //    webView
 }
@@ -98,6 +106,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self.navigationController popViewControllerAnimated:YES];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 /*

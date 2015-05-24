@@ -187,7 +187,11 @@
         case 1: // For Edu Menu
         {
             if ([[EKPSingleton loadUserRole] isEqualToString:PARENT_ROLE]) {
-                dashboardMenu = (EKPDashboardMenus) indexPath.row + 6; // 6 menus from Edu Alerts
+                if ([[EKPSingleton loadVersion] isEqualToString:PRO_VERSION]) {
+                    dashboardMenu = (EKPDashboardMenus) indexPath.row + 6; // 6 menus from Edu Alerts
+                } else {
+                    dashboardMenu = (EKPDashboardMenus) indexPath.row + 12; // 6 menus from Edu Alerts
+                }
                 
             } else {
                 dashboardMenu = (EKPDashboardMenus) indexPath.row + 12; // 6 menus from Edu Alerts
@@ -502,14 +506,21 @@
 
 #pragma mark UIWebViewDelegate Methods
 
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"Loaded successfully.");
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"Failed with ERROR ::: %@",[error localizedDescription]);
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 

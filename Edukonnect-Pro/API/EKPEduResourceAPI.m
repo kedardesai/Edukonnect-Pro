@@ -15,7 +15,9 @@
     EKPStudent *currentStudent = [EKPSingleton loadStudent];
     
     NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
-    [dateformate setDateFormat:@"dd/mm/yyyy"]; // Date formater
+    [dateformate setDateFormat:@"dd/MM/yyyy"]; // Date formater
+//    [dateformate setDateStyle:NSDateFormatterShortStyle];
+    NSLog(@"date :%@",[NSDate date]);
     NSString *dateString = [dateformate stringFromDate:[NSDate date]]; // Convert date to string
     NSLog(@"date :%@",dateString);
     

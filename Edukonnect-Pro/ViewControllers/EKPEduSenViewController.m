@@ -48,14 +48,21 @@
 
 #pragma mark UIWebViewDelegate Methods
 
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"Loaded successfully.");
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"Failed with ERROR ::: %@",[error localizedDescription]);
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 /*
